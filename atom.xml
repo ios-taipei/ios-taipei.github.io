@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>iOS @ Taipei</title>
+  
+  <subtitle>iOS and her good friends</subtitle>
+  <link href="/docs/atom.xml" rel="self"/>
+  
+  <link href="http://ios.taipei/"/>
+  <updated>2018-06-21T06:46:34.195Z</updated>
+  <id>http://ios.taipei/</id>
+  
+  <author>
+    <name>AKI YU</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://ios.taipei/2018/06/21/hello-world/"/>
+    <id>http://ios.taipei/2018/06/21/hello-world/</id>
+    <published>2018-06-21T02:53:26.671Z</published>
+    <updated>2018-06-21T06:46:34.195Z</updated>
+    
+    <content type="html"><![CDATA[<p>這裡是 <a href="https://iOS.Taipei/">iOS＠Taipei</a> 的新家! 如果有需要交流或是建議的地方，都歡迎在此討論交流。</p><h2 id="給新手的話"><a href="#給新手的話" class="headerlink" title="給新手的話"></a>給新手的話</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">"不會寫程式是很正常的事，沒什麼好丟臉的，多問多學，很簡單的"</span>)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;這裡是 &lt;a href=&quot;https://iOS.Taipei/&quot;&gt;iOS＠Taipei&lt;/a&gt; 的新家! 如果有需要交流或是建議的地方，都歡迎在此討論交流。&lt;/p&gt;
+&lt;h2 id=&quot;給新手的話&quot;&gt;&lt;a href=&quot;#給新手的話&quot; class=&quot;headerlink&quot; ti
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>

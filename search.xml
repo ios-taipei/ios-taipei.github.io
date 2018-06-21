@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/docs/2018/06/21/hello-world/"/>
+      <url>/docs/2018/06/21/hello-world/</url>
+      <content type="html"><![CDATA[<p>這裡是 <a href="https://iOS.Taipei/">iOS＠Taipei</a> 的新家! 如果有需要交流或是建議的地方，都歡迎在此討論交流。</p><h2 id="給新手的話"><a href="#給新手的話" class="headerlink" title="給新手的話"></a>給新手的話</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">"不會寫程式是很正常的事，沒什麼好丟臉的，多問多學，很簡單的"</span>)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+    </entry>
+    
+  
+  
+</search>
