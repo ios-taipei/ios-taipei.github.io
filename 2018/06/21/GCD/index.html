@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>XCode 搜尋小技巧 | iOS @ Taipei</title>
+  <title>GCD | iOS @ Taipei</title>
   <meta name="description" content="We are the guys who fall in love with iOS" />
   <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,30 +12,18 @@
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="茫茫碼海中，要怎麼找到你想要找的那一段程式碼？關鍵字下的不夠精準，找不到或是搜尋的資料太多，都是種苦惱。還是想找個Hex? 找Tab? 找ip？ 找url？ 找email? 好的搜尋技巧帶你上天堂，下面幾個技巧該可以能帶你上天堂">
-<meta name="keywords" content="iOS,xCode">
+  <meta name="description" content="GCD 有許多用法，不知道你會那幾種？">
+<meta name="keywords" content="iOS,GCD">
 <meta property="og:type" content="article">
-<meta property="og:title" content="XCode 搜尋小技巧">
-<meta property="og:url" content="http://ios.taipei/2018/06/21/xcode-search/index.html">
+<meta property="og:title" content="GCD">
+<meta property="og:url" content="http://ios.taipei/2018/06/21/GCD/index.html">
 <meta property="og:site_name" content="iOS @ Taipei">
-<meta property="og:description" content="茫茫碼海中，要怎麼找到你想要找的那一段程式碼？關鍵字下的不夠精準，找不到或是搜尋的資料太多，都是種苦惱。還是想找個Hex? 找Tab? 找ip？ 找url？ 找email? 好的搜尋技巧帶你上天堂，下面幾個技巧該可以能帶你上天堂">
+<meta property="og:description" content="GCD 有許多用法，不知道你會那幾種？">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:image" content="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-search-definition01.png">
-<meta property="og:image" content="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-search-definition02.png">
-<meta property="og:image" content="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-search-definition03.png">
-<meta property="og:image" content="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-insert-pattern.png">
-<meta property="og:image" content="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-insert-pattern-url.png">
-<meta property="og:image" content="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-insert-pattern-result.png">
-<meta property="og:image" content="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-path01.png">
-<meta property="og:image" content="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-path02.png">
-<meta property="og:image" content="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-path03.png">
-<meta property="og:image" content="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-call-Hierarchy.png">
-<meta property="og:image" content="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-call-Hierarchy02.png">
-<meta property="og:updated_time" content="2018-06-21T15:07:14.896Z">
+<meta property="og:updated_time" content="2018-06-21T15:12:08.991Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="XCode 搜尋小技巧">
-<meta name="twitter:description" content="茫茫碼海中，要怎麼找到你想要找的那一段程式碼？關鍵字下的不夠精準，找不到或是搜尋的資料太多，都是種苦惱。還是想找個Hex? 找Tab? 找ip？ 找url？ 找email? 好的搜尋技巧帶你上天堂，下面幾個技巧該可以能帶你上天堂">
-<meta name="twitter:image" content="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-search-definition01.png">
+<meta name="twitter:title" content="GCD">
+<meta name="twitter:description" content="GCD 有許多用法，不知道你會那幾種？">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -146,47 +134,39 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        <article id="post-xcode-search"
+        <article id="post-GCD"
   class="post white-box article-type-post"
   itemscope itemprop="blogPost">
 	<section class='meta'>
 	<h2 class="title">
-  	<a href="/2018/06/21/xcode-search/">
-    	XCode 搜尋小技巧
+  	<a href="/2018/06/21/GCD/">
+    	GCD
     </a>
   </h2>
 	<time>
 	  6月 21, 2018
 	</time>
 	
+    
+    <div class='cats'>
+        <a href="/categories/iOS/">iOS</a>
+    </div>
+
 	</section>
 	
-		<section class="toc-wrapper"></section>
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#GCD-有許多用法，不知道你會那幾種？"><span class="toc-number">1.</span> <span class="toc-text">GCD 有許多用法，不知道你會那幾種？</span></a></li></ol></section>
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	<p>茫茫碼海中，要怎麼找到你想要找的那一段程式碼？關鍵字下的不夠精準，找不到或是搜尋的資料太多，都是種苦惱。還是想找個Hex? 找Tab? 找ip？ 找url？ 找email?</p>
-<p>好的搜尋技巧帶你上天堂，下面幾個技巧該可以能帶你上天堂</p>
-<a id="more"></a>
-<p><ol><br>     <li><strong>定義搜尋（只搜尋「定義」的字串）</strong></li><br></ol><br>搜尋關鍵字會把所有找到的資料帶出來（以simple為例）<br><img class="wp-image-5 size-full aligncenter" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-search-definition01.png" width="264" height="260"></p>
-<p>在find的第二層，將搜尋改為definition<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-search-definition02.png" alt="定義02" width="281" height="246"></p>
-<p>結果就只會出現「定義」裡的關鍵字搜尋了<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-search-definition03.png" alt="定義03" width="263" height="260"></p>
-<p>&nbsp;</p>
-<p><strong>2. Pattern </strong></p>
-<p>在搜尋裡先打一個「”」,用以區隔 pattern之用，接著，在放大鏡裡點選 insert pattern<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-insert-pattern.png" alt="pattern01" width="263" height="132"></p>
-<p>接著，點選「url」,再補個「”」給他<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-insert-pattern-url.png" alt="pattern02" width="277" height="310"></p>
-<p>結果，就是我們想要的結果<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-insert-pattern-result.png" alt="pattern03" width="261" height="150"></p>
-<p><strong>3. 指定路徑</strong></p>
-<p>如果是已知路徑下搜尋，只要在 下方的「in Workspace」點一下</p>
-<p><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-path01.png" alt="path01" width="267" height="130"></p>
-<p>再點選你要搜尋的路徑就可以了</p>
-<p><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-path02.png" alt="path02" width="266" height="233"></p>
-<p>有興趣的人還有scope的進階版可以玩<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-path03.png" alt="path03" width="805" height="175"></p>
-<ol start="4">
-<li>Call Hierarchy</li>
-</ol>
-<p>想知道有誰呼叫了某個函數？<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-call-Hierarchy.png" alt="call-hierarchy" width="260" height="189"></p>
-<p>還有一個方法，就是當你移到函數的位置時<br><img src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-call-Hierarchy02.png" alt="call-hierarchy" width="567" height="463"></p>
+    	<h2 id="GCD-有許多用法，不知道你會那幾種？"><a href="#GCD-有許多用法，不知道你會那幾種？" class="headerlink" title="GCD 有許多用法，不知道你會那幾種？"></a>GCD 有許多用法，不知道你會那幾種？</h2><a id="more"></a>
+<p><strong>1. 背景執行</strong></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> defaultPriority = <span class="type">DISPATCH_QUEUE_PRIORITY_DEFAULT</span></span><br><span class="line"><span class="keyword">let</span> backgroundQueue = dispatch_get_global_queue(defaultPriority, <span class="number">0</span>)</span><br><span class="line">dispatch_async(backgroundQueue, &#123;</span><br><span class="line">     <span class="keyword">let</span> result = doSomeExpensiveWork()</span><br><span class="line">     dispatch_async(dispatch_get_main_queue(), &#123;</span><br><span class="line">          <span class="comment">//use `result` somehow </span></span><br><span class="line">     &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><strong>2. Singleton</strong></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">+ (instancetype) sharedInstance &#123;</span><br><span class="line">     <span class="keyword">static</span> dispatch_once_t onceToken;</span><br><span class="line">     <span class="keyword">static</span> id sharedInstance;</span><br><span class="line">     dispatch_once(&amp;amp;amp;onceToken, ^&#123;</span><br><span class="line">          sharedInstance = [[<span class="keyword">self</span> alloc] <span class="keyword">init</span>];</span><br><span class="line">     &#125;);</span><br><span class="line">     <span class="keyword">return</span> sharedInstance;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>3. with blocks</strong></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typealias</span> <span class="type">DoneBlock</span> = () -&amp;gt; ()</span><br><span class="line"><span class="keyword">typealias</span> <span class="type">WorkBlock</span> = (<span class="type">DoneBlock</span>) -&amp;gt; ()</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AsyncSerialWorker</span> </span>&#123;</span><br><span class="line">     <span class="keyword">private</span> <span class="keyword">let</span> serialQueue = dispatch_queue_create(<span class="string">"ios.taipei.queue"</span>, <span class="type">DISPATCH_QUEUE_SERIAL</span>)</span><br><span class="line"></span><br><span class="line">     <span class="function"><span class="keyword">func</span> <span class="title">enqueueWork</span><span class="params">(work: WorkBlock)</span></span> &#123;</span><br><span class="line">          dispatch_async(serialQueue) &#123;</span><br><span class="line">               <span class="keyword">let</span> semaphore = dispatch_semaphore_create(<span class="number">0</span>)</span><br><span class="line">               work(&#123;</span><br><span class="line">                    dispatch_semaphore_signal(semaphore)</span><br><span class="line">               &#125;)</span><br><span class="line">               dispatch_semaphore_wait(semaphore, <span class="type">DISPATCH_TIME_FOREVER</span>)</span><br><span class="line">          &#125;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>4. multi-task</strong></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">dispatch_group_t group = dispatch_group_create()</span><br><span class="line">     <span class="keyword">for</span> item <span class="keyword">in</span> someArray &#123;</span><br><span class="line">          dispatch_group_async(group, backgroundQueue, &#123;</span><br><span class="line">               performExpensiveWork(item: item)</span><br><span class="line">          &#125;)</span><br><span class="line">     &#125;</span><br><span class="line">     dispatch_group_notify(group, dispatch_get_main_queue(), &#123;</span><br><span class="line">     <span class="comment">// all the work is complete</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
   	</div>
 	  
@@ -194,7 +174,7 @@
       
         <a href="/tags/iOS/">iOS</a>
       
-        <a href="/tags/xCode/">xCode</a>
+        <a href="/tags/GCD/">GCD</a>
       
 	  </div>
     
@@ -202,13 +182,9 @@
 	
 		<div class="art-item-footer">
 				
-					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2018/06/21/GCD/" rel="prev"  title="GCD">
-						GCD 
-					</a></span>
 				
-				
-					<span class="art-item-right">next：<a href="/2018/06/21/hello-world/" rel="next"  title="Hello World">
-						Hello World
+					<span class="art-item-right">next：<a href="/2018/06/21/xcode-search/" rel="next"  title="XCode 搜尋小技巧">
+						XCode 搜尋小技巧
 					</a><i class="icon icon-chevron-thin-right"></i></span>
 				
 		</div>
@@ -218,7 +194,7 @@
 </article>
 <script>
 	window.subData = {
-		title: 'XCode 搜尋小技巧',
+		title: 'GCD',
 		tools: true
 	}
 </script>
