@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>Carthage-introduction</title>
+      <link href="/2018/06/21/Carthage-introduction/"/>
+      <url>/2018/06/21/Carthage-introduction/</url>
+      <content type="html"><![CDATA[<p>相信大家對於CocoaPods非常的熟悉，用的愛不釋手，那麼為什麼還要看一下Carthage呢？</p><a id="more"></a><p>在還沒有CocoaPods之類，大家都是用拖檔案，拖library進來，甚至是拖另一個專案到專案裡面來，記得還要<br>copy items if needed，有CocoaPods，只要幾行指令，就完成了所有的工作了，就連考試都得了一百分呢！！</p><p>Carthage與CocoaPods的不同在那裡呢？</p><p>首先，CocoaPods預設會自動產生具有dependency的workspace並且更新你的專案檔，Carthage則是使用xcodebuild來打包成framework，以方便引用，避免污染專案檔</p><p>再來，CocoaPods在每次編譯時，都會重新打包所有的pods，當使用第三方元件使用的多時，編譯就會變慢，有機會會差到幾十秒</p><p>最後，Carthage比CocoaPods好封裝多了，只要開一個Project/Framework,裡面的scheme設為shared就可以了</p><p>附帶一提的是 Carthage 的打包，可以不讓別人看到source code，這不知道要算優點還是缺點</p><p>1。安裝Carthage</p><p>Carthage提供OS X平台的pkg安裝文件，可以從Github的最新release中找到，按照指示一步步安裝即可。</p><p>2。新增framework到程式裡</p><p>安裝完Carthage後，你能够使用它来新增framework到你的專案裡。注意Carthage只支持dynamic framework(iOS8以上)。</p><p>3。執行</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">carthage update</span><br></pre></td></tr></table></figure><p>和CocoaPods一樣，會將相依的資料抓到 Carthage/Checkouts 目錄下，並且編譯好</p><p>4。設定<br>在你的專案的target的[General][Embedded Binaries]，將framework從Carthage.build裡拉進去。<br>（如果有git，也順便push上去，醬子其他人只要執行carthage bootstrap就能使用了。</p><p>5。update<br>如果變動了Cartfile，或者想升级到最新版本，執行carthage update命令就可以了。</p><p>6。檢查<br>如果編譯失敗的話，試著在命令列執行</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcodebuild -scheme <span class="type">SCHEME</span> -workspace <span class="type">WORKSPACE</span> build</span><br></pre></td></tr></table></figure><p>或</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcodebuild -scheme <span class="type">SCHEME</span> -project <span class="type">PROJECT</span> build</span><br></pre></td></tr></table></figure><p>其中大寫的地方要換成你的workspace或專案名稱, 有沒有很簡單？</p>]]></content>
+      
+      <categories>
+          
+          <category> iOS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> iOS </tag>
+            
+            <tag> Dependency Management </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>GCD</title>
       <link href="/2018/06/21/GCD/"/>
       <url>/2018/06/21/GCD/</url>
@@ -26,29 +49,6 @@
     </entry>
     
     <entry>
-      <title>XCode 搜尋小技巧</title>
-      <link href="/2018/06/21/xcode-search/"/>
-      <url>/2018/06/21/xcode-search/</url>
-      <content type="html"><![CDATA[<p>茫茫碼海中，要怎麼找到你想要找的那一段程式碼？關鍵字下的不夠精準，找不到或是搜尋的資料太多，都是種苦惱。還是想找個Hex? 找Tab? 找ip？ 找url？ 找email?</p><p>好的搜尋技巧帶你上天堂，下面幾個技巧該可以能帶你上天堂</p><a id="more"></a><p><ol><br>     <li><strong>定義搜尋（只搜尋「定義」的字串）</strong></li><br></ol><br>搜尋關鍵字會把所有找到的資料帶出來（以simple為例）<br><img src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-search-definition01.png" width="264" height="260"></p><p>在find的第二層，將搜尋改為definition<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-search-definition02.png" alt="定義02" width="281" height="246"></p><p>結果就只會出現「定義」裡的關鍵字搜尋了<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-search-definition03.png" alt="定義03" width="263" height="260"></p><p>&nbsp;</p><p><strong>2. Pattern </strong></p><p>在搜尋裡先打一個「”」,用以區隔 pattern之用，接著，在放大鏡裡點選 insert pattern<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-insert-pattern.png" alt="pattern01" width="263" height="132"></p><p>接著，點選「url」,再補個「”」給他<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-insert-pattern-url.png" alt="pattern02" width="277" height="310"></p><p>結果，就是我們想要的結果<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-insert-pattern-result.png" alt="pattern03" width="261" height="150"></p><p><strong>3. 指定路徑</strong></p><p>如果是已知路徑下搜尋，只要在 下方的「in Workspace」點一下</p><p><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-path01.png" alt="path01" width="267" height="130"></p><p>再點選你要搜尋的路徑就可以了</p><p><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-path02.png" alt="path02" width="266" height="233"></p><p>有興趣的人還有scope的進階版可以玩<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-path03.png" alt="path03" width="805" height="175"></p><ol start="4"><li>Call Hierarchy</li></ol><p>想知道有誰呼叫了某個函數？<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-call-Hierarchy.png" alt="call-hierarchy" width="260" height="189"></p><p>還有一個方法，就是當你移到函數的位置時<br><img src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-call-Hierarchy02.png" alt="call-hierarchy" width="567" height="463"></p>]]></content>
-      
-      <categories>
-          
-          <category> iOS </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> iOS </tag>
-            
-            <tag> xCode </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
       <title>SpotLight 初探</title>
       <link href="/2018/06/21/Spotlight-inspect/"/>
       <url>/2018/06/21/Spotlight-inspect/</url>
@@ -66,6 +66,29 @@
             <tag> iOS </tag>
             
             <tag> spotlight </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>XCode 搜尋小技巧</title>
+      <link href="/2018/06/21/xcode-search/"/>
+      <url>/2018/06/21/xcode-search/</url>
+      <content type="html"><![CDATA[<p>茫茫碼海中，要怎麼找到你想要找的那一段程式碼？關鍵字下的不夠精準，找不到或是搜尋的資料太多，都是種苦惱。還是想找個Hex? 找Tab? 找ip？ 找url？ 找email?</p><p>好的搜尋技巧帶你上天堂，下面幾個技巧該可以能帶你上天堂</p><a id="more"></a><p><ol><br>     <li><strong>定義搜尋（只搜尋「定義」的字串）</strong></li><br></ol><br>搜尋關鍵字會把所有找到的資料帶出來（以simple為例）<br><img src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-search-definition01.png" width="264" height="260"></p><p>在find的第二層，將搜尋改為definition<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-search-definition02.png" alt="定義02" width="281" height="246"></p><p>結果就只會出現「定義」裡的關鍵字搜尋了<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-search-definition03.png" alt="定義03" width="263" height="260"></p><p>&nbsp;</p><p><strong>2. Pattern </strong></p><p>在搜尋裡先打一個「”」,用以區隔 pattern之用，接著，在放大鏡裡點選 insert pattern<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-insert-pattern.png" alt="pattern01" width="263" height="132"></p><p>接著，點選「url」,再補個「”」給他<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-insert-pattern-url.png" alt="pattern02" width="277" height="310"></p><p>結果，就是我們想要的結果<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-insert-pattern-result.png" alt="pattern03" width="261" height="150"></p><p><strong>3. 指定路徑</strong></p><p>如果是已知路徑下搜尋，只要在 下方的「in Workspace」點一下</p><p><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-path01.png" alt="path01" width="267" height="130"></p><p>再點選你要搜尋的路徑就可以了</p><p><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-path02.png" alt="path02" width="266" height="233"></p><p>有興趣的人還有scope的進階版可以玩<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-path03.png" alt="path03" width="805" height="175"></p><ol start="4"><li>Call Hierarchy</li></ol><p>想知道有誰呼叫了某個函數？<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-call-Hierarchy.png" alt="call-hierarchy" width="260" height="189"></p><p>還有一個方法，就是當你移到函數的位置時<br><img src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-call-Hierarchy02.png" alt="call-hierarchy" width="567" height="463"></p>]]></content>
+      
+      <categories>
+          
+          <category> iOS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> iOS </tag>
+            
+            <tag> xCode </tag>
             
         </tags>
       
