@@ -45,7 +45,15 @@
 
 
   <script>setLoadingBarProgress(20)</script> 
-  <header class="l_header">
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.0&appId=179895666557&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<header class="l_header">
 	<div class='wrapper'>
 		<div class="nav-main container container--flex">
 			<a class="logo flat-box" href='/' >
@@ -193,10 +201,14 @@
 	
 		<div class="art-item-footer">
 				
-					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2018/06/21/xcode-search/" rel="prev"  title="XCode 搜尋小技巧">
-						XCode 搜尋小技巧 
+					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2018/06/21/GCD/" rel="prev"  title="GCD">
+						GCD 
 					</a></span>
 				
+				
+					<span class="art-item-right">next：<a href="/2018/06/21/xcode-search/" rel="next"  title="XCode 搜尋小技巧">
+						XCode 搜尋小技巧
+					</a><i class="icon icon-chevron-thin-right"></i></span>
 				
 		</div>
 	
@@ -221,6 +233,10 @@
 <div class='content'>
 <div class='desc'>We are the guys who fall in love with iOS</div>
 </div>
+</section>
+
+  <section class='m_widget facebook'>
+<div class="fb-group" data-href="https://www.facebook.com/groups/ios.taipei/" data-width="250" data-show-social-context="true" data-show-metadata="false"></div>
 </section>
 
   <section class='m_widget links'>
