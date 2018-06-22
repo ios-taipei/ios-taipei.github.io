@@ -36,12 +36,6 @@
 </head>
 
 <body>
-  <div id="loading-bar-wrapper">
-  <div id="loading-bar"></div>
-</div>
-
-
-  <script>setLoadingBarProgress(20)</script> 
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -50,7 +44,13 @@
   js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.0&appId=179895666557&autoLogAppEvents=1';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<header class="l_header">
+<div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+  <script>setLoadingBarProgress(20)</script> 
+  <header class="l_header">
 	<div class='wrapper'>
 		<div class="nav-main container container--flex">
 			<a class="logo flat-box" href='/' >
