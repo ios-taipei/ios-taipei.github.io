@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Carthage-introduction | iOS @ Taipei</title>
+  <title>DUNS申請以及相關問題 | iOS @ Taipei</title>
   <meta name="description" content="We are the guys who fall in love with iOS" />
   <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,18 +12,18 @@
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="相信大家對於CocoaPods非常的熟悉，用的愛不釋手，那麼為什麼還要看一下Carthage呢？">
-<meta name="keywords" content="iOS,Dependency Management">
+  <meta name="description" content="D-U-N-S 申請以及相關問題Q: What is D-U-N-S? A:   The D‑U‑N‑S Number is a unique nine-digit identifier for businesses. It is used to establish a D&amp;amp;B® business credit file, which is often referenced by lend">
+<meta name="keywords" content="iOS,教學">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Carthage-introduction">
-<meta property="og:url" content="http://ios.taipei/2018/06/21/Carthage-introduction/index.html">
+<meta property="og:title" content="DUNS申請以及相關問題">
+<meta property="og:url" content="http://ios.taipei/2018/06/24/duns/index.html">
 <meta property="og:site_name" content="iOS @ Taipei">
-<meta property="og:description" content="相信大家對於CocoaPods非常的熟悉，用的愛不釋手，那麼為什麼還要看一下Carthage呢？">
+<meta property="og:description" content="D-U-N-S 申請以及相關問題Q: What is D-U-N-S? A:   The D‑U‑N‑S Number is a unique nine-digit identifier for businesses. It is used to establish a D&amp;amp;B® business credit file, which is often referenced by lend">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2018-06-21T15:34:31.000Z">
+<meta property="og:updated_time" content="2018-06-25T08:53:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Carthage-introduction">
-<meta name="twitter:description" content="相信大家對於CocoaPods非常的熟悉，用的愛不釋手，那麼為什麼還要看一下Carthage呢？">
+<meta name="twitter:title" content="DUNS申請以及相關問題">
+<meta name="twitter:description" content="D-U-N-S 申請以及相關問題Q: What is D-U-N-S? A:   The D‑U‑N‑S Number is a unique nine-digit identifier for businesses. It is used to establish a D&amp;amp;B® business credit file, which is often referenced by lend">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -142,17 +142,17 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        <article id="post-Carthage-introduction"
+        <article id="post-duns"
   class="post white-box article-type-post"
   itemscope itemprop="blogPost">
 	<section class='meta'>
 	<h2 class="title">
-  	<a href="/2018/06/21/Carthage-introduction/">
-    	Carthage-introduction
+  	<a href="/2018/06/24/duns/">
+    	DUNS申請以及相關問題
     </a>
   </h2>
 	<time>
-	  6月 21, 2018
+	  6月 24, 2018
 	</time>
 	
     
@@ -162,32 +162,37 @@
 
 	</section>
 	
-		<section class="toc-wrapper"></section>
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#D-U-N-S-申請以及相關問題"><span class="toc-number">1.</span> <span class="toc-text">D-U-N-S 申請以及相關問題</span></a></li></ol></section>
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	<p>相信大家對於CocoaPods非常的熟悉，用的愛不釋手，那麼為什麼還要看一下Carthage呢？</p>
-<a id="more"></a>
-<p>在還沒有CocoaPods之類，大家都是用拖檔案，拖library進來，甚至是拖另一個專案到專案裡面來，記得還要<br>copy items if needed，有CocoaPods，只要幾行指令，就完成了所有的工作了，就連考試都得了一百分呢！！</p>
-<p>Carthage與CocoaPods的不同在那裡呢？</p>
-<p>首先，CocoaPods預設會自動產生具有dependency的workspace並且更新你的專案檔，Carthage則是使用xcodebuild來打包成framework，以方便引用，避免污染專案檔</p>
-<p>再來，CocoaPods在每次編譯時，都會重新打包所有的pods，當使用第三方元件使用的多時，編譯就會變慢，有機會會差到幾十秒</p>
-<p>最後，Carthage比CocoaPods好封裝多了，只要開一個Project/Framework,裡面的scheme設為shared就可以了</p>
-<p>附帶一提的是 Carthage 的打包，可以不讓別人看到source code，這不知道要算優點還是缺點</p>
-<p>1。安裝Carthage</p>
-<p>Carthage提供OS X平台的pkg安裝文件，可以從Github的最新release中找到，按照指示一步步安裝即可。</p>
-<p>2。新增framework到程式裡</p>
-<p>安裝完Carthage後，你能够使用它来新增framework到你的專案裡。注意Carthage只支持dynamic framework(iOS8以上)。</p>
-<p>3。執行</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">carthage update</span><br></pre></td></tr></table></figure>
-<p>和CocoaPods一樣，會將相依的資料抓到 Carthage/Checkouts 目錄下，並且編譯好</p>
-<p>4。設定<br>在你的專案的target的[General][Embedded Binaries]，將framework從Carthage.build裡拉進去。<br>（如果有git，也順便push上去，醬子其他人只要執行carthage bootstrap就能使用了。</p>
-<p>5。update<br>如果變動了Cartfile，或者想升级到最新版本，執行carthage update命令就可以了。</p>
-<p>6。檢查<br>如果編譯失敗的話，試著在命令列執行</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcodebuild -scheme <span class="type">SCHEME</span> -workspace <span class="type">WORKSPACE</span> build</span><br></pre></td></tr></table></figure>
-<p>或</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcodebuild -scheme <span class="type">SCHEME</span> -project <span class="type">PROJECT</span> build</span><br></pre></td></tr></table></figure>
-<p>其中大寫的地方要換成你的workspace或專案名稱, 有沒有很簡單？</p>
+    	<h2 id="D-U-N-S-申請以及相關問題"><a href="#D-U-N-S-申請以及相關問題" class="headerlink" title="D-U-N-S 申請以及相關問題"></a>D-U-N-S 申請以及相關問題</h2><p>Q: What is D-U-N-S?</p>
+<p>A:   The D‑U‑N‑S Number is a unique nine-digit identifier for businesses. It is used to establish a D&amp;B® business credit file, which is often referenced by lenders and potential business partners to help predict the reliability and/or financial stability of the company in question. “D‑U‑N‑S,” which stands for data universal numbering system, is used to maintain up-to-date and timely information on more than 300 million global businesses.</p>
+<p>大意是說，有跨國生意需求時，可以幫你做基本的徵信，以降低風險。</p>
+<p>不知為何，被APPLE拿來當做公司帳號的初步篩選。因此，如果想要申請公司或組織的開發者計劃，或是企業方案之前，都要先有一組D-U-N-S號碼，才能夠繼續進行。</p>
+<p>通常在台灣，如果是成立一段時間的公司，會由台灣鄧白氏主動幫你加入，申請之前，可以先查一下，看有沒有已經有號碼了</p>
+<ul>
+<li>點我 <a href="https://developer.apple.com/enroll/duns-lookup/#!/search" target="_blank" rel="noopener">查詢 D-U-N-S</a><ul>
+<li><span style="color:blue">Legal</span> entity name （公司組織法律名稱）</li>
+<li>Headquarters address (總公司地址)</li>
+<li>Mailing address (郵件位址)</li>
+<li><span style="color:blue">Your work contact information</span> (聯絡方式)</li>
+</ul>
+</li>
+</ul>
+<p>如果沒有的話，就必須要申請 D-U-N-S 了，一樣的流程，只是時間會久一點（據說要五個工作天，建議是多留點時間等等），這裡會由D&amp;B的真人來電話聯絡，用以確認是否為正常的公司。</p>
+<p><span style="color:red">有可能被reject的事項為</span></p>
+<ul>
+<li>獨資的個人公司</li>
+<li>無法查到公司正確的相關資訊<ul>
+<li>DBAs - Do Business As XXX (e.g. iOS@Taipei 不是一個合法的公司名稱)</li>
+<li>Fictitious Name - 虛擬名稱</li>
+<li>貿易名</li>
+<li>分公司名 （需由總公司統一申請） </li>
+</ul>
+</li>
+<li>這裡會用真人打電話聯絡確認，回答如果不正確的話，可是會被reject的 </li>
+</ul>
 
   	</div>
 	  
@@ -195,7 +200,7 @@
       
         <a href="/tags/iOS/">iOS</a>
       
-        <a href="/tags/Dependency-Management/">Dependency Management</a>
+        <a href="/tags/教學/">教學</a>
       
 	  </div>
     
@@ -203,13 +208,13 @@
 	
 		<div class="art-item-footer">
 				
-					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2018/06/24/duns/" rel="prev"  title="DUNS申請以及相關問題">
-						DUNS申請以及相關問題 
+					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2018/06/24/Tutorial_00_1/" rel="prev"  title="寫在程式開發之前00-1">
+						寫在程式開發之前00-1 
 					</a></span>
 				
 				
-					<span class="art-item-right">next：<a href="/2018/06/21/GCD/" rel="next"  title="GCD">
-						GCD
+					<span class="art-item-right">next：<a href="/2018/06/21/Carthage-introduction/" rel="next"  title="Carthage-introduction">
+						Carthage-introduction
 					</a><i class="icon icon-chevron-thin-right"></i></span>
 				
 		</div>
@@ -219,7 +224,7 @@
 </article>
 <script>
 	window.subData = {
-		title: 'Carthage-introduction',
+		title: 'DUNS申請以及相關問題',
 		tools: true
 	}
 </script>
