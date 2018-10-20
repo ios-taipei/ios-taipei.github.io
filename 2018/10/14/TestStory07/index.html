@@ -12,22 +12,22 @@
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="軟體開發故事07 - 其他不同的測試與驅動開發在整個軟體開發的過程中，還是會有一些可能要做的測試。 舉個例子 壓力測試有聽過server在做壓力測試的，為什麼手機APP也有機會要做壓力測試？ 舉個例子吧 以兩個帳戶之間互相轉帳為例子， a 有1000元 轉給 b 200元，b也同時轉200給 a，程式如下： 12345678910111213141516171819let a = Account(">
+  <meta name="description" content="軟體開發故事07 - 其他不同的測試與驅動開發在整個軟體開發的過程中，還是會有一些可能要做的測試。 舉個例子 壓力測試">
 <meta name="keywords" content="Test,Press Test,Monkey Test">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Other Tests">
 <meta property="og:url" content="http://ios.taipei/2018/10/14/TestStory07/index.html">
 <meta property="og:site_name" content="iOS @ Taipei">
-<meta property="og:description" content="軟體開發故事07 - 其他不同的測試與驅動開發在整個軟體開發的過程中，還是會有一些可能要做的測試。 舉個例子 壓力測試有聽過server在做壓力測試的，為什麼手機APP也有機會要做壓力測試？ 舉個例子吧 以兩個帳戶之間互相轉帳為例子， a 有1000元 轉給 b 200元，b也同時轉200給 a，程式如下： 12345678910111213141516171819let a = Account(">
+<meta property="og:description" content="軟體開發故事07 - 其他不同的測試與驅動開發在整個軟體開發的過程中，還是會有一些可能要做的測試。 舉個例子 壓力測試">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/memory_monitor.png">
 <meta property="og:image" content="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/networklinkconditioner.png">
 <meta property="og:image" content="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/packetlogger.png">
 <meta property="og:image" content="https://xebialabs.com/assets/files/plugins/Charles.jpg">
-<meta property="og:updated_time" content="2018-10-19T16:58:32.415Z">
+<meta property="og:updated_time" content="2018-10-20T03:05:23.047Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Other Tests">
-<meta name="twitter:description" content="軟體開發故事07 - 其他不同的測試與驅動開發在整個軟體開發的過程中，還是會有一些可能要做的測試。 舉個例子 壓力測試有聽過server在做壓力測試的，為什麼手機APP也有機會要做壓力測試？ 舉個例子吧 以兩個帳戶之間互相轉帳為例子， a 有1000元 轉給 b 200元，b也同時轉200給 a，程式如下： 12345678910111213141516171819let a = Account(">
+<meta name="twitter:description" content="軟體開發故事07 - 其他不同的測試與驅動開發在整個軟體開發的過程中，還是會有一些可能要做的測試。 舉個例子 壓力測試">
 <meta name="twitter:image" content="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/memory_monitor.png">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
@@ -173,7 +173,8 @@
   	<div class="article-entry" itemprop="articleBody">
     	<h2 id="軟體開發故事07-其他不同的測試與驅動開發"><a href="#軟體開發故事07-其他不同的測試與驅動開發" class="headerlink" title="軟體開發故事07 - 其他不同的測試與驅動開發"></a>軟體開發故事07 - 其他不同的測試與驅動開發</h2><p>在整個軟體開發的過程中，還是會有一些可能要做的測試。</p>
 <p>舉個例子</p>
-<h3 id="壓力測試"><a href="#壓力測試" class="headerlink" title="壓力測試"></a>壓力測試</h3><p>有聽過server在做壓力測試的，為什麼手機APP也有機會要做壓力測試？</p>
+<h3 id="壓力測試"><a href="#壓力測試" class="headerlink" title="壓力測試"></a>壓力測試</h3><a id="more"></a>
+<p>有聽過server在做壓力測試的，為什麼手機APP也有機會要做壓力測試？</p>
 <p>舉個例子吧</p>
 <p>以兩個帳戶之間互相轉帳為例子， a 有1000元 轉給 b 200元，b也同時轉200給 a，程式如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">let a = Account(id: 1, balance: 1000)</span><br><span class="line">let b = Account(id: 2, balance: 0)</span><br><span class="line"></span><br><span class="line">DispatchQueue.global(qos: .background).async &#123;</span><br><span class="line">    self.transfer(from: a, to: b, amount: 200)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">DispatchQueue.global(qos: .background).async &#123;</span><br><span class="line">self.transfer(from: b, to: a, amount: 200)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func transfer(from: Account, to: Account, amount: Double) &#123;</span><br><span class="line">    from.synchronized(self) &#123;  () -&gt; Void  in</span><br><span class="line">        to.synchronized(self) &#123; () -&gt; Void in</span><br><span class="line">            from.withdraw(amount: amount)</span><br><span class="line">            to.deposit(amount: amount)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -207,9 +208,13 @@
 	
 		<div class="art-item-footer">
 				
+					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2018/10/14/TestStory06/" rel="prev"  title="What is QA">
+						What is QA 
+					</a></span>
 				
-					<span class="art-item-right">next：<a href="/2018/10/14/TestStory06/" rel="next"  title="What is QA">
-						What is QA
+				
+					<span class="art-item-right">next：<a href="/2018/10/13/TestStory03/" rel="next"  title="Unit Test">
+						Unit Test
 					</a><i class="icon icon-chevron-thin-right"></i></span>
 				
 		</div>

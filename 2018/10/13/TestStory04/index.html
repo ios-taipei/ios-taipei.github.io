@@ -12,21 +12,21 @@
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="軟體開發故事04 - UI Test ，操作行為的錄製與播放前情提要：工程師1把後端做好了 同時，另一位工程師2也把前端的UI也做好了，兩個前後端串接好後，直接交付由QA進行測試。 工程師2說：「前端不用測，QA會幫我們找到問題。」 如果你相信工程師2說的，那麼這章可以跳過不看。 UI 要怎麼測？ 原始時代 － 佷久很久以前，工程師自己手按一按 漁獵時代 － 使用者來按或找有空的人一起幫忙按一下">
+  <meta name="description" content="軟體開發故事04 - UI Test ，操作行為的錄製與播放前情提要：工程師1把後端做好了 同時，另一位工程師2也把前端的UI也做好了，兩個前後端串接好後，直接交付由QA進行測試。 工程師2說：「前端不用測，QA會幫我們找到問題。」 如果你相信工程師2說的，那麼這章可以跳過不看。">
 <meta name="keywords" content="Test,UI Test">
 <meta property="og:type" content="article">
 <meta property="og:title" content="UI Test, Record and Replay">
 <meta property="og:url" content="http://ios.taipei/2018/10/13/TestStory04/index.html">
 <meta property="og:site_name" content="iOS @ Taipei">
-<meta property="og:description" content="軟體開發故事04 - UI Test ，操作行為的錄製與播放前情提要：工程師1把後端做好了 同時，另一位工程師2也把前端的UI也做好了，兩個前後端串接好後，直接交付由QA進行測試。 工程師2說：「前端不用測，QA會幫我們找到問題。」 如果你相信工程師2說的，那麼這章可以跳過不看。 UI 要怎麼測？ 原始時代 － 佷久很久以前，工程師自己手按一按 漁獵時代 － 使用者來按或找有空的人一起幫忙按一下">
+<meta property="og:description" content="軟體開發故事04 - UI Test ，操作行為的錄製與播放前情提要：工程師1把後端做好了 同時，另一位工程師2也把前端的UI也做好了，兩個前後端串接好後，直接交付由QA進行測試。 工程師2說：「前端不用測，QA會幫我們找到問題。」 如果你相信工程師2說的，那麼這章可以跳過不看。">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/uitest_record.png">
 <meta property="og:image" content="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/mac_recorder.png">
 <meta property="og:image" content="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/writing_machine.jpeg">
-<meta property="og:updated_time" content="2018-10-19T13:17:13.519Z">
+<meta property="og:updated_time" content="2018-10-20T03:05:51.616Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UI Test, Record and Replay">
-<meta name="twitter:description" content="軟體開發故事04 - UI Test ，操作行為的錄製與播放前情提要：工程師1把後端做好了 同時，另一位工程師2也把前端的UI也做好了，兩個前後端串接好後，直接交付由QA進行測試。 工程師2說：「前端不用測，QA會幫我們找到問題。」 如果你相信工程師2說的，那麼這章可以跳過不看。 UI 要怎麼測？ 原始時代 － 佷久很久以前，工程師自己手按一按 漁獵時代 － 使用者來按或找有空的人一起幫忙按一下">
+<meta name="twitter:description" content="軟體開發故事04 - UI Test ，操作行為的錄製與播放前情提要：工程師1把後端做好了 同時，另一位工程師2也把前端的UI也做好了，兩個前後端串接好後，直接交付由QA進行測試。 工程師2說：「前端不用測，QA會幫我們找到問題。」 如果你相信工程師2說的，那麼這章可以跳過不看。">
 <meta name="twitter:image" content="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/uitest_record.png">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
@@ -173,7 +173,7 @@
     	<h2 id="軟體開發故事04-UI-Test-，操作行為的錄製與播放"><a href="#軟體開發故事04-UI-Test-，操作行為的錄製與播放" class="headerlink" title="軟體開發故事04 - UI Test ，操作行為的錄製與播放"></a>軟體開發故事04 - UI Test ，操作行為的錄製與播放</h2><p>前情提要：工程師1把後端做好了</p>
 <p>同時，另一位工程師2也把前端的UI也做好了，兩個前後端串接好後，直接交付由QA進行測試。</p>
 <p>工程師2說：「前端不用測，QA會幫我們找到問題。」</p>
-<p>如果你相信工程師2說的，那麼這章可以跳過不看。</p>
+<p>如果你相信工程師2說的，那麼這章可以跳過不看。<br><a id="more"></a></p>
 <h3 id="UI-要怎麼測？"><a href="#UI-要怎麼測？" class="headerlink" title="UI 要怎麼測？"></a>UI 要怎麼測？</h3><ul>
 <li>原始時代 － 佷久很久以前，工程師自己手按一按</li>
 <li>漁獵時代 － 使用者來按或找有空的人一起幫忙按一下</li>
@@ -228,13 +228,13 @@
 	
 		<div class="art-item-footer">
 				
-					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2018/10/14/TestStory06/" rel="prev"  title="What is QA">
-						What is QA 
+					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2018/10/13/TestStory05/" rel="prev"  title="UI Test, Cucumberish">
+						UI Test, Cucumberish 
 					</a></span>
 				
 				
-					<span class="art-item-right">next：<a href="/2018/10/13/TestStory03/" rel="next"  title="Unit Test">
-						Unit Test
+					<span class="art-item-right">next：<a href="/2018/10/13/TestStory02/" rel="next"  title="Specification By Example">
+						Specification By Example
 					</a><i class="icon icon-chevron-thin-right"></i></span>
 				
 		</div>

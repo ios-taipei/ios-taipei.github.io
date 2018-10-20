@@ -12,18 +12,18 @@
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="軟體開發故事02 - 實例化需求 Specification by Example前情提要：在驗收的 D Day 當天，User發現了預期之外的驗證碼功能，覺得這項功能在手機上不需要，所以PM只好回過頭來，要求團隊再花時間把多做的功能拿掉。 請大家思考一下，那裡可能出現了問題？ 不過是一個小小的使用者登入的功能，User心裡所想的，PM心裡所想的，工程師心裡所想的，QA心裡所想的，Art心裡所想的">
+  <meta name="description" content="軟體開發故事02 - 實例化需求 Specification by Example前情提要：在驗收的 D Day 當天，User發現了預期之外的驗證碼功能，覺得這項功能在手機上不需要，所以PM只好回過頭來，要求團隊再花時間把多做的功能拿掉。 請大家思考一下，那裡可能出現了問題？">
 <meta name="keywords" content="Test,SPE">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Specification By Example">
 <meta property="og:url" content="http://ios.taipei/2018/10/13/TestStory02/index.html">
 <meta property="og:site_name" content="iOS @ Taipei">
-<meta property="og:description" content="軟體開發故事02 - 實例化需求 Specification by Example前情提要：在驗收的 D Day 當天，User發現了預期之外的驗證碼功能，覺得這項功能在手機上不需要，所以PM只好回過頭來，要求團隊再花時間把多做的功能拿掉。 請大家思考一下，那裡可能出現了問題？ 不過是一個小小的使用者登入的功能，User心裡所想的，PM心裡所想的，工程師心裡所想的，QA心裡所想的，Art心裡所想的">
+<meta property="og:description" content="軟體開發故事02 - 實例化需求 Specification by Example前情提要：在驗收的 D Day 當天，User發現了預期之外的驗證碼功能，覺得這項功能在手機上不需要，所以PM只好回過頭來，要求團隊再花時間把多做的功能拿掉。 請大家思考一下，那裡可能出現了問題？">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2018-10-19T13:06:25.023Z">
+<meta property="og:updated_time" content="2018-10-20T03:05:57.784Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Specification By Example">
-<meta name="twitter:description" content="軟體開發故事02 - 實例化需求 Specification by Example前情提要：在驗收的 D Day 當天，User發現了預期之外的驗證碼功能，覺得這項功能在手機上不需要，所以PM只好回過頭來，要求團隊再花時間把多做的功能拿掉。 請大家思考一下，那裡可能出現了問題？ 不過是一個小小的使用者登入的功能，User心裡所想的，PM心裡所想的，工程師心裡所想的，QA心裡所想的，Art心裡所想的">
+<meta name="twitter:description" content="軟體開發故事02 - 實例化需求 Specification by Example前情提要：在驗收的 D Day 當天，User發現了預期之外的驗證碼功能，覺得這項功能在手機上不需要，所以PM只好回過頭來，要求團隊再花時間把多做的功能拿掉。 請大家思考一下，那裡可能出現了問題？">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -167,8 +167,7 @@
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
     	<h2 id="軟體開發故事02-實例化需求-Specification-by-Example"><a href="#軟體開發故事02-實例化需求-Specification-by-Example" class="headerlink" title="軟體開發故事02 - 實例化需求 Specification by Example"></a>軟體開發故事02 - 實例化需求 Specification by Example</h2><p>前情提要：在驗收的 D Day 當天，User發現了預期之外的驗證碼功能，覺得這項功能在手機上不需要，所以PM只好回過頭來，要求團隊再花時間把多做的功能拿掉。</p>
-<p>請大家思考一下，那裡可能出現了問題？</p>
-<p>不過是一個小小的使用者登入的功能，User心裡所想的，PM心裡所想的，工程師心裡所想的，QA心裡所想的，Art心裡所想的，都有可能不一樣？？？</p>
+<p>請大家思考一下，那裡可能出現了問題？<br><a id="more"></a><br>不過是一個小小的使用者登入的功能，User心裡所想的，PM心裡所想的，工程師心裡所想的，QA心裡所想的，Art心裡所想的，都有可能不一樣？？？</p>
 <p>1990年，Elizabeth Newton － 史丹福大學心理學研究生，通過研究一個簡單的遊戲，提出了「知識的詛咒」（curse of knowledge）,在遊戲的過程中（註1），會因為每個人的背景不同，教育不同，經驗的不同產生出一種認知的偏差。</p>
 <p>以故事之中APP登入的功能為例</p>
 <ul>
@@ -457,8 +456,8 @@
 	
 		<div class="art-item-footer">
 				
-					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2018/10/13/TestStory05/" rel="prev"  title="UI Test, Cucumberish">
-						UI Test, Cucumberish 
+					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2018/10/13/TestStory04/" rel="prev"  title="UI Test, Record and Replay">
+						UI Test, Record and Replay 
 					</a></span>
 				
 				
