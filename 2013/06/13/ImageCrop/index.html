@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>圖片的裁切 | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
@@ -27,7 +27,7 @@
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -35,7 +35,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -166,7 +166,9 @@
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	<p>Q: 這邊要教你把某一個UIImage 重新裁切<br><a id="more"></a></p>
+    	<p>Q: 這邊要教你把某一個UIImage 重新裁切</p>
+<a id="more"></a>
+
 <p>實作一個category</p>
 <pre><code>@implementation UIImage (Crop)
 
@@ -185,13 +187,11 @@
     return result;
 }
 
-@end
-</code></pre><p>使用</p>
+@end</code></pre><p>使用</p>
 <pre><code>UIImage *imageToCrop = &lt;yourImageToCrop&gt;;
 CGRect cropRect = &lt;areaYouWantToCrop&gt;;   
 
-UIImage *croppedImage = [imageToCrop crop:cropRect];
-</code></pre>
+UIImage *croppedImage = [imageToCrop crop:cropRect];</code></pre>
   	</div>
 	  
 	  <div class="article-tags tags">

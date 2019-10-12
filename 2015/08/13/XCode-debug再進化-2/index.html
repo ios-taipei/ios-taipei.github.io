@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>XCode debug再進化－2 | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="學海無涯，唯勤是岸，今天又要教一些xcode debug好用的小技巧了。這次是要介紹中斷點(BreakPoint)的使用 為你的程式加入中斷點先來一段小程式 for(int i=0;i&amp;lt;100;i++){    NSLog(@&amp;quot;%d&amp;quot;,i); } 接著  在旁邊的行數的區域用滑鼠點一下，就會看到中斷點的藍標跑出來想要移除中斷點可以用拖曳該中斷點  到中間的編輯區時會出現X">
+  <meta name="description" content="學海無涯，唯勤是岸，今天又要教一些xcode debug好用的小技巧了。這次是要介紹中斷點(BreakPoint)的使用 為你的程式加入中斷點先來一段小程式 for(int i=0;i&amp;lt;100;i++){    NSLog(@&amp;quot;%d&amp;quot;,i); }接著  在旁邊的行數的區域用滑鼠點一下，就會看到中斷點的藍標跑出來想要移除中斷點可以用拖曳該中斷點  到中間的編輯區時會出現X，">
 <meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="XCode debug再進化－2">
 <meta property="og:url" content="http://ios.taipei/2015/08/13/XCode-debug再進化-2/index.html">
 <meta property="og:site_name" content="iOS @ Taipei">
-<meta property="og:description" content="學海無涯，唯勤是岸，今天又要教一些xcode debug好用的小技巧了。這次是要介紹中斷點(BreakPoint)的使用 為你的程式加入中斷點先來一段小程式 for(int i=0;i&amp;lt;100;i++){    NSLog(@&amp;quot;%d&amp;quot;,i); } 接著  在旁邊的行數的區域用滑鼠點一下，就會看到中斷點的藍標跑出來想要移除中斷點可以用拖曳該中斷點  到中間的編輯區時會出現X">
+<meta property="og:description" content="學海無涯，唯勤是岸，今天又要教一些xcode debug好用的小技巧了。這次是要介紹中斷點(BreakPoint)的使用 為你的程式加入中斷點先來一段小程式 for(int i=0;i&amp;lt;100;i++){    NSLog(@&amp;quot;%d&amp;quot;,i); }接著  在旁邊的行數的區域用滑鼠點一下，就會看到中斷點的藍標跑出來想要移除中斷點可以用拖曳該中斷點  到中間的編輯區時會出現X，">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug1-01.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug1-02.png">
@@ -28,12 +28,12 @@
 <meta property="og:updated_time" content="2015-08-13T06:20:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="XCode debug再進化－2">
-<meta name="twitter:description" content="學海無涯，唯勤是岸，今天又要教一些xcode debug好用的小技巧了。這次是要介紹中斷點(BreakPoint)的使用 為你的程式加入中斷點先來一段小程式 for(int i=0;i&amp;lt;100;i++){    NSLog(@&amp;quot;%d&amp;quot;,i); } 接著  在旁邊的行數的區域用滑鼠點一下，就會看到中斷點的藍標跑出來想要移除中斷點可以用拖曳該中斷點  到中間的編輯區時會出現X">
+<meta name="twitter:description" content="學海無涯，唯勤是岸，今天又要教一些xcode debug好用的小技巧了。這次是要介紹中斷點(BreakPoint)的使用 為你的程式加入中斷點先來一段小程式 for(int i=0;i&amp;lt;100;i++){    NSLog(@&amp;quot;%d&amp;quot;,i); }接著  在旁邊的行數的區域用滑鼠點一下，就會看到中斷點的藍標跑出來想要移除中斷點可以用拖曳該中斷點  到中間的編輯區時會出現X，">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug1-01.png">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -41,7 +41,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -171,27 +171,32 @@
 <h3 id="為你的程式加入中斷點"><a href="#為你的程式加入中斷點" class="headerlink" title="為你的程式加入中斷點"></a>為你的程式加入中斷點</h3><p>先來一段小程式</p>
 <pre><code>for(int i=0;i&lt;100;i++){
    NSLog(@&quot;%d&quot;,i);
-}
-</code></pre><p>接著  在旁邊的行數的區域用滑鼠點一下，就會看到中斷點的藍標跑出來<br>想要移除中斷點可以用拖曳該中斷點  到中間的編輯區時會出現X，放掉就刪除了（有點像丟垃圾桶）。</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug1-01.png" alt="debug1-01" style="width:310px"></p>
+}</code></pre><p>接著  在旁邊的行數的區域用滑鼠點一下，就會看到中斷點的藍標跑出來<br>想要移除中斷點可以用拖曳該中斷點  到中間的編輯區時會出現X，放掉就刪除了（有點像丟垃圾桶）。</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug1-01.png" alt="debug1-01" style="width:310px">
+
 <p>接著，運行程式，會發現程式在一觸碰到中斷點時就會停下來等你debug</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug1-02.png" alt="debug1-02" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug1-02.png" alt="debug1-02" style="width:310px">
+
 <p>此時下方的[Debug Navigator]會自已彈出來<br>會有一些基本的變數訊息在左邊  告訴我們此時 </p>
-<pre><code>i=0;
-</code></pre><p><br><br>當然，因為一碰到中斷點時馬上就停下來，所以i＝0時就停了</p>
+<pre><code>i=0;</code></pre><br>
+當然，因為一碰到中斷點時馬上就停下來，所以i＝0時就停了
+
 <p>那…….我想要在 i=49 時，來做一個debug的動作呢？</p>
-<p><br><br>=============== Of Course YES =================<br><br>=============== Of Course YES =================<br><br>=============== Of Course YES =================</p>
+<br>
+=============== Of Course YES =================<br>
+=============== Of Course YES =================<br>
+=============== Of Course YES =================
+
 <p>在breakpoint上滑鼠右鍵，並且選擇[Edit BreakPoint]<br><br><br><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug1-03.png" alt="debug1-03" style="width:310px"></p>
 <p>此時，會有幾個參數可以使用<br><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug1-04.png" alt="debug1-04" style="width:310px"></p>
 <pre><code>1. Condition
 2. Ignore
 3. Action
-4. Options - Automatically continue after evaluating actions
-</code></pre><p>在上述的情境中我們可以做的是</p>
+4. Options - Automatically continue after evaluating actions</code></pre><p>在上述的情境中我們可以做的是</p>
 <pre><code>1. 在Condition 裡輸入 [ i == 49 ]
 或
-2. Ignore 48 
-</code></pre><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug1-05.png" alt="debug1-05" style="width:310px"></p>
+2. Ignore 48 </code></pre><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug1-05.png" alt="debug1-05" style="width:310px">
+
 <p>接著重跑一次程式，媽呀～ 太神奇了，同樣的中斷點，程式跑到第49次才停下來！！！！！</p>
 <p>醬子的話  就可以隨心所欲的想中斷就中斷，不用一直按 [Step Over] 了</p>
 <p><br><br><br><br></p>
@@ -208,8 +213,8 @@
 	
 		<div class="art-item-footer">
 				
-					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2015/08/13/XCode-debug再進化-3/" rel="prev"  title="XCode debug再進化－3">
-						XCode debug再進化－3 
+					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2015/08/13/XCode-debug再進化-4/" rel="prev"  title="XCode debug再進化－4">
+						XCode debug再進化－4 
 					</a></span>
 				
 				

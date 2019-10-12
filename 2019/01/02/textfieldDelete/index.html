@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>Delete in UITextField | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
@@ -27,7 +27,7 @@
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -35,7 +35,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -166,7 +166,10 @@
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	<p>Q: 在UITextField之中，要怎麼知道delete按下去了呢？這時候  我們可以透過delegate來判斷是不是刪除鍵按到了<br><a id="more"></a></p>
+    	<p>Q: 在UITextField之中，要怎麼知道delete按下去了呢？這時候  我們可以透過delegate來判斷是不是刪除鍵按到了 </p>
+<a id="more"></a>
+
+
 <h3 id="swift"><a href="#swift" class="headerlink" title="swift"></a>swift</h3><pre><code>import UIKit
 
 protocol MyTextFieldDelegate {
@@ -182,8 +185,7 @@ class MyTextField: UITextField {
         myDelegate?.textFieldDidDelete()
     }
 
-}
-</code></pre><p>實作</p>
+}</code></pre><p>實作</p>
 <pre><code>import UIKit
 
 class ViewController: UIViewController, MyTextFieldDelegate {
@@ -201,8 +203,7 @@ class ViewController: UIViewController, MyTextFieldDelegate {
         print(&quot;delete&quot;)
     }
 
-}
-</code></pre><h4 id="OBJC"><a href="#OBJC" class="headerlink" title="OBJC"></a>OBJC</h4><pre><code>//MyTextField.h
+}</code></pre><h4 id="OBJC"><a href="#OBJC" class="headerlink" title="OBJC"></a>OBJC</h4><pre><code>//MyTextField.h
 
 //create delegate protocol
 @protocol MyTextFieldDelegate &lt;NSObject&gt;
@@ -229,8 +230,7 @@ class ViewController: UIViewController, MyTextFieldDelegate {
     }
 }
 
-@end
-</code></pre><p>實作</p>
+@end</code></pre><p>實作</p>
 <pre><code>@interface ViewController : UIViewController &lt;MyTextFieldDelegate&gt;
 @end
 
@@ -245,8 +245,7 @@ class ViewController: UIViewController, MyTextFieldDelegate {
 //MyTextField Delegate
 - (void)textFieldDidDelete {
     NSLog(@&quot;delete&quot;);
-}
-</code></pre>
+}</code></pre>
   	</div>
 	  
 	  <div class="article-tags tags">
@@ -269,13 +268,13 @@ class ViewController: UIViewController, MyTextFieldDelegate {
 	
 		<div class="art-item-footer">
 				
-					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2019/05/19/DateToString/" rel="prev"  title="String to Date, Date to String">
-						String to Date, Date to String 
+					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2019/05/19/calenderEvent/" rel="prev"  title="新增行事曆的事件">
+						新增行事曆的事件 
 					</a></span>
 				
 				
-					<span class="art-item-right">next：<a href="/2018/10/14/TestStory07/" rel="next"  title="Other Tests">
-						Other Tests
+					<span class="art-item-right">next：<a href="/2018/10/14/TestStory06/" rel="next"  title="What is QA">
+						What is QA
 					</a><i class="icon icon-chevron-thin-right"></i></span>
 				
 		</div>

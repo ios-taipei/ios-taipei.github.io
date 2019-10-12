@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>在 ViewConrtoller 之間傳遞值 | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
@@ -27,7 +27,7 @@
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -35,7 +35,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -166,41 +166,34 @@
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	<p>Q: 在ViewController之間有那些傳遞值的方法呢？<br><a id="more"></a></p>
+    	<p>Q: 在ViewController之間有那些傳遞值的方法呢？</p>
+<a id="more"></a>
+
 <h2 id="VC-A-將值塞入下一個-VC-B"><a href="#VC-A-將值塞入下一個-VC-B" class="headerlink" title="VC A 將值塞入下一個 VC B"></a>VC A 將值塞入下一個 VC B</h2><h3 id="利用-property-當做是變數來存放值"><a href="#利用-property-當做是變數來存放值" class="headerlink" title="利用 property 當做是變數來存放值"></a>利用 property 當做是變數來存放值</h3><p>在 VC B 寫一個 property BOOL 值 isOpen 為例</p>
-<pre><code>@property (nonatomic, assign) BOOL isOpen;
-</code></pre><p>由 VC A 將 VC B 建立起來的同時，將值塞入 VC B</p>
+<pre><code>@property (nonatomic, assign) BOOL isOpen;</code></pre><p>由 VC A 將 VC B 建立起來的同時，將值塞入 VC B</p>
 <pre><code>ViewControllerB *vcB = [[ViewControllerB alloc] initWithNib:@&quot;vcB&quot; bundle:nil];
 vcB.isOpen = YES;
-[[[self navigationController]] pushViewController:vcB animated:YES]; 
-</code></pre><p>不使用push 的話 可以放入 Segue</p>
+[[[self navigationController]] pushViewController:vcB animated:YES]; </code></pre><p>不使用push 的話 可以放入 Segue</p>
 <pre><code>-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
  if([segue.identifier isEqualToString:@&quot;showDetailSegue&quot;]){
     ViewControllerB *vcB = (ViewControllerB *)segue.destinationViewController;
     vcB.isOpen = YES;
   }
-}
-</code></pre><h2 id="VC-A-將-VC-B-的值-透過-delegate-取回"><a href="#VC-A-將-VC-B-的值-透過-delegate-取回" class="headerlink" title="VC A 將 VC B 的值 透過 delegate 取回"></a>VC A 將 VC B 的值 透過 delegate 取回</h2><p>為 VC B 建立一個protocol 和 delegate</p>
+}</code></pre><h2 id="VC-A-將-VC-B-的值-透過-delegate-取回"><a href="#VC-A-將-VC-B-的值-透過-delegate-取回" class="headerlink" title="VC A 將 VC B 的值 透過 delegate 取回"></a>VC A 將 VC B 的值 透過 delegate 取回</h2><p>為 VC B 建立一個protocol 和 delegate</p>
 <h4 id="Protocol"><a href="#Protocol" class="headerlink" title="Protocol"></a>Protocol</h4><pre><code>@class ViewControllerB;
 
 @protocol ViewControllerBDelegate &lt;NSObject&gt;
 - (void)didEnteringItem:(NSString *)item;
-@end
-</code></pre><h4 id="Delegate"><a href="#Delegate" class="headerlink" title="Delegate"></a>Delegate</h4><pre><code>@property (nonatomic, weak) id &lt;ViewControllerBDelegate&gt; delegate;
-</code></pre><p>VC A 要使用 VC B 的 deletegate時，必須在自己的interface上將delegate引用進來</p>
-<pre><code>@interface ViewControllerA : UIViewController &lt;ViewControllerBDelegate&gt;
-</code></pre><p>並且在 .m 裡實作 protocol 需要的函數</p>
+@end</code></pre><h4 id="Delegate"><a href="#Delegate" class="headerlink" title="Delegate"></a>Delegate</h4><pre><code>@property (nonatomic, weak) id &lt;ViewControllerBDelegate&gt; delegate;</code></pre><p>VC A 要使用 VC B 的 deletegate時，必須在自己的interface上將delegate引用進來</p>
+<pre><code>@interface ViewControllerA : UIViewController &lt;ViewControllerBDelegate&gt;</code></pre><p>並且在 .m 裡實作 protocol 需要的函數</p>
 <pre><code>- (void)didEnteringItem:(NSString *)item
 {
     NSLog(@&quot;Value from VC B %@&quot;,item);
-}
-</code></pre><p>最後 在 VC B 建立的同時，告訴他 delegate是 vc A</p>
+}</code></pre><p>最後 在 VC B 建立的同時，告訴他 delegate是 vc A</p>
 <pre><code>ViewControllerB *vcB = [[ViewControllerB alloc] initWithNib:@&quot;vcB&quot; bundle:nil];
 vcB.delegate = self
-[[self navigationController] pushViewController:vcB animated:YES];
-</code></pre><p>在 vc B 操作的時候，只要呼叫</p>
-<pre><code>[self.delegate didEnteringItem:@&quot;test&quot;];
-</code></pre><p>vc A 就收到值了</p>
+[[self navigationController] pushViewController:vcB animated:YES];</code></pre><p>在 vc B 操作的時候，只要呼叫</p>
+<pre><code>[self.delegate didEnteringItem:@&quot;test&quot;];</code></pre><p>vc A 就收到值了</p>
 
   	</div>
 	  

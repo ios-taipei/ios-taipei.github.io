@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>LinkedInSDK-Walk-Through | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="千呼萬喚始出來，LinkedIn終於把最後的一個ios sdk給補上了，就是這次要walk through的東西，不過很可惜的是目前只有objc版本，swift根據過往objc sdk的開發進度，我在想可能要等上個好一陣子了。 下載sdkSDK載點  準備開發環境 在開發者後台建立一個新旳應用程式 在開發者後台＞應用程式＞Mobile裡將Application Id 先記下來同時填寫1。iOS B">
+  <meta name="description" content="千呼萬喚始出來，LinkedIn終於把最後的一個ios sdk給補上了，就是這次要walk through的東西，不過很可惜的是目前只有objc版本，swift根據過往objc sdk的開發進度，我在想可能要等上個好一陣子了。 下載sdkSDK載點   準備開發環境  在開發者後台建立一個新旳應用程式   在開發者後台＞應用程式＞Mobile裡將Application Id 先記下來同時填寫1。i">
 <meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LinkedInSDK-Walk-Through">
 <meta property="og:url" content="http://ios.taipei/2015/08/04/LinkedInSDK-Walk-Through/index.html">
 <meta property="og:site_name" content="iOS @ Taipei">
-<meta property="og:description" content="千呼萬喚始出來，LinkedIn終於把最後的一個ios sdk給補上了，就是這次要walk through的東西，不過很可惜的是目前只有objc版本，swift根據過往objc sdk的開發進度，我在想可能要等上個好一陣子了。 下載sdkSDK載點  準備開發環境 在開發者後台建立一個新旳應用程式 在開發者後台＞應用程式＞Mobile裡將Application Id 先記下來同時填寫1。iOS B">
+<meta property="og:description" content="千呼萬喚始出來，LinkedIn終於把最後的一個ios sdk給補上了，就是這次要walk through的東西，不過很可惜的是目前只有objc版本，swift根據過往objc sdk的開發進度，我在想可能要等上個好一陣子了。 下載sdkSDK載點   準備開發環境  在開發者後台建立一個新旳應用程式   在開發者後台＞應用程式＞Mobile裡將Application Id 先記下來同時填寫1。i">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin01.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin02.png">
@@ -32,12 +32,12 @@
 <meta property="og:updated_time" content="2015-08-04T09:13:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LinkedInSDK-Walk-Through">
-<meta name="twitter:description" content="千呼萬喚始出來，LinkedIn終於把最後的一個ios sdk給補上了，就是這次要walk through的東西，不過很可惜的是目前只有objc版本，swift根據過往objc sdk的開發進度，我在想可能要等上個好一陣子了。 下載sdkSDK載點  準備開發環境 在開發者後台建立一個新旳應用程式 在開發者後台＞應用程式＞Mobile裡將Application Id 先記下來同時填寫1。iOS B">
+<meta name="twitter:description" content="千呼萬喚始出來，LinkedIn終於把最後的一個ios sdk給補上了，就是這次要walk through的東西，不過很可惜的是目前只有objc版本，swift根據過往objc sdk的開發進度，我在想可能要等上個好一陣子了。 下載sdkSDK載點   準備開發環境  在開發者後台建立一個新旳應用程式   在開發者後台＞應用程式＞Mobile裡將Application Id 先記下來同時填寫1。i">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin01.png">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -45,7 +45,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -173,20 +173,31 @@
   	<div class="article-entry" itemprop="articleBody">
     	<p>千呼萬喚始出來，LinkedIn終於把最後的一個ios sdk給補上了，就是這次要walk through的東西，不過很可惜的是目前只有objc版本，swift根據過往objc sdk的開發進度，我在想可能要等上個好一陣子了。</p>
 <h3 id="下載sdk"><a href="#下載sdk" class="headerlink" title="下載sdk"></a>下載sdk</h3><p><a href="https://developer.linkedin.com/docs/ios-sdk" target="_blank" rel="noopener">SDK載點</a></p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin01.png" alt="linkedin01" style="width:310px"></p>
-<h3 id="準備開發環境"><a href="#準備開發環境" class="headerlink" title="準備開發環境"></a>準備開發環境</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin02.png" alt="linkedin02" style="width:310px"></p>
-<h3 id="在開發者後台建立一個新旳應用程式"><a href="#在開發者後台建立一個新旳應用程式" class="headerlink" title="在開發者後台建立一個新旳應用程式"></a>在開發者後台建立一個新旳應用程式</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin06.png" alt="linkedin06" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin01.png" alt="linkedin01" style="width:310px">
+
+<h3 id="準備開發環境"><a href="#準備開發環境" class="headerlink" title="準備開發環境"></a>準備開發環境</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin02.png" alt="linkedin02" style="width:310px">
+
+<h3 id="在開發者後台建立一個新旳應用程式"><a href="#在開發者後台建立一個新旳應用程式" class="headerlink" title="在開發者後台建立一個新旳應用程式"></a>在開發者後台建立一個新旳應用程式</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin06.png" alt="linkedin06" style="width:310px">
+
+
 <h3 id="在開發者後台＞應用程式＞Mobile裡"><a href="#在開發者後台＞應用程式＞Mobile裡" class="headerlink" title="在開發者後台＞應用程式＞Mobile裡"></a>在開發者後台＞應用程式＞Mobile裡</h3><p>將Application Id 先記下來<br>同時填寫<br>1。iOS Bundle Identifiers<br>2。iOS URL Suffix Schemes: </p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin08.png" alt="linkedin08" style="width:310px"></p>
-<h3 id="打開samplesdk的專案"><a href="#打開samplesdk的專案" class="headerlink" title="打開samplesdk的專案"></a>打開samplesdk的專案</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin03.png" alt="linkedin03" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin08.png" alt="linkedin08" style="width:310px">
+
+
+<h3 id="打開samplesdk的專案"><a href="#打開samplesdk的專案" class="headerlink" title="打開samplesdk的專案"></a>打開samplesdk的專案</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin03.png" alt="linkedin03" style="width:310px">
+
 <h3 id="修改info-plist"><a href="#修改info-plist" class="headerlink" title="修改info.plist"></a>修改info.plist</h3><pre><code>key：LIAppId 
-value： [LinkedIn Application Id]
-</code></pre><h3 id="修改url-scheme"><a href="#修改url-scheme" class="headerlink" title="修改url scheme"></a>修改url scheme</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin10.png" alt="linkedin10" style="width:310px"></p>
-<h3 id="跑跑看"><a href="#跑跑看" class="headerlink" title="跑跑看"></a>跑跑看</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin11.png" alt="linkedin11" style="width:310px"></p>
+value： [LinkedIn Application Id]</code></pre><h3 id="修改url-scheme"><a href="#修改url-scheme" class="headerlink" title="修改url scheme"></a>修改url scheme</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin10.png" alt="linkedin10" style="width:310px">
+
+
+<h3 id="跑跑看"><a href="#跑跑看" class="headerlink" title="跑跑看"></a>跑跑看</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin11.png" alt="linkedin11" style="width:310px">
+
 <p>沒裝linkedin native app的話會提醒安裝 （不裝不能用）</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin12.png" alt="linkedin12" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin12.png" alt="linkedin12" style="width:310px">
+
 <p>據linkedin的開發者表示，這不會被apple reject，所以，有機會就來試看看會不會被reject吧</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin13.png" alt="linkedin13" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin13.png" alt="linkedin13" style="width:310px">
+
 <p>導回成功  但create session失敗（據說so是iOS 8.4的問題）</p>
 <p>不過似乎沒有管道可以REPORT BUG，就只能慢慢等了</p>
 

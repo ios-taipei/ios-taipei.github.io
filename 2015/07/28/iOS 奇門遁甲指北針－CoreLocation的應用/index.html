@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>iOS 奇門遁甲指北針－CoreLocation的應用 | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="準備好一個新專案，以及CoreLocation.Framework 應該有的素材1。奇門遁甲圓盤 2。旋轉用的太極(裝飾用) 3。UISegment 切換「磁北」、「真北」 4。四個UILabel 顯示經緯度、高度、與方向角度 程式的撰寫info.plist NSLocationWhenInUseUsageDescription NSLocationAlwaysUsageDescription V">
+  <meta name="description" content="準備好一個新專案，以及CoreLocation.Framework   應該有的素材1。奇門遁甲圓盤 2。旋轉用的太極(裝飾用) 3。UISegment 切換「磁北」、「真北」 4。四個UILabel 顯示經緯度、高度、與方向角度程式的撰寫  info.plist  NSLocationWhenInUseUsageDescription NSLocationAlwaysUsageDescripti">
 <meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS 奇門遁甲指北針－CoreLocation的應用">
 <meta property="og:url" content="http://ios.taipei/2015/07/28/iOS 奇門遁甲指北針－CoreLocation的應用/index.html">
 <meta property="og:site_name" content="iOS @ Taipei">
-<meta property="og:description" content="準備好一個新專案，以及CoreLocation.Framework 應該有的素材1。奇門遁甲圓盤 2。旋轉用的太極(裝飾用) 3。UISegment 切換「磁北」、「真北」 4。四個UILabel 顯示經緯度、高度、與方向角度 程式的撰寫info.plist NSLocationWhenInUseUsageDescription NSLocationAlwaysUsageDescription V">
+<meta property="og:description" content="準備好一個新專案，以及CoreLocation.Framework   應該有的素材1。奇門遁甲圓盤 2。旋轉用的太極(裝飾用) 3。UISegment 切換「磁北」、「真北」 4。四個UILabel 顯示經緯度、高度、與方向角度程式的撰寫  info.plist  NSLocationWhenInUseUsageDescription NSLocationAlwaysUsageDescripti">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:updated_time" content="2015-07-28T15:24:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS 奇門遁甲指北針－CoreLocation的應用">
-<meta name="twitter:description" content="準備好一個新專案，以及CoreLocation.Framework 應該有的素材1。奇門遁甲圓盤 2。旋轉用的太極(裝飾用) 3。UISegment 切換「磁北」、「真北」 4。四個UILabel 顯示經緯度、高度、與方向角度 程式的撰寫info.plist NSLocationWhenInUseUsageDescription NSLocationAlwaysUsageDescription V">
+<meta name="twitter:description" content="準備好一個新專案，以及CoreLocation.Framework   應該有的素材1。奇門遁甲圓盤 2。旋轉用的太極(裝飾用) 3。UISegment 切換「磁北」、「真北」 4。四個UILabel 顯示經緯度、高度、與方向角度程式的撰寫  info.plist  NSLocationWhenInUseUsageDescription NSLocationAlwaysUsageDescripti">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -35,7 +35,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -161,15 +161,18 @@
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	<h3 id="準備好一個新專案，以及CoreLocation-Framework"><a href="#準備好一個新專案，以及CoreLocation-Framework" class="headerlink" title="準備好一個新專案，以及CoreLocation.Framework"></a>準備好一個新專案，以及CoreLocation.Framework</h3><p><br><br><br></p>
+    	<h3 id="準備好一個新專案，以及CoreLocation-Framework"><a href="#準備好一個新專案，以及CoreLocation-Framework" class="headerlink" title="準備好一個新專案，以及CoreLocation.Framework"></a>準備好一個新專案，以及CoreLocation.Framework</h3><br>
+<br>
+
 <h3 id="應該有的素材"><a href="#應該有的素材" class="headerlink" title="應該有的素材"></a>應該有的素材</h3><pre><code>1。奇門遁甲圓盤
 2。旋轉用的太極(裝飾用)
 3。UISegment 切換「磁北」、「真北」
-4。四個UILabel 顯示經緯度、高度、與方向角度
-</code></pre><h3 id="程式的撰寫"><a href="#程式的撰寫" class="headerlink" title="程式的撰寫"></a>程式的撰寫</h3><p><br><br><br><br>info.plist</p>
+4。四個UILabel 顯示經緯度、高度、與方向角度</code></pre><h3 id="程式的撰寫"><a href="#程式的撰寫" class="headerlink" title="程式的撰寫"></a>程式的撰寫</h3><br>
+<br>
+info.plist
+
 <pre><code>NSLocationWhenInUseUsageDescription
-NSLocationAlwaysUsageDescription
-</code></pre><p>ViewController.h</p>
+NSLocationAlwaysUsageDescription</code></pre><p>ViewController.h</p>
 <pre><code>#import &lt;CoreLocation/CoreLocation.h&gt;
 
 &lt;CLLocationManagerDelegate&gt;
@@ -177,8 +180,7 @@ NSLocationAlwaysUsageDescription
 IBOutlet UIImageView *imgCompass;
 
 @property (nonatomic,retain) CLLocationManager *locationManager;
-@property (nonatomic,retain) CLHeading *currentHeading;
-</code></pre><p>ViewController.m</p>
+@property (nonatomic,retain) CLHeading *currentHeading;</code></pre><p>ViewController.m</p>
 <pre><code>- (void)viewDidLoad {
     [super viewDidLoad];
     self.currentHeading = [[CLHeading alloc] init];
@@ -277,8 +279,7 @@ IBOutlet UIImageView *imgCompass;
     }
 
 
-}
-</code></pre><p>完整專案放在 <a href="https://github.com/nobodyyu/ChimenCompass" target="_blank" rel="noopener">GitHub</a></p>
+}</code></pre><p>完整專案放在 <a href="https://github.com/nobodyyu/ChimenCompass" target="_blank" rel="noopener">GitHub</a></p>
 
   	</div>
 	  

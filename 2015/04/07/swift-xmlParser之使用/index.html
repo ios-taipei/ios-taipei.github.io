@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>swift-xmlParser之使用 | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在ViewController後引用所需要的 delegate  class ViewController: ViewController,NSXMLParserDelegate   加入delegate所需要的function func parser(parser: NSXMLParser!, didStartElement elementName: String!, namespaceURI">
+  <meta name="description" content="在ViewController後引用所需要的 delegate  class ViewController: ViewController,NSXMLParserDelegate  加入delegate所需要的function func parser(parser: NSXMLParser!, didStartElement elementName: String!, namespaceURI:">
 <meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="swift-xmlParser之使用">
 <meta property="og:url" content="http://ios.taipei/2015/04/07/swift-xmlParser之使用/index.html">
 <meta property="og:site_name" content="iOS @ Taipei">
-<meta property="og:description" content="在ViewController後引用所需要的 delegate  class ViewController: ViewController,NSXMLParserDelegate   加入delegate所需要的function func parser(parser: NSXMLParser!, didStartElement elementName: String!, namespaceURI">
+<meta property="og:description" content="在ViewController後引用所需要的 delegate  class ViewController: ViewController,NSXMLParserDelegate  加入delegate所需要的function func parser(parser: NSXMLParser!, didStartElement elementName: String!, namespaceURI:">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:updated_time" content="2015-07-25T13:43:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="swift-xmlParser之使用">
-<meta name="twitter:description" content="在ViewController後引用所需要的 delegate  class ViewController: ViewController,NSXMLParserDelegate   加入delegate所需要的function func parser(parser: NSXMLParser!, didStartElement elementName: String!, namespaceURI">
+<meta name="twitter:description" content="在ViewController後引用所需要的 delegate  class ViewController: ViewController,NSXMLParserDelegate  加入delegate所需要的function func parser(parser: NSXMLParser!, didStartElement elementName: String!, namespaceURI:">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -35,7 +35,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -164,8 +164,7 @@
     	<ol>
 <li>在ViewController後引用所需要的 delegate</li>
 </ol>
-<pre><code>class ViewController: ViewController,NSXMLParserDelegate 
-</code></pre><ol start="2">
+<pre><code>class ViewController: ViewController,NSXMLParserDelegate </code></pre><ol start="2">
 <li><p>加入delegate所需要的function</p>
 <pre><code>func parser(parser: NSXMLParser!, didStartElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!, attributes attributeDict: [NSObject : AnyObject]!) {
 println(&quot;Element&apos;s name is \(elementName)&quot;)
@@ -176,8 +175,7 @@ func parser(parser: NSXMLParser!, foundCharacters string: String!) {
 }
 
 func parser(parser: NSXMLParser!, didEndElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!) {
-println(&quot;End&quot;)
-</code></pre><p> }</p>
+println(&quot;End&quot;)</code></pre><p> }</p>
 </li>
 </ol>
 <ol start="3">
@@ -186,8 +184,7 @@ println(&quot;End&quot;)
 var xmlParser: NSXMLParser = NSXMLParser(data: xml)
 xmlParser.delegate = self
 
-xmlParser.parse()
-</code></pre></li>
+xmlParser.parse()</code></pre></li>
 </ol>
 <ol start="4">
 <li><p>跑跑看結果是否正確</p>
@@ -196,8 +193,7 @@ Element&apos;s attributes are [stat: fail]
 Element&apos;s name is err
 Element&apos;s attributes are [msg: Failed, desc: 錯誤, code: 123]
 End
-End
-</code></pre></li>
+End</code></pre></li>
 <li><p>收工</p>
 </li>
 </ol>

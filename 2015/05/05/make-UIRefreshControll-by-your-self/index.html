@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>make UIRefreshControll by your self | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##裡面用到了幾個技示巧 1。 旋轉的animation2。 移動的animation3。 移除不必要的UIActivityIndicator bikeRegreshConrtol.h#import &amp;lt;UIKit/UIKit.h&amp;gt;  @interface bikeRegreshConrtol : UIRefreshControl   -(void)makeAnimate;  @end">
+  <meta name="description" content="##裡面用到了幾個技示巧 1。 旋轉的animation2。 移動的animation3。 移除不必要的UIActivityIndicator bikeRegreshConrtol.h#import &amp;lt;UIKit/UIKit.h&amp;gt;  @interface bikeRegreshConrtol : UIRefreshControl   -(void)makeAnimate;  @endb">
 <meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="make UIRefreshControll by your self">
 <meta property="og:url" content="http://ios.taipei/2015/05/05/make-UIRefreshControll-by-your-self/index.html">
 <meta property="og:site_name" content="iOS @ Taipei">
-<meta property="og:description" content="##裡面用到了幾個技示巧 1。 旋轉的animation2。 移動的animation3。 移除不必要的UIActivityIndicator bikeRegreshConrtol.h#import &amp;lt;UIKit/UIKit.h&amp;gt;  @interface bikeRegreshConrtol : UIRefreshControl   -(void)makeAnimate;  @end">
+<meta property="og:description" content="##裡面用到了幾個技示巧 1。 旋轉的animation2。 移動的animation3。 移除不必要的UIActivityIndicator bikeRegreshConrtol.h#import &amp;lt;UIKit/UIKit.h&amp;gt;  @interface bikeRegreshConrtol : UIRefreshControl   -(void)makeAnimate;  @endb">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:updated_time" content="2015-07-25T13:52:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="make UIRefreshControll by your self">
-<meta name="twitter:description" content="##裡面用到了幾個技示巧 1。 旋轉的animation2。 移動的animation3。 移除不必要的UIActivityIndicator bikeRegreshConrtol.h#import &amp;lt;UIKit/UIKit.h&amp;gt;  @interface bikeRegreshConrtol : UIRefreshControl   -(void)makeAnimate;  @end">
+<meta name="twitter:description" content="##裡面用到了幾個技示巧 1。 旋轉的animation2。 移動的animation3。 移除不必要的UIActivityIndicator bikeRegreshConrtol.h#import &amp;lt;UIKit/UIKit.h&amp;gt;  @interface bikeRegreshConrtol : UIRefreshControl   -(void)makeAnimate;  @endb">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -35,7 +35,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -170,8 +170,7 @@
 
 -(void)makeAnimate;
 
-@end
-</code></pre><h3 id="bikeRegreshConrtol-m"><a href="#bikeRegreshConrtol-m" class="headerlink" title="bikeRegreshConrtol.m"></a>bikeRegreshConrtol.m</h3><p>#import “bikeRegreshConrtol.h”</p>
+@end</code></pre><h3 id="bikeRegreshConrtol-m"><a href="#bikeRegreshConrtol-m" class="headerlink" title="bikeRegreshConrtol.m"></a>bikeRegreshConrtol.m</h3><p>#import “bikeRegreshConrtol.h”</p>
 <pre><code>@implementation bikeRegreshConrtol
 
 -(instancetype)init{
@@ -263,15 +262,12 @@
         [img2 setFrame:CGRectMake(320, 0, img.frame.size.width, img.frame.size.height)];
         [self doAnimate:img :img2];
     }];
-}
-</code></pre><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><pre><code>refreshControl = [[bikeRegreshConrtol alloc] init];
+}</code></pre><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><pre><code>refreshControl = [[bikeRegreshConrtol alloc] init];
 [refreshControl addTarget:self action:@selector(refresh)
               forControlEvents:UIControlEventValueChanged];
 [mTable addSubview:refreshControl];
 
-[refreshControl makeAnimate];
-</code></pre><h3 id="更新結束"><a href="#更新結束" class="headerlink" title="更新結束"></a>更新結束</h3><pre><code>[refreshControl endRefreshing];
-</code></pre>
+[refreshControl makeAnimate];</code></pre><h3 id="更新結束"><a href="#更新結束" class="headerlink" title="更新結束"></a>更新結束</h3><pre><code>[refreshControl endRefreshing];</code></pre>
   	</div>
 	  
 	  <div class="article-tags tags">

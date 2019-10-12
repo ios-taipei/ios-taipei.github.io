@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>XCode debug再進化－4 | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在xcode debug時，有些功能可能用不太到，不過既然知道了，就分享出來給大家知道，致於想不想用，什麼時候用，就端看自已的判斷了 這次是要介紹如何在debug模式下，新增watchpoint(監看點or監看式) 一樣先中斷一下吧在一個範例的按鈕裡裡先拉一個 IBAction  然後給一個中斷點  按下按鈕，被中斷後，在debug navagator的lldb裡下指令 watchpoint se">
+  <meta name="description" content="在xcode debug時，有些功能可能用不太到，不過既然知道了，就分享出來給大家知道，致於想不想用，什麼時候用，就端看自已的判斷了 這次是要介紹如何在debug模式下，新增watchpoint(監看點or監看式) 一樣先中斷一下吧在一個範例的按鈕裡裡先拉一個 IBAction  然後給一個中斷點    按下按鈕，被中斷後，在debug navagator的lldb裡下指令 watchpoint">
 <meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="XCode debug再進化－4">
 <meta property="og:url" content="http://ios.taipei/2015/08/13/XCode-debug再進化-4/index.html">
 <meta property="og:site_name" content="iOS @ Taipei">
-<meta property="og:description" content="在xcode debug時，有些功能可能用不太到，不過既然知道了，就分享出來給大家知道，致於想不想用，什麼時候用，就端看自已的判斷了 這次是要介紹如何在debug模式下，新增watchpoint(監看點or監看式) 一樣先中斷一下吧在一個範例的按鈕裡裡先拉一個 IBAction  然後給一個中斷點  按下按鈕，被中斷後，在debug navagator的lldb裡下指令 watchpoint se">
+<meta property="og:description" content="在xcode debug時，有些功能可能用不太到，不過既然知道了，就分享出來給大家知道，致於想不想用，什麼時候用，就端看自已的判斷了 這次是要介紹如何在debug模式下，新增watchpoint(監看點or監看式) 一樣先中斷一下吧在一個範例的按鈕裡裡先拉一個 IBAction  然後給一個中斷點    按下按鈕，被中斷後，在debug navagator的lldb裡下指令 watchpoint">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-01.png">
 <meta property="og:updated_time" content="2015-08-13T07:17:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="XCode debug再進化－4">
-<meta name="twitter:description" content="在xcode debug時，有些功能可能用不太到，不過既然知道了，就分享出來給大家知道，致於想不想用，什麼時候用，就端看自已的判斷了 這次是要介紹如何在debug模式下，新增watchpoint(監看點or監看式) 一樣先中斷一下吧在一個範例的按鈕裡裡先拉一個 IBAction  然後給一個中斷點  按下按鈕，被中斷後，在debug navagator的lldb裡下指令 watchpoint se">
+<meta name="twitter:description" content="在xcode debug時，有些功能可能用不太到，不過既然知道了，就分享出來給大家知道，致於想不想用，什麼時候用，就端看自已的判斷了 這次是要介紹如何在debug模式下，新增watchpoint(監看點or監看式) 一樣先中斷一下吧在一個範例的按鈕裡裡先拉一個 IBAction  然後給一個中斷點    按下按鈕，被中斷後，在debug navagator的lldb裡下指令 watchpoint">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-01.png">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -37,7 +37,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -166,20 +166,19 @@
     	<p>在xcode debug時，有些功能可能用不太到，不過既然知道了，就分享出來給大家知道，致於想不想用，什麼時候用，就端看自已的判斷了</p>
 <p><br><br><br>這次是要介紹如何在debug模式下，新增watchpoint(監看點or監看式)</p>
 <h3 id="一樣先中斷一下吧"><a href="#一樣先中斷一下吧" class="headerlink" title="一樣先中斷一下吧"></a>一樣先中斷一下吧</h3><p>在一個範例的按鈕裡裡先拉一個 IBAction  然後給一個中斷點</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-01.png" alt="debug2-01" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-01.png" alt="debug2-01" style="width:310px">
+
+
 <p>按下按鈕，被中斷後，在debug navagator的lldb裡下指令</p>
-<pre><code>watchpoint set variable i
-</code></pre><p>其中</p>
+<pre><code>watchpoint set variable i</code></pre><p>其中</p>
 <pre><code>watchpoint 是指令  可以簡寫為 watch
 variable 可以簡寫為 var
-i 就是你想要監看的東西
-</code></pre><p>然後就會出現如下的結果    </p>
+i 就是你想要監看的東西</code></pre><p>然後就會出現如下的結果    </p>
 <pre><code>Watchpoint created: Watchpoint 1: addr = 0x16fd25614 size = 4 state = enabled type = w
     declare @ &apos;/Users/minghongyu/Documents/work/iphone/test3/test3/ViewController.m:28&apos;
     watchpoint spec = &apos;i&apos;
     new value: 0
-2015-08-13 20:02:38.367 test3[4700:525425] 0
-</code></pre><p>代表監看點新增成功</p>
+2015-08-13 20:02:38.367 test3[4700:525425] 0</code></pre><p>代表監看點新增成功</p>
 <p><br><br><br>接著如果拿掉中斷點再繼續執行的話，會發現，每次都會自動停下來，結果如下</p>
 <pre><code>Watchpoint 1 hit:
 old value: 0
@@ -198,28 +197,22 @@ new value: 3
 
 Watchpoint 1 hit:
 old value: 3
-new value: 4
-</code></pre><p>就可以好好的觀察變數的變化了</p>
+new value: 4</code></pre><p>就可以好好的觀察變數的變化了</p>
 <p>如果想看到所有的監看點列表，指令為</p>
 <pre><code>watchpoint list  
 
-也可以簡寫為 watch l  （小寫L）
-</code></pre><p>執行的結果如下</p>
+也可以簡寫為 watch l  （小寫L）</code></pre><p>執行的結果如下</p>
 <pre><code>Number of supported hardware watchpoints: 4
 Current watchpoints:
 Watchpoint 1: addr = 0x16fd25614 size = 4 state = enabled type = w
     declare @ &apos;/Users/minghongyu/Documents/work/iphone/test3/test3/ViewController.m:28&apos;
     watchpoint spec = &apos;i&apos;
     old value: 3
-    new value: 4
-</code></pre><p><br><br><br>如果想要刪除監看點，指令為</p>
+    new value: 4</code></pre><p><br><br><br>如果想要刪除監看點，指令為</p>
 <pre><code>watchpoint delete 1
-也可以簡寫為 watch del 1
-</code></pre><p>其中</p>
-<pre><code>1 是列表中的順序數
-</code></pre><p>執行結果如下</p>
-<pre><code>1 watchpoints deleted.
-</code></pre><p>再繼續跑程式就不會停下來了！！</p>
+也可以簡寫為 watch del 1</code></pre><p>其中</p>
+<pre><code>1 是列表中的順序數</code></pre><p>執行結果如下</p>
+<pre><code>1 watchpoints deleted.</code></pre><p>再繼續跑程式就不會停下來了！！</p>
 <p>無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾！！！</p>
 <p><br><br><br><br></p>
 
@@ -235,13 +228,13 @@ Watchpoint 1: addr = 0x16fd25614 size = 4 state = enabled type = w
 	
 		<div class="art-item-footer">
 				
-					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2015/08/17/漫談手機的存儲方式/" rel="prev"  title="漫談手機的存儲方式">
-						漫談手機的存儲方式 
+					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2015/08/13/XCode-debug再進化-3/" rel="prev"  title="XCode debug再進化－3">
+						XCode debug再進化－3 
 					</a></span>
 				
 				
-					<span class="art-item-right">next：<a href="/2015/08/13/XCode-debug再進化-3/" rel="next"  title="XCode debug再進化－3">
-						XCode debug再進化－3
+					<span class="art-item-right">next：<a href="/2015/08/13/XCode-debug再進化-2/" rel="next"  title="XCode debug再進化－2">
+						XCode debug再進化－2
 					</a><i class="icon icon-chevron-thin-right"></i></span>
 				
 		</div>

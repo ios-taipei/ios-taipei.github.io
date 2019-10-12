@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>時間軸: 2015 | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
@@ -26,7 +26,7 @@
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -34,7 +34,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -434,8 +434,7 @@
 		
   </section>
   <section class="article typo">
-	  <p>##河內塔<br>    public static void Move(int disks, int from, int to)<br>    {<br>        if(disks == 1)<br>        {<br>            System.out.println(“Move from “ + from + “ to “ + to);<br>            return;<br>        }<br>        int relay = 6 - from - to;<br>        Move(disks - 1, from, relay);<br>        Move(1, from, to);<br>        Move(disks - 1, relay, to);<br>    }</p>
-<p>##Fibonacci</p>
+	  <p>##河內塔<br>    public static void Move(int disks, int from, int to)<br>    {<br>        if(disks == 1)<br>        {<br>            System.out.println(“Move from “ + from + “ to “ + to);<br>            return;<br>        }<br>        int relay = 6 - from - to;<br>        Move(disks - 1, from, relay);<br>        Move(1, from, to);<br>        Move(disks - 1, relay, to);<br>    }<br>##Fibonacci</p>
 <pre><code>public class DivideAndConquer {
     public static long Fibonacci(int n)
     {
@@ -445,9 +444,7 @@
             return 1;
         return Fibonacci(n - 1) + Fibonacci(n - 2);
     }
-}
-</code></pre><p>##Merge sort </p>
-<p>###TopDown<br>    public class TopDown {<br>       public static void Sort(int[] array)<br>       {<br>           int[] workArray = new int[array.length];<br>           Sort(array, workArray, 0, array.length);<br>       } </p>
+}</code></pre><p>##Merge sort<br>###TopDown<br>    public class TopDown {<br>       public static void Sort(int[] array)<br>       {<br>           int[] workArray = new int[array.length];<br>           Sort(array, workArray, 0, array.length);<br>       } </p>
 <pre><code>   private static void Sort(int[] array, int[] workArray, int start, int count) 
    { 
        if (count &lt; 2) 
@@ -479,8 +476,7 @@
    for (i = leftStart; i &lt; index; ++i) 
        array[i] = workArray[i]; 
    }
-}
-</code></pre><p>##BottomUp</p>
+}</code></pre><p>##BottomUp</p>
 <pre><code>public class BottomUp {
     public static void Sort(int[] array) 
     { 
@@ -516,8 +512,7 @@
         for (i = leftStart; i &lt; index; ++i) 
             array[i] = workArray[i]; 
     }
-}
-</code></pre><p>##Quick Sort</p>
+}</code></pre><p>##Quick Sort</p>
 <pre><code>import java.util.List;
 import java.util.Random;
 import java.util.ArrayList;
@@ -560,8 +555,7 @@ public class ObjectOriented {
         result.addAll(Sort(greater));
         return result;
     }
-}
-</code></pre><p>##Binary Search<br>    public class DivideAndConquer {<br>        static public int Search(int[] array, int num)<br>        {<br>            return Search(array, num, 0, array.length - 1);<br>        }</p>
+}</code></pre><p>##Binary Search<br>    public class DivideAndConquer {<br>        static public int Search(int[] array, int num)<br>        {<br>            return Search(array, num, 0, array.length - 1);<br>        }</p>
 <pre><code>    static public int Search(int[] array, int num, int left, int right)
     {
         if (left &gt; right)
@@ -577,8 +571,7 @@ public class ObjectOriented {
 
         return Search(array, num, middle + 1, right);
     }
-}
-</code></pre><p>##下樓梯<br>    public class Iterative {<br>        public static long DownStairs(int n)<br>        {<br>            long v1 = 1;<br>            long v2 = 2;<br>            long result = n;<br>            for (int i = 2; i &lt;= n; ++i)<br>            {<br>                result = v2 + v1;<br>                v1 = v2;<br>                v2 = result;<br>            }<br>            return result;<br>        }<br>    }</p>
+}</code></pre><p>##下樓梯<br>    public class Iterative {<br>        public static long DownStairs(int n)<br>        {<br>            long v1 = 1;<br>            long v2 = 2;<br>            long result = n;<br>            for (int i = 2; i &lt;= n; ++i)<br>            {<br>                result = v2 + v1;<br>                v1 = v2;<br>                v2 = result;<br>            }<br>            return result;<br>        }<br>    }</p>
 <p>##總和遞迴<br>       int sum(int n)<br>    {<br>        if(n &lt; 1)<br>            return 0;<br>        return n + sum(n - 1);<br>    }</p>
 
 
@@ -623,8 +616,7 @@ public class ObjectOriented {
     public static Object getInstance() {
         return instance;
     }
-}
-</code></pre>
+}</code></pre>
 
     
     
@@ -669,8 +661,7 @@ public class ObjectOriented {
                });
         }
     }).start();
-}
-</code></pre>
+}</code></pre>
 
     
     
@@ -705,8 +696,7 @@ public class ObjectOriented {
 <pre><code>if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)])
 {
      [[UIApplication sharedApplication] sendAction:@selector(requestWhenInUseAuthorization) to:self.locationManager from:self forEvent:nil];
-}
-</code></pre>
+}</code></pre>
 
     
     
@@ -786,8 +776,7 @@ static char leftNameKey;
     return CGRectContainsPoint(rect, point) ? self : nil;
 }
 
-@end
-</code></pre>
+@end</code></pre>
 
     
     

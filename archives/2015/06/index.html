@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>時間軸: 2015/6 | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
@@ -26,7 +26,7 @@
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -34,7 +34,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -203,20 +203,29 @@
   </section>
   <section class="article typo">
 	  <p>手機也能透過sdk來讀取放在dropbox雲端空間的檔案！！<br><br>利用dropbox來打造一個可以儲存讀取雲端空間的app吧<br><br>只要跟著如下的步驟做就可以了<br><br></p>
-<h3 id="在APP-Console開一個app"><a href="#在APP-Console開一個app" class="headerlink" title="在APP Console開一個app"></a>在APP Console開一個app</h3><p><a href="">https://www.dropbox.com/developers/apps</a></p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox01.png" alt="dropbox01" style="width:310px"></p>
+<h3 id="在APP-Console開一個app"><a href="#在APP-Console開一個app" class="headerlink" title="在APP Console開一個app"></a>在APP Console開一個app</h3><p><a href>https://www.dropbox.com/developers/apps</a></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox01.png" alt="dropbox01" style="width:310px">
+
 <p>把其中的app key 和 app secret複製下來 </p>
-<h3 id="下載sdk範例程式"><a href="#下載sdk範例程式" class="headerlink" title="下載sdk範例程式"></a>下載sdk範例程式</h3><p><a href="">https://www.dropbox.com/developers/core/sdks/ios</a></p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox02.png" alt="dropbox02" style="width:310px"></p>
-<h3 id="把-app-key-與-app-secret貼到範例的delegate-m-裡"><a href="#把-app-key-與-app-secret貼到範例的delegate-m-裡" class="headerlink" title="把 app key 與 app secret貼到範例的delegate.m 裡"></a>把 app key 與 app secret貼到範例的delegate.m 裡</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox03.png" alt="dropbox03" style="width:310px"></p>
+<h3 id="下載sdk範例程式"><a href="#下載sdk範例程式" class="headerlink" title="下載sdk範例程式"></a>下載sdk範例程式</h3><p><a href>https://www.dropbox.com/developers/core/sdks/ios</a></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox02.png" alt="dropbox02" style="width:310px">
+
+
+
+<h3 id="把-app-key-與-app-secret貼到範例的delegate-m-裡"><a href="#把-app-key-與-app-secret貼到範例的delegate-m-裡" class="headerlink" title="把 app key 與 app secret貼到範例的delegate.m 裡"></a>把 app key 與 app secret貼到範例的delegate.m 裡</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox03.png" alt="dropbox03" style="width:310px">
+
+
 <p>記得要設定根目錄 </p>
-<pre><code>NSString *root = kDBRootDropbox;
-</code></pre><p>或</p>
-<pre><code>NSString *root = kDBRootAppFolder；
-</code></pre><h3 id="設定url-schema-讓-dropbox-signon-可以回得來"><a href="#設定url-schema-讓-dropbox-signon-可以回得來" class="headerlink" title="設定url schema 讓 dropbox signon 可以回得來"></a>設定url schema 讓 dropbox signon 可以回得來</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox04.png" alt="dropbox04" style="width:310px"></p>
-<h3 id="好了的話就把程式run起來"><a href="#好了的話就把程式run起來" class="headerlink" title="好了的話就把程式run起來"></a>好了的話就把程式run起來</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox05.png" alt="dropbox05" style="width:310px"></p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox06.png" alt="dropbox06" style="width:310px"></p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox07.png" alt="dropbox07" style="width:310px"></p>
+<pre><code>NSString *root = kDBRootDropbox;</code></pre><p>或</p>
+<pre><code>NSString *root = kDBRootAppFolder；</code></pre><h3 id="設定url-schema-讓-dropbox-signon-可以回得來"><a href="#設定url-schema-讓-dropbox-signon-可以回得來" class="headerlink" title="設定url schema 讓 dropbox signon 可以回得來"></a>設定url schema 讓 dropbox signon 可以回得來</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox04.png" alt="dropbox04" style="width:310px">
+
+
+<h3 id="好了的話就把程式run起來"><a href="#好了的話就把程式run起來" class="headerlink" title="好了的話就把程式run起來"></a>好了的話就把程式run起來</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox05.png" alt="dropbox05" style="width:310px">
+
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox06.png" alt="dropbox06" style="width:310px">
+
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox07.png" alt="dropbox07" style="width:310px">
+
 <p>拍洗  照片不給看～</p>
 
 
@@ -251,16 +260,17 @@
   <section class="article typo">
 	  <p>2015 Google I/O  之後  很多東西都改了，所以來做一次walk through吧</p>
 <p>比較特別的是 gcm也可以發ios了</p>
-<p><a href="">https://developers.google.com/cloud-messaging/</a></p>
-<h3 id="try-it-on-iOS"><a href="#try-it-on-iOS" class="headerlink" title="try it on iOS"></a>try it on iOS</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/gcm01.png" alt="gcm01" style="width:310px"></p>
-<h3 id="選擇語言-objc／swift"><a href="#選擇語言-objc／swift" class="headerlink" title="選擇語言 objc／swift"></a>選擇語言 objc／swift</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/gcm02.png" alt="gcm02" style="width:310px"></p>
+<p><a href>https://developers.google.com/cloud-messaging/</a></p>
+<h3 id="try-it-on-iOS"><a href="#try-it-on-iOS" class="headerlink" title="try it on iOS"></a>try it on iOS</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/gcm01.png" alt="gcm01" style="width:310px">
+
+<h3 id="選擇語言-objc／swift"><a href="#選擇語言-objc／swift" class="headerlink" title="選擇語言 objc／swift"></a>選擇語言 objc／swift</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/gcm02.png" alt="gcm02" style="width:310px">
+
 <h3 id="使用cocoapods安裝-gcm／analytics"><a href="#使用cocoapods安裝-gcm／analytics" class="headerlink" title="使用cocoapods安裝 gcm／analytics"></a>使用cocoapods安裝 gcm／analytics</h3><p>Podfile</p>
 <pre><code>pod &apos;Google/Analytics&apos;
-pod &apos;Google/CloudMessaging&apos;
-</code></pre><p>在所在目錄安裝</p>
-<pre><code>pod install
-</code></pre><h4 id="pod-要確認是否為最新版本，不然安裝後會有錯誤"><a href="#pod-要確認是否為最新版本，不然安裝後會有錯誤" class="headerlink" title="pod 要確認是否為最新版本，不然安裝後會有錯誤"></a>pod 要確認是否為最新版本，不然安裝後會有錯誤</h4><p>完成之後打開workspace會看到一堆framework</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/gcm03.png" alt="gcm03" style="width:310px"></p>
+pod &apos;Google/CloudMessaging&apos;</code></pre><p>在所在目錄安裝</p>
+<pre><code>pod install</code></pre><h4 id="pod-要確認是否為最新版本，不然安裝後會有錯誤"><a href="#pod-要確認是否為最新版本，不然安裝後會有錯誤" class="headerlink" title="pod 要確認是否為最新版本，不然安裝後會有錯誤"></a>pod 要確認是否為最新版本，不然安裝後會有錯誤</h4><p>完成之後打開workspace會看到一堆framework</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/gcm03.png" alt="gcm03" style="width:310px">
+
 <h3 id="GCM的一些code"><a href="#GCM的一些code" class="headerlink" title="GCM的一些code"></a>GCM的一些code</h3><pre><code>- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     // Register for remote notifications
@@ -294,8 +304,7 @@ pod &apos;Google/CloudMessaging&apos;
 
 -(void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
     NSLog(@&quot;%@&quot;,error);
-}
-</code></pre><h3 id="GA的一些code"><a href="#GA的一些code" class="headerlink" title="GA的一些code"></a>GA的一些code</h3><pre><code>-(void)GAScreen:(NSString *)name{
+}</code></pre><h3 id="GA的一些code"><a href="#GA的一些code" class="headerlink" title="GA的一些code"></a>GA的一些code</h3><pre><code>-(void)GAScreen:(NSString *)name{
     dispatch_queue_t myQueue = dispatch_queue_create(&quot;GAQueue&quot;,NULL);
     dispatch_async(myQueue, ^{
         id&lt;GAITracker&gt; tracker = [[GAI sharedInstance] defaultTracker];
@@ -315,8 +324,7 @@ pod &apos;Google/CloudMessaging&apos;
     });
 
 
-}
-</code></pre><p>希望對大家有幫助</p>
+}</code></pre><p>希望對大家有幫助</p>
 
 
     

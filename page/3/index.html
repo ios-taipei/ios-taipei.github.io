@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
@@ -26,7 +26,7 @@
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -34,7 +34,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -149,6 +149,52 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/04/12/CustomizedFont/">
+        如何在程式裡放入字型檔
+      </a>
+    </h2>
+    
+    <time>
+      4月 12, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/iOS/">iOS</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <p>Q: 想使用不同的字型嗎？</p>
+
+    
+	  <div class="readmore">
+      <a href="/2017/04/12/CustomizedFont/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/iOS/">iOS</a>
+      
+        <a href="/tags/新手村/">新手村</a>
+      
+        <a href="/tags/OBJC/">OBJC</a>
+      
+        <a href="/tags/字型/">字型</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/04/12/screenshots/">
         UIView 截圖
       </a>
@@ -165,7 +211,7 @@
 
   </section>
   <section class="article typo">
-	  <p>Q: 這邊要教你把某一個UIView 的畫面重繪成圖片<br>
+	  <p>Q: 這邊要教你把某一個UIView 的畫面重繪成圖片</p>
 
     
 	  <div class="readmore">
@@ -197,13 +243,13 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2017/04/12/CustomizedFont/">
-        如何在程式裡放入字型檔
+      <a href="/2017/01/26/AppSize/">
+        APP Size
       </a>
     </h2>
     
     <time>
-      4月 12, 2017
+      1月 26, 2017
     </time>
 		
     
@@ -213,11 +259,11 @@
 
   </section>
   <section class="article typo">
-	  <p>Q: 想使用不同的字型嗎？<br>
+	  <p>冷知識，app size最大可以到多少GB？</p>
 
     
 	  <div class="readmore">
-      <a href="/2017/04/12/CustomizedFont/">Read More</a>
+      <a href="/2017/01/26/AppSize/">Read More</a>
     </div>
     
     
@@ -228,9 +274,7 @@
       
         <a href="/tags/新手村/">新手村</a>
       
-        <a href="/tags/OBJC/">OBJC</a>
-      
-        <a href="/tags/字型/">字型</a>
+        <a href="/tags/APP-Size/">APP Size</a>
       
 	  </div>
     
@@ -277,50 +321,6 @@
         <a href="/tags/swift/">swift</a>
       
         <a href="/tags/UIImage/">UIImage</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/01/26/AppSize/">
-        APP Size
-      </a>
-    </h2>
-    
-    <time>
-      1月 26, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/iOS/">iOS</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p>冷知識，app size最大可以到多少GB？</p>
-
-    
-	  <div class="readmore">
-      <a href="/2017/01/26/AppSize/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/iOS/">iOS</a>
-      
-        <a href="/tags/新手村/">新手村</a>
-      
-        <a href="/tags/APP-Size/">APP Size</a>
       
 	  </div>
     
@@ -408,9 +408,11 @@ UIView *blueBlock = [[UIView alloc] init];
 [blueBlock setTranslatesAutoresizingMaskIntoConstraints:NO];
 
 
-[self.view addSubview:blueBlock];
-</code></pre><p>結果圖</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/AutoLayout01.png" alt="AutoLayout02" style="width:310px"></p>
+[self.view addSubview:blueBlock];</code></pre><p>結果圖</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/AutoLayout01.png" alt="AutoLayout02" style="width:310px">
+
+
+
 <p>接著  開始撰寫這次要用的constraint</p>
 <h2 id="把握-X-Y-W-H-原則"><a href="#把握-X-Y-W-H-原則" class="headerlink" title="把握 X,Y,W,H 原則"></a>把握 X,Y,W,H 原則</h2><p>每一個物件在頁面上都有四種屬性 X,Y,Width,與Height，因此在撰寫auto layout constraint時，都要補足這四個原則，以下為範例</p>
 <pre><code>NSLayoutConstraint *constraintHeight = [NSLayoutConstraint constraintWithItem:redBlock attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:0.25 constant:0];
@@ -425,8 +427,7 @@ NSLayoutConstraint *constraintTop = [NSLayoutConstraint constraintWithItem:redBl
 [self.view addConstraint:constraintWidth];
 
 [self.view addConstraint:constraintLeading];
-[self.view addConstraint:constraintTop];
-</code></pre><p>樓上大意為 為紅色區域設定寛高為self.view的0.25倍，距離頁面左邊20，距離頁面上方40</p>
+[self.view addConstraint:constraintTop];</code></pre><p>樓上大意為 為紅色區域設定寛高為self.view的0.25倍，距離頁面左邊20，距離頁面上方40</p>
 <pre><code>NSLayoutConstraint *constraintHeight2 = [NSLayoutConstraint constraintWithItem:blueBlock attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:redBlock attribute:NSLayoutAttributeHeight multiplier:0.25 constant:0];
 
 NSLayoutConstraint *constraintWidth2 = [NSLayoutConstraint constraintWithItem:blueBlock attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:redBlock attribute:NSLayoutAttributeWidth multiplier:0.25 constant:0];
@@ -439,8 +440,7 @@ NSLayoutConstraint *constraintTop2 = [NSLayoutConstraint constraintWithItem:blue
 [self.view addConstraint:constraintWidth2];
 
 [self.view addConstraint:constraintLeading2];
-[self.view addConstraint:constraintTop2];
-</code></pre><p>樓上大意為 為藍色區域設定寛高為紅色區域的0.25倍，距離紅色區域左邊20，距離紅色區域上方40</p>
+[self.view addConstraint:constraintTop2];</code></pre><p>樓上大意為 為藍色區域設定寛高為紅色區域的0.25倍，距離紅色區域左邊20，距離紅色區域上方40</p>
 <h3 id="Visual-Format"><a href="#Visual-Format" class="headerlink" title="Visual Format"></a>Visual Format</h3><p>這是一種相對於constraint 比較簡單的寫法（比較不用一直加constraint）</p>
 <pre><code>NSMutableArray *myConstraints = [NSMutableArray array];
 
@@ -462,24 +462,19 @@ NSLayoutConstraint *constraintTop2 = [NSLayoutConstraint constraintWithItem:blue
                                          metrics:nil
                                            views:NSDictionaryOfVariableBindings(blueBlock,redBlock)]];
 
-[self.view addConstraints:myConstraints];
-</code></pre><p>其中</p>
-<pre><code>V: &quot;、 &quot; H: &quot;
-</code></pre><p>分別代表由垂直或是水平方向來佈局。</p>
+[self.view addConstraints:myConstraints];</code></pre><p>其中</p>
+<pre><code>V: &quot;、 &quot; H: &quot;</code></pre><p>分別代表由垂直或是水平方向來佈局。</p>
 <p><br><br><br></p>
-<pre><code>&quot; | &quot;
-</code></pre><p>代表 Superview 的邊界。</p>
+<pre><code>&quot; | &quot;</code></pre><p>代表 Superview 的邊界。</p>
 <p><br><br><br></p>
-<pre><code>&quot; [ ] &quot;
-</code></pre><p>代表物件本身，括號內包含物件的變數名稱與大小限制，可以使用關係運算子（&lt;＝、&gt;＝ 或 ＝＝ 等邏輯判斷）。<br><br><br><br></p>
-<pre><code>&quot; - &quot;
-</code></pre><p>代表預設寬度或高度，如果在中間加上數字 “ -30- “，則代表限制 30 個單位高度或寬度。<br><br><br>兩側必需要銜接物件，以下為錯誤範例 （錯在20－20中間沒有物件相隔）</p>
-<pre><code>[viewA]-20-20-[viewB]
-</code></pre><p><br><br><br></p>
-<pre><code>&quot; @ &quot;
-</code></pre><p>優先權，1 至 1000 的整數，優先權較大的條件會優先被滿足，例如 ，<br>[viewA(&gt;=100@1000)]，物件 viewA 不可以小於 100 個單位長度或寬度會最優先被考慮。</p>
+<pre><code>&quot; [ ] &quot;</code></pre><p>代表物件本身，括號內包含物件的變數名稱與大小限制，可以使用關係運算子（&lt;＝、&gt;＝ 或 ＝＝ 等邏輯判斷）。<br><br><br><br></p>
+<pre><code>&quot; - &quot;</code></pre><p>代表預設寬度或高度，如果在中間加上數字 “ -30- “，則代表限制 30 個單位高度或寬度。<br><br><br>兩側必需要銜接物件，以下為錯誤範例 （錯在20－20中間沒有物件相隔）</p>
+<pre><code>[viewA]-20-20-[viewB]</code></pre><p><br><br><br></p>
+<pre><code>&quot; @ &quot;</code></pre><p>優先權，1 至 1000 的整數，優先權較大的條件會優先被滿足，例如 ，<br>[viewA(&gt;=100@1000)]，物件 viewA 不可以小於 100 個單位長度或寬度會最優先被考慮。</p>
 <p>結果圖</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/AutoLayout02.png" alt="AutoLayout02" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/AutoLayout02.png" alt="AutoLayout02" style="width:310px">
+
+
 
 
     
@@ -512,9 +507,11 @@ NSLayoutConstraint *constraintTop2 = [NSLayoutConstraint constraintWithItem:blue
   </section>
   <section class="article typo">
 	  <h2 id="XCode7、iOS9新功能－Resource-On-Demand-資源檔分段下載"><a href="#XCode7、iOS9新功能－Resource-On-Demand-資源檔分段下載" class="headerlink" title="XCode7、iOS9新功能－Resource On Demand 資源檔分段下載"></a>XCode7、iOS9新功能－Resource On Demand 資源檔分段下載</h2><p>XCode7的專案多了一個標籤[Resource Tags]</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/resourcetag01.png" alt="resourcetag01" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/resourcetag01.png" alt="resourcetag01" style="width:310px">
+
 <p>打開來看長這樣</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/resourcetag02.png" alt="resourcetag02" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/resourcetag02.png" alt="resourcetag02" style="width:310px">
+
 <p>接著解說一下各自的用意</p>
 <p>Initial Install Tags: 在一開始安裝時就包在ipa裡讓人下載的資源檔</p>
 <p>Prefetched Tag Order: 第一次開啟app時才下載資源檔</p>
@@ -522,7 +519,9 @@ NSLayoutConstraint *constraintTop2 = [NSLayoutConstraint constraintWithItem:blue
 <p>##套用情境<br>假設我寫了一個電子書app，全部資源檔包一包上傳到store，結果有30MB，此時手機如果在3G模式下，是沒有辦法下載這個app的（上限20MB），此時若將資源檔移至 [Prefetched Tag Order] 把主程式壓在20MB以下的話，3G模式下的使用者就可以下載了，另外的10MB，則是使用者第一次開啟時才會將這10MB下載回來。</p>
 <p>內容的部份，我有10本書，每本10MB，如果在[Prefetched Tag Order]一口氣全下載回來的話，會慢到讓user以為是當機吧。所以內容可以等到使用者單獨開啟某一本書時再去下載，就可以放在[Download Only On Demand]，再用程式去判斷。</p>
 <h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><h3 id="設定資源檔的tag"><a href="#設定資源檔的tag" class="headerlink" title="設定資源檔的tag"></a>設定資源檔的tag</h3><p>在Images.xcassets找到需要設定的圖檔，並在且右方屬性的地方找找[On Demand Resources Tags]，如圖</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/resourcetag03.png" alt="resourcetag03" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/resourcetag03.png" alt="resourcetag03" style="width:310px">
+
+
 <p>打入[book1]，看起來很像標籤雲，實際上一個資源檔可以輸入多個tag，如圖<br><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/resourcetag04.png" alt="resourcetag04" style="width:310px"></p>
 <p>輸入完成後，回到[Resource Tags]看一眼，發現檔案自動出現在[Download Only On Demand]<br><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/resourcetag05.png" alt="resourcetag05" style="width:310px"></p>
 <h3 id="呼叫程式下載資源檔"><a href="#呼叫程式下載資源檔" class="headerlink" title="呼叫程式下載資源檔"></a>呼叫程式下載資源檔</h3><p>iOS9 提供了兩個方法呼叫  看程式，bj4</p>
@@ -534,8 +533,7 @@ NSLayoutConstraint *constraintTop2 = [NSLayoutConstraint constraintWithItem:blue
     [resourceRequest beginAccessingResourcesWithCompletionHandler:^(NSError * _Nullable error) {
         NSLog(@&quot;%@&quot;,error);
     }];
-}
-</code></pre><h4 id="conditionallyBeginAccessingResourcesWithCompletionHandler"><a href="#conditionallyBeginAccessingResourcesWithCompletionHandler" class="headerlink" title="conditionallyBeginAccessingResourcesWithCompletionHandler"></a>conditionallyBeginAccessingResourcesWithCompletionHandler</h4><pre><code>-(void)loadResourceWithTags:(NSArray *)tagArray{
+}</code></pre><h4 id="conditionallyBeginAccessingResourcesWithCompletionHandler"><a href="#conditionallyBeginAccessingResourcesWithCompletionHandler" class="headerlink" title="conditionallyBeginAccessingResourcesWithCompletionHandler"></a>conditionallyBeginAccessingResourcesWithCompletionHandler</h4><pre><code>-(void)loadResourceWithTags:(NSArray *)tagArray{
     NSSet *tagSet = [NSSet setWithArray:tagArray];
 
     NSBundleResourceRequest *resourceRequest = [[NSBundleResourceRequest alloc] initWithTags:tagSet];
@@ -547,8 +545,7 @@ NSLayoutConstraint *constraintTop2 = [NSLayoutConstraint constraintWithItem:blue
 
     }];
 
-}
-</code></pre>
+}</code></pre>
 
     
     
@@ -582,17 +579,12 @@ NSLayoutConstraint *constraintTop2 = [NSLayoutConstraint constraintWithItem:blue
 	  <p>如何在手機上存資料是我常常被問到的問題，因此開一篇文章來討論一下實務上幾個比較常見的到資料存儲方式，不過，這裡不會提到CoreData，原因在於－－－大部份的手機專案都是iOS／Android兩個手機專案在並行，因此大部份的owner會想要兩邊的流程是一致的，因此在選擇資料存儲的方式時，大多選擇兩個手機台平能夠共用的方式，sqlite就是一個比較好說服owner的方式。當然coredata也有他的好處和便捷性，這邊就不多解釋了。<br><br>這裡要介紹的是 NSUserDefault、File與SQLite<br><br>如果有人有更好的存儲方式，也請不吝告知。</p>
 <h3 id="NSUserDefault"><a href="#NSUserDefault" class="headerlink" title="NSUserDefault"></a>NSUserDefault</h3><p>有許多型別可以使用，這裡使用比較常用的object當範例，其他類似的就不一一介紹。</p>
 <h4 id="regist-Data"><a href="#regist-Data" class="headerlink" title="regist Data"></a>regist Data</h4><pre><code>[[NSUserDefaults standardUserDefaults] registerDefaults:&lt;#(NSDictionary *)#&gt;]
-[[NSUserDefaults standardUserDefaults] synchronize];
-</code></pre><h4 id="write-Data"><a href="#write-Data" class="headerlink" title="write Data"></a>write Data</h4><pre><code>[[NSUserDefaults standardUserDefaults] setObject:data forKey:@&quot;key&quot;];
-[[NSUserDefaults standardUserDefaults] synchronize];
-</code></pre><h4 id="remove-Data"><a href="#remove-Data" class="headerlink" title="remove Data"></a>remove Data</h4><pre><code>[[NSUserDefaults standardUserDefaults] removeObjectForKey:@&quot;key&quot;]    
-[[NSUserDefaults standardUserDefaults] synchronize];
-</code></pre><p>或是</p>
+[[NSUserDefaults standardUserDefaults] synchronize];</code></pre><h4 id="write-Data"><a href="#write-Data" class="headerlink" title="write Data"></a>write Data</h4><pre><code>[[NSUserDefaults standardUserDefaults] setObject:data forKey:@&quot;key&quot;];
+[[NSUserDefaults standardUserDefaults] synchronize];</code></pre><h4 id="remove-Data"><a href="#remove-Data" class="headerlink" title="remove Data"></a>remove Data</h4><pre><code>[[NSUserDefaults standardUserDefaults] removeObjectForKey:@&quot;key&quot;]    
+[[NSUserDefaults standardUserDefaults] synchronize];</code></pre><p>或是</p>
 <pre><code>[[NSUserDefaults standardUserDefaults] setObject:nil forKey:@&quot;key&quot;];
-[[NSUserDefaults standardUserDefaults] synchronize];
-</code></pre><h4 id="read-Data"><a href="#read-Data" class="headerlink" title="read Data"></a>read Data</h4><pre><code>[[NSUserDefaults standardUserDefaults] objectForKey:@&quot;key&quot;];
-[[NSUserDefaults standardUserDefaults] synchronize];
-</code></pre><h3 id="實體檔案存取-NSFileManager"><a href="#實體檔案存取-NSFileManager" class="headerlink" title="實體檔案存取(NSFileManager)"></a>實體檔案存取(NSFileManager)</h3><h4 id="Create-File"><a href="#Create-File" class="headerlink" title="Create File"></a>Create File</h4><pre><code>- (void)createFileWithName:(NSString *)fileName
+[[NSUserDefaults standardUserDefaults] synchronize];</code></pre><h4 id="read-Data"><a href="#read-Data" class="headerlink" title="read Data"></a>read Data</h4><pre><code>[[NSUserDefaults standardUserDefaults] objectForKey:@&quot;key&quot;];
+[[NSUserDefaults standardUserDefaults] synchronize];</code></pre><h3 id="實體檔案存取-NSFileManager"><a href="#實體檔案存取-NSFileManager" class="headerlink" title="實體檔案存取(NSFileManager)"></a>實體檔案存取(NSFileManager)</h3><h4 id="Create-File"><a href="#Create-File" class="headerlink" title="Create File"></a>Create File</h4><pre><code>- (void)createFileWithName:(NSString *)fileName
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -605,8 +597,7 @@ NSLayoutConstraint *constraintTop2 = [NSLayoutConstraint constraintWithItem:blue
     } else {
         NSLog(@&quot;Failed to Create the File&quot;);
     }
-}
-</code></pre><h4 id="Read-File"><a href="#Read-File" class="headerlink" title="Read File"></a>Read File</h4><pre><code>- (void)readFileWithName:(NSString *)fileName
+}</code></pre><h4 id="Read-File"><a href="#Read-File" class="headerlink" title="Read File"></a>Read File</h4><pre><code>- (void)readFileWithName:(NSString *)fileName
 {
 
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -625,8 +616,7 @@ NSLayoutConstraint *constraintTop2 = [NSLayoutConstraint constraintWithItem:blue
     } else {
         NSLog(@&quot;File %@ doesn&apos;t exists&quot;, fileName);
     }
-}
-</code></pre><h4 id="Write-File"><a href="#Write-File" class="headerlink" title="Write File"></a>Write File</h4><pre><code>- (void)writeString:(NSString *)content toFile:(NSString *)fileName
+}</code></pre><h4 id="Write-File"><a href="#Write-File" class="headerlink" title="Write File"></a>Write File</h4><pre><code>- (void)writeString:(NSString *)content toFile:(NSString *)fileName
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -642,8 +632,7 @@ NSLayoutConstraint *constraintTop2 = [NSLayoutConstraint constraintWithItem:blue
         NSLog(@&quot;File %@ doesn&apos;t exists&quot;, fileName);
     }
 
-}
-</code></pre><h4 id="delete-File"><a href="#delete-File" class="headerlink" title="delete File"></a>delete File</h4><pre><code>- (void)deleteFileWithName:(NSString *)fileName
+}</code></pre><h4 id="delete-File"><a href="#delete-File" class="headerlink" title="delete File"></a>delete File</h4><pre><code>- (void)deleteFileWithName:(NSString *)fileName
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -660,8 +649,7 @@ NSLayoutConstraint *constraintTop2 = [NSLayoutConstraint constraintWithItem:blue
     } else {
         NSLog(@&quot;File %@ doesn&apos;t exists&quot;, fileName);
     }
-}
-</code></pre><h3 id="SQLite"><a href="#SQLite" class="headerlink" title="SQLite"></a>SQLite</h3><p>這裡我使用最常用的FMDB來當做範例<br><a href="https://github.com/ccgus/fmdb" target="_blank" rel="noopener">FMDB on GitHub</a></p>
+}</code></pre><h3 id="SQLite"><a href="#SQLite" class="headerlink" title="SQLite"></a>SQLite</h3><p>這裡我使用最常用的FMDB來當做範例<br><a href="https://github.com/ccgus/fmdb" target="_blank" rel="noopener">FMDB on GitHub</a></p>
 <h4 id="首先你要先把-libsqlite3-dylib-加進library"><a href="#首先你要先把-libsqlite3-dylib-加進library" class="headerlink" title="首先你要先把 libsqlite3.dylib 加進library"></a>首先你要先把 libsqlite3.dylib 加進library</h4><p>不解釋</p>
 <h4 id="OpenDB"><a href="#OpenDB" class="headerlink" title="OpenDB"></a>OpenDB</h4><pre><code>NSURL *appUrl = [[[NSFileManager defaultManager] 
      URLsForDirectory:NSDocumentDirectory 
@@ -672,12 +660,10 @@ FMDatabase* db = [FMDatabase databaseWithPath:dbPath];
 if (![db open]) {       
  NSLog(@&quot;Could not open db&quot;);     
  return;  
-}
-</code></pre><h4 id="insertData"><a href="#insertData" class="headerlink" title="insertData"></a>insertData</h4><pre><code>if(![db executeUpdate:@&quot;INSERT INTO user (name, description) VALUES (?,?)&quot;, name, description])
+}</code></pre><h4 id="insertData"><a href="#insertData" class="headerlink" title="insertData"></a>insertData</h4><pre><code>if(![db executeUpdate:@&quot;INSERT INTO user (name, description) VALUES (?,?)&quot;, name, description])
 {
  NSLog(@&quot;Could not insert data: %@&quot;, [db lastErrorMessage]);
-}
-</code></pre><p>這裡的代數是用？</p>
+}</code></pre><p>這裡的代數是用？</p>
 <h4 id="readData"><a href="#readData" class="headerlink" title="readData"></a>readData</h4><pre><code>NSMutableArray* items = [NSMutableArray arrayWithCapacity:0];
 FMResultSet *rs = [db executeQuery:@&quot;SELECT uid, name, description from user&quot;];
 
@@ -693,19 +679,15 @@ while ([rs next]) {
        nil]];
 }
 
-[rs close];   
-</code></pre><h4 id="updateData"><a href="#updateData" class="headerlink" title="updateData"></a>updateData</h4><pre><code>[db beginTransaction];
+[rs close];   </code></pre><h4 id="updateData"><a href="#updateData" class="headerlink" title="updateData"></a>updateData</h4><pre><code>[db beginTransaction];
 if(![db executeUpdate:@&quot;UPDATE user set name=?, description＝? where name=&apos;?&apos;“,@&quot;1&quot;,@&quot;2&quot;,@&quot;1&quot;]);
     {
      NSLog(@&quot;Could not update data: %@&quot;, [db lastErrorMessage]);
     }
-[db commit];
-</code></pre><h4 id="deleteData"><a href="#deleteData" class="headerlink" title="deleteData"></a>deleteData</h4><pre><code>if(![_db executeUpdate:@&quot;DELETE FROM user WHERE uid = ?&quot;, [NSNumber numberWithInt:uid]])
+[db commit];</code></pre><h4 id="deleteData"><a href="#deleteData" class="headerlink" title="deleteData"></a>deleteData</h4><pre><code>if(![_db executeUpdate:@&quot;DELETE FROM user WHERE uid = ?&quot;, [NSNumber numberWithInt:uid]])
 {
  NSLog(@&quot;Could not delete data: %@&quot;, [db lastErrorMessage]);
-}
-</code></pre><h4 id="CloseDB"><a href="#CloseDB" class="headerlink" title="CloseDB"></a>CloseDB</h4><pre><code>[db close]
-</code></pre><p>執行FMDB的指令有她的生命週期，都是<br><br><br>1.open db<br><br><br>2.執行<br><br><br>3.close db</p>
+}</code></pre><h4 id="CloseDB"><a href="#CloseDB" class="headerlink" title="CloseDB"></a>CloseDB</h4><pre><code>[db close]</code></pre><p>執行FMDB的指令有她的生命週期，都是<br><br><br>1.open db<br><br><br>2.執行<br><br><br>3.close db</p>
 <p>如果沒有確實的open與close的話  是很容易造成exception而crash的<br><br><br><br><br>最後，因為sqlite是以一個檔案型態存在的，因此在multi－thread讀寫資料時很容易出現錯誤，官方說明與建議的方法如下：<br><br><br></p>
 <pre><code>Using a single instance of FMDatabase from multiple threads at once is a bad idea. It has always been OK to make a FMDatabase object per thread. Just don&apos;t share a single instance across threads, and definitely not across multiple threads at the same time. Bad things will eventually happen and you&apos;ll eventually get something to crash, or maybe get an exception, or maybe meteorites will fall out of the sky and hit your Mac Pro. This would suck.
 
@@ -713,8 +695,7 @@ So don&apos;t instantiate a single FMDatabase object and use it across multiple 
 
 Instead, use FMDatabaseQueue. It&apos;s your friend and it&apos;s here to help. Here&apos;s how to use it:
 
-First, make your queue.
-</code></pre><p>用FMDatabaseQueue來解決，<br><br>範例：</p>
+First, make your queue.</code></pre><p>用FMDatabaseQueue來解決，<br><br>範例：</p>
 <pre><code>FMDatabaseQueue *queue = [FMDatabaseQueue databaseQueueWithPath:aPath];
 
 [queue inDatabase:^(FMDatabase *db) {
@@ -726,8 +707,67 @@ FMResultSet *rs = [db executeQuery:@&quot;select * from foo&quot;];
     while ([rs next]) {
         …
     }
-}];
-</code></pre><p><br><br>就醬，其實不難～<br><br><br><br><br><br><br></p>
+}];</code></pre><br>
+就醬，其實不難～
+<br><br><br><br>
+<br>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/iOS/">iOS</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2015/08/13/XCode-debug再進化-3/">
+        XCode debug再進化－3
+      </a>
+    </h2>
+    
+    <time>
+      8月 13, 2015
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <p>在xcode debug時，有些功能可能用不太到，不過既然知道了，就分享出來給大家知道，致於想不想用，什麼時候用，就端看自已的判斷了</p>
+<p><br><br><br>這次是要介紹如何在debug模式下，做到更新 UI 的指令</p>
+<h3 id="先中斷一下吧"><a href="#先中斷一下吧" class="headerlink" title="先中斷一下吧"></a>先中斷一下吧</h3><p>在一個範例的按鈕裡裡先拉一個 IBAction  然後給一個中斷點</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-01.png" alt="debug2-01" style="width:310px">
+
+<p>在debug前的 UI 長成這樣</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-02.png" alt="debug2-02" style="width:310px">
+
+<p>按下按鈕，被中斷後，在debug navagator的lldb裡下指令</p>
+<pre><code>e id $myView = (id)0x154d0e9d0</code></pre><p>其中</p>
+<pre><code>e 是 expresss 的簡寫
+id 是型別
+$myView 是變數容器
+0x154d0e9d0 是記憶體位址 （需要與左側的變數的記憶體位址一致）</code></pre><p>結果如下圖</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-03.png" alt="debug2-03" style="width:310px">
+
+<p>接著 可以輸入想要做的事情</p>
+<pre><code>e (void)[$myView setBackgroundColor:[UIColor redColor]]</code></pre><p>內容就不多解釋了，只是，醬子打完後  手機是不會動的（廢話，因為還卡在中斷點）</p>
+<br>
+所以，要通知 UI 做更新才行
+
+<pre><code>e (void)[CATransaction flush]</code></pre><p>你會發現，還在中斷點的debug模式下，手機的畫面更新了！！！！（如下圖）<br><br></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-04.png" alt="debug2-04" style="width:310px">
+
+
+<p>真的太神奇了，傑克</p>
+<p><br><br><br><br></p>
 
 
     
@@ -762,20 +802,19 @@ FMResultSet *rs = [db executeQuery:@&quot;select * from foo&quot;];
 	  <p>在xcode debug時，有些功能可能用不太到，不過既然知道了，就分享出來給大家知道，致於想不想用，什麼時候用，就端看自已的判斷了</p>
 <p><br><br><br>這次是要介紹如何在debug模式下，新增watchpoint(監看點or監看式)</p>
 <h3 id="一樣先中斷一下吧"><a href="#一樣先中斷一下吧" class="headerlink" title="一樣先中斷一下吧"></a>一樣先中斷一下吧</h3><p>在一個範例的按鈕裡裡先拉一個 IBAction  然後給一個中斷點</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-01.png" alt="debug2-01" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-01.png" alt="debug2-01" style="width:310px">
+
+
 <p>按下按鈕，被中斷後，在debug navagator的lldb裡下指令</p>
-<pre><code>watchpoint set variable i
-</code></pre><p>其中</p>
+<pre><code>watchpoint set variable i</code></pre><p>其中</p>
 <pre><code>watchpoint 是指令  可以簡寫為 watch
 variable 可以簡寫為 var
-i 就是你想要監看的東西
-</code></pre><p>然後就會出現如下的結果    </p>
+i 就是你想要監看的東西</code></pre><p>然後就會出現如下的結果    </p>
 <pre><code>Watchpoint created: Watchpoint 1: addr = 0x16fd25614 size = 4 state = enabled type = w
     declare @ &apos;/Users/minghongyu/Documents/work/iphone/test3/test3/ViewController.m:28&apos;
     watchpoint spec = &apos;i&apos;
     new value: 0
-2015-08-13 20:02:38.367 test3[4700:525425] 0
-</code></pre><p>代表監看點新增成功</p>
+2015-08-13 20:02:38.367 test3[4700:525425] 0</code></pre><p>代表監看點新增成功</p>
 <p><br><br><br>接著如果拿掉中斷點再繼續執行的話，會發現，每次都會自動停下來，結果如下</p>
 <pre><code>Watchpoint 1 hit:
 old value: 0
@@ -794,84 +833,23 @@ new value: 3
 
 Watchpoint 1 hit:
 old value: 3
-new value: 4
-</code></pre><p>就可以好好的觀察變數的變化了</p>
+new value: 4</code></pre><p>就可以好好的觀察變數的變化了</p>
 <p>如果想看到所有的監看點列表，指令為</p>
 <pre><code>watchpoint list  
 
-也可以簡寫為 watch l  （小寫L）
-</code></pre><p>執行的結果如下</p>
+也可以簡寫為 watch l  （小寫L）</code></pre><p>執行的結果如下</p>
 <pre><code>Number of supported hardware watchpoints: 4
 Current watchpoints:
 Watchpoint 1: addr = 0x16fd25614 size = 4 state = enabled type = w
     declare @ &apos;/Users/minghongyu/Documents/work/iphone/test3/test3/ViewController.m:28&apos;
     watchpoint spec = &apos;i&apos;
     old value: 3
-    new value: 4
-</code></pre><p><br><br><br>如果想要刪除監看點，指令為</p>
+    new value: 4</code></pre><p><br><br><br>如果想要刪除監看點，指令為</p>
 <pre><code>watchpoint delete 1
-也可以簡寫為 watch del 1
-</code></pre><p>其中</p>
-<pre><code>1 是列表中的順序數
-</code></pre><p>執行結果如下</p>
-<pre><code>1 watchpoints deleted.
-</code></pre><p>再繼續跑程式就不會停下來了！！</p>
+也可以簡寫為 watch del 1</code></pre><p>其中</p>
+<pre><code>1 是列表中的順序數</code></pre><p>執行結果如下</p>
+<pre><code>1 watchpoints deleted.</code></pre><p>再繼續跑程式就不會停下來了！！</p>
 <p>無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾！！！</p>
-<p><br><br><br><br></p>
-
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/iOS/">iOS</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2015/08/13/XCode-debug再進化-3/">
-        XCode debug再進化－3
-      </a>
-    </h2>
-    
-    <time>
-      8月 13, 2015
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <p>在xcode debug時，有些功能可能用不太到，不過既然知道了，就分享出來給大家知道，致於想不想用，什麼時候用，就端看自已的判斷了</p>
-<p><br><br><br>這次是要介紹如何在debug模式下，做到更新 UI 的指令</p>
-<h3 id="先中斷一下吧"><a href="#先中斷一下吧" class="headerlink" title="先中斷一下吧"></a>先中斷一下吧</h3><p>在一個範例的按鈕裡裡先拉一個 IBAction  然後給一個中斷點</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-01.png" alt="debug2-01" style="width:310px"></p>
-<p>在debug前的 UI 長成這樣</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-02.png" alt="debug2-02" style="width:310px"></p>
-<p>按下按鈕，被中斷後，在debug navagator的lldb裡下指令</p>
-<pre><code>e id $myView = (id)0x154d0e9d0
-</code></pre><p>其中</p>
-<pre><code>e 是 expresss 的簡寫
-id 是型別
-$myView 是變數容器
-0x154d0e9d0 是記憶體位址 （需要與左側的變數的記憶體位址一致）
-</code></pre><p>結果如下圖</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-03.png" alt="debug2-03" style="width:310px"></p>
-<p>接著 可以輸入想要做的事情</p>
-<pre><code>e (void)[$myView setBackgroundColor:[UIColor redColor]]
-</code></pre><p>內容就不多解釋了，只是，醬子打完後  手機是不會動的（廢話，因為還卡在中斷點）</p>
-<p><br><br>所以，要通知 UI 做更新才行</p>
-<pre><code>e (void)[CATransaction flush]
-</code></pre><p>你會發現，還在中斷點的debug模式下，手機的畫面更新了！！！！（如下圖）<br><br></p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-04.png" alt="debug2-04" style="width:310px"></p>
-<p>真的太神奇了，傑克</p>
 <p><br><br><br><br></p>
 
 

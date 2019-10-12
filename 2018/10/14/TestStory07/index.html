@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>Other Tests | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
@@ -32,7 +32,7 @@
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -40,7 +40,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -178,10 +178,13 @@
 <p>舉個例子吧</p>
 <p>以兩個帳戶之間互相轉帳為例子， a 有1000元 轉給 b 200元，b也同時轉200給 a，程式如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">let a = Account(id: 1, balance: 1000)</span><br><span class="line">let b = Account(id: 2, balance: 0)</span><br><span class="line"></span><br><span class="line">DispatchQueue.global(qos: .background).async &#123;</span><br><span class="line">    self.transfer(from: a, to: b, amount: 200)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">DispatchQueue.global(qos: .background).async &#123;</span><br><span class="line">self.transfer(from: b, to: a, amount: 200)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func transfer(from: Account, to: Account, amount: Double) &#123;</span><br><span class="line">    from.synchronized(self) &#123;  () -&gt; Void  in</span><br><span class="line">        to.synchronized(self) &#123; () -&gt; Void in</span><br><span class="line">            from.withdraw(amount: amount)</span><br><span class="line">            to.deposit(amount: amount)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>此時因為我們在背景執行轉帳時，就有可能發生Race condition或dead lock的情況發生，只做一次有可能是成功的，但是連續做個一萬次再來看兩個人的balance，一沒寫好，就有可能金額是不對的。</p>
 <p>簡單的範例如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">extension NSObject &#123;</span><br><span class="line">    func synchronized&lt;T&gt;(_ lock: AnyObject, _ closure: () throws -&gt; T) rethrows -&gt; T &#123;</span><br><span class="line">    objc_sync_enter(lock)</span><br><span class="line">    defer &#123; objc_sync_exit(lock) &#125;</span><br><span class="line">        return try closure()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="記憶體監控"><a href="#記憶體監控" class="headerlink" title="記憶體監控"></a>記憶體監控</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">override func didReceiveMemoryWarning() &#123;</span><br><span class="line">   //這裡要測 </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>嗯，不多解釋了。<br><img src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/memory_monitor.png" alt="記憶體監控"></p>
 <h3 id="網路監控與測試"><a href="#網路監控與測試" class="headerlink" title="網路監控與測試"></a>網路監控與測試</h3><ul>
 <li><p>Network Link Conditioner<br><img src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/networklinkconditioner.png" alt="Network Link Conditioner"></p>
@@ -208,13 +211,13 @@
 	
 		<div class="art-item-footer">
 				
-					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2019/01/02/textfieldDelete/" rel="prev"  title="Delete in UITextField">
-						Delete in UITextField 
+					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2018/10/14/TestStory06/" rel="prev"  title="What is QA">
+						What is QA 
 					</a></span>
 				
 				
-					<span class="art-item-right">next：<a href="/2018/10/14/TestStory06/" rel="next"  title="What is QA">
-						What is QA
+					<span class="art-item-right">next：<a href="/2018/10/13/TestStory05/" rel="next"  title="UI Test, Cucumberish">
+						UI Test, Cucumberish
 					</a><i class="icon icon-chevron-thin-right"></i></span>
 				
 		</div>

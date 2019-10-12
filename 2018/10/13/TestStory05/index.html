@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>UI Test, Cucumberish | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
@@ -30,7 +30,7 @@
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -38,7 +38,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -177,18 +177,22 @@
 <li>安裝 cucumberish</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">target &apos;TestMe&apos; do</span><br><span class="line">  use_frameworks!</span><br><span class="line"></span><br><span class="line">  target &apos;TestMeTests&apos; do</span><br><span class="line">    inherit! :search_paths</span><br><span class="line">    pod &apos;Cucumberish&apos;</span><br><span class="line">  end</span><br><span class="line"></span><br><span class="line">  target &apos;TestMeUITests&apos; do</span><br><span class="line">    inherit! :search_paths</span><br><span class="line">  end</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
 <p>pod install 完成後開啟 workspace</p>
 <p>設定的部份請參考<br><a href="https://github.com/Ahmed-Ali/Cucumberish" target="_blank" rel="noopener">Github Cucumberish</a></p>
 <p>主要有三個資料夾 Scenario(環境)、Steps(操作步驟)和Features(SPE文件)</p>
 <p>完成後的檔案與資料夾(如圖)<br><img src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/cucumber01.png" alt="Cucumberish01"></p>
 <p>在實作的一開始，工程師2拿到了一份 SPE 的 Feature 文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Feature: TestMe Cucumberish Login Test Exapmle</span><br><span class="line"></span><br><span class="line">Scenario Outline: Verify Login Process</span><br><span class="line">Given the app is running</span><br><span class="line">When I enter Account &quot;&lt;acc&gt;&quot; and Password &quot;&lt;pass&gt;&quot;</span><br><span class="line">Then I should see &quot;&lt;result&gt;&quot;</span><br><span class="line"></span><br><span class="line">Examples:</span><br><span class="line">|  acc  |  pass   |    result       |</span><br><span class="line">|  aki  |  qaz    |    success      |</span><br><span class="line">|  aki  |  123    |    帳號密碼錯誤   |</span><br></pre></td></tr></table></figure>
+
 <p>接著到 Scenario 裡加上一個 LoginPage.swift 程式碼如下，大意是把操作的步驟給實作出來</p>
 <p>Scenario 程式碼，以Login為例，Home的也要做</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">import XCTest</span><br><span class="line"></span><br><span class="line">class LoginPage: Page &#123;</span><br><span class="line">    private lazy var account = findElement(.textField)[&quot;textAccount&quot;]</span><br><span class="line">    private lazy var password = findElement(.secureTextField)[&quot;textPassword&quot;]</span><br><span class="line">    private lazy var btnLogin = findElement(.button)[&quot;btnLogin&quot;]</span><br><span class="line">    </span><br><span class="line">    required init() &#123;</span><br><span class="line">        waitFor(element: account)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @discardableResult func checkPage() -&gt; LoginPage&#123;</span><br><span class="line">        XCTAssertTrue(account.exists)</span><br><span class="line">        XCTAssertTrue(password.exists)</span><br><span class="line">        XCTAssertTrue(btnLogin.exists)</span><br><span class="line">        return self</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @discardableResult func inputData(_ acc: String, _ pass:String) -&gt; LoginPage&#123;</span><br><span class="line">        account.tap()</span><br><span class="line">        account.typeText(acc)</span><br><span class="line">        password.tap()</span><br><span class="line">        password.typeText(pass)</span><br><span class="line">        return self</span><br><span class="line">    &#125;</span><br><span class="line">   </span><br><span class="line">    @discardableResult func clickLogin() -&gt;LoginPage&#123;</span><br><span class="line">        btnLogin.tap()</span><br><span class="line">        return self</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @discardableResult func clickAlert(_ msg:String) -&gt;LoginPage&#123;</span><br><span class="line">        let msgResult = findElement(.alert).element.staticTexts.element(boundBy: 0).label</span><br><span class="line">        </span><br><span class="line">        XCTAssertEqual(msg,msgResult)</span><br><span class="line">        return self</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>最後，Steps 把 Feature 的文件和 Scenario 裡的操作做結合</p>
 <p>Steps 程式碼</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">import XCTest</span><br><span class="line">import Cucumberish</span><br><span class="line"></span><br><span class="line">class StepDefinetion: NSObject &#123;</span><br><span class="line">    </span><br><span class="line">    var application : XCUIApplication!</span><br><span class="line">    </span><br><span class="line">    func setup(_ application: XCUIApplication)</span><br><span class="line">    &#123;</span><br><span class="line">        self.application = application</span><br><span class="line">        </span><br><span class="line">        Given(&quot;the app is running&quot;) &#123; (args, userInfo) -&gt; Void in</span><br><span class="line">            LoginPage().checkPage()</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        When(&quot;I enter Account \&quot;([^\\\&quot;]*)\&quot; and Password \&quot;([^\\\&quot;]*)\&quot;&quot;)&#123;(args,userInfo)-&gt;Void in</span><br><span class="line">            </span><br><span class="line">            guard let acc = args?[0] , let pass = args?[1]</span><br><span class="line">                else &#123;</span><br><span class="line">                    XCTAssert(false)</span><br><span class="line">                    return</span><br><span class="line">            &#125;</span><br><span class="line">            LoginPage().inputData(acc, pass)</span><br><span class="line">            LoginPage().clickLogin()</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        Then(&quot;I should see \&quot;([^\\\&quot;]*)\&quot;&quot;)&#123;(args,userInfo)-&gt;Void in</span><br><span class="line">            </span><br><span class="line">            guard let expectedResult = args?[0]</span><br><span class="line">                else &#123;</span><br><span class="line">                XCTAssert(false)</span><br><span class="line">                return</span><br><span class="line">            &#125;</span><br><span class="line">            if expectedResult == &quot;success&quot; &#123;</span><br><span class="line">                HomePage().checkPage()</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                LoginPage().clickAlert(expectedResult)</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    class func setup(_ application: XCUIApplication)</span><br><span class="line">    &#123;</span><br><span class="line">        StepDefinetion().setup(application)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>— 此次範例的 <a href="https://github.com/ios-taipei/TestMe" target="_blank" rel="noopener">Github TestMe</a> 在此—</p>
 <p>跑一下 UITest 看看結果</p>
 <p><img src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/cucumberis-testresult.png" alt="Cucumberish01"></p>
@@ -207,8 +211,8 @@
 	
 		<div class="art-item-footer">
 				
-					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2018/10/14/TestStory06/" rel="prev"  title="What is QA">
-						What is QA 
+					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2018/10/14/TestStory07/" rel="prev"  title="Other Tests">
+						Other Tests 
 					</a></span>
 				
 				

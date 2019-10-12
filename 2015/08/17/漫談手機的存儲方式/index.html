@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>漫談手機的存儲方式 | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
@@ -27,7 +27,7 @@
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -35,7 +35,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -164,17 +164,12 @@
     	<p>如何在手機上存資料是我常常被問到的問題，因此開一篇文章來討論一下實務上幾個比較常見的到資料存儲方式，不過，這裡不會提到CoreData，原因在於－－－大部份的手機專案都是iOS／Android兩個手機專案在並行，因此大部份的owner會想要兩邊的流程是一致的，因此在選擇資料存儲的方式時，大多選擇兩個手機台平能夠共用的方式，sqlite就是一個比較好說服owner的方式。當然coredata也有他的好處和便捷性，這邊就不多解釋了。<br><br>這裡要介紹的是 NSUserDefault、File與SQLite<br><br>如果有人有更好的存儲方式，也請不吝告知。</p>
 <h3 id="NSUserDefault"><a href="#NSUserDefault" class="headerlink" title="NSUserDefault"></a>NSUserDefault</h3><p>有許多型別可以使用，這裡使用比較常用的object當範例，其他類似的就不一一介紹。</p>
 <h4 id="regist-Data"><a href="#regist-Data" class="headerlink" title="regist Data"></a>regist Data</h4><pre><code>[[NSUserDefaults standardUserDefaults] registerDefaults:&lt;#(NSDictionary *)#&gt;]
-[[NSUserDefaults standardUserDefaults] synchronize];
-</code></pre><h4 id="write-Data"><a href="#write-Data" class="headerlink" title="write Data"></a>write Data</h4><pre><code>[[NSUserDefaults standardUserDefaults] setObject:data forKey:@&quot;key&quot;];
-[[NSUserDefaults standardUserDefaults] synchronize];
-</code></pre><h4 id="remove-Data"><a href="#remove-Data" class="headerlink" title="remove Data"></a>remove Data</h4><pre><code>[[NSUserDefaults standardUserDefaults] removeObjectForKey:@&quot;key&quot;]    
-[[NSUserDefaults standardUserDefaults] synchronize];
-</code></pre><p>或是</p>
+[[NSUserDefaults standardUserDefaults] synchronize];</code></pre><h4 id="write-Data"><a href="#write-Data" class="headerlink" title="write Data"></a>write Data</h4><pre><code>[[NSUserDefaults standardUserDefaults] setObject:data forKey:@&quot;key&quot;];
+[[NSUserDefaults standardUserDefaults] synchronize];</code></pre><h4 id="remove-Data"><a href="#remove-Data" class="headerlink" title="remove Data"></a>remove Data</h4><pre><code>[[NSUserDefaults standardUserDefaults] removeObjectForKey:@&quot;key&quot;]    
+[[NSUserDefaults standardUserDefaults] synchronize];</code></pre><p>或是</p>
 <pre><code>[[NSUserDefaults standardUserDefaults] setObject:nil forKey:@&quot;key&quot;];
-[[NSUserDefaults standardUserDefaults] synchronize];
-</code></pre><h4 id="read-Data"><a href="#read-Data" class="headerlink" title="read Data"></a>read Data</h4><pre><code>[[NSUserDefaults standardUserDefaults] objectForKey:@&quot;key&quot;];
-[[NSUserDefaults standardUserDefaults] synchronize];
-</code></pre><h3 id="實體檔案存取-NSFileManager"><a href="#實體檔案存取-NSFileManager" class="headerlink" title="實體檔案存取(NSFileManager)"></a>實體檔案存取(NSFileManager)</h3><h4 id="Create-File"><a href="#Create-File" class="headerlink" title="Create File"></a>Create File</h4><pre><code>- (void)createFileWithName:(NSString *)fileName
+[[NSUserDefaults standardUserDefaults] synchronize];</code></pre><h4 id="read-Data"><a href="#read-Data" class="headerlink" title="read Data"></a>read Data</h4><pre><code>[[NSUserDefaults standardUserDefaults] objectForKey:@&quot;key&quot;];
+[[NSUserDefaults standardUserDefaults] synchronize];</code></pre><h3 id="實體檔案存取-NSFileManager"><a href="#實體檔案存取-NSFileManager" class="headerlink" title="實體檔案存取(NSFileManager)"></a>實體檔案存取(NSFileManager)</h3><h4 id="Create-File"><a href="#Create-File" class="headerlink" title="Create File"></a>Create File</h4><pre><code>- (void)createFileWithName:(NSString *)fileName
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -187,8 +182,7 @@
     } else {
         NSLog(@&quot;Failed to Create the File&quot;);
     }
-}
-</code></pre><h4 id="Read-File"><a href="#Read-File" class="headerlink" title="Read File"></a>Read File</h4><pre><code>- (void)readFileWithName:(NSString *)fileName
+}</code></pre><h4 id="Read-File"><a href="#Read-File" class="headerlink" title="Read File"></a>Read File</h4><pre><code>- (void)readFileWithName:(NSString *)fileName
 {
 
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -207,8 +201,7 @@
     } else {
         NSLog(@&quot;File %@ doesn&apos;t exists&quot;, fileName);
     }
-}
-</code></pre><h4 id="Write-File"><a href="#Write-File" class="headerlink" title="Write File"></a>Write File</h4><pre><code>- (void)writeString:(NSString *)content toFile:(NSString *)fileName
+}</code></pre><h4 id="Write-File"><a href="#Write-File" class="headerlink" title="Write File"></a>Write File</h4><pre><code>- (void)writeString:(NSString *)content toFile:(NSString *)fileName
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -224,8 +217,7 @@
         NSLog(@&quot;File %@ doesn&apos;t exists&quot;, fileName);
     }
 
-}
-</code></pre><h4 id="delete-File"><a href="#delete-File" class="headerlink" title="delete File"></a>delete File</h4><pre><code>- (void)deleteFileWithName:(NSString *)fileName
+}</code></pre><h4 id="delete-File"><a href="#delete-File" class="headerlink" title="delete File"></a>delete File</h4><pre><code>- (void)deleteFileWithName:(NSString *)fileName
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -242,8 +234,7 @@
     } else {
         NSLog(@&quot;File %@ doesn&apos;t exists&quot;, fileName);
     }
-}
-</code></pre><h3 id="SQLite"><a href="#SQLite" class="headerlink" title="SQLite"></a>SQLite</h3><p>這裡我使用最常用的FMDB來當做範例<br><a href="https://github.com/ccgus/fmdb" target="_blank" rel="noopener">FMDB on GitHub</a></p>
+}</code></pre><h3 id="SQLite"><a href="#SQLite" class="headerlink" title="SQLite"></a>SQLite</h3><p>這裡我使用最常用的FMDB來當做範例<br><a href="https://github.com/ccgus/fmdb" target="_blank" rel="noopener">FMDB on GitHub</a></p>
 <h4 id="首先你要先把-libsqlite3-dylib-加進library"><a href="#首先你要先把-libsqlite3-dylib-加進library" class="headerlink" title="首先你要先把 libsqlite3.dylib 加進library"></a>首先你要先把 libsqlite3.dylib 加進library</h4><p>不解釋</p>
 <h4 id="OpenDB"><a href="#OpenDB" class="headerlink" title="OpenDB"></a>OpenDB</h4><pre><code>NSURL *appUrl = [[[NSFileManager defaultManager] 
      URLsForDirectory:NSDocumentDirectory 
@@ -254,12 +245,10 @@ FMDatabase* db = [FMDatabase databaseWithPath:dbPath];
 if (![db open]) {       
  NSLog(@&quot;Could not open db&quot;);     
  return;  
-}
-</code></pre><h4 id="insertData"><a href="#insertData" class="headerlink" title="insertData"></a>insertData</h4><pre><code>if(![db executeUpdate:@&quot;INSERT INTO user (name, description) VALUES (?,?)&quot;, name, description])
+}</code></pre><h4 id="insertData"><a href="#insertData" class="headerlink" title="insertData"></a>insertData</h4><pre><code>if(![db executeUpdate:@&quot;INSERT INTO user (name, description) VALUES (?,?)&quot;, name, description])
 {
  NSLog(@&quot;Could not insert data: %@&quot;, [db lastErrorMessage]);
-}
-</code></pre><p>這裡的代數是用？</p>
+}</code></pre><p>這裡的代數是用？</p>
 <h4 id="readData"><a href="#readData" class="headerlink" title="readData"></a>readData</h4><pre><code>NSMutableArray* items = [NSMutableArray arrayWithCapacity:0];
 FMResultSet *rs = [db executeQuery:@&quot;SELECT uid, name, description from user&quot;];
 
@@ -275,19 +264,15 @@ while ([rs next]) {
        nil]];
 }
 
-[rs close];   
-</code></pre><h4 id="updateData"><a href="#updateData" class="headerlink" title="updateData"></a>updateData</h4><pre><code>[db beginTransaction];
+[rs close];   </code></pre><h4 id="updateData"><a href="#updateData" class="headerlink" title="updateData"></a>updateData</h4><pre><code>[db beginTransaction];
 if(![db executeUpdate:@&quot;UPDATE user set name=?, description＝? where name=&apos;?&apos;“,@&quot;1&quot;,@&quot;2&quot;,@&quot;1&quot;]);
     {
      NSLog(@&quot;Could not update data: %@&quot;, [db lastErrorMessage]);
     }
-[db commit];
-</code></pre><h4 id="deleteData"><a href="#deleteData" class="headerlink" title="deleteData"></a>deleteData</h4><pre><code>if(![_db executeUpdate:@&quot;DELETE FROM user WHERE uid = ?&quot;, [NSNumber numberWithInt:uid]])
+[db commit];</code></pre><h4 id="deleteData"><a href="#deleteData" class="headerlink" title="deleteData"></a>deleteData</h4><pre><code>if(![_db executeUpdate:@&quot;DELETE FROM user WHERE uid = ?&quot;, [NSNumber numberWithInt:uid]])
 {
  NSLog(@&quot;Could not delete data: %@&quot;, [db lastErrorMessage]);
-}
-</code></pre><h4 id="CloseDB"><a href="#CloseDB" class="headerlink" title="CloseDB"></a>CloseDB</h4><pre><code>[db close]
-</code></pre><p>執行FMDB的指令有她的生命週期，都是<br><br><br>1.open db<br><br><br>2.執行<br><br><br>3.close db</p>
+}</code></pre><h4 id="CloseDB"><a href="#CloseDB" class="headerlink" title="CloseDB"></a>CloseDB</h4><pre><code>[db close]</code></pre><p>執行FMDB的指令有她的生命週期，都是<br><br><br>1.open db<br><br><br>2.執行<br><br><br>3.close db</p>
 <p>如果沒有確實的open與close的話  是很容易造成exception而crash的<br><br><br><br><br>最後，因為sqlite是以一個檔案型態存在的，因此在multi－thread讀寫資料時很容易出現錯誤，官方說明與建議的方法如下：<br><br><br></p>
 <pre><code>Using a single instance of FMDatabase from multiple threads at once is a bad idea. It has always been OK to make a FMDatabase object per thread. Just don&apos;t share a single instance across threads, and definitely not across multiple threads at the same time. Bad things will eventually happen and you&apos;ll eventually get something to crash, or maybe get an exception, or maybe meteorites will fall out of the sky and hit your Mac Pro. This would suck.
 
@@ -295,8 +280,7 @@ So don&apos;t instantiate a single FMDatabase object and use it across multiple 
 
 Instead, use FMDatabaseQueue. It&apos;s your friend and it&apos;s here to help. Here&apos;s how to use it:
 
-First, make your queue.
-</code></pre><p>用FMDatabaseQueue來解決，<br><br>範例：</p>
+First, make your queue.</code></pre><p>用FMDatabaseQueue來解決，<br><br>範例：</p>
 <pre><code>FMDatabaseQueue *queue = [FMDatabaseQueue databaseQueueWithPath:aPath];
 
 [queue inDatabase:^(FMDatabase *db) {
@@ -308,9 +292,10 @@ FMResultSet *rs = [db executeQuery:@&quot;select * from foo&quot;];
     while ([rs next]) {
         …
     }
-}];
-</code></pre><p><br><br>就醬，其實不難～<br><br><br><br><br><br><br></p>
-
+}];</code></pre><br>
+就醬，其實不難～
+<br><br><br><br>
+<br>
   	</div>
 	  
 	  <div class="article-tags tags">
@@ -328,8 +313,8 @@ FMResultSet *rs = [db executeQuery:@&quot;select * from foo&quot;];
 					</a></span>
 				
 				
-					<span class="art-item-right">next：<a href="/2015/08/13/XCode-debug再進化-4/" rel="next"  title="XCode debug再進化－4">
-						XCode debug再進化－4
+					<span class="art-item-right">next：<a href="/2015/08/13/XCode-debug再進化-3/" rel="next"  title="XCode debug再進化－3">
+						XCode debug再進化－3
 					</a><i class="icon icon-chevron-thin-right"></i></span>
 				
 		</div>

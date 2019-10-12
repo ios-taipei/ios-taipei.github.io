@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>Unit Test | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
@@ -29,7 +29,7 @@
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -37,7 +37,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -179,24 +179,35 @@
 </ol>
 <h3 id="Ready-Go"><a href="#Ready-Go" class="headerlink" title="Ready, Go!!"></a>Ready, Go!!</h3><p>第一步，看一下我們的user story，先把測試給寫出來</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">假設(Given)，存在有一個可用的帳號與密碼</span><br><span class="line">當(When)，使用者開啟APP,輸入帳號 aki ,密碼 qaz，點選「登入」</span><br><span class="line">然後(Then)，要看到首頁的內容。(success)</span><br></pre></td></tr></table></figure>
+
 <p>test case 如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//============== Test ==================</span><br><span class="line">func testLoginSuccess() &#123;</span><br><span class="line"></span><br><span class="line">  	XCTAssert(login(acc: &quot;aki&quot;, pass: &quot;qaz&quot;))     </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p> 如上，我們寫出了第一個Test Case,此時試著跑一下Test,會得到 Test Failed，因為login函數還沒有實做。此時我們把Failed的狀態簡稱「<span style="color:red">紅燈</span>」。</p>
 <p>接著，我們需要把紅燈的地方修到好，所以要實作一個login函數，用以檢核帳號密碼，最終回傳成功或失敗</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//============== Code ==================</span><br><span class="line">func login(acc:String,pass:String)-&gt;Bool&#123;</span><br><span class="line">	return true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>此時跑一下Test， 你會得到login回傳true，喔耶～～ 測試通過了，此時成功的狀態（success），我們簡稱為「<span style="color:green">綠燈</span>」。</p>
 <p>身為工程師的你，摸一下你的xx，不用多想也知道，不管什麼東西進來都是true，所以，我們白痴地依依 Test Case 來<span style="color:blue">重構</span>一下功能</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//============== Code ==================</span><br><span class="line">func login(acc:String,pass:String)-&gt;Bool&#123;</span><br><span class="line">	if acc==&quot;&quot; || pass==&quot;&quot; &#123;</span><br><span class="line">		return false</span><br><span class="line">	&#125;else&#123;</span><br><span class="line">	   return true</span><br><span class="line">	&#125; 	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>白痴重構結束後，再跑一下測試，嗯嗯嗯  還是綠燈。那就可以拿下一個Test Case來做了</p>
-<p><hr><br>第二個使用者故事 如下</p>
+<hr>
+第二個使用者故事 如下
+
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">假設(Given)，存在有一個可用的帳號與密碼</span><br><span class="line">當(When)，使用者開啟APP,輸入帳號 aki ,密碼 123，點選「登入」</span><br><span class="line">然後(Then)，要跳出錯誤訊息（Failed）</span><br></pre></td></tr></table></figure>
+
 <p>第二個Test case 如下：</p>
 <h4 id="寫測試"><a href="#寫測試" class="headerlink" title="寫測試"></a>寫測試</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">func testLoginFailed() &#123;</span><br><span class="line">    XCTAssertFalse(login(acc: &quot;aki&quot;, pass: &quot;123&quot;))     </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h4 id="跑測試亮紅燈"><a href="#跑測試亮紅燈" class="headerlink" title="跑測試亮紅燈"></a>跑測試亮紅燈</h4><h4 id="改code"><a href="#改code" class="headerlink" title="改code"></a>改code</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//============== Code ==================</span><br><span class="line">func login(acc:String,pass:String)-&gt;Bool&#123;</span><br><span class="line">	if acc==&quot;aki&quot; &#123;</span><br><span class="line">		if(pass==&quot;qaz&quot;)&#123;</span><br><span class="line">			return true</span><br><span class="line">		&#125;else if pass==&quot;123&quot;&#123;</span><br><span class="line">			return false</span><br><span class="line">		&#125;</span><br><span class="line">		return false</span><br><span class="line">	&#125;else&#123;</span><br><span class="line">	   return false</span><br><span class="line">	&#125; 	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h4 id="跑一下測試，綠燈"><a href="#跑一下測試，綠燈" class="headerlink" title="跑一下測試，綠燈"></a>跑一下測試，綠燈</h4><h4 id="重構，跑一下測試，綠燈"><a href="#重構，跑一下測試，綠燈" class="headerlink" title="重構，跑一下測試，綠燈"></a>重構，跑一下測試，綠燈</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//============== Code ==================</span><br><span class="line">func login(acc:String,pass:String)-&gt;Bool&#123;</span><br><span class="line">	if acc==&quot;aki&quot; &#123;</span><br><span class="line">		if(pass==&quot;qaz&quot;)&#123;</span><br><span class="line">			return true</span><br><span class="line">		&#125;</span><br><span class="line">		return false</span><br><span class="line">	&#125;else&#123;</span><br><span class="line">	   return false</span><br><span class="line">	&#125; 	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>無限loop直到所有的測試都通過，此時程式就寫好了，而且應該被完整的重構過。</p>
 <h3 id="反思一下我們在上面的所有動作"><a href="#反思一下我們在上面的所有動作" class="headerlink" title="反思一下我們在上面的所有動作"></a>反思一下我們在上面的所有動作</h3><p>我們把上述的動作抽離出來<br></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Action 01: 寫好 Test Case 後,跑一下測試（嗯。。。紅燈）</span><br><span class="line">Action 02: 改code之後,跑一下測試（嗯。。。綠燈）</span><br><span class="line">Action 03: code的有沒有要重構或調整的部份，改完之後再跑一次測試，直到綠燈（重構）</span><br></pre></td></tr></table></figure>
+
 <p>在01－03之間，藉由不斷地添加Test Case，跑test case，寫程式，重構，來建構一個開發的流程。</p>
 <p>這就是 TDD 呀！！</p>
 <h3 id="想一下，不寫測試不行嗎？"><a href="#想一下，不寫測試不行嗎？" class="headerlink" title="想一下，不寫測試不行嗎？"></a>想一下，不寫測試不行嗎？</h3><p>可以啊<br><br>那有可能會發生什麼問題？<br><br>QA會花很多力氣在做局部的測試，當一個專案愈大，就愈難完整的測到完，沒測試到的部份，頂多就是閉著眼睛上線，直接讓User幫你測試。這部份留到QA的部份再加以解釋</p>
@@ -204,18 +215,25 @@
 <p>舉個例子吧。<br></p>
 <p>我們想要寫一個function來知道一個字串是不是數字<br><br>比如說 “123” 時為true，”ABC”時為false，<br><br>於是工程師寫下了一段Code，</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">func isInteger(aStr:String) -&gt; Bool&#123;</span><br><span class="line">	do &#123;</span><br><span class="line">   		let a = try Int(aStr)</span><br><span class="line">       return true</span><br><span class="line">   &#125;catch &#123;</span><br><span class="line">   		return false</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>語意是利用變數型別的轉換正確或失敗來判斷這一個變數是不是數字</p>
 <p>如果不做測試的話，其實是不會知道問題在那裡<br><br>如果輸入了 “123” 為 true， 但是輸入了 “ABC” 一樣是true</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">func isInteger(aStr:String) -&gt; Bool&#123;</span><br><span class="line">        </span><br><span class="line">	let number = Int(aStr)</span><br><span class="line">        </span><br><span class="line">   if number != nil &#123;</span><br><span class="line">     	return true</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   return false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>兩個 Test Case “123”,”ABC” 的回傳都符合我們的預期。</p>
 <p>在一般的情況下，也許上面的code沒有問題，但是如果今天也許我們需要經營辛巴威市場時，我們加個測試看會不會過 <br><br>“1234567890123456789012345678901234567890”?</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">func testIsTrue()&#123;</span><br><span class="line">	XCTAssert(isInteger(aStr: &quot;1234567890123456789012345678901234567890&quot;))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="再次強調，在很多情況之下，我們是很相信工程師的"><a href="#再次強調，在很多情況之下，我們是很相信工程師的" class="headerlink" title="再次強調，在很多情況之下，我們是很相信工程師的"></a>再次強調，在很多情況之下，我們是很相信工程師的</h3><h3 id="工程師有沒有可能出錯？-那怕是千萬之一的機會，產品如果有問題，公司、團隊、個人能不能承擔犯錯之後的結果？"><a href="#工程師有沒有可能出錯？-那怕是千萬之一的機會，產品如果有問題，公司、團隊、個人能不能承擔犯錯之後的結果？" class="headerlink" title="工程師有沒有可能出錯？ 那怕是千萬之一的機會，產品如果有問題，公司、團隊、個人能不能承擔犯錯之後的結果？"></a>工程師有沒有可能出錯？ 那怕是千萬之一的機會，產品如果有問題，公司、團隊、個人能不能承擔犯錯之後的結果？</h3><h3 id="工程師能不能信用擔保，或者用性命擔保程式沒有什麼？"><a href="#工程師能不能信用擔保，或者用性命擔保程式沒有什麼？" class="headerlink" title="工程師能不能信用擔保，或者用性命擔保程式沒有什麼？"></a>工程師能不能信用擔保，或者用性命擔保程式沒有什麼？</h3><h3 id="寫了測試就不會出錯了嗎？"><a href="#寫了測試就不會出錯了嗎？" class="headerlink" title="寫了測試就不會出錯了嗎？"></a>寫了測試就不會出錯了嗎？</h3><p>會，人還是會犯錯的，只是在一連串的犯錯的學習中，可以透過TestCase來了解，程式為什麼這樣子寫<br>（有時候，別人也可以透過Test Case來了解程式的流程而不用深入程式實作的細節）</p>
 <h3 id="應不應該追求所謂的100％的測試覆蓋率-100-Test-Coverage-？"><a href="#應不應該追求所謂的100％的測試覆蓋率-100-Test-Coverage-？" class="headerlink" title="應不應該追求所謂的100％的測試覆蓋率(100 Test Coverage)？"></a>應不應該追求所謂的100％的測試覆蓋率(100 Test Coverage)？</h3><p>要看投入的時間成本，和所回收的效益，才能判斷值不值得。這個判斷的點，我們晚點回過頭來探討。</p>
 <p>註1:如果你想要做TDD的練習，那麼有一些道場(dojo、どじょ)提供一些套路（Kata、型、かた），其中一個比較有名的道場如下：<br><a href="http://www.codingdojo.org/KataCatalogue/" target="_blank" rel="noopener">http://www.codingdojo.org/KataCatalogue/</a></p>
 <p>註2:<br><img src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/news-integer-parse.png" alt="辛巴威幣"></p>
-<p><hr><br>想一下：<br>有一段正則表示式是,你敢不敢直接把code推上production？</p>
+<hr>
+想一下：
+有一段正則表示式是,你敢不敢直接把code推上production？
+
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\A(?=[a-z0-9@.!#$%&amp;&apos;*+/=?^_`&#123;|&#125;~-]&#123;6,254&#125;\z)(?=[a-z0-9.!#$%&amp;&apos;*+/=?^_`&#123;|&#125;~-]&#123;1,64&#125;@)[a-z0-9!#$%&amp;&apos;*+/=?^_`&#123;|&#125;~-]+(?:\.[a-z0-9!#$%&amp;&apos;*+/=?^_`&#123;|&#125;~-]+)*@(?:(?=[a-z0-9-]&#123;1,63&#125;\.)[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?=[a-z0-9-]&#123;1,63&#125;\z)[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\z</span><br></pre></td></tr></table></figure>
+
 
   	</div>
 	  

@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>GameKit tutorial | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="開始使用GAME CENTER###1。在project裡加入 GameKit.framework ###2。在iOS Dev Center 加入對應的AppID，並且在iTunes Connect新增一個APP ###3。[My App][xxxApp][Game Center]下，設定啟用game center  ###4。新增一個「個別排行榜」 ###5。enable Game Center">
+  <meta name="description" content="開始使用GAME CENTER###1。在project裡加入 GameKit.framework ###2。在iOS Dev Center 加入對應的AppID，並且在iTunes Connect新增一個APP ###3。[My App][xxxApp][Game Center]下，設定啟用game center     ###4。新增一個「個別排行榜」 ###5。enable Game Cen">
 <meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GameKit tutorial">
 <meta property="og:url" content="http://ios.taipei/2015/04/12/GameKit-tutorial/index.html">
 <meta property="og:site_name" content="iOS @ Taipei">
-<meta property="og:description" content="開始使用GAME CENTER###1。在project裡加入 GameKit.framework ###2。在iOS Dev Center 加入對應的AppID，並且在iTunes Connect新增一個APP ###3。[My App][xxxApp][Game Center]下，設定啟用game center  ###4。新增一個「個別排行榜」 ###5。enable Game Center">
+<meta property="og:description" content="開始使用GAME CENTER###1。在project裡加入 GameKit.framework ###2。在iOS Dev Center 加入對應的AppID，並且在iTunes Connect新增一個APP ###3。[My App][xxxApp][Game Center]下，設定啟用game center     ###4。新增一個「個別排行榜」 ###5。enable Game Cen">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/game_center_01.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/game_center_02.png">
@@ -33,12 +33,12 @@
 <meta property="og:updated_time" content="2015-07-24T09:18:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GameKit tutorial">
-<meta name="twitter:description" content="開始使用GAME CENTER###1。在project裡加入 GameKit.framework ###2。在iOS Dev Center 加入對應的AppID，並且在iTunes Connect新增一個APP ###3。[My App][xxxApp][Game Center]下，設定啟用game center  ###4。新增一個「個別排行榜」 ###5。enable Game Center">
+<meta name="twitter:description" content="開始使用GAME CENTER###1。在project裡加入 GameKit.framework ###2。在iOS Dev Center 加入對應的AppID，並且在iTunes Connect新增一個APP ###3。[My App][xxxApp][Game Center]下，設定啟用game center     ###4。新增一個「個別排行榜」 ###5。enable Game Cen">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/game_center_01.png">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -46,7 +46,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -175,7 +175,10 @@
     	<h2 id="開始使用GAME-CENTER"><a href="#開始使用GAME-CENTER" class="headerlink" title="開始使用GAME CENTER"></a>開始使用GAME CENTER</h2><p>###1。在project裡加入 GameKit.framework</p>
 <p>###2。在iOS Dev Center 加入對應的AppID，並且在iTunes Connect新增一個APP</p>
 <p>###3。[My App][xxxApp][Game Center]下，設定啟用game center</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/game_center_01.png" alt="game01" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/game_center_01.png" alt="game01" style="width:310px">
+
+
+
 <p>###4。新增一個「個別排行榜」<br><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/game_center_02.png" alt="game02" style="width:310px"></p>
 <p>###5。enable Game Center<br><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/game_center_03.png" alt="game03" style="width:310px"></p>
 <p>###6。加上 GameKitHelper 的程式碼</p>
@@ -213,8 +216,7 @@ id&lt;GameKitHelperProtocol&gt; delegate;
 // Show Leaderboard
 -(void) showLeaderboard;
 
-@end
-</code></pre><p>####GameKitHelper.m</p>
+@end</code></pre><p>####GameKitHelper.m</p>
 <pre><code>#import &quot;GameKitHelper.h&quot;
 
 #import &quot;GameKitHelper.h&quot;
@@ -331,20 +333,20 @@ id&lt;GameKitHelperProtocol&gt; delegate;
 
 
 
-@end
-</code></pre><p>###7。確認Bundle identifier是否一致</p>
+@end</code></pre><p>###7。確認Bundle identifier是否一致</p>
 <p>###8。確認Capabilities － GameCenter 是否無錯誤</p>
 <p>###9。確認info.plist 有無gamekit的Capabilities</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/game_center_04.png" alt="game04" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/game_center_04.png" alt="game04" style="width:310px">
+
+
+
 <p>###10。在程式的啟動點加入 authenticateLocalPlayer</p>
-<pre><code>[[GameKitHelper sharedGameKitHelper] authenticateLocalPlayer];
-</code></pre><p>###11。Submit Score</p>
-<pre><code>[[GameKitHelper sharedGameKitHelper] submitScore:[lblScore.text integerValue]];
-</code></pre><p>###12。Show LeaderBoard</p>
-<pre><code>[[GameKitHelper sharedGameKitHelper] showLeaderboard];
-</code></pre><p>###13。在手機上測試</p>
+<pre><code>[[GameKitHelper sharedGameKitHelper] authenticateLocalPlayer];</code></pre><p>###11。Submit Score</p>
+<pre><code>[[GameKitHelper sharedGameKitHelper] submitScore:[lblScore.text integerValue]];</code></pre><p>###12。Show LeaderBoard</p>
+<pre><code>[[GameKitHelper sharedGameKitHelper] showLeaderboard];</code></pre><p>###13。在手機上測試</p>
 <p>這裡有個小地方要注意一下 iOS8必需要在手機上開啟sandox mode，才能進行開發測試</p>
-<h4 id="設定-Game-Center-Sandbox-設為開啟"><a href="#設定-Game-Center-Sandbox-設為開啟" class="headerlink" title="[設定] [Game Center] [Sandbox] 設為開啟"></a>[設定] [Game Center] [Sandbox] 設為開啟</h4><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/game_center_05.PNG" alt="game05" style="width:310px"></p>
+<h4 id="設定-Game-Center-Sandbox-設為開啟"><a href="#設定-Game-Center-Sandbox-設為開啟" class="headerlink" title="[設定] [Game Center] [Sandbox] 設為開啟"></a>[設定] [Game Center] [Sandbox] 設為開啟</h4><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/game_center_05.PNG" alt="game05" style="width:310px">
+
 <p>####xcode 執行 debug 啟動進入程式後會出現 Game Center Sandbox，依序完成</p>
 <p>輸入 AppID<br><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/game_center_06.PNG" alt="game06" style="width:310px"></p>
 <p>確認 Terms and Conditions<br><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/game_center_07.PNG" alt="game07" style="width:310px"></p>

@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>XCode debug再進化 | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="當然，要先來個crash 謝謝 Crashlytics 可以強制造成crash  基礎debug mode當crash發生時 xcode沒設定什麼東西時 程式會hang在這個讓人看不懂的地方  所以  要在xcode的地方設定一下  好方便未來的debug xcode左邊的panel 左邊數第7個  右邊倒數第2個頁籤 點下去 － 下面的「+」 點下去  選擇第一個「Add Exception B">
+  <meta name="description" content="當然，要先來個crash 謝謝 Crashlytics 可以強制造成crash    基礎debug mode當crash發生時 xcode沒設定什麼東西時 程式會hang在這個讓人看不懂的地方   所以  要在xcode的地方設定一下  好方便未來的debug xcode左邊的panel 左邊數第7個  右邊倒數第2個頁籤 點下去－ 下面的「+」 點下去   選擇第一個「Add Exceptio">
 <meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="XCode debug再進化">
 <meta property="og:url" content="http://ios.taipei/2015/07/02/XCode-debug再進化/index.html">
 <meta property="og:site_name" content="iOS @ Taipei">
-<meta property="og:description" content="當然，要先來個crash 謝謝 Crashlytics 可以強制造成crash  基礎debug mode當crash發生時 xcode沒設定什麼東西時 程式會hang在這個讓人看不懂的地方  所以  要在xcode的地方設定一下  好方便未來的debug xcode左邊的panel 左邊數第7個  右邊倒數第2個頁籤 點下去 － 下面的「+」 點下去  選擇第一個「Add Exception B">
+<meta property="og:description" content="當然，要先來個crash 謝謝 Crashlytics 可以強制造成crash    基礎debug mode當crash發生時 xcode沒設定什麼東西時 程式會hang在這個讓人看不懂的地方   所以  要在xcode的地方設定一下  好方便未來的debug xcode左邊的panel 左邊數第7個  右邊倒數第2個頁籤 點下去－ 下面的「+」 點下去   選擇第一個「Add Exceptio">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug01.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug02.png">
@@ -37,12 +37,12 @@
 <meta property="og:updated_time" content="2015-08-13T03:19:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="XCode debug再進化">
-<meta name="twitter:description" content="當然，要先來個crash 謝謝 Crashlytics 可以強制造成crash  基礎debug mode當crash發生時 xcode沒設定什麼東西時 程式會hang在這個讓人看不懂的地方  所以  要在xcode的地方設定一下  好方便未來的debug xcode左邊的panel 左邊數第7個  右邊倒數第2個頁籤 點下去 － 下面的「+」 點下去  選擇第一個「Add Exception B">
+<meta name="twitter:description" content="當然，要先來個crash 謝謝 Crashlytics 可以強制造成crash    基礎debug mode當crash發生時 xcode沒設定什麼東西時 程式會hang在這個讓人看不懂的地方   所以  要在xcode的地方設定一下  好方便未來的debug xcode左邊的panel 左邊數第7個  右邊倒數第2個頁籤 點下去－ 下面的「+」 點下去   選擇第一個「Add Exceptio">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug01.png">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -50,7 +50,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -178,29 +178,36 @@
   	<div class="article-entry" itemprop="articleBody">
     	<p>當然，要先來個crash</p>
 <p>謝謝 Crashlytics 可以強制造成crash</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug01.png" alt="debug01" style="width:310px"></p>
-<h3 id="基礎debug-mode"><a href="#基礎debug-mode" class="headerlink" title="基礎debug mode"></a>基礎debug mode</h3><p>當crash發生時 xcode沒設定什麼東西時 程式會hang在這個讓人看不懂的地方</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug02.png" alt="debug02" style="width:310px"></p>
-<p>所以  要在xcode的地方設定一下  好方便未來的debug</p>
-<pre><code>xcode左邊的panel 左邊數第7個  右邊倒數第2個頁籤 點下去
-</code></pre><p>－</p>
-<pre><code>下面的「+」 點下去
-</code></pre><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug03.png" alt="debug03" style="width:310px"></p>
-<pre><code>選擇第一個「Add Exception Breakpoint」
-</code></pre><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug04.png" alt="debug04" style="width:310px"></p>
-<p>這時候會變成這個專案專屬的exception breakpoint</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug05.png" alt="debug05" style="width:310px"></p>
-<p>此時xcode有個小貼心的地方，就是可以把breakpoint設為USER，往後，每一個新增的專案都會有這個exception breakpoint</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug06.png" alt="debug06" style="width:310px"></p>
-<p>結果變成</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug07.png" alt="debug07" style="width:310px"></p>
-<p>再重新執行一次crash，就會停在比較易讀的位置，也可以利用下方的debug console 來進行debug了</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug08.png" alt="debug08" style="width:310px"></p>
-<p>下方的debug console最常使用的指令是</p>
-<pre><code>po xxx
-</code></pre><p>如果你真的很想知道有那些指令的話，可以在debug console輸入help</p>
-<font color="red">(不過我相信你絕對不會每一個都看完的)</font>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug01.png" alt="debug01" style="width:310px">
 
+
+<h3 id="基礎debug-mode"><a href="#基礎debug-mode" class="headerlink" title="基礎debug mode"></a>基礎debug mode</h3><p>當crash發生時 xcode沒設定什麼東西時 程式會hang在這個讓人看不懂的地方</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug02.png" alt="debug02" style="width:310px">
+
+<p>所以  要在xcode的地方設定一下  好方便未來的debug</p>
+<pre><code>xcode左邊的panel 左邊數第7個  右邊倒數第2個頁籤 點下去</code></pre><p>－</p>
+<pre><code>下面的「+」 點下去</code></pre><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug03.png" alt="debug03" style="width:310px">
+
+
+<pre><code>選擇第一個「Add Exception Breakpoint」</code></pre><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug04.png" alt="debug04" style="width:310px">
+
+
+<p>這時候會變成這個專案專屬的exception breakpoint</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug05.png" alt="debug05" style="width:310px">
+
+
+<p>此時xcode有個小貼心的地方，就是可以把breakpoint設為USER，往後，每一個新增的專案都會有這個exception breakpoint</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug06.png" alt="debug06" style="width:310px">
+
+<p>結果變成</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug07.png" alt="debug07" style="width:310px">
+
+<p>再重新執行一次crash，就會停在比較易讀的位置，也可以利用下方的debug console 來進行debug了</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug08.png" alt="debug08" style="width:310px">
+
+
+<p>下方的debug console最常使用的指令是</p>
+<pre><code>po xxx</code></pre><p>如果你真的很想知道有那些指令的話，可以在debug console輸入help<br><font color="red">(不過我相信你絕對不會每一個都看完的)</font></p>
 <pre><code>(lldb) help
 Debugger commands:
 
@@ -346,34 +353,34 @@ Current command abbreviations (type &apos;help command alias&apos; for more info
   x         -- (&apos;memory read&apos;)  Read from the memory of the process being
            debugged.
 
-For more information on any command, type &apos;help &lt;command-name&gt;&apos;.
-</code></pre><h3 id="進階debug-mode"><a href="#進階debug-mode" class="headerlink" title="進階debug mode"></a>進階debug mode</h3><p>故事當然不會就醬子結束，breakpoint停在 </p>
-<pre><code>1 [AppDelegate application:didFinishLaunchingWithOptions:] at /Users/minghongyu/Documents/work/iphone/OpenPoint/OpenPoint/AppDelegate.m:32
-</code></pre><p>如圖</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug09.png" alt="debug09" style="width:310px"></p>
-<p>但是  好像還有個</p>
-<pre><code>0 [Crashlytics crash]
-</code></pre><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug10.png" alt="debug10" style="width:310px"></p>
-<p>會停在一堆機器碼的地方，真的讓人有點難以閱讀咧</p>
-<p>接著在 debug console裡輸入</p>
-<font color="red">(不要問，很可怕)</font>
+For more information on any command, type &apos;help &lt;command-name&gt;&apos;.</code></pre><h3 id="進階debug-mode"><a href="#進階debug-mode" class="headerlink" title="進階debug mode"></a>進階debug mode</h3><p>故事當然不會就醬子結束，breakpoint停在 </p>
+<pre><code>1 [AppDelegate application:didFinishLaunchingWithOptions:] at /Users/minghongyu/Documents/work/iphone/OpenPoint/OpenPoint/AppDelegate.m:32</code></pre><p>如圖</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug09.png" alt="debug09" style="width:310px">
 
-<pre><code>po $arg1
-</code></pre><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug11.png" alt="debug11" style="width:310px"></p>
+
+<p>但是  好像還有個</p>
+<pre><code>0 [Crashlytics crash]</code></pre><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug10.png" alt="debug10" style="width:310px">
+
+
+<p>會停在一堆機器碼的地方，真的讓人有點難以閱讀咧</p>
+<p>接著在 debug console裡輸入<br><font color="red">(不要問，很可怕)</font></p>
+<pre><code>po $arg1</code></pre><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug11.png" alt="debug11" style="width:310px">
+
+
 <p>發現他會吐出當下的crash的human－readable的解釋！！！！</p>
 <p>很重要  所以要說三次</p>
 <pre><code>真的是太好了！！！！！！
 真的是太好了！！！！！！
-真的是太好了！！！！！！
-</code></pre><p>但是  每次又要用手打 <font color="red">po ＄arg1</font> 很辛苦有沒有？？很辛苦有沒有？？</p>
+真的是太好了！！！！！！</code></pre><p>但是  每次又要用手打 <font color="red">po ＄arg1</font> 很辛苦有沒有？？很辛苦有沒有？？</p>
 <p>還好 xcode真的很貼心</p>
-<pre><code>在All Exception上按右鍵  選擇編輯「Edit Breakpoint」
-</code></pre><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug12.png" alt="debug12" style="width:310px"></p>
-<pre><code>點選「Add Action」
-</code></pre><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug13.png" alt="debug13" style="width:310px"></p>
-<pre><code>輸入 po $arg1
-</code></pre><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug14.png" alt="debug14" style="width:310px"></p>
-<p>The End~~~</p>
+<pre><code>在All Exception上按右鍵  選擇編輯「Edit Breakpoint」</code></pre><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug12.png" alt="debug12" style="width:310px">
+
+<pre><code>點選「Add Action」</code></pre><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug13.png" alt="debug13" style="width:310px">
+
+
+<pre><code>輸入 po $arg1</code></pre><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug14.png" alt="debug14" style="width:310px">
+
+<p>The End<del>~</del></p>
 <p>有沒有很酷？  有沒有?  有沒有? </p>
 
   	</div>

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>如何知道網路通不通？ | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
@@ -27,7 +27,7 @@
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -35,7 +35,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -166,12 +166,17 @@
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	<p>Q: 如何知道網路通不通？<br><a id="more"></a></p>
+    	<p>Q: 如何知道網路通不通？</p>
+<a id="more"></a>
+
+
 <h4 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h4><ol>
 <li>將別人寫好的 Reachability 引用進來 <a href="https://github.com/ashleymills/Reachability.swift" target="_blank" rel="noopener">https://github.com/ashleymills/Reachability.swift
 </a></li>
 </ol>
-<p><code><br>    let reachability = Reachability()!</code></p>
+<code>
+    let reachability = Reachability()!
+
 <pre><code>reachability.whenReachable = { reachability in
     if reachability.connection == .wifi {
         print(&quot;Reachable via WiFi&quot;)
@@ -188,42 +193,47 @@ do {
     try reachability.startNotifier()
 } catch {
     print(&quot;Unable to start notifier&quot;)
-}
-</code></pre><p></p>
+}</code></pre></code>
+
 <h4 id="OBJC-Reachability"><a href="#OBJC-Reachability" class="headerlink" title="OBJC Reachability"></a>OBJC Reachability</h4><ol>
-<li>引用 SystemConfiguration.Framework </li>
+<li><p>引用 SystemConfiguration.Framework </p>
+</li>
 <li><p>將別人寫好的 Reachability 引用進來 <a href="https://github.com/tonymillion/Reachability" target="_blank" rel="noopener">https://github.com/tonymillion/Reachability</a></p>
 </li>
 <li><p>實作 interface</p>
 </li>
 </ol>
-<p><code></code></p>
+<code>
+
 <pre><code>#import &quot;Reachability.h&quot;
 
 @interface MyViewController ()
 {
     Reachability *internetReachableFoo;
 }
-@end
-</code></pre><p></p>
+@end</code></pre></code>
+
 <ol start="4">
-<li><p>實作 .m<br><code><br> - (void)testInternetConnection<br>{<br> internetReachableFoo = [Reachability reachabilityWithHostname:@”<a href="http://www.google.com&quot;]" target="_blank" rel="noopener">www.google.com&quot;]</a>;</code></p>
-<pre><code>internetReachableFoo.reachableBlock = ^(Reachability*reach)
-</code></pre><p> {</p>
+<li><p>實作 .m</p>
+<code>
+ \- (void)testInternetConnection
+{   
+ internetReachableFoo = [Reachability reachabilityWithHostname:@"www.google.com"];
+
+<pre><code>internetReachableFoo.reachableBlock = ^(Reachability*reach)</code></pre><p> {</p>
 <pre><code>dispatch_async(dispatch_get_main_queue(), ^{
     NSLog(@&quot;Yayyy, we have the interwebs!&quot;);
-});
-</code></pre><p> };</p>
+});</code></pre><p> };</p>
 <p> internetReachableFoo.unreachableBlock = ^(Reachability*reach)<br> {</p>
 <pre><code>dispatch_async(dispatch_get_main_queue(), ^{
     NSLog(@&quot;Someone broke the internet :(&quot;);
-});
-</code></pre><p> };</p>
+});</code></pre><p> };</p>
 <p> [internetReachableFoo startNotifier];<br> }    </p>
-</li>
+</code></li>
 </ol>
-<p><code></code></p>
+<code>
 
+</code>
   	</div>
 	  
 	  <div class="article-tags tags">
@@ -249,8 +259,8 @@ do {
 					</a></span>
 				
 				
-					<span class="art-item-right">next：<a href="/2017/04/12/screenshots/" rel="next"  title="UIView 截圖">
-						UIView 截圖
+					<span class="art-item-right">next：<a href="/2017/04/12/CustomizedFont/" rel="next"  title="如何在程式裡放入字型檔">
+						如何在程式裡放入字型檔
 					</a><i class="icon icon-chevron-thin-right"></i></span>
 				
 		</div>

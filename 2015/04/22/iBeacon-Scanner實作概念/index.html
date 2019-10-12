@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>iBeacon Scanner實作概念 | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
@@ -27,7 +27,7 @@
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -35,7 +35,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -251,12 +251,9 @@
     didDiscoverServices:(NSArray *)serviceUuids
 {
     NSLog(@&quot;discovered a peripheral&apos;s services: %@&quot;, serviceUuids);
-}
-</code></pre><p>其中可以過濾掉一些不會廣播的設備</p>
-<pre><code>if([advertisementDataobjectForKey:@&quot;kCBAdvDataLocalName&quot;]!=nil){
-</code></pre><p>可以取該設備的UUID</p>
-<pre><code>&lt;__NSConcreteUUID 0x17403f520&gt; 2750A093-A1C2-9953-A59F-A0769538DC15
-</code></pre><p>附帶一提的是，小米手環也會廣播自已的藍芽訊號</p>
+}</code></pre><p>其中可以過濾掉一些不會廣播的設備</p>
+<pre><code>if([advertisementDataobjectForKey:@&quot;kCBAdvDataLocalName&quot;]!=nil){</code></pre><p>可以取該設備的UUID</p>
+<pre><code>&lt;__NSConcreteUUID 0x17403f520&gt; 2750A093-A1C2-9953-A59F-A0769538DC15</code></pre><p>附帶一提的是，小米手環也會廣播自已的藍芽訊號</p>
 <h3 id="2-接著利用-CLLocationManagerDelegate-對-已取得的UUID-對-iBeacon-做程式的實作"><a href="#2-接著利用-CLLocationManagerDelegate-對-已取得的UUID-對-iBeacon-做程式的實作" class="headerlink" title="2. 接著利用 CLLocationManagerDelegate 對 已取得的UUID 對 iBeacon 做程式的實作"></a>2. 接著利用 CLLocationManagerDelegate 對 已取得的UUID 對 iBeacon 做程式的實作</h3><pre><code> for (NSUUID *uuid in [APLDefaults sharedDefaults].supportedProximityUUIDs)
     {
         CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:[uuid UUIDString]];
@@ -269,8 +266,7 @@
 - (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
 {
     // 這裡就可以取到 iBeacon 了
-}
-</code></pre><p>在這裡 小米手環 不會出現在 CLLocationManagerDelegate，所以會出現的就只剩下iBeacon了</p>
+}</code></pre><p>在這裡 小米手環 不會出現在 CLLocationManagerDelegate，所以會出現的就只剩下iBeacon了</p>
 <h3 id="打完收工"><a href="#打完收工" class="headerlink" title="打完收工"></a>打完收工</h3>
   	</div>
 	  

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>時間軸: 2015/10 | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
@@ -26,7 +26,7 @@
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -34,7 +34,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -166,9 +166,11 @@
   </section>
   <section class="article typo">
 	  <h2 id="XCode7、iOS9新功能－Resource-On-Demand-資源檔分段下載"><a href="#XCode7、iOS9新功能－Resource-On-Demand-資源檔分段下載" class="headerlink" title="XCode7、iOS9新功能－Resource On Demand 資源檔分段下載"></a>XCode7、iOS9新功能－Resource On Demand 資源檔分段下載</h2><p>XCode7的專案多了一個標籤[Resource Tags]</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/resourcetag01.png" alt="resourcetag01" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/resourcetag01.png" alt="resourcetag01" style="width:310px">
+
 <p>打開來看長這樣</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/resourcetag02.png" alt="resourcetag02" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/resourcetag02.png" alt="resourcetag02" style="width:310px">
+
 <p>接著解說一下各自的用意</p>
 <p>Initial Install Tags: 在一開始安裝時就包在ipa裡讓人下載的資源檔</p>
 <p>Prefetched Tag Order: 第一次開啟app時才下載資源檔</p>
@@ -176,7 +178,9 @@
 <p>##套用情境<br>假設我寫了一個電子書app，全部資源檔包一包上傳到store，結果有30MB，此時手機如果在3G模式下，是沒有辦法下載這個app的（上限20MB），此時若將資源檔移至 [Prefetched Tag Order] 把主程式壓在20MB以下的話，3G模式下的使用者就可以下載了，另外的10MB，則是使用者第一次開啟時才會將這10MB下載回來。</p>
 <p>內容的部份，我有10本書，每本10MB，如果在[Prefetched Tag Order]一口氣全下載回來的話，會慢到讓user以為是當機吧。所以內容可以等到使用者單獨開啟某一本書時再去下載，就可以放在[Download Only On Demand]，再用程式去判斷。</p>
 <h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><h3 id="設定資源檔的tag"><a href="#設定資源檔的tag" class="headerlink" title="設定資源檔的tag"></a>設定資源檔的tag</h3><p>在Images.xcassets找到需要設定的圖檔，並在且右方屬性的地方找找[On Demand Resources Tags]，如圖</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/resourcetag03.png" alt="resourcetag03" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/resourcetag03.png" alt="resourcetag03" style="width:310px">
+
+
 <p>打入[book1]，看起來很像標籤雲，實際上一個資源檔可以輸入多個tag，如圖<br><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/resourcetag04.png" alt="resourcetag04" style="width:310px"></p>
 <p>輸入完成後，回到[Resource Tags]看一眼，發現檔案自動出現在[Download Only On Demand]<br><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/resourcetag05.png" alt="resourcetag05" style="width:310px"></p>
 <h3 id="呼叫程式下載資源檔"><a href="#呼叫程式下載資源檔" class="headerlink" title="呼叫程式下載資源檔"></a>呼叫程式下載資源檔</h3><p>iOS9 提供了兩個方法呼叫  看程式，bj4</p>
@@ -188,8 +192,7 @@
     [resourceRequest beginAccessingResourcesWithCompletionHandler:^(NSError * _Nullable error) {
         NSLog(@&quot;%@&quot;,error);
     }];
-}
-</code></pre><h4 id="conditionallyBeginAccessingResourcesWithCompletionHandler"><a href="#conditionallyBeginAccessingResourcesWithCompletionHandler" class="headerlink" title="conditionallyBeginAccessingResourcesWithCompletionHandler"></a>conditionallyBeginAccessingResourcesWithCompletionHandler</h4><pre><code>-(void)loadResourceWithTags:(NSArray *)tagArray{
+}</code></pre><h4 id="conditionallyBeginAccessingResourcesWithCompletionHandler"><a href="#conditionallyBeginAccessingResourcesWithCompletionHandler" class="headerlink" title="conditionallyBeginAccessingResourcesWithCompletionHandler"></a>conditionallyBeginAccessingResourcesWithCompletionHandler</h4><pre><code>-(void)loadResourceWithTags:(NSArray *)tagArray{
     NSSet *tagSet = [NSSet setWithArray:tagArray];
 
     NSBundleResourceRequest *resourceRequest = [[NSBundleResourceRequest alloc] initWithTags:tagSet];
@@ -201,8 +204,7 @@
 
     }];
 
-}
-</code></pre>
+}</code></pre>
 
     
     

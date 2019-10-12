@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>Tag: iOS | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
@@ -26,7 +26,7 @@
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -34,7 +34,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -167,17 +167,12 @@
 	  <p>如何在手機上存資料是我常常被問到的問題，因此開一篇文章來討論一下實務上幾個比較常見的到資料存儲方式，不過，這裡不會提到CoreData，原因在於－－－大部份的手機專案都是iOS／Android兩個手機專案在並行，因此大部份的owner會想要兩邊的流程是一致的，因此在選擇資料存儲的方式時，大多選擇兩個手機台平能夠共用的方式，sqlite就是一個比較好說服owner的方式。當然coredata也有他的好處和便捷性，這邊就不多解釋了。<br><br>這裡要介紹的是 NSUserDefault、File與SQLite<br><br>如果有人有更好的存儲方式，也請不吝告知。</p>
 <h3 id="NSUserDefault"><a href="#NSUserDefault" class="headerlink" title="NSUserDefault"></a>NSUserDefault</h3><p>有許多型別可以使用，這裡使用比較常用的object當範例，其他類似的就不一一介紹。</p>
 <h4 id="regist-Data"><a href="#regist-Data" class="headerlink" title="regist Data"></a>regist Data</h4><pre><code>[[NSUserDefaults standardUserDefaults] registerDefaults:&lt;#(NSDictionary *)#&gt;]
-[[NSUserDefaults standardUserDefaults] synchronize];
-</code></pre><h4 id="write-Data"><a href="#write-Data" class="headerlink" title="write Data"></a>write Data</h4><pre><code>[[NSUserDefaults standardUserDefaults] setObject:data forKey:@&quot;key&quot;];
-[[NSUserDefaults standardUserDefaults] synchronize];
-</code></pre><h4 id="remove-Data"><a href="#remove-Data" class="headerlink" title="remove Data"></a>remove Data</h4><pre><code>[[NSUserDefaults standardUserDefaults] removeObjectForKey:@&quot;key&quot;]    
-[[NSUserDefaults standardUserDefaults] synchronize];
-</code></pre><p>或是</p>
+[[NSUserDefaults standardUserDefaults] synchronize];</code></pre><h4 id="write-Data"><a href="#write-Data" class="headerlink" title="write Data"></a>write Data</h4><pre><code>[[NSUserDefaults standardUserDefaults] setObject:data forKey:@&quot;key&quot;];
+[[NSUserDefaults standardUserDefaults] synchronize];</code></pre><h4 id="remove-Data"><a href="#remove-Data" class="headerlink" title="remove Data"></a>remove Data</h4><pre><code>[[NSUserDefaults standardUserDefaults] removeObjectForKey:@&quot;key&quot;]    
+[[NSUserDefaults standardUserDefaults] synchronize];</code></pre><p>或是</p>
 <pre><code>[[NSUserDefaults standardUserDefaults] setObject:nil forKey:@&quot;key&quot;];
-[[NSUserDefaults standardUserDefaults] synchronize];
-</code></pre><h4 id="read-Data"><a href="#read-Data" class="headerlink" title="read Data"></a>read Data</h4><pre><code>[[NSUserDefaults standardUserDefaults] objectForKey:@&quot;key&quot;];
-[[NSUserDefaults standardUserDefaults] synchronize];
-</code></pre><h3 id="實體檔案存取-NSFileManager"><a href="#實體檔案存取-NSFileManager" class="headerlink" title="實體檔案存取(NSFileManager)"></a>實體檔案存取(NSFileManager)</h3><h4 id="Create-File"><a href="#Create-File" class="headerlink" title="Create File"></a>Create File</h4><pre><code>- (void)createFileWithName:(NSString *)fileName
+[[NSUserDefaults standardUserDefaults] synchronize];</code></pre><h4 id="read-Data"><a href="#read-Data" class="headerlink" title="read Data"></a>read Data</h4><pre><code>[[NSUserDefaults standardUserDefaults] objectForKey:@&quot;key&quot;];
+[[NSUserDefaults standardUserDefaults] synchronize];</code></pre><h3 id="實體檔案存取-NSFileManager"><a href="#實體檔案存取-NSFileManager" class="headerlink" title="實體檔案存取(NSFileManager)"></a>實體檔案存取(NSFileManager)</h3><h4 id="Create-File"><a href="#Create-File" class="headerlink" title="Create File"></a>Create File</h4><pre><code>- (void)createFileWithName:(NSString *)fileName
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -190,8 +185,7 @@
     } else {
         NSLog(@&quot;Failed to Create the File&quot;);
     }
-}
-</code></pre><h4 id="Read-File"><a href="#Read-File" class="headerlink" title="Read File"></a>Read File</h4><pre><code>- (void)readFileWithName:(NSString *)fileName
+}</code></pre><h4 id="Read-File"><a href="#Read-File" class="headerlink" title="Read File"></a>Read File</h4><pre><code>- (void)readFileWithName:(NSString *)fileName
 {
 
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -210,8 +204,7 @@
     } else {
         NSLog(@&quot;File %@ doesn&apos;t exists&quot;, fileName);
     }
-}
-</code></pre><h4 id="Write-File"><a href="#Write-File" class="headerlink" title="Write File"></a>Write File</h4><pre><code>- (void)writeString:(NSString *)content toFile:(NSString *)fileName
+}</code></pre><h4 id="Write-File"><a href="#Write-File" class="headerlink" title="Write File"></a>Write File</h4><pre><code>- (void)writeString:(NSString *)content toFile:(NSString *)fileName
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -227,8 +220,7 @@
         NSLog(@&quot;File %@ doesn&apos;t exists&quot;, fileName);
     }
 
-}
-</code></pre><h4 id="delete-File"><a href="#delete-File" class="headerlink" title="delete File"></a>delete File</h4><pre><code>- (void)deleteFileWithName:(NSString *)fileName
+}</code></pre><h4 id="delete-File"><a href="#delete-File" class="headerlink" title="delete File"></a>delete File</h4><pre><code>- (void)deleteFileWithName:(NSString *)fileName
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -245,8 +237,7 @@
     } else {
         NSLog(@&quot;File %@ doesn&apos;t exists&quot;, fileName);
     }
-}
-</code></pre><h3 id="SQLite"><a href="#SQLite" class="headerlink" title="SQLite"></a>SQLite</h3><p>這裡我使用最常用的FMDB來當做範例<br><a href="https://github.com/ccgus/fmdb" target="_blank" rel="noopener">FMDB on GitHub</a></p>
+}</code></pre><h3 id="SQLite"><a href="#SQLite" class="headerlink" title="SQLite"></a>SQLite</h3><p>這裡我使用最常用的FMDB來當做範例<br><a href="https://github.com/ccgus/fmdb" target="_blank" rel="noopener">FMDB on GitHub</a></p>
 <h4 id="首先你要先把-libsqlite3-dylib-加進library"><a href="#首先你要先把-libsqlite3-dylib-加進library" class="headerlink" title="首先你要先把 libsqlite3.dylib 加進library"></a>首先你要先把 libsqlite3.dylib 加進library</h4><p>不解釋</p>
 <h4 id="OpenDB"><a href="#OpenDB" class="headerlink" title="OpenDB"></a>OpenDB</h4><pre><code>NSURL *appUrl = [[[NSFileManager defaultManager] 
      URLsForDirectory:NSDocumentDirectory 
@@ -257,12 +248,10 @@ FMDatabase* db = [FMDatabase databaseWithPath:dbPath];
 if (![db open]) {       
  NSLog(@&quot;Could not open db&quot;);     
  return;  
-}
-</code></pre><h4 id="insertData"><a href="#insertData" class="headerlink" title="insertData"></a>insertData</h4><pre><code>if(![db executeUpdate:@&quot;INSERT INTO user (name, description) VALUES (?,?)&quot;, name, description])
+}</code></pre><h4 id="insertData"><a href="#insertData" class="headerlink" title="insertData"></a>insertData</h4><pre><code>if(![db executeUpdate:@&quot;INSERT INTO user (name, description) VALUES (?,?)&quot;, name, description])
 {
  NSLog(@&quot;Could not insert data: %@&quot;, [db lastErrorMessage]);
-}
-</code></pre><p>這裡的代數是用？</p>
+}</code></pre><p>這裡的代數是用？</p>
 <h4 id="readData"><a href="#readData" class="headerlink" title="readData"></a>readData</h4><pre><code>NSMutableArray* items = [NSMutableArray arrayWithCapacity:0];
 FMResultSet *rs = [db executeQuery:@&quot;SELECT uid, name, description from user&quot;];
 
@@ -278,19 +267,15 @@ while ([rs next]) {
        nil]];
 }
 
-[rs close];   
-</code></pre><h4 id="updateData"><a href="#updateData" class="headerlink" title="updateData"></a>updateData</h4><pre><code>[db beginTransaction];
+[rs close];   </code></pre><h4 id="updateData"><a href="#updateData" class="headerlink" title="updateData"></a>updateData</h4><pre><code>[db beginTransaction];
 if(![db executeUpdate:@&quot;UPDATE user set name=?, description＝? where name=&apos;?&apos;“,@&quot;1&quot;,@&quot;2&quot;,@&quot;1&quot;]);
     {
      NSLog(@&quot;Could not update data: %@&quot;, [db lastErrorMessage]);
     }
-[db commit];
-</code></pre><h4 id="deleteData"><a href="#deleteData" class="headerlink" title="deleteData"></a>deleteData</h4><pre><code>if(![_db executeUpdate:@&quot;DELETE FROM user WHERE uid = ?&quot;, [NSNumber numberWithInt:uid]])
+[db commit];</code></pre><h4 id="deleteData"><a href="#deleteData" class="headerlink" title="deleteData"></a>deleteData</h4><pre><code>if(![_db executeUpdate:@&quot;DELETE FROM user WHERE uid = ?&quot;, [NSNumber numberWithInt:uid]])
 {
  NSLog(@&quot;Could not delete data: %@&quot;, [db lastErrorMessage]);
-}
-</code></pre><h4 id="CloseDB"><a href="#CloseDB" class="headerlink" title="CloseDB"></a>CloseDB</h4><pre><code>[db close]
-</code></pre><p>執行FMDB的指令有她的生命週期，都是<br><br><br>1.open db<br><br><br>2.執行<br><br><br>3.close db</p>
+}</code></pre><h4 id="CloseDB"><a href="#CloseDB" class="headerlink" title="CloseDB"></a>CloseDB</h4><pre><code>[db close]</code></pre><p>執行FMDB的指令有她的生命週期，都是<br><br><br>1.open db<br><br><br>2.執行<br><br><br>3.close db</p>
 <p>如果沒有確實的open與close的話  是很容易造成exception而crash的<br><br><br><br><br>最後，因為sqlite是以一個檔案型態存在的，因此在multi－thread讀寫資料時很容易出現錯誤，官方說明與建議的方法如下：<br><br><br></p>
 <pre><code>Using a single instance of FMDatabase from multiple threads at once is a bad idea. It has always been OK to make a FMDatabase object per thread. Just don&apos;t share a single instance across threads, and definitely not across multiple threads at the same time. Bad things will eventually happen and you&apos;ll eventually get something to crash, or maybe get an exception, or maybe meteorites will fall out of the sky and hit your Mac Pro. This would suck.
 
@@ -298,8 +283,7 @@ So don&apos;t instantiate a single FMDatabase object and use it across multiple 
 
 Instead, use FMDatabaseQueue. It&apos;s your friend and it&apos;s here to help. Here&apos;s how to use it:
 
-First, make your queue.
-</code></pre><p>用FMDatabaseQueue來解決，<br><br>範例：</p>
+First, make your queue.</code></pre><p>用FMDatabaseQueue來解決，<br><br>範例：</p>
 <pre><code>FMDatabaseQueue *queue = [FMDatabaseQueue databaseQueueWithPath:aPath];
 
 [queue inDatabase:^(FMDatabase *db) {
@@ -311,8 +295,92 @@ FMResultSet *rs = [db executeQuery:@&quot;select * from foo&quot;];
     while ([rs next]) {
         …
     }
-}];
-</code></pre><p><br><br>就醬，其實不難～<br><br><br><br><br><br><br></p>
+}];</code></pre><br>
+就醬，其實不難～
+<br><br><br><br>
+<br>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/iOS/">iOS</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2015/08/13/XCode-debug再進化-4/">
+        XCode debug再進化－4
+      </a>
+    </h2>
+    
+    <time>
+      8月 13, 2015
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <p>在xcode debug時，有些功能可能用不太到，不過既然知道了，就分享出來給大家知道，致於想不想用，什麼時候用，就端看自已的判斷了</p>
+<p><br><br><br>這次是要介紹如何在debug模式下，新增watchpoint(監看點or監看式)</p>
+<h3 id="一樣先中斷一下吧"><a href="#一樣先中斷一下吧" class="headerlink" title="一樣先中斷一下吧"></a>一樣先中斷一下吧</h3><p>在一個範例的按鈕裡裡先拉一個 IBAction  然後給一個中斷點</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-01.png" alt="debug2-01" style="width:310px">
+
+
+<p>按下按鈕，被中斷後，在debug navagator的lldb裡下指令</p>
+<pre><code>watchpoint set variable i</code></pre><p>其中</p>
+<pre><code>watchpoint 是指令  可以簡寫為 watch
+variable 可以簡寫為 var
+i 就是你想要監看的東西</code></pre><p>然後就會出現如下的結果    </p>
+<pre><code>Watchpoint created: Watchpoint 1: addr = 0x16fd25614 size = 4 state = enabled type = w
+    declare @ &apos;/Users/minghongyu/Documents/work/iphone/test3/test3/ViewController.m:28&apos;
+    watchpoint spec = &apos;i&apos;
+    new value: 0
+2015-08-13 20:02:38.367 test3[4700:525425] 0</code></pre><p>代表監看點新增成功</p>
+<p><br><br><br>接著如果拿掉中斷點再繼續執行的話，會發現，每次都會自動停下來，結果如下</p>
+<pre><code>Watchpoint 1 hit:
+old value: 0
+new value: 1
+2015-08-13 20:02:42.329 test3[4700:525425] 1
+
+Watchpoint 1 hit:
+old value: 1
+new value: 2
+2015-08-13 20:02:45.380 test3[4700:525425] 2
+
+Watchpoint 1 hit:
+old value: 2
+new value: 3
+2015-08-13 20:02:48.603 test3[4700:525425] 3
+
+Watchpoint 1 hit:
+old value: 3
+new value: 4</code></pre><p>就可以好好的觀察變數的變化了</p>
+<p>如果想看到所有的監看點列表，指令為</p>
+<pre><code>watchpoint list  
+
+也可以簡寫為 watch l  （小寫L）</code></pre><p>執行的結果如下</p>
+<pre><code>Number of supported hardware watchpoints: 4
+Current watchpoints:
+Watchpoint 1: addr = 0x16fd25614 size = 4 state = enabled type = w
+    declare @ &apos;/Users/minghongyu/Documents/work/iphone/test3/test3/ViewController.m:28&apos;
+    watchpoint spec = &apos;i&apos;
+    old value: 3
+    new value: 4</code></pre><p><br><br><br>如果想要刪除監看點，指令為</p>
+<pre><code>watchpoint delete 1
+也可以簡寫為 watch del 1</code></pre><p>其中</p>
+<pre><code>1 是列表中的順序數</code></pre><p>執行結果如下</p>
+<pre><code>1 watchpoints deleted.</code></pre><p>再繼續跑程式就不會停下來了！！</p>
+<p>無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾！！！</p>
+<p><br><br><br><br></p>
 
 
     
@@ -347,116 +415,29 @@ FMResultSet *rs = [db executeQuery:@&quot;select * from foo&quot;];
 	  <p>在xcode debug時，有些功能可能用不太到，不過既然知道了，就分享出來給大家知道，致於想不想用，什麼時候用，就端看自已的判斷了</p>
 <p><br><br><br>這次是要介紹如何在debug模式下，做到更新 UI 的指令</p>
 <h3 id="先中斷一下吧"><a href="#先中斷一下吧" class="headerlink" title="先中斷一下吧"></a>先中斷一下吧</h3><p>在一個範例的按鈕裡裡先拉一個 IBAction  然後給一個中斷點</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-01.png" alt="debug2-01" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-01.png" alt="debug2-01" style="width:310px">
+
 <p>在debug前的 UI 長成這樣</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-02.png" alt="debug2-02" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-02.png" alt="debug2-02" style="width:310px">
+
 <p>按下按鈕，被中斷後，在debug navagator的lldb裡下指令</p>
-<pre><code>e id $myView = (id)0x154d0e9d0
-</code></pre><p>其中</p>
+<pre><code>e id $myView = (id)0x154d0e9d0</code></pre><p>其中</p>
 <pre><code>e 是 expresss 的簡寫
 id 是型別
 $myView 是變數容器
-0x154d0e9d0 是記憶體位址 （需要與左側的變數的記憶體位址一致）
-</code></pre><p>結果如下圖</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-03.png" alt="debug2-03" style="width:310px"></p>
+0x154d0e9d0 是記憶體位址 （需要與左側的變數的記憶體位址一致）</code></pre><p>結果如下圖</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-03.png" alt="debug2-03" style="width:310px">
+
 <p>接著 可以輸入想要做的事情</p>
-<pre><code>e (void)[$myView setBackgroundColor:[UIColor redColor]]
-</code></pre><p>內容就不多解釋了，只是，醬子打完後  手機是不會動的（廢話，因為還卡在中斷點）</p>
-<p><br><br>所以，要通知 UI 做更新才行</p>
-<pre><code>e (void)[CATransaction flush]
-</code></pre><p>你會發現，還在中斷點的debug模式下，手機的畫面更新了！！！！（如下圖）<br><br></p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-04.png" alt="debug2-04" style="width:310px"></p>
+<pre><code>e (void)[$myView setBackgroundColor:[UIColor redColor]]</code></pre><p>內容就不多解釋了，只是，醬子打完後  手機是不會動的（廢話，因為還卡在中斷點）</p>
+<br>
+所以，要通知 UI 做更新才行
+
+<pre><code>e (void)[CATransaction flush]</code></pre><p>你會發現，還在中斷點的debug模式下，手機的畫面更新了！！！！（如下圖）<br><br></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-04.png" alt="debug2-04" style="width:310px">
+
+
 <p>真的太神奇了，傑克</p>
-<p><br><br><br><br></p>
-
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/iOS/">iOS</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2015/08/13/XCode-debug再進化-4/">
-        XCode debug再進化－4
-      </a>
-    </h2>
-    
-    <time>
-      8月 13, 2015
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <p>在xcode debug時，有些功能可能用不太到，不過既然知道了，就分享出來給大家知道，致於想不想用，什麼時候用，就端看自已的判斷了</p>
-<p><br><br><br>這次是要介紹如何在debug模式下，新增watchpoint(監看點or監看式)</p>
-<h3 id="一樣先中斷一下吧"><a href="#一樣先中斷一下吧" class="headerlink" title="一樣先中斷一下吧"></a>一樣先中斷一下吧</h3><p>在一個範例的按鈕裡裡先拉一個 IBAction  然後給一個中斷點</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-01.png" alt="debug2-01" style="width:310px"></p>
-<p>按下按鈕，被中斷後，在debug navagator的lldb裡下指令</p>
-<pre><code>watchpoint set variable i
-</code></pre><p>其中</p>
-<pre><code>watchpoint 是指令  可以簡寫為 watch
-variable 可以簡寫為 var
-i 就是你想要監看的東西
-</code></pre><p>然後就會出現如下的結果    </p>
-<pre><code>Watchpoint created: Watchpoint 1: addr = 0x16fd25614 size = 4 state = enabled type = w
-    declare @ &apos;/Users/minghongyu/Documents/work/iphone/test3/test3/ViewController.m:28&apos;
-    watchpoint spec = &apos;i&apos;
-    new value: 0
-2015-08-13 20:02:38.367 test3[4700:525425] 0
-</code></pre><p>代表監看點新增成功</p>
-<p><br><br><br>接著如果拿掉中斷點再繼續執行的話，會發現，每次都會自動停下來，結果如下</p>
-<pre><code>Watchpoint 1 hit:
-old value: 0
-new value: 1
-2015-08-13 20:02:42.329 test3[4700:525425] 1
-
-Watchpoint 1 hit:
-old value: 1
-new value: 2
-2015-08-13 20:02:45.380 test3[4700:525425] 2
-
-Watchpoint 1 hit:
-old value: 2
-new value: 3
-2015-08-13 20:02:48.603 test3[4700:525425] 3
-
-Watchpoint 1 hit:
-old value: 3
-new value: 4
-</code></pre><p>就可以好好的觀察變數的變化了</p>
-<p>如果想看到所有的監看點列表，指令為</p>
-<pre><code>watchpoint list  
-
-也可以簡寫為 watch l  （小寫L）
-</code></pre><p>執行的結果如下</p>
-<pre><code>Number of supported hardware watchpoints: 4
-Current watchpoints:
-Watchpoint 1: addr = 0x16fd25614 size = 4 state = enabled type = w
-    declare @ &apos;/Users/minghongyu/Documents/work/iphone/test3/test3/ViewController.m:28&apos;
-    watchpoint spec = &apos;i&apos;
-    old value: 3
-    new value: 4
-</code></pre><p><br><br><br>如果想要刪除監看點，指令為</p>
-<pre><code>watchpoint delete 1
-也可以簡寫為 watch del 1
-</code></pre><p>其中</p>
-<pre><code>1 是列表中的順序數
-</code></pre><p>執行結果如下</p>
-<pre><code>1 watchpoints deleted.
-</code></pre><p>再繼續跑程式就不會停下來了！！</p>
-<p>無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾！！！</p>
 <p><br><br><br><br></p>
 
 
@@ -493,27 +474,32 @@ Watchpoint 1: addr = 0x16fd25614 size = 4 state = enabled type = w
 <h3 id="為你的程式加入中斷點"><a href="#為你的程式加入中斷點" class="headerlink" title="為你的程式加入中斷點"></a>為你的程式加入中斷點</h3><p>先來一段小程式</p>
 <pre><code>for(int i=0;i&lt;100;i++){
    NSLog(@&quot;%d&quot;,i);
-}
-</code></pre><p>接著  在旁邊的行數的區域用滑鼠點一下，就會看到中斷點的藍標跑出來<br>想要移除中斷點可以用拖曳該中斷點  到中間的編輯區時會出現X，放掉就刪除了（有點像丟垃圾桶）。</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug1-01.png" alt="debug1-01" style="width:310px"></p>
+}</code></pre><p>接著  在旁邊的行數的區域用滑鼠點一下，就會看到中斷點的藍標跑出來<br>想要移除中斷點可以用拖曳該中斷點  到中間的編輯區時會出現X，放掉就刪除了（有點像丟垃圾桶）。</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug1-01.png" alt="debug1-01" style="width:310px">
+
 <p>接著，運行程式，會發現程式在一觸碰到中斷點時就會停下來等你debug</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug1-02.png" alt="debug1-02" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug1-02.png" alt="debug1-02" style="width:310px">
+
 <p>此時下方的[Debug Navigator]會自已彈出來<br>會有一些基本的變數訊息在左邊  告訴我們此時 </p>
-<pre><code>i=0;
-</code></pre><p><br><br>當然，因為一碰到中斷點時馬上就停下來，所以i＝0時就停了</p>
+<pre><code>i=0;</code></pre><br>
+當然，因為一碰到中斷點時馬上就停下來，所以i＝0時就停了
+
 <p>那…….我想要在 i=49 時，來做一個debug的動作呢？</p>
-<p><br><br>=============== Of Course YES =================<br><br>=============== Of Course YES =================<br><br>=============== Of Course YES =================</p>
+<br>
+=============== Of Course YES =================<br>
+=============== Of Course YES =================<br>
+=============== Of Course YES =================
+
 <p>在breakpoint上滑鼠右鍵，並且選擇[Edit BreakPoint]<br><br><br><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug1-03.png" alt="debug1-03" style="width:310px"></p>
 <p>此時，會有幾個參數可以使用<br><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug1-04.png" alt="debug1-04" style="width:310px"></p>
 <pre><code>1. Condition
 2. Ignore
 3. Action
-4. Options - Automatically continue after evaluating actions
-</code></pre><p>在上述的情境中我們可以做的是</p>
+4. Options - Automatically continue after evaluating actions</code></pre><p>在上述的情境中我們可以做的是</p>
 <pre><code>1. 在Condition 裡輸入 [ i == 49 ]
 或
-2. Ignore 48 
-</code></pre><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug1-05.png" alt="debug1-05" style="width:310px"></p>
+2. Ignore 48 </code></pre><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug1-05.png" alt="debug1-05" style="width:310px">
+
 <p>接著重跑一次程式，媽呀～ 太神奇了，同樣的中斷點，程式跑到第49次才停下來！！！！！</p>
 <p>醬子的話  就可以隨心所欲的想中斷就中斷，不用一直按 [Step Over] 了</p>
 <p><br><br><br><br></p>
@@ -550,20 +536,31 @@ Watchpoint 1: addr = 0x16fd25614 size = 4 state = enabled type = w
   <section class="article typo">
 	  <p>千呼萬喚始出來，LinkedIn終於把最後的一個ios sdk給補上了，就是這次要walk through的東西，不過很可惜的是目前只有objc版本，swift根據過往objc sdk的開發進度，我在想可能要等上個好一陣子了。</p>
 <h3 id="下載sdk"><a href="#下載sdk" class="headerlink" title="下載sdk"></a>下載sdk</h3><p><a href="https://developer.linkedin.com/docs/ios-sdk" target="_blank" rel="noopener">SDK載點</a></p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin01.png" alt="linkedin01" style="width:310px"></p>
-<h3 id="準備開發環境"><a href="#準備開發環境" class="headerlink" title="準備開發環境"></a>準備開發環境</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin02.png" alt="linkedin02" style="width:310px"></p>
-<h3 id="在開發者後台建立一個新旳應用程式"><a href="#在開發者後台建立一個新旳應用程式" class="headerlink" title="在開發者後台建立一個新旳應用程式"></a>在開發者後台建立一個新旳應用程式</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin06.png" alt="linkedin06" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin01.png" alt="linkedin01" style="width:310px">
+
+<h3 id="準備開發環境"><a href="#準備開發環境" class="headerlink" title="準備開發環境"></a>準備開發環境</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin02.png" alt="linkedin02" style="width:310px">
+
+<h3 id="在開發者後台建立一個新旳應用程式"><a href="#在開發者後台建立一個新旳應用程式" class="headerlink" title="在開發者後台建立一個新旳應用程式"></a>在開發者後台建立一個新旳應用程式</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin06.png" alt="linkedin06" style="width:310px">
+
+
 <h3 id="在開發者後台＞應用程式＞Mobile裡"><a href="#在開發者後台＞應用程式＞Mobile裡" class="headerlink" title="在開發者後台＞應用程式＞Mobile裡"></a>在開發者後台＞應用程式＞Mobile裡</h3><p>將Application Id 先記下來<br>同時填寫<br>1。iOS Bundle Identifiers<br>2。iOS URL Suffix Schemes: </p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin08.png" alt="linkedin08" style="width:310px"></p>
-<h3 id="打開samplesdk的專案"><a href="#打開samplesdk的專案" class="headerlink" title="打開samplesdk的專案"></a>打開samplesdk的專案</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin03.png" alt="linkedin03" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin08.png" alt="linkedin08" style="width:310px">
+
+
+<h3 id="打開samplesdk的專案"><a href="#打開samplesdk的專案" class="headerlink" title="打開samplesdk的專案"></a>打開samplesdk的專案</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin03.png" alt="linkedin03" style="width:310px">
+
 <h3 id="修改info-plist"><a href="#修改info-plist" class="headerlink" title="修改info.plist"></a>修改info.plist</h3><pre><code>key：LIAppId 
-value： [LinkedIn Application Id]
-</code></pre><h3 id="修改url-scheme"><a href="#修改url-scheme" class="headerlink" title="修改url scheme"></a>修改url scheme</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin10.png" alt="linkedin10" style="width:310px"></p>
-<h3 id="跑跑看"><a href="#跑跑看" class="headerlink" title="跑跑看"></a>跑跑看</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin11.png" alt="linkedin11" style="width:310px"></p>
+value： [LinkedIn Application Id]</code></pre><h3 id="修改url-scheme"><a href="#修改url-scheme" class="headerlink" title="修改url scheme"></a>修改url scheme</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin10.png" alt="linkedin10" style="width:310px">
+
+
+<h3 id="跑跑看"><a href="#跑跑看" class="headerlink" title="跑跑看"></a>跑跑看</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin11.png" alt="linkedin11" style="width:310px">
+
 <p>沒裝linkedin native app的話會提醒安裝 （不裝不能用）</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin12.png" alt="linkedin12" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin12.png" alt="linkedin12" style="width:310px">
+
 <p>據linkedin的開發者表示，這不會被apple reject，所以，有機會就來試看看會不會被reject吧</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin13.png" alt="linkedin13" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin13.png" alt="linkedin13" style="width:310px">
+
 <p>導回成功  但create session失敗（據說so是iOS 8.4的問題）</p>
 <p>不過似乎沒有管道可以REPORT BUG，就只能慢慢等了</p>
 
@@ -597,15 +594,18 @@ value： [LinkedIn Application Id]
 		
   </section>
   <section class="article typo">
-	  <h3 id="準備好一個新專案，以及CoreLocation-Framework"><a href="#準備好一個新專案，以及CoreLocation-Framework" class="headerlink" title="準備好一個新專案，以及CoreLocation.Framework"></a>準備好一個新專案，以及CoreLocation.Framework</h3><p><br><br><br></p>
+	  <h3 id="準備好一個新專案，以及CoreLocation-Framework"><a href="#準備好一個新專案，以及CoreLocation-Framework" class="headerlink" title="準備好一個新專案，以及CoreLocation.Framework"></a>準備好一個新專案，以及CoreLocation.Framework</h3><br>
+<br>
+
 <h3 id="應該有的素材"><a href="#應該有的素材" class="headerlink" title="應該有的素材"></a>應該有的素材</h3><pre><code>1。奇門遁甲圓盤
 2。旋轉用的太極(裝飾用)
 3。UISegment 切換「磁北」、「真北」
-4。四個UILabel 顯示經緯度、高度、與方向角度
-</code></pre><h3 id="程式的撰寫"><a href="#程式的撰寫" class="headerlink" title="程式的撰寫"></a>程式的撰寫</h3><p><br><br><br><br>info.plist</p>
+4。四個UILabel 顯示經緯度、高度、與方向角度</code></pre><h3 id="程式的撰寫"><a href="#程式的撰寫" class="headerlink" title="程式的撰寫"></a>程式的撰寫</h3><br>
+<br>
+info.plist
+
 <pre><code>NSLocationWhenInUseUsageDescription
-NSLocationAlwaysUsageDescription
-</code></pre><p>ViewController.h</p>
+NSLocationAlwaysUsageDescription</code></pre><p>ViewController.h</p>
 <pre><code>#import &lt;CoreLocation/CoreLocation.h&gt;
 
 &lt;CLLocationManagerDelegate&gt;
@@ -613,8 +613,7 @@ NSLocationAlwaysUsageDescription
 IBOutlet UIImageView *imgCompass;
 
 @property (nonatomic,retain) CLLocationManager *locationManager;
-@property (nonatomic,retain) CLHeading *currentHeading;
-</code></pre><p>ViewController.m</p>
+@property (nonatomic,retain) CLHeading *currentHeading;</code></pre><p>ViewController.m</p>
 <pre><code>- (void)viewDidLoad {
     [super viewDidLoad];
     self.currentHeading = [[CLHeading alloc] init];
@@ -713,8 +712,7 @@ IBOutlet UIImageView *imgCompass;
     }
 
 
-}
-</code></pre><p>完整專案放在 <a href="https://github.com/nobodyyu/ChimenCompass" target="_blank" rel="noopener">GitHub</a></p>
+}</code></pre><p>完整專案放在 <a href="https://github.com/nobodyyu/ChimenCompass" target="_blank" rel="noopener">GitHub</a></p>
 
 
     
@@ -747,8 +745,7 @@ IBOutlet UIImageView *imgCompass;
   </section>
   <section class="article typo">
 	  <h2 id="TouchID-Walk-Through"><a href="#TouchID-Walk-Through" class="headerlink" title="TouchID Walk Through"></a>TouchID Walk Through</h2><p>每個人的心中，都有一個secrect box，用來存放一些不為人知的小秘密，然而，在iphone，也可以自已打造一倨屬於自已的secret box，接著，就是要介紹，如果打造一把只有自已能開鎖的這把鑰匙－－Touch ID</p>
-<h3 id="1。引用"><a href="#1。引用" class="headerlink" title="1。引用"></a>1。引用</h3><pre><code>#import &lt;LocalAuthentication/LocalAuthentication.h&gt;
-</code></pre><h3 id="2。加入程式"><a href="#2。加入程式" class="headerlink" title="2。加入程式"></a>2。加入程式</h3><pre><code>- (IBAction)btnAuth:(id)sender {
+<h3 id="1。引用"><a href="#1。引用" class="headerlink" title="1。引用"></a>1。引用</h3><pre><code>#import &lt;LocalAuthentication/LocalAuthentication.h&gt;</code></pre><h3 id="2。加入程式"><a href="#2。加入程式" class="headerlink" title="2。加入程式"></a>2。加入程式</h3><pre><code>- (IBAction)btnAuth:(id)sender {
     LAContext *context = [[LAContext alloc] init];
 
     NSError *error = nil;
@@ -799,11 +796,14 @@ IBOutlet UIImageView *imgCompass;
         [alert show];
 
     }
-}
-</code></pre><p>###3。看結果</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/touchid01.png" alt="touchid01" style="width:310px"></p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/touchid02.png" alt="touchid02" style="width:310px"></p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/touchid03.png" alt="touchid03" style="width:310px"></p>
+}</code></pre><p>###3。看結果</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/touchid01.png" alt="touchid01" style="width:310px">
+
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/touchid02.png" alt="touchid02" style="width:310px">
+
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/touchid03.png" alt="touchid03" style="width:310px">
+
+
 
 
     
@@ -837,29 +837,36 @@ IBOutlet UIImageView *imgCompass;
   <section class="article typo">
 	  <p>當然，要先來個crash</p>
 <p>謝謝 Crashlytics 可以強制造成crash</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug01.png" alt="debug01" style="width:310px"></p>
-<h3 id="基礎debug-mode"><a href="#基礎debug-mode" class="headerlink" title="基礎debug mode"></a>基礎debug mode</h3><p>當crash發生時 xcode沒設定什麼東西時 程式會hang在這個讓人看不懂的地方</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug02.png" alt="debug02" style="width:310px"></p>
-<p>所以  要在xcode的地方設定一下  好方便未來的debug</p>
-<pre><code>xcode左邊的panel 左邊數第7個  右邊倒數第2個頁籤 點下去
-</code></pre><p>－</p>
-<pre><code>下面的「+」 點下去
-</code></pre><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug03.png" alt="debug03" style="width:310px"></p>
-<pre><code>選擇第一個「Add Exception Breakpoint」
-</code></pre><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug04.png" alt="debug04" style="width:310px"></p>
-<p>這時候會變成這個專案專屬的exception breakpoint</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug05.png" alt="debug05" style="width:310px"></p>
-<p>此時xcode有個小貼心的地方，就是可以把breakpoint設為USER，往後，每一個新增的專案都會有這個exception breakpoint</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug06.png" alt="debug06" style="width:310px"></p>
-<p>結果變成</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug07.png" alt="debug07" style="width:310px"></p>
-<p>再重新執行一次crash，就會停在比較易讀的位置，也可以利用下方的debug console 來進行debug了</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug08.png" alt="debug08" style="width:310px"></p>
-<p>下方的debug console最常使用的指令是</p>
-<pre><code>po xxx
-</code></pre><p>如果你真的很想知道有那些指令的話，可以在debug console輸入help</p>
-<font color="red">(不過我相信你絕對不會每一個都看完的)</font>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug01.png" alt="debug01" style="width:310px">
 
+
+<h3 id="基礎debug-mode"><a href="#基礎debug-mode" class="headerlink" title="基礎debug mode"></a>基礎debug mode</h3><p>當crash發生時 xcode沒設定什麼東西時 程式會hang在這個讓人看不懂的地方</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug02.png" alt="debug02" style="width:310px">
+
+<p>所以  要在xcode的地方設定一下  好方便未來的debug</p>
+<pre><code>xcode左邊的panel 左邊數第7個  右邊倒數第2個頁籤 點下去</code></pre><p>－</p>
+<pre><code>下面的「+」 點下去</code></pre><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug03.png" alt="debug03" style="width:310px">
+
+
+<pre><code>選擇第一個「Add Exception Breakpoint」</code></pre><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug04.png" alt="debug04" style="width:310px">
+
+
+<p>這時候會變成這個專案專屬的exception breakpoint</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug05.png" alt="debug05" style="width:310px">
+
+
+<p>此時xcode有個小貼心的地方，就是可以把breakpoint設為USER，往後，每一個新增的專案都會有這個exception breakpoint</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug06.png" alt="debug06" style="width:310px">
+
+<p>結果變成</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug07.png" alt="debug07" style="width:310px">
+
+<p>再重新執行一次crash，就會停在比較易讀的位置，也可以利用下方的debug console 來進行debug了</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug08.png" alt="debug08" style="width:310px">
+
+
+<p>下方的debug console最常使用的指令是</p>
+<pre><code>po xxx</code></pre><p>如果你真的很想知道有那些指令的話，可以在debug console輸入help<br><font color="red">(不過我相信你絕對不會每一個都看完的)</font></p>
 <pre><code>(lldb) help
 Debugger commands:
 
@@ -1005,34 +1012,34 @@ Current command abbreviations (type &apos;help command alias&apos; for more info
   x         -- (&apos;memory read&apos;)  Read from the memory of the process being
            debugged.
 
-For more information on any command, type &apos;help &lt;command-name&gt;&apos;.
-</code></pre><h3 id="進階debug-mode"><a href="#進階debug-mode" class="headerlink" title="進階debug mode"></a>進階debug mode</h3><p>故事當然不會就醬子結束，breakpoint停在 </p>
-<pre><code>1 [AppDelegate application:didFinishLaunchingWithOptions:] at /Users/minghongyu/Documents/work/iphone/OpenPoint/OpenPoint/AppDelegate.m:32
-</code></pre><p>如圖</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug09.png" alt="debug09" style="width:310px"></p>
-<p>但是  好像還有個</p>
-<pre><code>0 [Crashlytics crash]
-</code></pre><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug10.png" alt="debug10" style="width:310px"></p>
-<p>會停在一堆機器碼的地方，真的讓人有點難以閱讀咧</p>
-<p>接著在 debug console裡輸入</p>
-<font color="red">(不要問，很可怕)</font>
+For more information on any command, type &apos;help &lt;command-name&gt;&apos;.</code></pre><h3 id="進階debug-mode"><a href="#進階debug-mode" class="headerlink" title="進階debug mode"></a>進階debug mode</h3><p>故事當然不會就醬子結束，breakpoint停在 </p>
+<pre><code>1 [AppDelegate application:didFinishLaunchingWithOptions:] at /Users/minghongyu/Documents/work/iphone/OpenPoint/OpenPoint/AppDelegate.m:32</code></pre><p>如圖</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug09.png" alt="debug09" style="width:310px">
 
-<pre><code>po $arg1
-</code></pre><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug11.png" alt="debug11" style="width:310px"></p>
+
+<p>但是  好像還有個</p>
+<pre><code>0 [Crashlytics crash]</code></pre><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug10.png" alt="debug10" style="width:310px">
+
+
+<p>會停在一堆機器碼的地方，真的讓人有點難以閱讀咧</p>
+<p>接著在 debug console裡輸入<br><font color="red">(不要問，很可怕)</font></p>
+<pre><code>po $arg1</code></pre><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug11.png" alt="debug11" style="width:310px">
+
+
 <p>發現他會吐出當下的crash的human－readable的解釋！！！！</p>
 <p>很重要  所以要說三次</p>
 <pre><code>真的是太好了！！！！！！
 真的是太好了！！！！！！
-真的是太好了！！！！！！
-</code></pre><p>但是  每次又要用手打 <font color="red">po ＄arg1</font> 很辛苦有沒有？？很辛苦有沒有？？</p>
+真的是太好了！！！！！！</code></pre><p>但是  每次又要用手打 <font color="red">po ＄arg1</font> 很辛苦有沒有？？很辛苦有沒有？？</p>
 <p>還好 xcode真的很貼心</p>
-<pre><code>在All Exception上按右鍵  選擇編輯「Edit Breakpoint」
-</code></pre><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug12.png" alt="debug12" style="width:310px"></p>
-<pre><code>點選「Add Action」
-</code></pre><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug13.png" alt="debug13" style="width:310px"></p>
-<pre><code>輸入 po $arg1
-</code></pre><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug14.png" alt="debug14" style="width:310px"></p>
-<p>The End~~~</p>
+<pre><code>在All Exception上按右鍵  選擇編輯「Edit Breakpoint」</code></pre><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug12.png" alt="debug12" style="width:310px">
+
+<pre><code>點選「Add Action」</code></pre><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug13.png" alt="debug13" style="width:310px">
+
+
+<pre><code>輸入 po $arg1</code></pre><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug14.png" alt="debug14" style="width:310px">
+
+<p>The End<del>~</del></p>
 <p>有沒有很酷？  有沒有?  有沒有? </p>
 
 
@@ -1103,20 +1110,29 @@ For more information on any command, type &apos;help &lt;command-name&gt;&apos;.
   </section>
   <section class="article typo">
 	  <p>手機也能透過sdk來讀取放在dropbox雲端空間的檔案！！<br><br>利用dropbox來打造一個可以儲存讀取雲端空間的app吧<br><br>只要跟著如下的步驟做就可以了<br><br></p>
-<h3 id="在APP-Console開一個app"><a href="#在APP-Console開一個app" class="headerlink" title="在APP Console開一個app"></a>在APP Console開一個app</h3><p><a href="">https://www.dropbox.com/developers/apps</a></p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox01.png" alt="dropbox01" style="width:310px"></p>
+<h3 id="在APP-Console開一個app"><a href="#在APP-Console開一個app" class="headerlink" title="在APP Console開一個app"></a>在APP Console開一個app</h3><p><a href>https://www.dropbox.com/developers/apps</a></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox01.png" alt="dropbox01" style="width:310px">
+
 <p>把其中的app key 和 app secret複製下來 </p>
-<h3 id="下載sdk範例程式"><a href="#下載sdk範例程式" class="headerlink" title="下載sdk範例程式"></a>下載sdk範例程式</h3><p><a href="">https://www.dropbox.com/developers/core/sdks/ios</a></p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox02.png" alt="dropbox02" style="width:310px"></p>
-<h3 id="把-app-key-與-app-secret貼到範例的delegate-m-裡"><a href="#把-app-key-與-app-secret貼到範例的delegate-m-裡" class="headerlink" title="把 app key 與 app secret貼到範例的delegate.m 裡"></a>把 app key 與 app secret貼到範例的delegate.m 裡</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox03.png" alt="dropbox03" style="width:310px"></p>
+<h3 id="下載sdk範例程式"><a href="#下載sdk範例程式" class="headerlink" title="下載sdk範例程式"></a>下載sdk範例程式</h3><p><a href>https://www.dropbox.com/developers/core/sdks/ios</a></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox02.png" alt="dropbox02" style="width:310px">
+
+
+
+<h3 id="把-app-key-與-app-secret貼到範例的delegate-m-裡"><a href="#把-app-key-與-app-secret貼到範例的delegate-m-裡" class="headerlink" title="把 app key 與 app secret貼到範例的delegate.m 裡"></a>把 app key 與 app secret貼到範例的delegate.m 裡</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox03.png" alt="dropbox03" style="width:310px">
+
+
 <p>記得要設定根目錄 </p>
-<pre><code>NSString *root = kDBRootDropbox;
-</code></pre><p>或</p>
-<pre><code>NSString *root = kDBRootAppFolder；
-</code></pre><h3 id="設定url-schema-讓-dropbox-signon-可以回得來"><a href="#設定url-schema-讓-dropbox-signon-可以回得來" class="headerlink" title="設定url schema 讓 dropbox signon 可以回得來"></a>設定url schema 讓 dropbox signon 可以回得來</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox04.png" alt="dropbox04" style="width:310px"></p>
-<h3 id="好了的話就把程式run起來"><a href="#好了的話就把程式run起來" class="headerlink" title="好了的話就把程式run起來"></a>好了的話就把程式run起來</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox05.png" alt="dropbox05" style="width:310px"></p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox06.png" alt="dropbox06" style="width:310px"></p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox07.png" alt="dropbox07" style="width:310px"></p>
+<pre><code>NSString *root = kDBRootDropbox;</code></pre><p>或</p>
+<pre><code>NSString *root = kDBRootAppFolder；</code></pre><h3 id="設定url-schema-讓-dropbox-signon-可以回得來"><a href="#設定url-schema-讓-dropbox-signon-可以回得來" class="headerlink" title="設定url schema 讓 dropbox signon 可以回得來"></a>設定url schema 讓 dropbox signon 可以回得來</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox04.png" alt="dropbox04" style="width:310px">
+
+
+<h3 id="好了的話就把程式run起來"><a href="#好了的話就把程式run起來" class="headerlink" title="好了的話就把程式run起來"></a>好了的話就把程式run起來</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox05.png" alt="dropbox05" style="width:310px">
+
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox06.png" alt="dropbox06" style="width:310px">
+
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox07.png" alt="dropbox07" style="width:310px">
+
 <p>拍洗  照片不給看～</p>
 
 

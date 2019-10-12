@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>[xcode6]打包自已做的framework | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="如何把自已做的code打包成一包framework，給其他人使用 1. 新增一個專案，選取 [Framework &amp;amp; Library] [Cocoa Touch Framework] 2. 在專案中，把要放的程式加到專案中 3. 在[Target][Build Phase][Headers]中設定，要給人看的表頭檔(.h)，和不給人看的表頭檔 4. 新增一個 [Aggregate Targ">
+  <meta name="description" content="如何把自已做的code打包成一包framework，給其他人使用 1. 新增一個專案，選取 [Framework &amp;amp; Library] [Cocoa Touch Framework]   2. 在專案中，把要放的程式加到專案中   3. 在[Target][Build Phase][Headers]中設定，要給人看的表頭檔(.h)，和不給人看的表頭檔   4. 新增一個 [Aggregat">
 <meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[xcode6]打包自已做的framework">
 <meta property="og:url" content="http://ios.taipei/2015/04/21/xcode6-打包自已做的framework/index.html">
 <meta property="og:site_name" content="iOS @ Taipei">
-<meta property="og:description" content="如何把自已做的code打包成一包framework，給其他人使用 1. 新增一個專案，選取 [Framework &amp;amp; Library] [Cocoa Touch Framework] 2. 在專案中，把要放的程式加到專案中 3. 在[Target][Build Phase][Headers]中設定，要給人看的表頭檔(.h)，和不給人看的表頭檔 4. 新增一個 [Aggregate Targ">
+<meta property="og:description" content="如何把自已做的code打包成一包framework，給其他人使用 1. 新增一個專案，選取 [Framework &amp;amp; Library] [Cocoa Touch Framework]   2. 在專案中，把要放的程式加到專案中   3. 在[Target][Build Phase][Headers]中設定，要給人看的表頭檔(.h)，和不給人看的表頭檔   4. 新增一個 [Aggregat">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework01.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework02.png">
@@ -31,12 +31,12 @@
 <meta property="og:updated_time" content="2015-07-24T09:08:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[xcode6]打包自已做的framework">
-<meta name="twitter:description" content="如何把自已做的code打包成一包framework，給其他人使用 1. 新增一個專案，選取 [Framework &amp;amp; Library] [Cocoa Touch Framework] 2. 在專案中，把要放的程式加到專案中 3. 在[Target][Build Phase][Headers]中設定，要給人看的表頭檔(.h)，和不給人看的表頭檔 4. 新增一個 [Aggregate Targ">
+<meta name="twitter:description" content="如何把自已做的code打包成一包framework，給其他人使用 1. 新增一個專案，選取 [Framework &amp;amp; Library] [Cocoa Touch Framework]   2. 在專案中，把要放的程式加到專案中   3. 在[Target][Build Phase][Headers]中設定，要給人看的表頭檔(.h)，和不給人看的表頭檔   4. 新增一個 [Aggregat">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework01.png">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -44,7 +44,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -171,10 +171,18 @@
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
     	<p>如何把自已做的code打包成一包framework，給其他人使用</p>
-<h3 id="1-新增一個專案，選取-Framework-amp-Library-Cocoa-Touch-Framework"><a href="#1-新增一個專案，選取-Framework-amp-Library-Cocoa-Touch-Framework" class="headerlink" title="1. 新增一個專案，選取 [Framework &amp; Library] [Cocoa Touch Framework]"></a>1. 新增一個專案，選取 [Framework &amp; Library] [Cocoa Touch Framework]</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework01.png" alt="framework01" style="width:310px"></p>
-<h3 id="2-在專案中，把要放的程式加到專案中"><a href="#2-在專案中，把要放的程式加到專案中" class="headerlink" title="2. 在專案中，把要放的程式加到專案中"></a>2. 在專案中，把要放的程式加到專案中</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework02.png" alt="framework02" style="width:310px"></p>
-<h3 id="3-在-Target-Build-Phase-Headers-中設定，要給人看的表頭檔-h-，和不給人看的表頭檔"><a href="#3-在-Target-Build-Phase-Headers-中設定，要給人看的表頭檔-h-，和不給人看的表頭檔" class="headerlink" title="3. 在[Target][Build Phase][Headers]中設定，要給人看的表頭檔(.h)，和不給人看的表頭檔"></a>3. 在[Target][Build Phase][Headers]中設定，要給人看的表頭檔(.h)，和不給人看的表頭檔</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework03.png" alt="framework03" style="width:310px"></p>
-<h3 id="4-新增一個-Aggregate-Target"><a href="#4-新增一個-Aggregate-Target" class="headerlink" title="4. 新增一個 [Aggregate Target]"></a>4. 新增一個 [Aggregate Target]</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework04.png" alt="framework04" style="width:310px"></p>
+<h3 id="1-新增一個專案，選取-Framework-amp-Library-Cocoa-Touch-Framework"><a href="#1-新增一個專案，選取-Framework-amp-Library-Cocoa-Touch-Framework" class="headerlink" title="1. 新增一個專案，選取 [Framework &amp; Library] [Cocoa Touch Framework]"></a>1. 新增一個專案，選取 [Framework &amp; Library] [Cocoa Touch Framework]</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework01.png" alt="framework01" style="width:310px">
+
+
+<h3 id="2-在專案中，把要放的程式加到專案中"><a href="#2-在專案中，把要放的程式加到專案中" class="headerlink" title="2. 在專案中，把要放的程式加到專案中"></a>2. 在專案中，把要放的程式加到專案中</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework02.png" alt="framework02" style="width:310px">
+
+
+<h3 id="3-在-Target-Build-Phase-Headers-中設定，要給人看的表頭檔-h-，和不給人看的表頭檔"><a href="#3-在-Target-Build-Phase-Headers-中設定，要給人看的表頭檔-h-，和不給人看的表頭檔" class="headerlink" title="3. 在[Target][Build Phase][Headers]中設定，要給人看的表頭檔(.h)，和不給人看的表頭檔"></a>3. 在[Target][Build Phase][Headers]中設定，要給人看的表頭檔(.h)，和不給人看的表頭檔</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework03.png" alt="framework03" style="width:310px">
+
+
+<h3 id="4-新增一個-Aggregate-Target"><a href="#4-新增一個-Aggregate-Target" class="headerlink" title="4. 新增一個 [Aggregate Target]"></a>4. 新增一個 [Aggregate Target]</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework04.png" alt="framework04" style="width:310px">
+
+
 <h3 id="5-在新的-Aggregate-Target-Build-Phases-加入-Run-Script"><a href="#5-在新的-Aggregate-Target-Build-Phases-加入-Run-Script" class="headerlink" title="5. 在新的 [Aggregate Target][Build Phases]加入 [Run Script]"></a>5. 在新的 [Aggregate Target][Build Phases]加入 [Run Script]</h3><pre><code>FMK_NAME=${PROJECT_NAME}
 
 INSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework
@@ -203,13 +211,21 @@ lipo -create &quot;${DEVICE_DIR}/${FMK_NAME}&quot; &quot;${SIMULATOR_DIR}/${FMK_
 
 rm -r &quot;${WRK_DIR}&quot;
 
-open &quot;${INSTALL_DIR}&quot;
-</code></pre><p>如圖</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework05.png" alt="framework05" style="width:310px"></p>
-<h3 id="6-最後-builde-project，會在-Products-生成你的個人的framework"><a href="#6-最後-builde-project，會在-Products-生成你的個人的framework" class="headerlink" title="6.最後 builde project，會在[Products] 生成你的個人的framework"></a>6.最後 builde project，會在[Products] 生成你的個人的framework</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework06.png" alt="framework06" style="width:210px"></p>
+open &quot;${INSTALL_DIR}&quot;</code></pre><p>如圖</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework05.png" alt="framework05" style="width:310px">
+
+
+<h3 id="6-最後-builde-project，會在-Products-生成你的個人的framework"><a href="#6-最後-builde-project，會在-Products-生成你的個人的framework" class="headerlink" title="6.最後 builde project，會在[Products] 生成你的個人的framework"></a>6.最後 builde project，會在[Products] 生成你的個人的framework</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework06.png" alt="framework06" style="width:210px">
+
+
 <h4 id="ps-如果要生成靜態的library使用，要注意一個設定"><a href="#ps-如果要生成靜態的library使用，要注意一個設定" class="headerlink" title="ps. 如果要生成靜態的library使用，要注意一個設定"></a>ps. 如果要生成靜態的library使用，要注意一個設定</h4><p>在 [Build Settings][Mach-O Type] 要選 [Static Library]</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework07.png" alt="framework07" style="width:310px"></p>
-<h3 id="7-最後給別人引用時-要注意一下，除了在-Linked-Frameworks-and-Libraries-下引用之外，還要在-Targer-General-Embeded-Binies-下加入自定義的framework"><a href="#7-最後給別人引用時-要注意一下，除了在-Linked-Frameworks-and-Libraries-下引用之外，還要在-Targer-General-Embeded-Binies-下加入自定義的framework" class="headerlink" title="7. 最後給別人引用時 要注意一下，除了在[Linked Frameworks and Libraries]下引用之外，還要在[Targer][General][Embeded Binies]下加入自定義的framework"></a>7. 最後給別人引用時 要注意一下，除了在[Linked Frameworks and Libraries]下引用之外，還要在[Targer][General][Embeded Binies]下加入自定義的framework</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework08.png" alt="framework08" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework07.png" alt="framework07" style="width:310px">
+
+
+
+<h3 id="7-最後給別人引用時-要注意一下，除了在-Linked-Frameworks-and-Libraries-下引用之外，還要在-Targer-General-Embeded-Binies-下加入自定義的framework"><a href="#7-最後給別人引用時-要注意一下，除了在-Linked-Frameworks-and-Libraries-下引用之外，還要在-Targer-General-Embeded-Binies-下加入自定義的framework" class="headerlink" title="7. 最後給別人引用時 要注意一下，除了在[Linked Frameworks and Libraries]下引用之外，還要在[Targer][General][Embeded Binies]下加入自定義的framework"></a>7. 最後給別人引用時 要注意一下，除了在[Linked Frameworks and Libraries]下引用之外，還要在[Targer][General][Embeded Binies]下加入自定義的framework</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework08.png" alt="framework08" style="width:310px">
+
+
 <h3 id="打完收工"><a href="#打完收工" class="headerlink" title="打完收工"></a>打完收工</h3>
   	</div>
 	  

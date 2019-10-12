@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>Software Development Story 01 - User Story, ATDD and BDD | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
@@ -27,7 +27,7 @@
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -35,7 +35,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -178,40 +178,38 @@
 <thead>
 <tr>
 <th>出場角色表</th>
-<th style="text-align:left">職責說明 </th>
+<th align="left">職責說明</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>User</td>
-<td style="text-align:left">軟體所有權有者 </td>
+<td align="left">軟體所有權有者</td>
 </tr>
 <tr>
 <td>PM</td>
-<td style="text-align:left">出張嘴的防火牆</td>
+<td align="left">出張嘴的防火牆</td>
 </tr>
 <tr>
 <td>軟體工程師1</td>
-<td style="text-align:left">前端開發者</td>
+<td align="left">前端開發者</td>
 </tr>
 <tr>
 <td>軟體工程師2</td>
-<td style="text-align:left">後端開發者</td>
+<td align="left">後端開發者</td>
 </tr>
 <tr>
 <td>Art</td>
-<td style="text-align:left">UI/UX，出圖都靠他</td>
+<td align="left">UI/UX，出圖都靠他</td>
 </tr>
 <tr>
 <td>QA</td>
-<td style="text-align:left">替User做早期驗收，對程式測試有足夠的了解，避免交付出太糟糕或是問題一堆的軟體，有時候沒有這個角色，大多是不進行測試，責任對內由工程師扛，對外由PM扛</td>
+<td align="left">替User做早期驗收，對程式測試有足夠的了解，避免交付出太糟糕或是問題一堆的軟體，有時候沒有這個角色，大多是不進行測試，責任對內由工程師扛，對外由PM扛</td>
 </tr>
 <tr>
 <td>用戶</td>
-<td style="text-align:left">市場上真正的軟體操作者</td>
+<td align="left">市場上真正的軟體操作者</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h3 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h3><p><span style="color:gray">Scenario 01: 地點－老闆辦公室 </span></p>
 <ul>
 <li>User： 幫我們的APP做一個登入的功能，當使用者登入後要看到首頁的內容。<br></li>
@@ -229,7 +227,9 @@
 <ul>
 <li>PM: 我再去和 User 確定好了 <br></li>
 </ul>
-<p><hr><br>一天過去了，一天過去了，一天過去了，一天過去了<br><br>(除了PM之外，團隊都沒在忙)</p>
+<hr>
+一天過去了，一天過去了，一天過去了，一天過去了<br>
+(除了PM之外，團隊都沒在忙)
 <hr>
 
 <h3 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h3><ul>
@@ -265,7 +265,8 @@
 <li>Art: （看Dcard）</li>
 <li>PM: （好了沒？）</li>
 </ul>
-<p><hr><br>幾個循環之後，功能完善了，QA也驗完了</p>
+<hr>
+幾個循環之後，功能完善了，QA也驗完了
 <hr>
 
 <ul>
@@ -302,11 +303,13 @@
 <p>「幫我們的APP做一個登入的功能，當使用者登入後要看到首頁的內容。」<br><br>這句話，其實就是一個典型的User Story。</p>
 <p>我們稍微改一下描述。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">As an User,</span><br><span class="line">I Want a login feature.</span><br><span class="line">When I login,</span><br><span class="line">So That I Can see Main Page.</span><br></pre></td></tr></table></figure>
+
 <p>對於User來說，完整地說出一個故事，就已經是相當盡責的User了。接著呢？PM和團隊要設法將一個個的故事拆解，變成許多工程師可以實作的功能，並且可以滿足故事的測試用例。好讓QA可以測試，一同做出使用者可以驗收的產品。</p>
 <h3 id="由User-Story-衍生出的-ATDD、BDD"><a href="#由User-Story-衍生出的-ATDD、BDD" class="headerlink" title="由User Story 衍生出的 ATDD、BDD"></a>由User Story 衍生出的 ATDD、BDD</h3><p>拆解成可測試用例的動作就是所謂的ATDD, Acceptance Test Driven Design</p>
 <p>關注於使用者的操作行為所需要的功能拆解就是所謂的BDD, Behavior Driven Design。</p>
 <p>以下介紹 Gherkin 語法，用自然語言來定義與描述測試用例</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Feature:</span><br><span class="line">在APP實現一個登入的功能</span><br><span class="line">Scenario:</span><br><span class="line">假設(Given)，存在有一個可用的帳號與密碼</span><br><span class="line">當(When)，使用者開啟APP,輸入帳號,密碼，點選「登入」</span><br><span class="line">然後(Then)，要看到首頁的內容。</span><br></pre></td></tr></table></figure>
+
 <p>如此一來，我們就能夠將一個個的使用者故事，轉化成一個個可以讓大家容易理解的測試用例，工程師知道怎麼做，QA知道怎麼驗，使用者在驗收時就一定會買單了。</p>
 <p>（美美的畫面如何測試與驗收，留到UI Testing時再來說，一般而言，一定也可以用Gherkin語法來闡述有關UI/UX的測試用例）</p>
 <p>（後話）：Gherkin語法和企管學裡的 STAR 非常地像，在大公司裡，或多或少都會用STAR語法來寫HR最喜歡的績效評量(Performance Appraisal)或是在面試時用STAR來檢驗應徵者的描述是否完整。<br>S: Situation, T:Task, A:Action, R:Result</p>
@@ -336,8 +339,8 @@
 					</a></span>
 				
 				
-					<span class="art-item-right">next：<a href="/2018/06/24/Tutorial_00_1/" rel="next"  title="寫在程式開發之前00-1">
-						寫在程式開發之前00-1
+					<span class="art-item-right">next：<a href="/2018/06/24/duns/" rel="next"  title="DUNS申請以及相關問題">
+						DUNS申請以及相關問題
 					</a><i class="icon icon-chevron-thin-right"></i></span>
 				
 		</div>

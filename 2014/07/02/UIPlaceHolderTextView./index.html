@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>PlaceHolder of UITextview | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
@@ -27,7 +27,7 @@
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -35,7 +35,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -166,7 +166,10 @@
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	<p>Q: UITextView 沒有 placeholder， 那就自己做一個吧<br><a id="more"></a></p>
+    	<p>Q: UITextView 沒有 placeholder， 那就自己做一個吧 </p>
+<a id="more"></a>
+
+
 <h4 id="UIPlaceHolderTextView-h"><a href="#UIPlaceHolderTextView-h" class="headerlink" title="UIPlaceHolderTextView.h:"></a>UIPlaceHolderTextView.h:</h4><pre><code>#import &lt;Foundation/Foundation.h&gt;
 IB_DESIGNABLE
 @interface UIPlaceHolderTextView : UITextView
@@ -176,8 +179,7 @@ IB_DESIGNABLE
 
 -(void)textChanged:(NSNotification*)notification;
 
-@end
-</code></pre><h4 id="UIPlaceHolderTextView-m"><a href="#UIPlaceHolderTextView-m" class="headerlink" title="UIPlaceHolderTextView.m:"></a>UIPlaceHolderTextView.m:</h4><pre><code>#import &quot;UIPlaceHolderTextView.h&quot;
+@end</code></pre><h4 id="UIPlaceHolderTextView-m"><a href="#UIPlaceHolderTextView-m" class="headerlink" title="UIPlaceHolderTextView.m:"></a>UIPlaceHolderTextView.m:</h4><pre><code>#import &quot;UIPlaceHolderTextView.h&quot;
 
 @interface UIPlaceHolderTextView ()
 
@@ -283,8 +285,7 @@ CGFloat const UI_PLACEHOLDER_TEXT_CHANGED_ANIMATION_DURATION = 0.25;
     [super drawRect:rect];
 }
 
-@end
-</code></pre><h4 id="swift"><a href="#swift" class="headerlink" title="swift"></a>swift</h4><pre><code>import UIKit
+@end</code></pre><h4 id="swift"><a href="#swift" class="headerlink" title="swift"></a>swift</h4><pre><code>import UIKit
 
 class PlaceholderTextView: UITextView {
 
@@ -367,8 +368,7 @@ class PlaceholderTextView: UITextView {
         }
         super.draw(rect)
     }
-}
-</code></pre>
+}</code></pre>
   	</div>
 	  
 	  <div class="article-tags tags">

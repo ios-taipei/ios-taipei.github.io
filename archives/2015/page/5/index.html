@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>時間軸: 2015 | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
@@ -26,7 +26,7 @@
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -34,7 +34,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -183,8 +183,7 @@
 + (id)allocWithZone:(NSZone *)zone
 {
     return [self sharedInstance];
-}
-</code></pre>
+}</code></pre>
 
     
     
@@ -228,19 +227,13 @@
 <p>##3.開始使用hexo</p>
 <hr>
 <p>第一次建立hexo時要先將hexo初始化（建議建立一個hexo資料夾存放資料）</p>
-<pre><code>hexo init
-</code></pre><p>如果有提示要輸入 npm install的話  也要</p>
-<pre><code>npm install
-</code></pre><p>接著  需要安裝 deployer</p>
-<pre><code>npm install hexo-deployer-git --save
-</code></pre><p>建立一篇文章，將會是Markdown形式，可以到source/_post/title.md去修改</p>
-<pre><code>hexo new &quot;title&quot;
-</code></pre><p>編輯md檔，增添你要的文章與tag，建議使用 <a href="http://25.io/mou/" target="_blank" rel="noopener">MOU</a> 編輯，可以很快地看到自已編寫的內容格式是否正確</p>
+<pre><code>hexo init</code></pre><p>如果有提示要輸入 npm install的話  也要</p>
+<pre><code>npm install</code></pre><p>接著  需要安裝 deployer</p>
+<pre><code>npm install hexo-deployer-git --save</code></pre><p>建立一篇文章，將會是Markdown形式，可以到source/_post/title.md去修改</p>
+<pre><code>hexo new &quot;title&quot;</code></pre><p>編輯md檔，增添你要的文章與tag，建議使用 <a href="http://25.io/mou/" target="_blank" rel="noopener">MOU</a> 編輯，可以很快地看到自已編寫的內容格式是否正確</p>
 <p>接著，生成public檔案</p>
-<pre><code>hexo generate
-</code></pre><p>可以在本機事先預覽（chrome需要用localhost來取代0.0.0.0）</p>
-<pre><code>hexo server
-</code></pre><p>##4.上傳至github</p>
+<pre><code>hexo generate</code></pre><p>可以在本機事先預覽（chrome需要用localhost來取代0.0.0.0）</p>
+<pre><code>hexo server</code></pre><p>##4.上傳至github</p>
 <hr>
 <p>修改 hexo的資料夾裡的 _config.yml 檔案</p>
 <p>比對一下，原始檔，填入自已的資料</p>
@@ -256,12 +249,9 @@ author: AKI YU
 deploy:
   type: git
   repository: git@github.com:github帳號/github帳號.github.io.git
-  branch: master
-</code></pre><p>編輯存檔後發佈</p>
-<pre><code>hexo deploy
-</code></pre><p>成功的話可以用瀏覽器看一下</p>
-<pre><code>http://github帳號.github.io
-</code></pre><p>打完收功</p>
+  branch: master</code></pre><p>編輯存檔後發佈</p>
+<pre><code>hexo deploy</code></pre><p>成功的話可以用瀏覽器看一下</p>
+<pre><code>http://github帳號.github.io</code></pre><p>打完收功</p>
 
 
     
@@ -296,8 +286,7 @@ deploy:
 	  <ol>
 <li>在ViewController後引用所需要的 delegate</li>
 </ol>
-<pre><code>class ViewController: ViewController,NSXMLParserDelegate 
-</code></pre><ol start="2">
+<pre><code>class ViewController: ViewController,NSXMLParserDelegate </code></pre><ol start="2">
 <li><p>加入delegate所需要的function</p>
 <pre><code>func parser(parser: NSXMLParser!, didStartElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!, attributes attributeDict: [NSObject : AnyObject]!) {
 println(&quot;Element&apos;s name is \(elementName)&quot;)
@@ -308,8 +297,7 @@ func parser(parser: NSXMLParser!, foundCharacters string: String!) {
 }
 
 func parser(parser: NSXMLParser!, didEndElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!) {
-println(&quot;End&quot;)
-</code></pre><p> }</p>
+println(&quot;End&quot;)</code></pre><p> }</p>
 </li>
 </ol>
 <ol start="3">
@@ -318,8 +306,7 @@ println(&quot;End&quot;)
 var xmlParser: NSXMLParser = NSXMLParser(data: xml)
 xmlParser.delegate = self
 
-xmlParser.parse()
-</code></pre></li>
+xmlParser.parse()</code></pre></li>
 </ol>
 <ol start="4">
 <li><p>跑跑看結果是否正確</p>
@@ -328,8 +315,7 @@ Element&apos;s attributes are [stat: fail]
 Element&apos;s name is err
 Element&apos;s attributes are [msg: Failed, desc: 錯誤, code: 123]
 End
-End
-</code></pre></li>
+End</code></pre></li>
 <li><p>收工</p>
 </li>
 </ol>
@@ -366,7 +352,7 @@ End
   <section class="article typo">
 	  <p>原始資料來源：<br><a href="http://fhy.wra.gov.tw/ReservoirPage_2011/StorageCapacity.aspx" target="_blank" rel="noopener">http://fhy.wra.gov.tw/ReservoirPage_2011/StorageCapacity.aspx</a></p>
 <p>##<a href="https://github.com/AKI-YU/WaterMonitor/" target="_blank" rel="noopener">原始碼</a></p>
-<p>##<a href="https://itunes.apple.com/us/app/tai-wan-shui-ku-shui-wei-jian/id940353315?l=zh&amp;ls=1&amp;mt=8" target="_blank" rel="noopener">載點</a> </p>
+<p>##<a href="https://itunes.apple.com/us/app/tai-wan-shui-ku-shui-wei-jian/id940353315?l=zh&ls=1&mt=8" target="_blank" rel="noopener">載點</a> </p>
 <hr>
 <p>##說明</p>
 <p>有許多資訊人對於週遭環境的關心，但是少了objc的版本，於此補上一份</p>

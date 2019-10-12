@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>Specification By Example | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
@@ -27,7 +27,7 @@
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -35,7 +35,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -167,7 +167,9 @@
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
     	<h2 id="軟體開發故事02-實例化需求-Specification-by-Example"><a href="#軟體開發故事02-實例化需求-Specification-by-Example" class="headerlink" title="軟體開發故事02 - 實例化需求 Specification by Example"></a>軟體開發故事02 - 實例化需求 Specification by Example</h2><p>前情提要：在驗收的 D Day 當天，User發現了預期之外的驗證碼功能，覺得這項功能在手機上不需要，所以PM只好回過頭來，要求團隊再花時間把多做的功能拿掉。</p>
-<p>請大家思考一下，那裡可能出現了問題？<br><a id="more"></a><br>不過是一個小小的使用者登入的功能，User心裡所想的，PM心裡所想的，工程師心裡所想的，QA心裡所想的，Art心裡所想的，都有可能不一樣？？？</p>
+<p>請大家思考一下，那裡可能出現了問題？</p>
+<a id="more"></a>
+<p>不過是一個小小的使用者登入的功能，User心裡所想的，PM心裡所想的，工程師心裡所想的，QA心裡所想的，Art心裡所想的，都有可能不一樣？？？</p>
 <p>1990年，Elizabeth Newton － 史丹福大學心理學研究生，通過研究一個簡單的遊戲，提出了「知識的詛咒」（curse of knowledge）,在遊戲的過程中（註1），會因為每個人的背景不同，教育不同，經驗的不同產生出一種認知的偏差。</p>
 <p>以故事之中APP登入的功能為例</p>
 <ul>
@@ -175,10 +177,14 @@
 </li>
 <li><p>PM知道其他APP是怎麼登入的而User提出的需求沒有太特別，一定做得出來。</p>
 </li>
-<li>工程師1想的是APP其他型態的登入要不要做</li>
-<li>工程師2在意的是資料欄位的檢核，也許還要先開規格給工程師1</li>
-<li>Art只能憑過去的經驗，把猜測要出的圖出一出</li>
-<li>QA還沒進入狀況，等開發出來之後再來看</li>
+<li><p>工程師1想的是APP其他型態的登入要不要做</p>
+</li>
+<li><p>工程師2在意的是資料欄位的檢核，也許還要先開規格給工程師1</p>
+</li>
+<li><p>Art只能憑過去的經驗，把猜測要出的圖出一出</p>
+</li>
+<li><p>QA還沒進入狀況，等開發出來之後再來看</p>
+</li>
 </ul>
 <p>通常，一個團隊裡面，大多數會存在一個意見領袖，抑或是一個脾氣很大的人，或是比較強勢不讓步的人，這裡分別用工程師2的角色代入這個情境來看看。</p>
 <ul>
@@ -242,9 +248,12 @@
 <p>我們回到第一次的場景</p>
 <p><span style="color:gray">Scenario 01: 地點－老闆辦公室 </span></p>
 <ul>
-<li>User： 幫我們的APP做一個登入的功能，當使用者登入後要看到首頁的內容。<br></li>
-<li>PM: <s>好，我請團隊評估一下所需要的時間。應該一個星期可以完成。</s> 可以舉個例子嗎？</li>
-<li>User：  (吱吱喳喳…)</li>
+<li><p>User： 幫我們的APP做一個登入的功能，當使用者登入後要看到首頁的內容。<br></p>
+</li>
+<li><p>PM: <s>好，我請團隊評估一下所需要的時間。應該一個星期可以完成。</s> 可以舉個例子嗎？</p>
+</li>
+<li><p>User：  (吱吱喳喳…)</p>
+</li>
 <li><p>PM：  (吱吱喳喳…)</p>
 </li>
 <li><p>PM：我整理一下，討論的結果是不是如下：</p>
@@ -256,6 +265,7 @@
 </ol>
 <p>為了方便，我們將它整理成一份表格</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">As an User,</span><br><span class="line">I Want a login feature.</span><br><span class="line">When I enter @account and @password,</span><br><span class="line">So That I Can see Main Page.</span><br></pre></td></tr></table></figure>
+
 <table>
 <thead>
 <tr>
@@ -264,8 +274,7 @@
 <th>result</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>aki</td>
 <td>qaz</td>
 <td>success</td>
@@ -275,8 +284,7 @@
 <td>123</td>
 <td>帳號密碼錯誤</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><span style="color: gray">Scenario 02: 地點－團隊會議室</span></p>
 <ul>
 <li>工程師1：我想加兩條，沒有輸入帳號，或是沒有輸入密碼的都算是錯誤</li>
@@ -289,8 +297,7 @@
 <th>result</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>aki</td>
 <td></td>
 <td>帳號密碼錯誤</td>
@@ -300,8 +307,7 @@
 <td>qaz</td>
 <td>帳號密碼錯誤</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <ul>
 <li>工程師2：我想加個兩條，帳號有最短和最長的限制，太短或太長都不能讓使用者打我的api</li>
 </ul>
@@ -313,8 +319,7 @@
 <th>result</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>ak</td>
 <td>qaz</td>
 <td>帳號長度不符</td>
@@ -324,8 +329,7 @@
 <td>qaz</td>
 <td>帳號長度不符</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <ul>
 <li>團隊: (吱吱喳喳…)</li>
 <li>PM: 我們統整一下表格如下：</li>
@@ -338,8 +342,7 @@
 <th>result</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>aki</td>
 <td>qaz</td>
 <td>success</td>
@@ -369,9 +372,12 @@
 <td>qaz</td>
 <td>帳號長度不符</td>
 </tr>
-</tbody>
-</table>
-<p>（註2）</p>
+<tr>
+<td>（註2）</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
 <ul>
 <li>QA: 咦，Test Case竟然順便寫好了，那我可以用自動化工具來寫測試了(暗爽中)</li>
 <li>Art: 只要三個元素呀，兩個輸入框，一個登入鈕，我就先出這幾個元素的圖</li>
@@ -400,14 +406,12 @@
 <th>result</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>test</td>
 <td>test</td>
 <td>success</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>工程師2拿出自己的測試資料當例子時，有沒有可能會測試通過，但是換個帳號就測試失敗了？有沒有可能有個通用密碼為test，不管什麼帳號用test當密碼都能登入。</p>
 <p>拿真實的帳號來測，問題就自動消失了</p>
 <p>舉第二個例子</p>
@@ -419,8 +423,7 @@
 <th>result</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>aki</td>
 <td>qaz</td>
 <td>success</td>
@@ -435,8 +438,7 @@
 <td>qaz</td>
 <td>success</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>帳號的長度少一個字元後就成功了<br>在邏輯上，這兩條指的是相同的一件事，就是帳號長度存在一個邊界，且邊界值為24, 第三條就顯得多餘了。</p>
 <p>當然，你想要多加幾條測試來增加信心，也不是不行，但是生命就應該花時間在更有價值的事情上不是嗎？</p>
 <p>註1：<br>遊戲有兩個角色，一個人是敲節奏的人（A），一個人是聽到節奏猜歌曲的人(B)。<br><br>實驗如下：<br><br>選定120首歌曲眾所能詳的歌曲，由A敲節奏，由B聽節奏猜歌曲，分別予以紀錄。<br><br>按照伊莉莎白根據實驗得出的結果:<br><br>A認為自己敲的節奏能夠讓B猜出來的機率為50%<br><br>B聽到A敲打的節奏而正確猜到歌曲的機為只有2.5%<br></p>

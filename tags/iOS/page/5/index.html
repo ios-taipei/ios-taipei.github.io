@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>Tag: iOS | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
@@ -26,7 +26,7 @@
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -34,7 +34,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -165,20 +165,17 @@
   </section>
   <section class="article typo">
 	  <p>定義地球弧度</p>
-<pre><code>#define MERCATOR_RADIUS 85445659.44705395 
-</code></pre><p>Method</p>
+<pre><code>#define MERCATOR_RADIUS 85445659.44705395 </code></pre><p>Method</p>
 <pre><code>- (int)getZoomLevel:(MKMapView*)_mapView { 
 
     return 21－round(log2(_mapView.region.span.longitudeDelta * MERCATOR_RADIUS * M_PI / (180.0 * _mapView.bounds.size.width))); 
 
-} 
-</code></pre><p>測試一下</p>
+} </code></pre><p>測試一下</p>
 <pre><code>- (void)mapView:(MKMapView *)_mapView regionDidChangeAnimated:(BOOL)animated { 
 
     NSLog(@&quot;zoom level %d&quot;, [self getZoomLevel:_mapView]); 
 
-} 
-</code></pre>
+} </code></pre>
 
     
     
@@ -299,12 +296,9 @@
     didDiscoverServices:(NSArray *)serviceUuids
 {
     NSLog(@&quot;discovered a peripheral&apos;s services: %@&quot;, serviceUuids);
-}
-</code></pre><p>其中可以過濾掉一些不會廣播的設備</p>
-<pre><code>if([advertisementDataobjectForKey:@&quot;kCBAdvDataLocalName&quot;]!=nil){
-</code></pre><p>可以取該設備的UUID</p>
-<pre><code>&lt;__NSConcreteUUID 0x17403f520&gt; 2750A093-A1C2-9953-A59F-A0769538DC15
-</code></pre><p>附帶一提的是，小米手環也會廣播自已的藍芽訊號</p>
+}</code></pre><p>其中可以過濾掉一些不會廣播的設備</p>
+<pre><code>if([advertisementDataobjectForKey:@&quot;kCBAdvDataLocalName&quot;]!=nil){</code></pre><p>可以取該設備的UUID</p>
+<pre><code>&lt;__NSConcreteUUID 0x17403f520&gt; 2750A093-A1C2-9953-A59F-A0769538DC15</code></pre><p>附帶一提的是，小米手環也會廣播自已的藍芽訊號</p>
 <h3 id="2-接著利用-CLLocationManagerDelegate-對-已取得的UUID-對-iBeacon-做程式的實作"><a href="#2-接著利用-CLLocationManagerDelegate-對-已取得的UUID-對-iBeacon-做程式的實作" class="headerlink" title="2. 接著利用 CLLocationManagerDelegate 對 已取得的UUID 對 iBeacon 做程式的實作"></a>2. 接著利用 CLLocationManagerDelegate 對 已取得的UUID 對 iBeacon 做程式的實作</h3><pre><code> for (NSUUID *uuid in [APLDefaults sharedDefaults].supportedProximityUUIDs)
     {
         CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:[uuid UUIDString]];
@@ -317,8 +311,7 @@
 - (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
 {
     // 這裡就可以取到 iBeacon 了
-}
-</code></pre><p>在這裡 小米手環 不會出現在 CLLocationManagerDelegate，所以會出現的就只剩下iBeacon了</p>
+}</code></pre><p>在這裡 小米手環 不會出現在 CLLocationManagerDelegate，所以會出現的就只剩下iBeacon了</p>
 <h3 id="打完收工"><a href="#打完收工" class="headerlink" title="打完收工"></a>打完收工</h3>
 
     
@@ -351,10 +344,18 @@
   </section>
   <section class="article typo">
 	  <p>如何把自已做的code打包成一包framework，給其他人使用</p>
-<h3 id="1-新增一個專案，選取-Framework-amp-Library-Cocoa-Touch-Framework"><a href="#1-新增一個專案，選取-Framework-amp-Library-Cocoa-Touch-Framework" class="headerlink" title="1. 新增一個專案，選取 [Framework &amp; Library] [Cocoa Touch Framework]"></a>1. 新增一個專案，選取 [Framework &amp; Library] [Cocoa Touch Framework]</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework01.png" alt="framework01" style="width:310px"></p>
-<h3 id="2-在專案中，把要放的程式加到專案中"><a href="#2-在專案中，把要放的程式加到專案中" class="headerlink" title="2. 在專案中，把要放的程式加到專案中"></a>2. 在專案中，把要放的程式加到專案中</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework02.png" alt="framework02" style="width:310px"></p>
-<h3 id="3-在-Target-Build-Phase-Headers-中設定，要給人看的表頭檔-h-，和不給人看的表頭檔"><a href="#3-在-Target-Build-Phase-Headers-中設定，要給人看的表頭檔-h-，和不給人看的表頭檔" class="headerlink" title="3. 在[Target][Build Phase][Headers]中設定，要給人看的表頭檔(.h)，和不給人看的表頭檔"></a>3. 在[Target][Build Phase][Headers]中設定，要給人看的表頭檔(.h)，和不給人看的表頭檔</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework03.png" alt="framework03" style="width:310px"></p>
-<h3 id="4-新增一個-Aggregate-Target"><a href="#4-新增一個-Aggregate-Target" class="headerlink" title="4. 新增一個 [Aggregate Target]"></a>4. 新增一個 [Aggregate Target]</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework04.png" alt="framework04" style="width:310px"></p>
+<h3 id="1-新增一個專案，選取-Framework-amp-Library-Cocoa-Touch-Framework"><a href="#1-新增一個專案，選取-Framework-amp-Library-Cocoa-Touch-Framework" class="headerlink" title="1. 新增一個專案，選取 [Framework &amp; Library] [Cocoa Touch Framework]"></a>1. 新增一個專案，選取 [Framework &amp; Library] [Cocoa Touch Framework]</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework01.png" alt="framework01" style="width:310px">
+
+
+<h3 id="2-在專案中，把要放的程式加到專案中"><a href="#2-在專案中，把要放的程式加到專案中" class="headerlink" title="2. 在專案中，把要放的程式加到專案中"></a>2. 在專案中，把要放的程式加到專案中</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework02.png" alt="framework02" style="width:310px">
+
+
+<h3 id="3-在-Target-Build-Phase-Headers-中設定，要給人看的表頭檔-h-，和不給人看的表頭檔"><a href="#3-在-Target-Build-Phase-Headers-中設定，要給人看的表頭檔-h-，和不給人看的表頭檔" class="headerlink" title="3. 在[Target][Build Phase][Headers]中設定，要給人看的表頭檔(.h)，和不給人看的表頭檔"></a>3. 在[Target][Build Phase][Headers]中設定，要給人看的表頭檔(.h)，和不給人看的表頭檔</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework03.png" alt="framework03" style="width:310px">
+
+
+<h3 id="4-新增一個-Aggregate-Target"><a href="#4-新增一個-Aggregate-Target" class="headerlink" title="4. 新增一個 [Aggregate Target]"></a>4. 新增一個 [Aggregate Target]</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework04.png" alt="framework04" style="width:310px">
+
+
 <h3 id="5-在新的-Aggregate-Target-Build-Phases-加入-Run-Script"><a href="#5-在新的-Aggregate-Target-Build-Phases-加入-Run-Script" class="headerlink" title="5. 在新的 [Aggregate Target][Build Phases]加入 [Run Script]"></a>5. 在新的 [Aggregate Target][Build Phases]加入 [Run Script]</h3><pre><code>FMK_NAME=${PROJECT_NAME}
 
 INSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework
@@ -383,13 +384,21 @@ lipo -create &quot;${DEVICE_DIR}/${FMK_NAME}&quot; &quot;${SIMULATOR_DIR}/${FMK_
 
 rm -r &quot;${WRK_DIR}&quot;
 
-open &quot;${INSTALL_DIR}&quot;
-</code></pre><p>如圖</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework05.png" alt="framework05" style="width:310px"></p>
-<h3 id="6-最後-builde-project，會在-Products-生成你的個人的framework"><a href="#6-最後-builde-project，會在-Products-生成你的個人的framework" class="headerlink" title="6.最後 builde project，會在[Products] 生成你的個人的framework"></a>6.最後 builde project，會在[Products] 生成你的個人的framework</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework06.png" alt="framework06" style="width:210px"></p>
+open &quot;${INSTALL_DIR}&quot;</code></pre><p>如圖</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework05.png" alt="framework05" style="width:310px">
+
+
+<h3 id="6-最後-builde-project，會在-Products-生成你的個人的framework"><a href="#6-最後-builde-project，會在-Products-生成你的個人的framework" class="headerlink" title="6.最後 builde project，會在[Products] 生成你的個人的framework"></a>6.最後 builde project，會在[Products] 生成你的個人的framework</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework06.png" alt="framework06" style="width:210px">
+
+
 <h4 id="ps-如果要生成靜態的library使用，要注意一個設定"><a href="#ps-如果要生成靜態的library使用，要注意一個設定" class="headerlink" title="ps. 如果要生成靜態的library使用，要注意一個設定"></a>ps. 如果要生成靜態的library使用，要注意一個設定</h4><p>在 [Build Settings][Mach-O Type] 要選 [Static Library]</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework07.png" alt="framework07" style="width:310px"></p>
-<h3 id="7-最後給別人引用時-要注意一下，除了在-Linked-Frameworks-and-Libraries-下引用之外，還要在-Targer-General-Embeded-Binies-下加入自定義的framework"><a href="#7-最後給別人引用時-要注意一下，除了在-Linked-Frameworks-and-Libraries-下引用之外，還要在-Targer-General-Embeded-Binies-下加入自定義的framework" class="headerlink" title="7. 最後給別人引用時 要注意一下，除了在[Linked Frameworks and Libraries]下引用之外，還要在[Targer][General][Embeded Binies]下加入自定義的framework"></a>7. 最後給別人引用時 要注意一下，除了在[Linked Frameworks and Libraries]下引用之外，還要在[Targer][General][Embeded Binies]下加入自定義的framework</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework08.png" alt="framework08" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework07.png" alt="framework07" style="width:310px">
+
+
+
+<h3 id="7-最後給別人引用時-要注意一下，除了在-Linked-Frameworks-and-Libraries-下引用之外，還要在-Targer-General-Embeded-Binies-下加入自定義的framework"><a href="#7-最後給別人引用時-要注意一下，除了在-Linked-Frameworks-and-Libraries-下引用之外，還要在-Targer-General-Embeded-Binies-下加入自定義的framework" class="headerlink" title="7. 最後給別人引用時 要注意一下，除了在[Linked Frameworks and Libraries]下引用之外，還要在[Targer][General][Embeded Binies]下加入自定義的framework"></a>7. 最後給別人引用時 要注意一下，除了在[Linked Frameworks and Libraries]下引用之外，還要在[Targer][General][Embeded Binies]下加入自定義的framework</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework08.png" alt="framework08" style="width:310px">
+
+
 <h3 id="打完收工"><a href="#打完收工" class="headerlink" title="打完收工"></a>打完收工</h3>
 
     
@@ -424,25 +433,35 @@ open &quot;${INSTALL_DIR}&quot;
 	  <h2 id="AdMob網頁設定"><a href="#AdMob網頁設定" class="headerlink" title="AdMob網頁設定"></a>AdMob網頁設定</h2><h3 id="1。註冊AdMob-帳號"><a href="#1。註冊AdMob-帳號" class="headerlink" title="1。註冊AdMob 帳號"></a>1。註冊AdMob 帳號</h3><p>不解釋</p>
 <h3 id="2。加入新的應用程式"><a href="#2。加入新的應用程式" class="headerlink" title="2。加入新的應用程式"></a>2。加入新的應用程式</h3><p>點擊<br><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/admob01.png" alt="admob01" style="width:310px"></p>
 <p>手動新增應用程式</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/admob02.png" alt="admob02" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/admob02.png" alt="admob02" style="width:310px">
+
+
 <p>將廣告單編號複製起來</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/admob03.png" alt="admob03" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/admob03.png" alt="admob03" style="width:310px">
+
+
+
 <h2 id="手機程式"><a href="#手機程式" class="headerlink" title="手機程式"></a>手機程式</h2><h3 id="1。pod-install"><a href="#1。pod-install" class="headerlink" title="1。pod install"></a>1。pod install</h3><p>在專案目錄下新增一個 Podfile 檔</p>
 <pre><code>source &apos;https://github.com/CocoaPods/Specs.git&apos;
 
 platform :ios, &apos;7.0&apos;
-pod &apos;Google-Mobile-Ads-SDK&apos;, &apos;~&gt; 7.0&apos;
-</code></pre><h3 id="2。在terminal下指令進行安裝"><a href="#2。在terminal下指令進行安裝" class="headerlink" title="2。在terminal下指令進行安裝"></a>2。在terminal下指令進行安裝</h3><pre><code>pod install
-</code></pre><p>安裝好之後，打開新產生的專案的workspace</p>
-<h3 id="3。在xib檔建一個UIView-並且將其class改為"><a href="#3。在xib檔建一個UIView-並且將其class改為" class="headerlink" title="3。在xib檔建一個UIView,並且將其class改為"></a>3。在xib檔建一個UIView,並且將其class改為</h3><pre><code>GADBannerView
-</code></pre><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/admob04.png" alt="admob04" style="width:310px"></p>
+pod &apos;Google-Mobile-Ads-SDK&apos;, &apos;~&gt; 7.0&apos;</code></pre><h3 id="2。在terminal下指令進行安裝"><a href="#2。在terminal下指令進行安裝" class="headerlink" title="2。在terminal下指令進行安裝"></a>2。在terminal下指令進行安裝</h3><pre><code>pod install</code></pre><p>安裝好之後，打開新產生的專案的workspace</p>
+<h3 id="3。在xib檔建一個UIView-並且將其class改為"><a href="#3。在xib檔建一個UIView-並且將其class改為" class="headerlink" title="3。在xib檔建一個UIView,並且將其class改為"></a>3。在xib檔建一個UIView,並且將其class改為</h3><pre><code>GADBannerView</code></pre><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/admob04.png" alt="admob04" style="width:310px">
+
+
+
 <p>接著拉好相對應的 IBOutlet<br><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/admob05.png" alt="admob05" style="width:310px"></p>
 <p>記得import GoogleMobileAds （語法和一般的import不太一樣）</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/admob06.png" alt="admob06" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/admob06.png" alt="admob06" style="width:310px">
+
+
+
+
 <h3 id="4。在-ViewDidLoad-or-anywhere-加入對應的程式碼"><a href="#4。在-ViewDidLoad-or-anywhere-加入對應的程式碼" class="headerlink" title="4。在 ViewDidLoad (or anywhere) 加入對應的程式碼"></a>4。在 ViewDidLoad (or anywhere) 加入對應的程式碼</h3><pre><code>bannerView.adUnitID = @&quot;和網頁的那串相同&quot;;
   bannerView.rootViewController = self;
-  [bannerView loadRequest:[GADRequest request]];
-</code></pre><h3 id="5。看到測試用的ad出現"><a href="#5。看到測試用的ad出現" class="headerlink" title="5。看到測試用的ad出現"></a>5。看到測試用的ad出現</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/admob07.png" alt="admob07" style="width:310px"></p>
+  [bannerView loadRequest:[GADRequest request]];</code></pre><h3 id="5。看到測試用的ad出現"><a href="#5。看到測試用的ad出現" class="headerlink" title="5。看到測試用的ad出現"></a>5。看到測試用的ad出現</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/admob07.png" alt="admob07" style="width:310px">
+
+
 <h2 id="AdMob網頁設定啟動"><a href="#AdMob網頁設定啟動" class="headerlink" title="AdMob網頁設定啟動"></a>AdMob網頁設定啟動</h2><p>據aircon解釋，在上架一週後可以搜尋得到應用程式，接著進行連結，就可以啟動admob了</p>
 <h2 id="打完收工"><a href="#打完收工" class="headerlink" title="打完收工"></a>打完收工</h2>
 
@@ -480,7 +499,10 @@ pod &apos;Google-Mobile-Ads-SDK&apos;, &apos;~&gt; 7.0&apos;
 	  <h2 id="開始使用GAME-CENTER"><a href="#開始使用GAME-CENTER" class="headerlink" title="開始使用GAME CENTER"></a>開始使用GAME CENTER</h2><p>###1。在project裡加入 GameKit.framework</p>
 <p>###2。在iOS Dev Center 加入對應的AppID，並且在iTunes Connect新增一個APP</p>
 <p>###3。[My App][xxxApp][Game Center]下，設定啟用game center</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/game_center_01.png" alt="game01" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/game_center_01.png" alt="game01" style="width:310px">
+
+
+
 <p>###4。新增一個「個別排行榜」<br><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/game_center_02.png" alt="game02" style="width:310px"></p>
 <p>###5。enable Game Center<br><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/game_center_03.png" alt="game03" style="width:310px"></p>
 <p>###6。加上 GameKitHelper 的程式碼</p>
@@ -518,8 +540,7 @@ id&lt;GameKitHelperProtocol&gt; delegate;
 // Show Leaderboard
 -(void) showLeaderboard;
 
-@end
-</code></pre><p>####GameKitHelper.m</p>
+@end</code></pre><p>####GameKitHelper.m</p>
 <pre><code>#import &quot;GameKitHelper.h&quot;
 
 #import &quot;GameKitHelper.h&quot;
@@ -636,20 +657,20 @@ id&lt;GameKitHelperProtocol&gt; delegate;
 
 
 
-@end
-</code></pre><p>###7。確認Bundle identifier是否一致</p>
+@end</code></pre><p>###7。確認Bundle identifier是否一致</p>
 <p>###8。確認Capabilities － GameCenter 是否無錯誤</p>
 <p>###9。確認info.plist 有無gamekit的Capabilities</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/game_center_04.png" alt="game04" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/game_center_04.png" alt="game04" style="width:310px">
+
+
+
 <p>###10。在程式的啟動點加入 authenticateLocalPlayer</p>
-<pre><code>[[GameKitHelper sharedGameKitHelper] authenticateLocalPlayer];
-</code></pre><p>###11。Submit Score</p>
-<pre><code>[[GameKitHelper sharedGameKitHelper] submitScore:[lblScore.text integerValue]];
-</code></pre><p>###12。Show LeaderBoard</p>
-<pre><code>[[GameKitHelper sharedGameKitHelper] showLeaderboard];
-</code></pre><p>###13。在手機上測試</p>
+<pre><code>[[GameKitHelper sharedGameKitHelper] authenticateLocalPlayer];</code></pre><p>###11。Submit Score</p>
+<pre><code>[[GameKitHelper sharedGameKitHelper] submitScore:[lblScore.text integerValue]];</code></pre><p>###12。Show LeaderBoard</p>
+<pre><code>[[GameKitHelper sharedGameKitHelper] showLeaderboard];</code></pre><p>###13。在手機上測試</p>
 <p>這裡有個小地方要注意一下 iOS8必需要在手機上開啟sandox mode，才能進行開發測試</p>
-<h4 id="設定-Game-Center-Sandbox-設為開啟"><a href="#設定-Game-Center-Sandbox-設為開啟" class="headerlink" title="[設定] [Game Center] [Sandbox] 設為開啟"></a>[設定] [Game Center] [Sandbox] 設為開啟</h4><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/game_center_05.PNG" alt="game05" style="width:310px"></p>
+<h4 id="設定-Game-Center-Sandbox-設為開啟"><a href="#設定-Game-Center-Sandbox-設為開啟" class="headerlink" title="[設定] [Game Center] [Sandbox] 設為開啟"></a>[設定] [Game Center] [Sandbox] 設為開啟</h4><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/game_center_05.PNG" alt="game05" style="width:310px">
+
 <p>####xcode 執行 debug 啟動進入程式後會出現 Game Center Sandbox，依序完成</p>
 <p>輸入 AppID<br><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/game_center_06.PNG" alt="game06" style="width:310px"></p>
 <p>確認 Terms and Conditions<br><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/game_center_07.PNG" alt="game07" style="width:310px"></p>
@@ -688,7 +709,7 @@ id&lt;GameKitHelperProtocol&gt; delegate;
   </section>
   <section class="article typo">
 	  <p>原始資料來源：<br><a href="http://taqm.epa.gov.tw/pm25/tw/PM25A.aspx?area=10" target="_blank" rel="noopener">http://taqm.epa.gov.tw/pm25/tw/PM25A.aspx?area=10</a></p>
-<p>##<a href="https://itunes.apple.com/us/app/tai-wan-kong-qi-wu-ran-jian-ce/id983539259?l=zh&amp;ls=1&amp;mt=8" target="_blank" rel="noopener">載點</a> </p>
+<p>##<a href="https://itunes.apple.com/us/app/tai-wan-kong-qi-wu-ran-jian-ce/id983539259?l=zh&ls=1&mt=8" target="_blank" rel="noopener">載點</a> </p>
 <hr>
 <p>##說明</p>
 <p>為台灣空氣污染監測設計的app </p>
@@ -729,8 +750,7 @@ id&lt;GameKitHelperProtocol&gt; delegate;
 <pre><code>if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)])
 {
      [[UIApplication sharedApplication] sendAction:@selector(requestWhenInUseAuthorization) to:self.locationManager from:self forEvent:nil];
-}
-</code></pre>
+}</code></pre>
 
     
     
@@ -810,8 +830,7 @@ static char leftNameKey;
     return CGRectContainsPoint(rect, point) ? self : nil;
 }
 
-@end
-</code></pre>
+@end</code></pre>
 
     
     
@@ -860,8 +879,7 @@ static char leftNameKey;
 + (id)allocWithZone:(NSZone *)zone
 {
     return [self sharedInstance];
-}
-</code></pre>
+}</code></pre>
 
     
     
@@ -895,8 +913,7 @@ static char leftNameKey;
 	  <ol>
 <li>在ViewController後引用所需要的 delegate</li>
 </ol>
-<pre><code>class ViewController: ViewController,NSXMLParserDelegate 
-</code></pre><ol start="2">
+<pre><code>class ViewController: ViewController,NSXMLParserDelegate </code></pre><ol start="2">
 <li><p>加入delegate所需要的function</p>
 <pre><code>func parser(parser: NSXMLParser!, didStartElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!, attributes attributeDict: [NSObject : AnyObject]!) {
 println(&quot;Element&apos;s name is \(elementName)&quot;)
@@ -907,8 +924,7 @@ func parser(parser: NSXMLParser!, foundCharacters string: String!) {
 }
 
 func parser(parser: NSXMLParser!, didEndElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!) {
-println(&quot;End&quot;)
-</code></pre><p> }</p>
+println(&quot;End&quot;)</code></pre><p> }</p>
 </li>
 </ol>
 <ol start="3">
@@ -917,8 +933,7 @@ println(&quot;End&quot;)
 var xmlParser: NSXMLParser = NSXMLParser(data: xml)
 xmlParser.delegate = self
 
-xmlParser.parse()
-</code></pre></li>
+xmlParser.parse()</code></pre></li>
 </ol>
 <ol start="4">
 <li><p>跑跑看結果是否正確</p>
@@ -927,8 +942,7 @@ Element&apos;s attributes are [stat: fail]
 Element&apos;s name is err
 Element&apos;s attributes are [msg: Failed, desc: 錯誤, code: 123]
 End
-End
-</code></pre></li>
+End</code></pre></li>
 <li><p>收工</p>
 </li>
 </ol>

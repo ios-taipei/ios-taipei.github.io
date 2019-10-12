@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>inApp Purchase walkthrough | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
@@ -37,7 +37,7 @@
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -45,7 +45,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -176,13 +176,20 @@
 <h3 id="member-center-Certificates-Identifiers-amp-Profiles-App-IDs"><a href="#member-center-Certificates-Identifiers-amp-Profiles-App-IDs" class="headerlink" title="[member center] - [Certificates, Identifiers &amp; Profiles] - [App IDs]"></a>[member center] - [Certificates, Identifiers &amp; Profiles] - [App IDs]</h3><h1 id="Provisioning-Profile"><a href="#Provisioning-Profile" class="headerlink" title="Provisioning Profile"></a>Provisioning Profile</h1><p>provision profile要與App ID匹配</p>
 <h1 id="ItunesConnect-設定APP"><a href="#ItunesConnect-設定APP" class="headerlink" title="ItunesConnect 設定APP"></a>ItunesConnect 設定APP</h1><p>新增一個app，該填的填</p>
 <h1 id="新增-inAPP-Product"><a href="#新增-inAPP-Product" class="headerlink" title="新增 inAPP Product"></a>新增 inAPP Product</h1><p>[APP] - [App 內購買項目] - [Create New] - [非消耗性項目]</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/inapp01.png" alt="inapp01" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/inapp01.png" alt="inapp01" style="width:310px">
+
 <p>非消耗性項目 把讓填的填一填後[儲存]</p>
 <h1 id="ProductID-一定要是-appid-name"><a href="#ProductID-一定要是-appid-name" class="headerlink" title="ProductID 一定要是 appid.name"></a>ProductID 一定要是 appid.name</h1><p>在這裡卡關很久，很多walk through說ProdoctID只要unique，但是程式寫好，按下去就是 [StoreStateInvalidProduct]，要記得全部都要帶</p>
 <p>(範例為) com.yuaki.No5.Remove_AD  </p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/inapp02.png" alt="inapp02" style="width:310px"></p>
-<h1 id="檢查xcode裡iap的設定是否開啟"><a href="#檢查xcode裡iap的設定是否開啟" class="headerlink" title="檢查xcode裡iap的設定是否開啟"></a>檢查xcode裡iap的設定是否開啟</h1><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/inapp03.png" alt="inapp03" style="width:310px"></p>
-<h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><h2 id="加入-StoreKit-Framework"><a href="#加入-StoreKit-Framework" class="headerlink" title="加入 StoreKit.Framework"></a>加入 StoreKit.Framework</h2><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/inapp04.png" alt="inapp04" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/inapp02.png" alt="inapp02" style="width:310px">
+
+
+<h1 id="檢查xcode裡iap的設定是否開啟"><a href="#檢查xcode裡iap的設定是否開啟" class="headerlink" title="檢查xcode裡iap的設定是否開啟"></a>檢查xcode裡iap的設定是否開啟</h1><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/inapp03.png" alt="inapp03" style="width:310px">
+
+
+<h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><h2 id="加入-StoreKit-Framework"><a href="#加入-StoreKit-Framework" class="headerlink" title="加入 StoreKit.Framework"></a>加入 StoreKit.Framework</h2><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/inapp04.png" alt="inapp04" style="width:310px">
+
+
 <h2 id="加入三支程式-Store-h、Store-m和一支放在server的iap-php"><a href="#加入三支程式-Store-h、Store-m和一支放在server的iap-php" class="headerlink" title="加入三支程式 Store.h、Store.m和一支放在server的iap.php"></a>加入三支程式 Store.h、Store.m和一支放在server的iap.php</h2><h3 id="感謝-Paul-Wu-大大的無私分享"><a href="#感謝-Paul-Wu-大大的無私分享" class="headerlink" title="感謝 Paul Wu 大大的無私分享"></a>感謝 Paul Wu 大大的無私分享</h3><p>store.h</p>
 <pre><code>//
 //  Store.h
@@ -221,8 +228,7 @@ typedef NSUInteger StoreState;
 + (Store*)shared;
 - (void)purchase:(NSString *)productIdentifier;
 - (void)restore;
-@end
-</code></pre><p>store.m<br>    //<br>    //  Store.m<br>    //  DemoIAP<br>    //<br>    //  Created by Paul Wu on 2014/11/23.<br>    //  Copyright (c) 2014年 Prodisky. All rights reserved.<br>    //</p>
+@end</code></pre><p>store.m<br>    //<br>    //  Store.m<br>    //  DemoIAP<br>    //<br>    //  Created by Paul Wu on 2014/11/23.<br>    //  Copyright (c) 2014年 Prodisky. All rights reserved.<br>    //</p>
 <pre><code>#import &quot;Store.h&quot;
 #define verifyServerURL        @&quot;http://XXX/iap.php&quot;
 
@@ -383,8 +389,7 @@ static Store *_shared = nil;
     }
 }
 
-@end
-</code></pre><p>Server code - iap.php</p>
+@end</code></pre><p>Server code - iap.php</p>
 <pre><code>&lt;?php
     function verify($receipt) {
         if (empty($receipt)) {
@@ -424,10 +429,8 @@ static Store *_shared = nil;
     }
 
     echo json_encode(verify($_REQUEST[&quot;receipt&quot;]));
-?&gt;
-</code></pre><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>購買</p>
-<pre><code>[[Store shared] purchase:@&quot;com.yuaki.No5.Remove_AD&quot;];
-</code></pre><p>回復購買產品動作<br>    [[Store shared] restore];</p>
+?&gt;</code></pre><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>購買</p>
+<pre><code>[[Store shared] purchase:@&quot;com.yuaki.No5.Remove_AD&quot;];</code></pre><p>回復購買產品動作<br>    [[Store shared] restore];</p>
 <h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><pre><code>-(void)checkStore{
     [Store shared].updatedState = ^(StoreState state, NSString *productIdentifier) {
         //需要顯示購買過程時使用。
@@ -493,15 +496,19 @@ static Store *_shared = nil;
     [Store shared].verifyFail = ^(NSString *productIdentifier) {
         [[[UIAlertView alloc] initWithTitle:@&quot;&quot; message:@&quot;購買失敗&quot; delegate:self cancelButtonTitle:@&quot;確定&quot; otherButtonTitles:nil] show];
     };
-}
-</code></pre><h1 id="沙箱測試"><a href="#沙箱測試" class="headerlink" title="沙箱測試"></a>沙箱測試</h1><p>新增測試人員<br>[使用者和職能] - [測試人員] - [+]</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/inapp06.png" alt="inapp06" style="width:310px"></p>
+}</code></pre><h1 id="沙箱測試"><a href="#沙箱測試" class="headerlink" title="沙箱測試"></a>沙箱測試</h1><p>新增測試人員<br>[使用者和職能] - [測試人員] - [+]</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/inapp06.png" alt="inapp06" style="width:310px">
+
 <p>該填的填一填<br><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/inapp07.png" alt="inapp07" style="width:310px"></p>
 <p>好玩的是，不能使用既有的appid當做沙箱測試人員，只好去申請一個新的email來測試。</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/inapp08.png" alt="inapp08" style="width:310px"></p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/inapp09.png" alt="inapp09" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/inapp08.png" alt="inapp08" style="width:310px">
+
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/inapp09.png" alt="inapp09" style="width:310px">
+
 <p>在手機上[App Store] &gt; [精選項目] &gt; [登入] 沙箱測試人員</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/inapp10.png" alt="inapp10" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/inapp10.png" alt="inapp10" style="width:310px">
+
+
 <p>接著就可以進行購買測試了</p>
 <h4 id="打完收功"><a href="#打完收功" class="headerlink" title="打完收功"></a>打完收功</h4>
   	</div>

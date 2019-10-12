@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>時間軸: 2015/11 | iOS @ Taipei</title>
-  <meta name="description" content="We are the guys who fall in love with iOS" />
-  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="description" content="We are the guys who fall in love with iOS">
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
@@ -26,7 +26,7 @@
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script>
     function setLoadingBarProgress(num) {
@@ -34,7 +34,7 @@
     }
   </script>
 </head>
-
+</html>
 <body>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -183,9 +183,11 @@ UIView *blueBlock = [[UIView alloc] init];
 [blueBlock setTranslatesAutoresizingMaskIntoConstraints:NO];
 
 
-[self.view addSubview:blueBlock];
-</code></pre><p>結果圖</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/AutoLayout01.png" alt="AutoLayout02" style="width:310px"></p>
+[self.view addSubview:blueBlock];</code></pre><p>結果圖</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/AutoLayout01.png" alt="AutoLayout02" style="width:310px">
+
+
+
 <p>接著  開始撰寫這次要用的constraint</p>
 <h2 id="把握-X-Y-W-H-原則"><a href="#把握-X-Y-W-H-原則" class="headerlink" title="把握 X,Y,W,H 原則"></a>把握 X,Y,W,H 原則</h2><p>每一個物件在頁面上都有四種屬性 X,Y,Width,與Height，因此在撰寫auto layout constraint時，都要補足這四個原則，以下為範例</p>
 <pre><code>NSLayoutConstraint *constraintHeight = [NSLayoutConstraint constraintWithItem:redBlock attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:0.25 constant:0];
@@ -200,8 +202,7 @@ NSLayoutConstraint *constraintTop = [NSLayoutConstraint constraintWithItem:redBl
 [self.view addConstraint:constraintWidth];
 
 [self.view addConstraint:constraintLeading];
-[self.view addConstraint:constraintTop];
-</code></pre><p>樓上大意為 為紅色區域設定寛高為self.view的0.25倍，距離頁面左邊20，距離頁面上方40</p>
+[self.view addConstraint:constraintTop];</code></pre><p>樓上大意為 為紅色區域設定寛高為self.view的0.25倍，距離頁面左邊20，距離頁面上方40</p>
 <pre><code>NSLayoutConstraint *constraintHeight2 = [NSLayoutConstraint constraintWithItem:blueBlock attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:redBlock attribute:NSLayoutAttributeHeight multiplier:0.25 constant:0];
 
 NSLayoutConstraint *constraintWidth2 = [NSLayoutConstraint constraintWithItem:blueBlock attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:redBlock attribute:NSLayoutAttributeWidth multiplier:0.25 constant:0];
@@ -214,8 +215,7 @@ NSLayoutConstraint *constraintTop2 = [NSLayoutConstraint constraintWithItem:blue
 [self.view addConstraint:constraintWidth2];
 
 [self.view addConstraint:constraintLeading2];
-[self.view addConstraint:constraintTop2];
-</code></pre><p>樓上大意為 為藍色區域設定寛高為紅色區域的0.25倍，距離紅色區域左邊20，距離紅色區域上方40</p>
+[self.view addConstraint:constraintTop2];</code></pre><p>樓上大意為 為藍色區域設定寛高為紅色區域的0.25倍，距離紅色區域左邊20，距離紅色區域上方40</p>
 <h3 id="Visual-Format"><a href="#Visual-Format" class="headerlink" title="Visual Format"></a>Visual Format</h3><p>這是一種相對於constraint 比較簡單的寫法（比較不用一直加constraint）</p>
 <pre><code>NSMutableArray *myConstraints = [NSMutableArray array];
 
@@ -237,24 +237,19 @@ NSLayoutConstraint *constraintTop2 = [NSLayoutConstraint constraintWithItem:blue
                                          metrics:nil
                                            views:NSDictionaryOfVariableBindings(blueBlock,redBlock)]];
 
-[self.view addConstraints:myConstraints];
-</code></pre><p>其中</p>
-<pre><code>V: &quot;、 &quot; H: &quot;
-</code></pre><p>分別代表由垂直或是水平方向來佈局。</p>
+[self.view addConstraints:myConstraints];</code></pre><p>其中</p>
+<pre><code>V: &quot;、 &quot; H: &quot;</code></pre><p>分別代表由垂直或是水平方向來佈局。</p>
 <p><br><br><br></p>
-<pre><code>&quot; | &quot;
-</code></pre><p>代表 Superview 的邊界。</p>
+<pre><code>&quot; | &quot;</code></pre><p>代表 Superview 的邊界。</p>
 <p><br><br><br></p>
-<pre><code>&quot; [ ] &quot;
-</code></pre><p>代表物件本身，括號內包含物件的變數名稱與大小限制，可以使用關係運算子（&lt;＝、&gt;＝ 或 ＝＝ 等邏輯判斷）。<br><br><br><br></p>
-<pre><code>&quot; - &quot;
-</code></pre><p>代表預設寬度或高度，如果在中間加上數字 “ -30- “，則代表限制 30 個單位高度或寬度。<br><br><br>兩側必需要銜接物件，以下為錯誤範例 （錯在20－20中間沒有物件相隔）</p>
-<pre><code>[viewA]-20-20-[viewB]
-</code></pre><p><br><br><br></p>
-<pre><code>&quot; @ &quot;
-</code></pre><p>優先權，1 至 1000 的整數，優先權較大的條件會優先被滿足，例如 ，<br>[viewA(&gt;=100@1000)]，物件 viewA 不可以小於 100 個單位長度或寬度會最優先被考慮。</p>
+<pre><code>&quot; [ ] &quot;</code></pre><p>代表物件本身，括號內包含物件的變數名稱與大小限制，可以使用關係運算子（&lt;＝、&gt;＝ 或 ＝＝ 等邏輯判斷）。<br><br><br><br></p>
+<pre><code>&quot; - &quot;</code></pre><p>代表預設寬度或高度，如果在中間加上數字 “ -30- “，則代表限制 30 個單位高度或寬度。<br><br><br>兩側必需要銜接物件，以下為錯誤範例 （錯在20－20中間沒有物件相隔）</p>
+<pre><code>[viewA]-20-20-[viewB]</code></pre><p><br><br><br></p>
+<pre><code>&quot; @ &quot;</code></pre><p>優先權，1 至 1000 的整數，優先權較大的條件會優先被滿足，例如 ，<br>[viewA(&gt;=100@1000)]，物件 viewA 不可以小於 100 個單位長度或寬度會最優先被考慮。</p>
 <p>結果圖</p>
-<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/AutoLayout02.png" alt="AutoLayout02" style="width:310px"></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/AutoLayout02.png" alt="AutoLayout02" style="width:310px">
+
+
 
 
     
