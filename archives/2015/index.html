@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>時間軸: 2015 | iOS @ Taipei</title>
+  <meta name="description" content="We are the guys who fall in love with iOS" />
+  <meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/">
+  <link rel="alternate" href="/atom.xml" title="iOS @ Taipei">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="We are the guys who fall in love with iOS">
+<meta name="keywords" content="iOS,Android,Mobile,UI,UX,iPhone,iPad,Tablet,Watch,TV">
+<meta property="og:type" content="website">
+<meta property="og:title" content="iOS @ Taipei">
+<meta property="og:url" content="http://ios.taipei/archives/2015/index.html">
+<meta property="og:site_name" content="iOS @ Taipei">
+<meta property="og:description" content="We are the guys who fall in love with iOS">
+<meta property="og:locale" content="zh-TW">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS @ Taipei">
+<meta name="twitter:description" content="We are the guys who fall in love with iOS">
+    
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+</head>
+
+<body>
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.0&appId=179895666557&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+  <script>setLoadingBarProgress(20)</script> 
+  <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/' >
+				iOS @ Taipei
+			</a>
+			<div class='menu'>
+				<ul class='h-list'>
+					
+						<li>
+							<a class='flat-box nav-home' href='/'>
+								Home
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-archives' href='/archives'>
+								Archives
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-app' href='/app'>
+								APP
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-about' href='/about'>
+								About
+							</a>
+						</li>
+					
+				</ul>
+				<div class='underline'></div>
+			</div>
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="Search" />
+						<span class="icon icon-search"></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search flat-box"></span></a></li>
+				
+				<li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu flat-box"></span></a></li>
+			</ul>
+		</div>
+		
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'>
+				Word of Forks
+			</a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a href='javascript:void(0)'><span class="icon icon-chat_bubble_outline flat-box"></span></a></li>
+				<li class='s-top'><a href='javascript:void(0)'><span class="icon icon-arrow_upward flat-box"></span></a></li>
+				<li class='s-toc'><a href='javascript:void(0)'><span class="icon icon-format_list_numbered flat-box"></span></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<aside class="menu-phone">
+	<nav>
+		
+			<a href="/" class="nav-home nav">
+				Home
+			</a>
+		
+			<a href="/archives" class="nav-archives nav">
+				Archives
+			</a>
+		
+			<a href="/app" class="nav-app nav">
+				APP
+			</a>
+		
+			<a href="/about" class="nav-about nav">
+				About
+			</a>
+		
+	</nav>
+</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+  <div class="l_body">
+    <div class='container clearfix'>
+      <div class='l_main'>
+        
+	
+  <script>
+    window.subData= { title:'Year : 2015'}
+  </script>
+
+<section class="post-list">
+	
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2015/11/10/AutoLayout_Programmatically/">
+        AutoLayout_Programmatically
+      </a>
+    </h2>
+    
+    <time>
+      11月 10, 2015
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <h1 id="利用程式來加入-constraint"><a href="#利用程式來加入-constraint" class="headerlink" title="利用程式來加入 constraint"></a>利用程式來加入 constraint</h1><p>首先  加兩個測試用的view 到 self.view 之中</p>
+<pre><code>  UIView *redBlock = [[UIView alloc] init];
+
+[redBlock setBackgroundColor:[UIColor redColor]];
+
+[redBlock setTranslatesAutoresizingMaskIntoConstraints:NO];
+
+
+[self.view addSubview:redBlock];
+
+
+UIView *blueBlock = [[UIView alloc] init];
+
+[blueBlock setBackgroundColor:[UIColor blueColor]];
+
+[blueBlock setTranslatesAutoresizingMaskIntoConstraints:NO];
+
+
+[self.view addSubview:blueBlock];
+</code></pre><p>結果圖</p>
+<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/AutoLayout01.png" alt="AutoLayout02" style="width:310px"></p>
+<p>接著  開始撰寫這次要用的constraint</p>
+<h2 id="把握-X-Y-W-H-原則"><a href="#把握-X-Y-W-H-原則" class="headerlink" title="把握 X,Y,W,H 原則"></a>把握 X,Y,W,H 原則</h2><p>每一個物件在頁面上都有四種屬性 X,Y,Width,與Height，因此在撰寫auto layout constraint時，都要補足這四個原則，以下為範例</p>
+<pre><code>NSLayoutConstraint *constraintHeight = [NSLayoutConstraint constraintWithItem:redBlock attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:0.25 constant:0];
+
+NSLayoutConstraint *constraintWidth = [NSLayoutConstraint constraintWithItem:redBlock attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeWidth multiplier:0.25 constant:0];
+
+NSLayoutConstraint *constraintLeading = [NSLayoutConstraint constraintWithItem:redBlock attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1 constant:20];
+
+NSLayoutConstraint *constraintTop = [NSLayoutConstraint constraintWithItem:redBlock attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1 constant:40];
+
+[self.view addConstraint:constraintHeight];
+[self.view addConstraint:constraintWidth];
+
+[self.view addConstraint:constraintLeading];
+[self.view addConstraint:constraintTop];
+</code></pre><p>樓上大意為 為紅色區域設定寛高為self.view的0.25倍，距離頁面左邊20，距離頁面上方40</p>
+<pre><code>NSLayoutConstraint *constraintHeight2 = [NSLayoutConstraint constraintWithItem:blueBlock attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:redBlock attribute:NSLayoutAttributeHeight multiplier:0.25 constant:0];
+
+NSLayoutConstraint *constraintWidth2 = [NSLayoutConstraint constraintWithItem:blueBlock attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:redBlock attribute:NSLayoutAttributeWidth multiplier:0.25 constant:0];
+
+NSLayoutConstraint *constraintLeading2 = [NSLayoutConstraint constraintWithItem:blueBlock attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:redBlock attribute:NSLayoutAttributeLeading multiplier:1 constant:20];
+
+NSLayoutConstraint *constraintTop2 = [NSLayoutConstraint constraintWithItem:blueBlock attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:redBlock attribute:NSLayoutAttributeTop multiplier:1 constant:40];
+
+[self.view addConstraint:constraintHeight2];
+[self.view addConstraint:constraintWidth2];
+
+[self.view addConstraint:constraintLeading2];
+[self.view addConstraint:constraintTop2];
+</code></pre><p>樓上大意為 為藍色區域設定寛高為紅色區域的0.25倍，距離紅色區域左邊20，距離紅色區域上方40</p>
+<h3 id="Visual-Format"><a href="#Visual-Format" class="headerlink" title="Visual Format"></a>Visual Format</h3><p>這是一種相對於constraint 比較簡單的寫法（比較不用一直加constraint）</p>
+<pre><code>NSMutableArray *myConstraints = [NSMutableArray array];
+
+[myConstraints addObjectsFromArray:
+ [NSLayoutConstraint constraintsWithVisualFormat:@&quot;H:|-20-[redBlock(100)]-10-[blueBlock(&gt;=100)]-|&quot;
+                                         options:NSLayoutFormatDirectionLeadingToTrailing
+                                         metrics:nil
+                                           views:NSDictionaryOfVariableBindings(redBlock,blueBlock)]];
+
+[myConstraints addObjectsFromArray:
+ [NSLayoutConstraint constraintsWithVisualFormat:@&quot;V:[redBlock(100)]-|&quot;
+                                         options:NSLayoutFormatDirectionLeadingToTrailing
+                                         metrics:nil
+                                           views:NSDictionaryOfVariableBindings(redBlock)]];
+
+[myConstraints addObjectsFromArray:
+ [NSLayoutConstraint constraintsWithVisualFormat:@&quot;V:|-30-[blueBlock(&gt;=120@750)]-30-|&quot;
+                                         options:NSLayoutFormatDirectionLeadingToTrailing
+                                         metrics:nil
+                                           views:NSDictionaryOfVariableBindings(blueBlock,redBlock)]];
+
+[self.view addConstraints:myConstraints];
+</code></pre><p>其中</p>
+<pre><code>V: &quot;、 &quot; H: &quot;
+</code></pre><p>分別代表由垂直或是水平方向來佈局。</p>
+<p><br><br><br></p>
+<pre><code>&quot; | &quot;
+</code></pre><p>代表 Superview 的邊界。</p>
+<p><br><br><br></p>
+<pre><code>&quot; [ ] &quot;
+</code></pre><p>代表物件本身，括號內包含物件的變數名稱與大小限制，可以使用關係運算子（&lt;＝、&gt;＝ 或 ＝＝ 等邏輯判斷）。<br><br><br><br></p>
+<pre><code>&quot; - &quot;
+</code></pre><p>代表預設寬度或高度，如果在中間加上數字 “ -30- “，則代表限制 30 個單位高度或寬度。<br><br><br>兩側必需要銜接物件，以下為錯誤範例 （錯在20－20中間沒有物件相隔）</p>
+<pre><code>[viewA]-20-20-[viewB]
+</code></pre><p><br><br><br></p>
+<pre><code>&quot; @ &quot;
+</code></pre><p>優先權，1 至 1000 的整數，優先權較大的條件會優先被滿足，例如 ，<br>[viewA(&gt;=100@1000)]，物件 viewA 不可以小於 100 個單位長度或寬度會最優先被考慮。</p>
+<p>結果圖</p>
+<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/AutoLayout02.png" alt="AutoLayout02" style="width:310px"></p>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/iOS/">iOS</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2015/10/15/XCode7-ResourceOnDemand/">
+        XCode7-ResourceOnDemand
+      </a>
+    </h2>
+    
+    <time>
+      10月 15, 2015
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <h2 id="XCode7、iOS9新功能－Resource-On-Demand-資源檔分段下載"><a href="#XCode7、iOS9新功能－Resource-On-Demand-資源檔分段下載" class="headerlink" title="XCode7、iOS9新功能－Resource On Demand 資源檔分段下載"></a>XCode7、iOS9新功能－Resource On Demand 資源檔分段下載</h2><p>XCode7的專案多了一個標籤[Resource Tags]</p>
+<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/resourcetag01.png" alt="resourcetag01" style="width:310px"></p>
+<p>打開來看長這樣</p>
+<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/resourcetag02.png" alt="resourcetag02" style="width:310px"></p>
+<p>接著解說一下各自的用意</p>
+<p>Initial Install Tags: 在一開始安裝時就包在ipa裡讓人下載的資源檔</p>
+<p>Prefetched Tag Order: 第一次開啟app時才下載資源檔</p>
+<p>Download Only On Demand: 以程式判斷，需要下載時才下載（這段好像由apple代理，只要寫程式去抓資源檔回來）</p>
+<p>##套用情境<br>假設我寫了一個電子書app，全部資源檔包一包上傳到store，結果有30MB，此時手機如果在3G模式下，是沒有辦法下載這個app的（上限20MB），此時若將資源檔移至 [Prefetched Tag Order] 把主程式壓在20MB以下的話，3G模式下的使用者就可以下載了，另外的10MB，則是使用者第一次開啟時才會將這10MB下載回來。</p>
+<p>內容的部份，我有10本書，每本10MB，如果在[Prefetched Tag Order]一口氣全下載回來的話，會慢到讓user以為是當機吧。所以內容可以等到使用者單獨開啟某一本書時再去下載，就可以放在[Download Only On Demand]，再用程式去判斷。</p>
+<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><h3 id="設定資源檔的tag"><a href="#設定資源檔的tag" class="headerlink" title="設定資源檔的tag"></a>設定資源檔的tag</h3><p>在Images.xcassets找到需要設定的圖檔，並在且右方屬性的地方找找[On Demand Resources Tags]，如圖</p>
+<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/resourcetag03.png" alt="resourcetag03" style="width:310px"></p>
+<p>打入[book1]，看起來很像標籤雲，實際上一個資源檔可以輸入多個tag，如圖<br><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/resourcetag04.png" alt="resourcetag04" style="width:310px"></p>
+<p>輸入完成後，回到[Resource Tags]看一眼，發現檔案自動出現在[Download Only On Demand]<br><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/resourcetag05.png" alt="resourcetag05" style="width:310px"></p>
+<h3 id="呼叫程式下載資源檔"><a href="#呼叫程式下載資源檔" class="headerlink" title="呼叫程式下載資源檔"></a>呼叫程式下載資源檔</h3><p>iOS9 提供了兩個方法呼叫  看程式，bj4</p>
+<h4 id="beginAccessingResourcesWithCompletionHandler"><a href="#beginAccessingResourcesWithCompletionHandler" class="headerlink" title="beginAccessingResourcesWithCompletionHandler"></a>beginAccessingResourcesWithCompletionHandler</h4><pre><code>-(void)preloadResourceWithTags:(NSArray *)tagArray{
+
+    NSSet *tagSet = [NSSet setWithArray:tagArray];
+
+    NSBundleResourceRequest *resourceRequest = [[NSBundleResourceRequest alloc] initWithTags:tagSet];
+    [resourceRequest beginAccessingResourcesWithCompletionHandler:^(NSError * _Nullable error) {
+        NSLog(@&quot;%@&quot;,error);
+    }];
+}
+</code></pre><h4 id="conditionallyBeginAccessingResourcesWithCompletionHandler"><a href="#conditionallyBeginAccessingResourcesWithCompletionHandler" class="headerlink" title="conditionallyBeginAccessingResourcesWithCompletionHandler"></a>conditionallyBeginAccessingResourcesWithCompletionHandler</h4><pre><code>-(void)loadResourceWithTags:(NSArray *)tagArray{
+    NSSet *tagSet = [NSSet setWithArray:tagArray];
+
+    NSBundleResourceRequest *resourceRequest = [[NSBundleResourceRequest alloc] initWithTags:tagSet];
+    [resourceRequest conditionallyBeginAccessingResourcesWithCompletionHandler:^(BOOL resourcesAvailable) {
+
+        if(resourcesAvailable){
+            NSLog(@&quot;Resources Available&quot;);
+        }
+
+    }];
+
+}
+</code></pre>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/iOS/">iOS</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2015/08/17/漫談手機的存儲方式/">
+        漫談手機的存儲方式
+      </a>
+    </h2>
+    
+    <time>
+      8月 17, 2015
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <p>如何在手機上存資料是我常常被問到的問題，因此開一篇文章來討論一下實務上幾個比較常見的到資料存儲方式，不過，這裡不會提到CoreData，原因在於－－－大部份的手機專案都是iOS／Android兩個手機專案在並行，因此大部份的owner會想要兩邊的流程是一致的，因此在選擇資料存儲的方式時，大多選擇兩個手機台平能夠共用的方式，sqlite就是一個比較好說服owner的方式。當然coredata也有他的好處和便捷性，這邊就不多解釋了。<br><br>這裡要介紹的是 NSUserDefault、File與SQLite<br><br>如果有人有更好的存儲方式，也請不吝告知。</p>
+<h3 id="NSUserDefault"><a href="#NSUserDefault" class="headerlink" title="NSUserDefault"></a>NSUserDefault</h3><p>有許多型別可以使用，這裡使用比較常用的object當範例，其他類似的就不一一介紹。</p>
+<h4 id="regist-Data"><a href="#regist-Data" class="headerlink" title="regist Data"></a>regist Data</h4><pre><code>[[NSUserDefaults standardUserDefaults] registerDefaults:&lt;#(NSDictionary *)#&gt;]
+[[NSUserDefaults standardUserDefaults] synchronize];
+</code></pre><h4 id="write-Data"><a href="#write-Data" class="headerlink" title="write Data"></a>write Data</h4><pre><code>[[NSUserDefaults standardUserDefaults] setObject:data forKey:@&quot;key&quot;];
+[[NSUserDefaults standardUserDefaults] synchronize];
+</code></pre><h4 id="remove-Data"><a href="#remove-Data" class="headerlink" title="remove Data"></a>remove Data</h4><pre><code>[[NSUserDefaults standardUserDefaults] removeObjectForKey:@&quot;key&quot;]    
+[[NSUserDefaults standardUserDefaults] synchronize];
+</code></pre><p>或是</p>
+<pre><code>[[NSUserDefaults standardUserDefaults] setObject:nil forKey:@&quot;key&quot;];
+[[NSUserDefaults standardUserDefaults] synchronize];
+</code></pre><h4 id="read-Data"><a href="#read-Data" class="headerlink" title="read Data"></a>read Data</h4><pre><code>[[NSUserDefaults standardUserDefaults] objectForKey:@&quot;key&quot;];
+[[NSUserDefaults standardUserDefaults] synchronize];
+</code></pre><h3 id="實體檔案存取-NSFileManager"><a href="#實體檔案存取-NSFileManager" class="headerlink" title="實體檔案存取(NSFileManager)"></a>實體檔案存取(NSFileManager)</h3><h4 id="Create-File"><a href="#Create-File" class="headerlink" title="Create File"></a>Create File</h4><pre><code>- (void)createFileWithName:(NSString *)fileName
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:fileName];
+
+    NSFileManager *manager = [NSFileManager defaultManager];
+
+    if ([manager createFileAtPath:filePath contents:nil attributes:nil]) {
+        NSLog(@&quot;Created the File Successfully.&quot;);
+    } else {
+        NSLog(@&quot;Failed to Create the File&quot;);
+    }
+}
+</code></pre><h4 id="Read-File"><a href="#Read-File" class="headerlink" title="Read File"></a>Read File</h4><pre><code>- (void)readFileWithName:(NSString *)fileName
+{
+
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:fileName];
+
+    NSFileManager *manager = [NSFileManager defaultManager];
+    if ([manager fileExistsAtPath:filePath]) {
+        NSError *error = nil;
+        NSString *content = [NSString stringWithContentsOfFile:filePath encoding:NSStringEncodingConversionAllowLossy error:&amp;error];
+        NSLog(@&quot;File Content: %@&quot;, content);
+
+        if (error) {
+            NSLog(@&quot;There is an Error: %@&quot;, error);
+        }
+    } else {
+        NSLog(@&quot;File %@ doesn&apos;t exists&quot;, fileName);
+    }
+}
+</code></pre><h4 id="Write-File"><a href="#Write-File" class="headerlink" title="Write File"></a>Write File</h4><pre><code>- (void)writeString:(NSString *)content toFile:(NSString *)fileName
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:fileName];
+    NSFileManager *manager = [NSFileManager defaultManager];
+    if ([manager fileExistsAtPath:filePath]) {
+        NSError *error = nil;
+        [content writeToFile:filePath atomically:YES encoding:NSStringEncodingConversionAllowLossy error:&amp;error];
+        if (error) {
+            NSLog(@&quot;There is an Error: %@&quot;, error);
+        }
+    } else {
+        NSLog(@&quot;File %@ doesn&apos;t exists&quot;, fileName);
+    }
+
+}
+</code></pre><h4 id="delete-File"><a href="#delete-File" class="headerlink" title="delete File"></a>delete File</h4><pre><code>- (void)deleteFileWithName:(NSString *)fileName
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:fileName];
+
+    NSFileManager *manager = [NSFileManager defaultManager];
+    // Need to check if the to be deleted file exists.
+    if ([manager fileExistsAtPath:filePath]) {
+        NSError *error = nil;
+       [manager removeItemAtPath:filePath error:&amp;error];
+        if (error) {
+            NSLog(@&quot;There is an Error: %@&quot;, error);
+        }
+    } else {
+        NSLog(@&quot;File %@ doesn&apos;t exists&quot;, fileName);
+    }
+}
+</code></pre><h3 id="SQLite"><a href="#SQLite" class="headerlink" title="SQLite"></a>SQLite</h3><p>這裡我使用最常用的FMDB來當做範例<br><a href="https://github.com/ccgus/fmdb" target="_blank" rel="noopener">FMDB on GitHub</a></p>
+<h4 id="首先你要先把-libsqlite3-dylib-加進library"><a href="#首先你要先把-libsqlite3-dylib-加進library" class="headerlink" title="首先你要先把 libsqlite3.dylib 加進library"></a>首先你要先把 libsqlite3.dylib 加進library</h4><p>不解釋</p>
+<h4 id="OpenDB"><a href="#OpenDB" class="headerlink" title="OpenDB"></a>OpenDB</h4><pre><code>NSURL *appUrl = [[[NSFileManager defaultManager] 
+     URLsForDirectory:NSDocumentDirectory 
+            inDomains:NSUserDomainMask] lastObject];
+NSString *dbPath = [[appUrl path] stringByAppendingPathComponent:@&quot;MyDatabase.db&quot;];   
+FMDatabase* db = [FMDatabase databaseWithPath:dbPath];
+
+if (![db open]) {       
+ NSLog(@&quot;Could not open db&quot;);     
+ return;  
+}
+</code></pre><h4 id="insertData"><a href="#insertData" class="headerlink" title="insertData"></a>insertData</h4><pre><code>if(![db executeUpdate:@&quot;INSERT INTO user (name, description) VALUES (?,?)&quot;, name, description])
+{
+ NSLog(@&quot;Could not insert data: %@&quot;, [db lastErrorMessage]);
+}
+</code></pre><p>這裡的代數是用？</p>
+<h4 id="readData"><a href="#readData" class="headerlink" title="readData"></a>readData</h4><pre><code>NSMutableArray* items = [NSMutableArray arrayWithCapacity:0];
+FMResultSet *rs = [db executeQuery:@&quot;SELECT uid, name, description from user&quot;];
+
+while ([rs next]) {       
+ int uid = [rs intForColumn:@&quot;uid&quot;];
+ NSString *name = [rs stringForColumn:@&quot;name&quot;];       
+ NSString *description = [rs stringForColumn:@&quot;description&quot;];       
+
+ [items addObject:[NSDictionary dictionaryWithObjectsAndKeys:
+       [NSNumber numberWithInt:uid], @&quot;uid&quot;,
+       name, @&quot;name&quot;,
+       description, @&quot;description&quot;,
+       nil]];
+}
+
+[rs close];   
+</code></pre><h4 id="updateData"><a href="#updateData" class="headerlink" title="updateData"></a>updateData</h4><pre><code>[db beginTransaction];
+if(![db executeUpdate:@&quot;UPDATE user set name=?, description＝? where name=&apos;?&apos;“,@&quot;1&quot;,@&quot;2&quot;,@&quot;1&quot;]);
+    {
+     NSLog(@&quot;Could not update data: %@&quot;, [db lastErrorMessage]);
+    }
+[db commit];
+</code></pre><h4 id="deleteData"><a href="#deleteData" class="headerlink" title="deleteData"></a>deleteData</h4><pre><code>if(![_db executeUpdate:@&quot;DELETE FROM user WHERE uid = ?&quot;, [NSNumber numberWithInt:uid]])
+{
+ NSLog(@&quot;Could not delete data: %@&quot;, [db lastErrorMessage]);
+}
+</code></pre><h4 id="CloseDB"><a href="#CloseDB" class="headerlink" title="CloseDB"></a>CloseDB</h4><pre><code>[db close]
+</code></pre><p>執行FMDB的指令有她的生命週期，都是<br><br><br>1.open db<br><br><br>2.執行<br><br><br>3.close db</p>
+<p>如果沒有確實的open與close的話  是很容易造成exception而crash的<br><br><br><br><br>最後，因為sqlite是以一個檔案型態存在的，因此在multi－thread讀寫資料時很容易出現錯誤，官方說明與建議的方法如下：<br><br><br></p>
+<pre><code>Using a single instance of FMDatabase from multiple threads at once is a bad idea. It has always been OK to make a FMDatabase object per thread. Just don&apos;t share a single instance across threads, and definitely not across multiple threads at the same time. Bad things will eventually happen and you&apos;ll eventually get something to crash, or maybe get an exception, or maybe meteorites will fall out of the sky and hit your Mac Pro. This would suck.
+
+So don&apos;t instantiate a single FMDatabase object and use it across multiple threads.
+
+Instead, use FMDatabaseQueue. It&apos;s your friend and it&apos;s here to help. Here&apos;s how to use it:
+
+First, make your queue.
+</code></pre><p>用FMDatabaseQueue來解決，<br><br>範例：</p>
+<pre><code>FMDatabaseQueue *queue = [FMDatabaseQueue databaseQueueWithPath:aPath];
+
+[queue inDatabase:^(FMDatabase *db) {
+    [db executeUpdate:@&quot;INSERT INTO myTable VALUES (?)&quot;, [NSNumber numberWithInt:1]];
+    [db executeUpdate:@&quot;INSERT INTO myTable VALUES (?)&quot;, [NSNumber numberWithInt:2]];
+    [db executeUpdate:@&quot;INSERT INTO myTable VALUES (?)&quot;, [NSNumber numberWithInt:3]];
+
+FMResultSet *rs = [db executeQuery:@&quot;select * from foo&quot;];
+    while ([rs next]) {
+        …
+    }
+}];
+</code></pre><p><br><br>就醬，其實不難～<br><br><br><br><br><br><br></p>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/iOS/">iOS</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2015/08/13/XCode-debug再進化-3/">
+        XCode debug再進化－3
+      </a>
+    </h2>
+    
+    <time>
+      8月 13, 2015
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <p>在xcode debug時，有些功能可能用不太到，不過既然知道了，就分享出來給大家知道，致於想不想用，什麼時候用，就端看自已的判斷了</p>
+<p><br><br><br>這次是要介紹如何在debug模式下，做到更新 UI 的指令</p>
+<h3 id="先中斷一下吧"><a href="#先中斷一下吧" class="headerlink" title="先中斷一下吧"></a>先中斷一下吧</h3><p>在一個範例的按鈕裡裡先拉一個 IBAction  然後給一個中斷點</p>
+<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-01.png" alt="debug2-01" style="width:310px"></p>
+<p>在debug前的 UI 長成這樣</p>
+<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-02.png" alt="debug2-02" style="width:310px"></p>
+<p>按下按鈕，被中斷後，在debug navagator的lldb裡下指令</p>
+<pre><code>e id $myView = (id)0x154d0e9d0
+</code></pre><p>其中</p>
+<pre><code>e 是 expresss 的簡寫
+id 是型別
+$myView 是變數容器
+0x154d0e9d0 是記憶體位址 （需要與左側的變數的記憶體位址一致）
+</code></pre><p>結果如下圖</p>
+<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-03.png" alt="debug2-03" style="width:310px"></p>
+<p>接著 可以輸入想要做的事情</p>
+<pre><code>e (void)[$myView setBackgroundColor:[UIColor redColor]]
+</code></pre><p>內容就不多解釋了，只是，醬子打完後  手機是不會動的（廢話，因為還卡在中斷點）</p>
+<p><br><br>所以，要通知 UI 做更新才行</p>
+<pre><code>e (void)[CATransaction flush]
+</code></pre><p>你會發現，還在中斷點的debug模式下，手機的畫面更新了！！！！（如下圖）<br><br></p>
+<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-04.png" alt="debug2-04" style="width:310px"></p>
+<p>真的太神奇了，傑克</p>
+<p><br><br><br><br></p>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/iOS/">iOS</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2015/08/13/XCode-debug再進化-4/">
+        XCode debug再進化－4
+      </a>
+    </h2>
+    
+    <time>
+      8月 13, 2015
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <p>在xcode debug時，有些功能可能用不太到，不過既然知道了，就分享出來給大家知道，致於想不想用，什麼時候用，就端看自已的判斷了</p>
+<p><br><br><br>這次是要介紹如何在debug模式下，新增watchpoint(監看點or監看式)</p>
+<h3 id="一樣先中斷一下吧"><a href="#一樣先中斷一下吧" class="headerlink" title="一樣先中斷一下吧"></a>一樣先中斷一下吧</h3><p>在一個範例的按鈕裡裡先拉一個 IBAction  然後給一個中斷點</p>
+<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-01.png" alt="debug2-01" style="width:310px"></p>
+<p>按下按鈕，被中斷後，在debug navagator的lldb裡下指令</p>
+<pre><code>watchpoint set variable i
+</code></pre><p>其中</p>
+<pre><code>watchpoint 是指令  可以簡寫為 watch
+variable 可以簡寫為 var
+i 就是你想要監看的東西
+</code></pre><p>然後就會出現如下的結果    </p>
+<pre><code>Watchpoint created: Watchpoint 1: addr = 0x16fd25614 size = 4 state = enabled type = w
+    declare @ &apos;/Users/minghongyu/Documents/work/iphone/test3/test3/ViewController.m:28&apos;
+    watchpoint spec = &apos;i&apos;
+    new value: 0
+2015-08-13 20:02:38.367 test3[4700:525425] 0
+</code></pre><p>代表監看點新增成功</p>
+<p><br><br><br>接著如果拿掉中斷點再繼續執行的話，會發現，每次都會自動停下來，結果如下</p>
+<pre><code>Watchpoint 1 hit:
+old value: 0
+new value: 1
+2015-08-13 20:02:42.329 test3[4700:525425] 1
+
+Watchpoint 1 hit:
+old value: 1
+new value: 2
+2015-08-13 20:02:45.380 test3[4700:525425] 2
+
+Watchpoint 1 hit:
+old value: 2
+new value: 3
+2015-08-13 20:02:48.603 test3[4700:525425] 3
+
+Watchpoint 1 hit:
+old value: 3
+new value: 4
+</code></pre><p>就可以好好的觀察變數的變化了</p>
+<p>如果想看到所有的監看點列表，指令為</p>
+<pre><code>watchpoint list  
+
+也可以簡寫為 watch l  （小寫L）
+</code></pre><p>執行的結果如下</p>
+<pre><code>Number of supported hardware watchpoints: 4
+Current watchpoints:
+Watchpoint 1: addr = 0x16fd25614 size = 4 state = enabled type = w
+    declare @ &apos;/Users/minghongyu/Documents/work/iphone/test3/test3/ViewController.m:28&apos;
+    watchpoint spec = &apos;i&apos;
+    old value: 3
+    new value: 4
+</code></pre><p><br><br><br>如果想要刪除監看點，指令為</p>
+<pre><code>watchpoint delete 1
+也可以簡寫為 watch del 1
+</code></pre><p>其中</p>
+<pre><code>1 是列表中的順序數
+</code></pre><p>執行結果如下</p>
+<pre><code>1 watchpoints deleted.
+</code></pre><p>再繼續跑程式就不會停下來了！！</p>
+<p>無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾！！！</p>
+<p><br><br><br><br></p>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/iOS/">iOS</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2015/08/13/XCode-debug再進化-2/">
+        XCode debug再進化－2
+      </a>
+    </h2>
+    
+    <time>
+      8月 13, 2015
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <p>學海無涯，唯勤是岸，今天又要教一些xcode debug好用的小技巧了。<br><br><br><br>這次是要介紹中斷點(BreakPoint)的使用</p>
+<h3 id="為你的程式加入中斷點"><a href="#為你的程式加入中斷點" class="headerlink" title="為你的程式加入中斷點"></a>為你的程式加入中斷點</h3><p>先來一段小程式</p>
+<pre><code>for(int i=0;i&lt;100;i++){
+   NSLog(@&quot;%d&quot;,i);
+}
+</code></pre><p>接著  在旁邊的行數的區域用滑鼠點一下，就會看到中斷點的藍標跑出來<br>想要移除中斷點可以用拖曳該中斷點  到中間的編輯區時會出現X，放掉就刪除了（有點像丟垃圾桶）。</p>
+<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug1-01.png" alt="debug1-01" style="width:310px"></p>
+<p>接著，運行程式，會發現程式在一觸碰到中斷點時就會停下來等你debug</p>
+<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug1-02.png" alt="debug1-02" style="width:310px"></p>
+<p>此時下方的[Debug Navigator]會自已彈出來<br>會有一些基本的變數訊息在左邊  告訴我們此時 </p>
+<pre><code>i=0;
+</code></pre><p><br><br>當然，因為一碰到中斷點時馬上就停下來，所以i＝0時就停了</p>
+<p>那…….我想要在 i=49 時，來做一個debug的動作呢？</p>
+<p><br><br>=============== Of Course YES =================<br><br>=============== Of Course YES =================<br><br>=============== Of Course YES =================</p>
+<p>在breakpoint上滑鼠右鍵，並且選擇[Edit BreakPoint]<br><br><br><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug1-03.png" alt="debug1-03" style="width:310px"></p>
+<p>此時，會有幾個參數可以使用<br><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug1-04.png" alt="debug1-04" style="width:310px"></p>
+<pre><code>1. Condition
+2. Ignore
+3. Action
+4. Options - Automatically continue after evaluating actions
+</code></pre><p>在上述的情境中我們可以做的是</p>
+<pre><code>1. 在Condition 裡輸入 [ i == 49 ]
+或
+2. Ignore 48 
+</code></pre><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug1-05.png" alt="debug1-05" style="width:310px"></p>
+<p>接著重跑一次程式，媽呀～ 太神奇了，同樣的中斷點，程式跑到第49次才停下來！！！！！</p>
+<p>醬子的話  就可以隨心所欲的想中斷就中斷，不用一直按 [Step Over] 了</p>
+<p><br><br><br><br></p>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/iOS/">iOS</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2015/08/04/LinkedInSDK-Walk-Through/">
+        LinkedInSDK-Walk-Through
+      </a>
+    </h2>
+    
+    <time>
+      8月 4, 2015
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <p>千呼萬喚始出來，LinkedIn終於把最後的一個ios sdk給補上了，就是這次要walk through的東西，不過很可惜的是目前只有objc版本，swift根據過往objc sdk的開發進度，我在想可能要等上個好一陣子了。</p>
+<h3 id="下載sdk"><a href="#下載sdk" class="headerlink" title="下載sdk"></a>下載sdk</h3><p><a href="https://developer.linkedin.com/docs/ios-sdk" target="_blank" rel="noopener">SDK載點</a></p>
+<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin01.png" alt="linkedin01" style="width:310px"></p>
+<h3 id="準備開發環境"><a href="#準備開發環境" class="headerlink" title="準備開發環境"></a>準備開發環境</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin02.png" alt="linkedin02" style="width:310px"></p>
+<h3 id="在開發者後台建立一個新旳應用程式"><a href="#在開發者後台建立一個新旳應用程式" class="headerlink" title="在開發者後台建立一個新旳應用程式"></a>在開發者後台建立一個新旳應用程式</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin06.png" alt="linkedin06" style="width:310px"></p>
+<h3 id="在開發者後台＞應用程式＞Mobile裡"><a href="#在開發者後台＞應用程式＞Mobile裡" class="headerlink" title="在開發者後台＞應用程式＞Mobile裡"></a>在開發者後台＞應用程式＞Mobile裡</h3><p>將Application Id 先記下來<br>同時填寫<br>1。iOS Bundle Identifiers<br>2。iOS URL Suffix Schemes: </p>
+<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin08.png" alt="linkedin08" style="width:310px"></p>
+<h3 id="打開samplesdk的專案"><a href="#打開samplesdk的專案" class="headerlink" title="打開samplesdk的專案"></a>打開samplesdk的專案</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin03.png" alt="linkedin03" style="width:310px"></p>
+<h3 id="修改info-plist"><a href="#修改info-plist" class="headerlink" title="修改info.plist"></a>修改info.plist</h3><pre><code>key：LIAppId 
+value： [LinkedIn Application Id]
+</code></pre><h3 id="修改url-scheme"><a href="#修改url-scheme" class="headerlink" title="修改url scheme"></a>修改url scheme</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin10.png" alt="linkedin10" style="width:310px"></p>
+<h3 id="跑跑看"><a href="#跑跑看" class="headerlink" title="跑跑看"></a>跑跑看</h3><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin11.png" alt="linkedin11" style="width:310px"></p>
+<p>沒裝linkedin native app的話會提醒安裝 （不裝不能用）</p>
+<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin12.png" alt="linkedin12" style="width:310px"></p>
+<p>據linkedin的開發者表示，這不會被apple reject，所以，有機會就來試看看會不會被reject吧</p>
+<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/linkedin13.png" alt="linkedin13" style="width:310px"></p>
+<p>導回成功  但create session失敗（據說so是iOS 8.4的問題）</p>
+<p>不過似乎沒有管道可以REPORT BUG，就只能慢慢等了</p>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/iOS/">iOS</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2015/07/28/iOS 奇門遁甲指北針－CoreLocation的應用/">
+        iOS 奇門遁甲指北針－CoreLocation的應用
+      </a>
+    </h2>
+    
+    <time>
+      7月 28, 2015
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <h3 id="準備好一個新專案，以及CoreLocation-Framework"><a href="#準備好一個新專案，以及CoreLocation-Framework" class="headerlink" title="準備好一個新專案，以及CoreLocation.Framework"></a>準備好一個新專案，以及CoreLocation.Framework</h3><p><br><br><br></p>
+<h3 id="應該有的素材"><a href="#應該有的素材" class="headerlink" title="應該有的素材"></a>應該有的素材</h3><pre><code>1。奇門遁甲圓盤
+2。旋轉用的太極(裝飾用)
+3。UISegment 切換「磁北」、「真北」
+4。四個UILabel 顯示經緯度、高度、與方向角度
+</code></pre><h3 id="程式的撰寫"><a href="#程式的撰寫" class="headerlink" title="程式的撰寫"></a>程式的撰寫</h3><p><br><br><br><br>info.plist</p>
+<pre><code>NSLocationWhenInUseUsageDescription
+NSLocationAlwaysUsageDescription
+</code></pre><p>ViewController.h</p>
+<pre><code>#import &lt;CoreLocation/CoreLocation.h&gt;
+
+&lt;CLLocationManagerDelegate&gt;
+
+IBOutlet UIImageView *imgCompass;
+
+@property (nonatomic,retain) CLLocationManager *locationManager;
+@property (nonatomic,retain) CLHeading *currentHeading;
+</code></pre><p>ViewController.m</p>
+<pre><code>- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.currentHeading = [[CLHeading alloc] init];
+
+
+
+    if ([CLLocationManager locationServicesEnabled]) //處理定位
+    {
+        if([CLLocationManager authorizationStatus]==kCLAuthorizationStatusDenied){
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@&quot;&quot; message:@&quot;請先開啟定位&quot; delegate:self cancelButtonTitle:@&quot;確認&quot; otherButtonTitles:nil];
+            alert.tag =999;
+            [self.view addSubview:alert];
+            [alert show];
+            isLocation = NO;
+            return;
+        }else{
+
+            isLocation = YES;
+            self.locationManager = [[CLLocationManager alloc] init];
+            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+            self.locationManager.headingFilter = 1;
+            self.locationManager.delegate = self;
+
+
+            if([locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]){
+                [locationManager requestWhenInUseAuthorization];
+            }
+
+            [self.locationManager startUpdatingLocation];
+
+
+
+        }
+    }
+    else {
+
+
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@&quot;&quot; message:@&quot;請先開啟定位&quot; delegate:self cancelButtonTitle:@&quot;確認&quot; otherButtonTitles:nil];
+        alert.tag =999;
+        [self.view addSubview:alert];
+        isLocation = NO;
+        [alert show];
+        return;
+
+    }
+
+
+    [self.locationManager startUpdatingHeading];
+
+}
+
+
+
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
+    CLLocation* location = [locations objectAtIndex:0];
+    NSLog(@&quot;%f-%f&quot;,location.coordinate.latitude,location.coordinate.longitude);
+
+    [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@&quot;%f&quot;,location.coordinate.latitude] forKey:@&quot;Lat&quot;];
+    [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@&quot;%f&quot;,location.coordinate.longitude] forKey:@&quot;Lng&quot;];
+    [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@&quot;%f&quot;,location.altitude] forKey:@&quot;Alt&quot;];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
+
+    lblLat.text = [NSString stringWithFormat:@&quot;%f&quot;,location.coordinate.latitude];
+    lblLong.text = [NSString stringWithFormat:@&quot;%f&quot;,location.coordinate.longitude];
+    lblAlt.text = [NSString stringWithFormat:@&quot;%f&quot;,location.altitude];
+}
+
+-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
+    NSLog(@&quot;%@&quot;,error);
+}
+
+#pragma LocationManager Delegate
+-(void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading{
+
+
+    self.currentHeading = newHeading;
+
+    if(segNorth.selectedSegmentIndex==1){
+        float heading = newHeading.magneticHeading; //in degrees
+        float headingDegrees = (heading*M_PI/180); //assuming needle points to top of iphone. convert to radians
+        imgCompass.transform = CGAffineTransformMakeRotation(headingDegrees);
+
+
+        NSLog(@&quot;heading %f&quot;,heading);
+        NSLog(@&quot;heading %f&quot;,headingDegrees);
+    }else{
+        float heading = newHeading.trueHeading; //in degrees
+        float headingDegrees = (heading*M_PI/180); //assuming needle points to top of iphone. convert to radians
+        imgCompass.transform = CGAffineTransformMakeRotation(headingDegrees);
+
+        NSLog(@&quot;heading %f&quot;,heading);
+
+        NSLog(@&quot;heading %f&quot;,headingDegrees);
+    }
+
+
+}
+</code></pre><p>完整專案放在 <a href="https://github.com/nobodyyu/ChimenCompass" target="_blank" rel="noopener">GitHub</a></p>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/iOS/">iOS</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2015/07/27/TouchID/">
+        TouchID Walk Through
+      </a>
+    </h2>
+    
+    <time>
+      7月 27, 2015
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <h2 id="TouchID-Walk-Through"><a href="#TouchID-Walk-Through" class="headerlink" title="TouchID Walk Through"></a>TouchID Walk Through</h2><p>每個人的心中，都有一個secrect box，用來存放一些不為人知的小秘密，然而，在iphone，也可以自已打造一倨屬於自已的secret box，接著，就是要介紹，如果打造一把只有自已能開鎖的這把鑰匙－－Touch ID</p>
+<h3 id="1。引用"><a href="#1。引用" class="headerlink" title="1。引用"></a>1。引用</h3><pre><code>#import &lt;LocalAuthentication/LocalAuthentication.h&gt;
+</code></pre><h3 id="2。加入程式"><a href="#2。加入程式" class="headerlink" title="2。加入程式"></a>2。加入程式</h3><pre><code>- (IBAction)btnAuth:(id)sender {
+    LAContext *context = [[LAContext alloc] init];
+
+    NSError *error = nil;
+    if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&amp;error]) {
+        [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
+                localizedReason:@&quot;I need your finger print?&quot;
+                          reply:^(BOOL success, NSError *error) {
+
+                              if (error) {
+                                  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@&quot;Error&quot;
+                                                                                  message:@&quot;There was a problem verifying your identity.&quot;
+                                                                                 delegate:nil
+                                                                        cancelButtonTitle:@&quot;Ok&quot;
+                                                                        otherButtonTitles:nil];
+                                   [self.view addSubview:alert];
+                                  [alert show];
+                                  return;
+                              }
+
+                              if (success) {
+                                  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@&quot;Success&quot;
+                                                                                  message:@&quot;You are the one I want!&quot;
+                                                                                 delegate:nil
+                                                                        cancelButtonTitle:@&quot;Ok&quot;
+                                                                        otherButtonTitles:nil];
+                                  [self.view addSubview:alert];
+                                  [alert show];
+
+                              } else {
+                                  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@&quot;Error&quot;
+                                                                                  message:@&quot;You are not the one I want.&quot;
+                                                                                 delegate:nil
+                                                                        cancelButtonTitle:@&quot;Ok&quot;
+                                                                        otherButtonTitles:nil];
+                                   [self.view addSubview:alert];
+                                  [alert show];
+                              }
+
+                          }];
+
+    } else {
+
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@&quot;Error&quot;
+                                                        message:@&quot;Your device cannot authenticate using TouchID.&quot;
+                                                       delegate:nil
+                                              cancelButtonTitle:@&quot;Ok&quot;
+                                              otherButtonTitles:nil];
+        [alert show];
+
+    }
+}
+</code></pre><p>###3。看結果</p>
+<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/touchid01.png" alt="touchid01" style="width:310px"></p>
+<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/touchid02.png" alt="touchid02" style="width:310px"></p>
+<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/touchid03.png" alt="touchid03" style="width:310px"></p>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/iOS/">iOS</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2015/07/02/XCode-debug再進化/">
+        XCode debug再進化
+      </a>
+    </h2>
+    
+    <time>
+      7月 2, 2015
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <p>當然，要先來個crash</p>
+<p>謝謝 Crashlytics 可以強制造成crash</p>
+<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug01.png" alt="debug01" style="width:310px"></p>
+<h3 id="基礎debug-mode"><a href="#基礎debug-mode" class="headerlink" title="基礎debug mode"></a>基礎debug mode</h3><p>當crash發生時 xcode沒設定什麼東西時 程式會hang在這個讓人看不懂的地方</p>
+<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug02.png" alt="debug02" style="width:310px"></p>
+<p>所以  要在xcode的地方設定一下  好方便未來的debug</p>
+<pre><code>xcode左邊的panel 左邊數第7個  右邊倒數第2個頁籤 點下去
+</code></pre><p>－</p>
+<pre><code>下面的「+」 點下去
+</code></pre><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug03.png" alt="debug03" style="width:310px"></p>
+<pre><code>選擇第一個「Add Exception Breakpoint」
+</code></pre><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug04.png" alt="debug04" style="width:310px"></p>
+<p>這時候會變成這個專案專屬的exception breakpoint</p>
+<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug05.png" alt="debug05" style="width:310px"></p>
+<p>此時xcode有個小貼心的地方，就是可以把breakpoint設為USER，往後，每一個新增的專案都會有這個exception breakpoint</p>
+<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug06.png" alt="debug06" style="width:310px"></p>
+<p>結果變成</p>
+<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug07.png" alt="debug07" style="width:310px"></p>
+<p>再重新執行一次crash，就會停在比較易讀的位置，也可以利用下方的debug console 來進行debug了</p>
+<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug08.png" alt="debug08" style="width:310px"></p>
+<p>下方的debug console最常使用的指令是</p>
+<pre><code>po xxx
+</code></pre><p>如果你真的很想知道有那些指令的話，可以在debug console輸入help</p>
+<font color="red">(不過我相信你絕對不會每一個都看完的)</font>
+
+<pre><code>(lldb) help
+Debugger commands:
+
+  apropos           -- Find a list of debugger commands related to a particular
+                       word/subject.
+  breakpoint        -- A set of commands for operating on breakpoints. Also see
+                       _regexp-break.
+  command           -- A set of commands for managing or customizing the
+                       debugger commands.
+  disassemble       -- Disassemble bytes in the current function, or elsewhere
+                       in the executable program as specified by the user.
+  expression        -- Evaluate an expression (ObjC++ or Swift) in the current
+                       program context, using user defined variables and
+                       variables currently in scope.
+  frame             -- A set of commands for operating on the current thread&apos;s
+                       frames.
+  gdb-remote        -- Connect to a remote GDB server.  If no hostname is
+                       provided, localhost is assumed.
+  gui               -- Switch into the curses based GUI mode.
+  help              -- Show a list of all debugger commands, or give details
+                       about specific commands.
+  kdp-remote        -- Connect to a remote KDP server.  udp port 41139 is the
+                       default port number.
+  log               -- A set of commands for operating on logs.
+  memory            -- A set of commands for operating on memory.
+  platform          -- A set of commands to manage and create platforms.
+  plugin            -- A set of commands for managing or customizing plugin
+                       commands.
+  process           -- A set of commands for operating on a process.
+  quit              -- Quit out of the LLDB debugger.
+  register          -- A set of commands to access thread registers.
+  script            -- Pass an expression to the script interpreter for
+                       evaluation and return the results. Drop into the
+                       interactive interpreter if no expression is given.
+  settings          -- A set of commands for manipulating internal settable
+                       debugger variables.
+  source            -- A set of commands for accessing source file information
+  target            -- A set of commands for operating on debugger targets.
+  thread            -- A set of commands for operating on one or more threads
+                       within a running process.
+  type              -- A set of commands for operating on the type system
+  version           -- Show version of LLDB debugger.
+  watchpoint        -- A set of commands for operating on watchpoints.
+
+Current command abbreviations (type &apos;help command alias&apos; for more info):
+
+  add-dsym  -- (&apos;target symbols add&apos;)  Add a debug symbol file to one of the
+               target&apos;s current modules by specifying a path to a debug symbols
+               file, or using the options to specify a module to download
+               symbols for.
+  attach    -- (&apos;_regexp-attach&apos;)  Attach to a process id if in decimal,
+               otherwise treat the argument as a process name to attach to.
+  b         -- (&apos;_regexp-break&apos;)  Set a breakpoint using a regular expression
+               to specify the location, where &lt;linenum&gt; is in decimal and
+               &lt;address&gt; is in hex.
+  bt        -- (&apos;_regexp-bt&apos;)  Show a backtrace.  An optional argument is
+               accepted; if that argument is a number, it specifies the number
+               of frames to display.  If that argument is &apos;all&apos;, full
+               backtraces of all threads are displayed.
+  c         -- (&apos;process continue&apos;)  Continue execution of all threads in the
+               current process.
+  call      -- (&apos;expression --&apos;)  Evaluate an expression (ObjC++ or Swift) in
+               the current program context, using user defined variables and
+               variables currently in scope.
+  continue  -- (&apos;process continue&apos;)  Continue execution of all threads in the
+               current process.
+  detach    -- (&apos;process detach&apos;)  Detach from the current process being
+               debugged.
+  di        -- (&apos;disassemble&apos;)  Disassemble bytes in the current function, or
+               elsewhere in the executable program as specified by the user.
+  dis       -- (&apos;disassemble&apos;)  Disassemble bytes in the current function, or
+               elsewhere in the executable program as specified by the user.
+  display   -- (&apos;_regexp-display&apos;)  Add an expression evaluation stop-hook.
+  down      -- (&apos;_regexp-down&apos;)  Go down &quot;n&quot; frames in the stack (1 frame by
+               default).
+  env       -- (&apos;_regexp-env&apos;)  Implements a shortcut to viewing and setting
+               environment variables.
+  exit      -- (&apos;quit&apos;)  Quit out of the LLDB debugger.
+  f         -- (&apos;frame select&apos;)  Select a frame by index from within the
+               current thread and make it the current frame.
+  file      -- (&apos;target create&apos;)  Create a target using the argument as the
+               main executable.
+  finish    -- (&apos;thread step-out&apos;)  Finish executing the function of the
+               currently selected frame and return to its call site in
+               specified thread (current thread, if none specified).
+  image     -- (&apos;target modules&apos;)  A set of commands for accessing information
+               for one or more target modules.
+  j         -- (&apos;_regexp-jump&apos;)  Sets the program counter to a new address.
+  jump      -- (&apos;_regexp-jump&apos;)  Sets the program counter to a new address.
+  kill      -- (&apos;process kill&apos;)  Terminate the current process being debugged.
+  l         -- (&apos;_regexp-list&apos;)  Implements the GDB &apos;list&apos; command in all of
+               its forms except FILE:FUNCTION and maps them to the appropriate
+               &apos;source list&apos; commands.
+  list      -- (&apos;_regexp-list&apos;)  Implements the GDB &apos;list&apos; command in all of
+               its forms except FILE:FUNCTION and maps them to the appropriate
+               &apos;source list&apos; commands.
+  n         -- (&apos;thread step-over&apos;)  Source level single step in specified
+               thread (current thread, if none specified), stepping over calls.
+  next      -- (&apos;thread step-over&apos;)  Source level single step in specified
+               thread (current thread, if none specified), stepping over calls.
+  nexti     -- (&apos;thread step-inst-over&apos;)  Single step one instruction in
+               specified thread (current thread, if none specified), stepping
+               over calls.
+  ni        -- (&apos;thread step-inst-over&apos;)  Single step one instruction in
+               specified thread (current thread, if none specified), stepping
+               over calls.
+  p         -- (&apos;expression --&apos;)  Evaluate an expression (ObjC++ or Swift) in
+               the current program context, using user defined variables and
+               variables currently in scope.
+  po        -- (&apos;expression -O  -- &apos;)  Evaluate an expression (ObjC++ or Swift)
+               in the current program context, using user defined variables and
+               variables currently in scope.
+  print     -- (&apos;expression --&apos;)  Evaluate an expression (ObjC++ or Swift) in
+               the current program context, using user defined variables and
+               variables currently in scope.
+  q         -- (&apos;quit&apos;)  Quit out of the LLDB debugger.
+  r         -- (&apos;process launch -c /bin/sh --&apos;)  Launch the executable in the
+               debugger.
+  rbreak    -- (&apos;breakpoint set -r %1&apos;)  Sets a breakpoint or set of
+               breakpoints in the executable.
+  repl      -- (&apos;expression -r  -- &apos;)  Evaluate an expression (ObjC++ or Swift)
+               in the current program context, using user defined variables and
+               variables currently in scope.
+  run       -- (&apos;process launch -c /bin/sh --&apos;)  Launch the executable in the
+               debugger.
+  s         -- (&apos;thread step-in&apos;)  Source level single step in specified thread
+               (current thread, if none specified).
+  si        -- (&apos;thread step-inst&apos;)  Single step one instruction in specified
+               thread (current thread, if none specified).
+  step      -- (&apos;thread step-in&apos;)  Source level single step in specified thread
+               (current thread, if none specified).
+  stepi     -- (&apos;thread step-inst&apos;)  Single step one instruction in specified
+               thread (current thread, if none specified).
+  t         -- (&apos;thread select&apos;)  Select a thread as the currently active
+               thread.
+  tbreak    -- (&apos;_regexp-tbreak&apos;)  Set a one shot breakpoint using a regular
+               expression to specify the location, where &lt;linenum&gt; is in
+               decimal and &lt;address&gt; is in hex.
+  undisplay -- (&apos;_regexp-undisplay&apos;)  Remove an expression evaluation
+               stop-hook.
+  up        -- (&apos;_regexp-up&apos;)  Go up &quot;n&quot; frames in the stack (1 frame by
+               default).
+  x         -- (&apos;memory read&apos;)  Read from the memory of the process being
+           debugged.
+
+For more information on any command, type &apos;help &lt;command-name&gt;&apos;.
+</code></pre><h3 id="進階debug-mode"><a href="#進階debug-mode" class="headerlink" title="進階debug mode"></a>進階debug mode</h3><p>故事當然不會就醬子結束，breakpoint停在 </p>
+<pre><code>1 [AppDelegate application:didFinishLaunchingWithOptions:] at /Users/minghongyu/Documents/work/iphone/OpenPoint/OpenPoint/AppDelegate.m:32
+</code></pre><p>如圖</p>
+<p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug09.png" alt="debug09" style="width:310px"></p>
+<p>但是  好像還有個</p>
+<pre><code>0 [Crashlytics crash]
+</code></pre><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug10.png" alt="debug10" style="width:310px"></p>
+<p>會停在一堆機器碼的地方，真的讓人有點難以閱讀咧</p>
+<p>接著在 debug console裡輸入</p>
+<font color="red">(不要問，很可怕)</font>
+
+<pre><code>po $arg1
+</code></pre><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug11.png" alt="debug11" style="width:310px"></p>
+<p>發現他會吐出當下的crash的human－readable的解釋！！！！</p>
+<p>很重要  所以要說三次</p>
+<pre><code>真的是太好了！！！！！！
+真的是太好了！！！！！！
+真的是太好了！！！！！！
+</code></pre><p>但是  每次又要用手打 <font color="red">po ＄arg1</font> 很辛苦有沒有？？很辛苦有沒有？？</p>
+<p>還好 xcode真的很貼心</p>
+<pre><code>在All Exception上按右鍵  選擇編輯「Edit Breakpoint」
+</code></pre><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug12.png" alt="debug12" style="width:310px"></p>
+<pre><code>點選「Add Action」
+</code></pre><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug13.png" alt="debug13" style="width:310px"></p>
+<pre><code>輸入 po $arg1
+</code></pre><p><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug14.png" alt="debug14" style="width:310px"></p>
+<p>The End~~~</p>
+<p>有沒有很酷？  有沒有?  有沒有? </p>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/iOS/">iOS</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+</section>
+
+
+  <nav id="page-nav">
+    
+    
+    <a class="next" rel="next" href="/archives/2015/page/2/">
+      <span class="text">Next</span>
+      <span class="icon icon-chevron-right"></span>
+    </a>
+    
+  </nav>
+  
+
+
+      </div>
+      <aside class='l_side'>
+        
+  <section class='m_widget about'>
+
+<img class='avatar waves-image' src='/images/logo.png' />
+
+<div class='header'>AKI YU</div>
+<div class='content'>
+<div class='desc'>We are the guys who fall in love with iOS</div>
+</div>
+</section>
+
+  <section class='m_widget facebook'>
+<div class="fb-group" data-href="https://www.facebook.com/groups/ios.taipei/" data-width="250" data-show-social-context="true" data-show-metadata="false"></div>
+</section>
+
+  <section class='m_widget links'>
+<div class='header'>Links</div>
+<div class='content'>
+    <ul class="entry">
+    
+        <li><a class="flat-box" target="_blank" href="https://ios.taipei">
+            <div class='name'>iOS@Taipei</div>
+        </a></li>
+    
+    </ul>
+</div>
+</section>
+
+  <section class='m_widget categories'>
+<div class='header'>Categories</div>
+<div class='content'>
+    
+    <ul class="entry">
+    
+        <li><a class="flat-box" href="/categories/Test/"><div class='name'>Test</div><div class='badget'>7</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/iOS/"><div class='name'>iOS</div><div class='badget'>21</div></a></li>
+    
+    </ul>
+    
+</div>
+</section>
+
+  
+<div class="m_widget tagcloud">
+    <div class="header">Tags</div>
+    <div class='content'>
+        <a href="/tags/APP-Size/" style="font-size: 14px; color: #808080">APP Size</a> <a href="/tags/ATDD/" style="font-size: 14px; color: #808080">ATDD</a> <a href="/tags/Android/" style="font-size: 15.5px; color: #606060">Android</a> <a href="/tags/BDD/" style="font-size: 14px; color: #808080">BDD</a> <a href="/tags/CCLayer/" style="font-size: 15.5px; color: #606060">CCLayer</a> <a href="/tags/Calendar/" style="font-size: 14px; color: #808080">Calendar</a> <a href="/tags/Clean-Code/" style="font-size: 16.25px; color: #505050">Clean Code</a> <a href="/tags/Date/" style="font-size: 14px; color: #808080">Date</a> <a href="/tags/Delegate/" style="font-size: 14px; color: #808080">Delegate</a> <a href="/tags/Dependency-Management/" style="font-size: 14px; color: #808080">Dependency Management</a> <a href="/tags/EventKit/" style="font-size: 14px; color: #808080">EventKit</a> <a href="/tags/Extension/" style="font-size: 14.75px; color: #707070">Extension</a> <a href="/tags/GCD/" style="font-size: 14px; color: #808080">GCD</a> <a href="/tags/Html/" style="font-size: 14px; color: #808080">Html</a> <a href="/tags/Language/" style="font-size: 14px; color: #808080">Language</a> <a href="/tags/Memory/" style="font-size: 14px; color: #808080">Memory</a> <a href="/tags/Monkey-Test/" style="font-size: 14px; color: #808080">Monkey Test</a> <a href="/tags/NSZombie/" style="font-size: 14px; color: #808080">NSZombie</a> <a href="/tags/OBJC/" style="font-size: 18.5px; color: #202020">OBJC</a> <a href="/tags/Press-Test/" style="font-size: 14px; color: #808080">Press Test</a> <a href="/tags/QA/" style="font-size: 14px; color: #808080">QA</a> <a href="/tags/SPE/" style="font-size: 14px; color: #808080">SPE</a> <a href="/tags/String/" style="font-size: 14px; color: #808080">String</a> <a href="/tags/Test/" style="font-size: 17px; color: #404040">Test</a> <a href="/tags/TextField/" style="font-size: 14px; color: #808080">TextField</a> <a href="/tags/TextView/" style="font-size: 14px; color: #808080">TextView</a> <a href="/tags/UI-Test/" style="font-size: 14.75px; color: #707070">UI Test</a> <a href="/tags/UIImage/" style="font-size: 14px; color: #808080">UIImage</a> <a href="/tags/Unit-Test/" style="font-size: 14px; color: #808080">Unit Test</a> <a href="/tags/User-Story/" style="font-size: 14px; color: #808080">User Story</a> <a href="/tags/cornerradius/" style="font-size: 14px; color: #808080">cornerradius</a> <a href="/tags/crop/" style="font-size: 14px; color: #808080">crop</a> <a href="/tags/iOS/" style="font-size: 20px; color: #000">iOS</a> <a href="/tags/spotlight/" style="font-size: 14px; color: #808080">spotlight</a> <a href="/tags/swift/" style="font-size: 17.75px; color: #303030">swift</a> <a href="/tags/xCode/" style="font-size: 14px; color: #808080">xCode</a> <a href="/tags/其他/" style="font-size: 15.5px; color: #606060">其他</a> <a href="/tags/字型/" style="font-size: 14px; color: #808080">字型</a> <a href="/tags/教學/" style="font-size: 14.75px; color: #707070">教學</a> <a href="/tags/新手村/" style="font-size: 19.25px; color: #101010">新手村</a> <a href="/tags/網路/" style="font-size: 14px; color: #808080">網路</a> <a href="/tags/資料/" style="font-size: 14px; color: #808080">資料</a> <a href="/tags/遊戲/" style="font-size: 14px; color: #808080">遊戲</a>
+    </div>
+</div>
+
+
+
+      </aside>
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+
+	<div class="social-wrapper">
+  	
+      
+        <a href="https://github.com/ios-taipei" class="social github"
+          target="_blank" rel="external">
+          <span class="icon icon-github"></span>
+        </a>
+      
+        <a href="https://twitter.com/nobodyyu" class="social twitter"
+          target="_blank" rel="external">
+          <span class="icon icon-twitter"></span>
+        </a>
+      
+        <a href="/atom.xml" class="social rss"
+          target="_blank" rel="external">
+          <span class="icon icon-rss"></span>
+        </a>
+      
+    
+  </div>
+  
+  <div>Theme <a href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename">MaterialFlow</a> designed by <a href="http://keyin.me/" target="_blank">Kevin Tan</a>.</div>
+  
+</footer>
+
+
+  <script>setLoadingBarProgress(80);</script>
+  
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+<script src="/js/jquery.fitvids.js"></script>
+<script>
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+	var ALGOLIA_API_KEY = "";
+	var ALGOLIA_APP_ID = "";
+	var ALGOLIA_INDEX_NAME = "";
+  var AZURE_SERVICE_NAME = "";
+  var AZURE_INDEX_NAME = "";
+  var AZURE_QUERY_KEY = "";
+  var BAIDU_API_ID = "";
+  var SEARCH_SERVICE = "hexo";
+  var ROOT = "/"||"/";
+  if(!ROOT.endsWith('/'))ROOT += '/';
+</script>
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>
