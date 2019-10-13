@@ -72,13 +72,13 @@
 						</li>
 					
 						<li>
-							<a class='flat-box nav-app' href='/app'>
+							<a class='flat-box nav-app' href='/app.html'>
 								APP
 							</a>
 						</li>
 					
 						<li>
-							<a class='flat-box nav-about' href='/about'>
+							<a class='flat-box nav-about' href='/about.html'>
 								About
 							</a>
 						</li>
@@ -126,11 +126,11 @@
 				Archives
 			</a>
 		
-			<a href="/app" class="nav-app nav">
+			<a href="/app.html" class="nav-app nav">
 				APP
 			</a>
 		
-			<a href="/about" class="nav-about nav">
+			<a href="/about.html" class="nav-about nav">
 				About
 			</a>
 		
@@ -144,6 +144,105 @@
         
 <section class="post-list">
 	
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2015/05/27/swift-shuffle/">
+        swift shuffle
+      </a>
+    </h2>
+    
+    <time>
+      5月 27, 2015
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <h3 id="為程式注入靈魂的小技巧-shuffle"><a href="#為程式注入靈魂的小技巧-shuffle" class="headerlink" title="為程式注入靈魂的小技巧 shuffle"></a>為程式注入靈魂的小技巧 shuffle</h3><pre><code>func shuffle&lt;C: MutableCollectionType where C.Index == Int&gt;(var list: C) -&gt; C {
+    let c = count(list)
+    for i in 0..&lt;(c - 1) {
+        let j = Int(arc4random_uniform(UInt32(c - i))) + i
+        swap(&amp;list[i], &amp;list[j])
+    }
+    return list
+}
+
+
+
+huffle([1, 2, 3, 4, 5, 6, 7, 8])        
+// e.g., [6, 1, 8, 3, 2, 4, 7, 5]
+shuffle([&quot;hello&quot;, &quot;goodbye&quot;, &quot;ciao&quot;])    
+// e.g., [&quot;ciao&quot;, &quot;goodbye&quot;, &quot;hello&quot;]</code></pre><h3 id="extension"><a href="#extension" class="headerlink" title="extension"></a>extension</h3><pre><code>extension Array {
+    mutating func shuffle() {
+        for i in 0..&lt;(count - 1) {
+            let j = Int(arc4random_uniform(UInt32(count - i))) + i
+            swap(&amp;self[i], &amp;self[j])
+        }
+    }
+}
+
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+numbers.shuffle()     </code></pre>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/iOS/">iOS</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2015/05/26/swift-spritekit-walk-through/">
+        swift spritekit walk through
+      </a>
+    </h2>
+    
+    <time>
+      5月 26, 2015
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <h3 id="新增一個遊戲專案"><a href="#新增一個遊戲專案" class="headerlink" title="新增一個遊戲專案"></a>新增一個遊戲專案</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/spritekit01.png" alt="spritekit01" style="width:310px">
+
+
+<p>並且設定語言為swift</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/spritekit02.png" alt="spritekit02" style="width:310px">
+
+
+<p>此時，可以先砍掉一些沒有必要的檔案（iOS很貼心放了一個太空船在程式的template裡）</p>
+<h3 id="加入一些遊戲需要用到的圖檔"><a href="#加入一些遊戲需要用到的圖檔" class="headerlink" title="加入一些遊戲需要用到的圖檔"></a>加入一些遊戲需要用到的圖檔</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/spritekit03.png" alt="spritekit03" style="width:310px">
+
+<p>你可以放在images.asset或是直接拉到專案裡</p>
+<h3 id="設一下GameViewController裡的-scene-size"><a href="#設一下GameViewController裡的-scene-size" class="headerlink" title="設一下GameViewController裡的 scene.size"></a>設一下GameViewController裡的 scene.size</h3><pre><code>scene.size = skView.bounds.size</code></pre><h3 id="了解scene的生命週期、座標系統、基本屬性"><a href="#了解scene的生命週期、座標系統、基本屬性" class="headerlink" title="了解scene的生命週期、座標系統、基本屬性"></a>了解scene的生命週期、座標系統、基本屬性</h3><h3 id="了解sprite基本屬性"><a href="#了解sprite基本屬性" class="headerlink" title="了解sprite基本屬性"></a>了解sprite基本屬性</h3><h3 id="了解texture基本屬性、打包textureAtlas-zip-file-with-altas"><a href="#了解texture基本屬性、打包textureAtlas-zip-file-with-altas" class="headerlink" title="了解texture基本屬性、打包textureAtlas(zip file with .altas)"></a>了解texture基本屬性、打包textureAtlas(zip file with .altas)</h3><h3 id="了解Action基本屬性"><a href="#了解Action基本屬性" class="headerlink" title="了解Action基本屬性"></a>了解Action基本屬性</h3><h3 id="了解Animation基本屬性"><a href="#了解Animation基本屬性" class="headerlink" title="了解Animation基本屬性"></a>了解Animation基本屬性</h3><h3 id="了解Physics"><a href="#了解Physics" class="headerlink" title="了解Physics"></a>了解Physics</h3><h3 id="game-loop？？"><a href="#game-loop？？" class="headerlink" title="game loop？？"></a>game loop？？</h3>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/iOS/">iOS</a>
+      
+        <a href="/tags/遊戲/">遊戲</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
     <div class='post-wrapper'>
       <article class="post reveal">
   <section class="meta">
@@ -1106,230 +1205,6 @@ group.motionEffects = @[xAxis,yAxis];
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2015/04/22/iBeacon-Scanner實作概念/">
-        iBeacon Scanner實作概念
-      </a>
-    </h2>
-    
-    <time>
-      4月 22, 2015
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <h3 id="1-利用-CoreBluetoooth-來找尋附近的藍芽裝置"><a href="#1-利用-CoreBluetoooth-來找尋附近的藍芽裝置" class="headerlink" title="1. 利用 CoreBluetoooth 來找尋附近的藍芽裝置"></a>1. 利用 CoreBluetoooth 來找尋附近的藍芽裝置</h3><p>Code Snippet</p>
-<pre><code>#import &lt;CoreBluetooth/CoreBluetooth.h&gt;
-
-@interface ViewController ()&lt;CBCentralManagerDelegate, CBPeripheralDelegate&gt;
-{
-    CBCentralManager *_manager;
-    CBPeripheral *_peripheral;
-}
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-    _manager =  [[CBCentralManager alloc] initWithDelegate:self
-                                                    queue:nil];
-
-
-}
-
-
-- (void)centralManagerDidUpdateState:(CBCentralManager *)central
-{
-    switch ((int)central.state)
-    {
-        case CBCentralManagerStatePoweredOn:
-        {
-            NSDictionary *options = @{
-                                      CBCentralManagerScanOptionAllowDuplicatesKey: @YES
-                                      };
-            [_manager scanForPeripheralsWithServices:nil
-                                             options:options];
-            NSLog(@&quot;I just started scanning for peripherals&quot;);
-            break;
-        }
-    }
-}
-
-- (void) centralManager:(CBCentralManager *)central
-    didDiscoverPeripheral:(CBPeripheral *)peripheral
-        advertisementData:(NSDictionary *)advertisementData
-                     RSSI:(NSNumber *)RSSI
-{
-
-    if([advertisementData objectForKey:@&quot;kCBAdvDataLocalName&quot;]!=nil){
-        NSLog(@&quot;I see an advertisement with identifer: %@, state: %ld, name: %@, services: %@, description: %@&quot;,
-              [peripheral identifier],
-              [peripheral state],
-              [peripheral name],
-              [peripheral services],
-              [advertisementData description]);
-    }
-
-
-
-    if (_peripheral == nil)
-    {
-        NSLog(@&quot;Trying to connect to peripheral&quot;);
-        _peripheral = peripheral;
-        _peripheral.delegate = (id)self;
-        [central connectPeripheral:_peripheral
-                           options:nil];
-    }
-}
-
-- (void) centralManager:(CBCentralManager *)central
-    didConnectPeripheral:(CBPeripheral *)peripheral
-{
-    if (peripheral == nil)
-    {
-        NSLog(@&quot;connect callback has nil peripheral&quot;);
-    } else {
-        NSLog(@&quot;Connected to peripheral with identifer: %@, state: %ld, name: %@, services: %@&quot;,
-              [peripheral identifier],
-              [peripheral state],
-              [peripheral name],
-              [peripheral services]);
-
-        NSLog(@&quot;discovering services...&quot;);
-        _peripheral = peripheral;
-        _peripheral.delegate = (id)self;
-        [_peripheral discoverServices:nil];
-    }
-}
-
-- (void) peripheral:(CBPeripheral *)peripheral
-    didDiscoverServices:(NSArray *)serviceUuids
-{
-    NSLog(@&quot;discovered a peripheral&apos;s services: %@&quot;, serviceUuids);
-}</code></pre><p>其中可以過濾掉一些不會廣播的設備</p>
-<pre><code>if([advertisementDataobjectForKey:@&quot;kCBAdvDataLocalName&quot;]!=nil){</code></pre><p>可以取該設備的UUID</p>
-<pre><code>&lt;__NSConcreteUUID 0x17403f520&gt; 2750A093-A1C2-9953-A59F-A0769538DC15</code></pre><p>附帶一提的是，小米手環也會廣播自已的藍芽訊號</p>
-<h3 id="2-接著利用-CLLocationManagerDelegate-對-已取得的UUID-對-iBeacon-做程式的實作"><a href="#2-接著利用-CLLocationManagerDelegate-對-已取得的UUID-對-iBeacon-做程式的實作" class="headerlink" title="2. 接著利用 CLLocationManagerDelegate 對 已取得的UUID 對 iBeacon 做程式的實作"></a>2. 接著利用 CLLocationManagerDelegate 對 已取得的UUID 對 iBeacon 做程式的實作</h3><pre><code> for (NSUUID *uuid in [APLDefaults sharedDefaults].supportedProximityUUIDs)
-    {
-        CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:[uuid UUIDString]];
-        self.rangedRegions[region] = [NSArray array];
-    }
-
-
-#pragma mark - Location manager delegate
-
-- (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
-{
-    // 這裡就可以取到 iBeacon 了
-}</code></pre><p>在這裡 小米手環 不會出現在 CLLocationManagerDelegate，所以會出現的就只剩下iBeacon了</p>
-<h3 id="打完收工"><a href="#打完收工" class="headerlink" title="打完收工"></a>打完收工</h3>
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/iOS/">iOS</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2015/04/21/xcode6-打包自已做的framework/">
-        [xcode6]打包自已做的framework
-      </a>
-    </h2>
-    
-    <time>
-      4月 21, 2015
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <p>如何把自已做的code打包成一包framework，給其他人使用</p>
-<h3 id="1-新增一個專案，選取-Framework-amp-Library-Cocoa-Touch-Framework"><a href="#1-新增一個專案，選取-Framework-amp-Library-Cocoa-Touch-Framework" class="headerlink" title="1. 新增一個專案，選取 [Framework &amp; Library] [Cocoa Touch Framework]"></a>1. 新增一個專案，選取 [Framework &amp; Library] [Cocoa Touch Framework]</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework01.png" alt="framework01" style="width:310px">
-
-
-<h3 id="2-在專案中，把要放的程式加到專案中"><a href="#2-在專案中，把要放的程式加到專案中" class="headerlink" title="2. 在專案中，把要放的程式加到專案中"></a>2. 在專案中，把要放的程式加到專案中</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework02.png" alt="framework02" style="width:310px">
-
-
-<h3 id="3-在-Target-Build-Phase-Headers-中設定，要給人看的表頭檔-h-，和不給人看的表頭檔"><a href="#3-在-Target-Build-Phase-Headers-中設定，要給人看的表頭檔-h-，和不給人看的表頭檔" class="headerlink" title="3. 在[Target][Build Phase][Headers]中設定，要給人看的表頭檔(.h)，和不給人看的表頭檔"></a>3. 在[Target][Build Phase][Headers]中設定，要給人看的表頭檔(.h)，和不給人看的表頭檔</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework03.png" alt="framework03" style="width:310px">
-
-
-<h3 id="4-新增一個-Aggregate-Target"><a href="#4-新增一個-Aggregate-Target" class="headerlink" title="4. 新增一個 [Aggregate Target]"></a>4. 新增一個 [Aggregate Target]</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework04.png" alt="framework04" style="width:310px">
-
-
-<h3 id="5-在新的-Aggregate-Target-Build-Phases-加入-Run-Script"><a href="#5-在新的-Aggregate-Target-Build-Phases-加入-Run-Script" class="headerlink" title="5. 在新的 [Aggregate Target][Build Phases]加入 [Run Script]"></a>5. 在新的 [Aggregate Target][Build Phases]加入 [Run Script]</h3><pre><code>FMK_NAME=${PROJECT_NAME}
-
-INSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework
-
-WRK_DIR=build
-DEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework
-SIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework
-
-# -configuration ${CONFIGURATION}
-# Clean and Building both architectures.
-xcodebuild -configuration &quot;Release&quot; -target &quot;${FMK_NAME}&quot; -sdk iphoneos clean build
-xcodebuild -configuration &quot;Release&quot; -target &quot;${FMK_NAME}&quot; -sdk iphonesimulator clean build
-
-# Cleaning the oldest.
-if [ -d &quot;${INSTALL_DIR}&quot; ]
-then
-rm -rf &quot;${INSTALL_DIR}&quot;
-fi
-
-mkdir -p &quot;${INSTALL_DIR}&quot;
-
-cp -R &quot;${DEVICE_DIR}/&quot; &quot;${INSTALL_DIR}/&quot;
-
-# Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.
-lipo -create &quot;${DEVICE_DIR}/${FMK_NAME}&quot; &quot;${SIMULATOR_DIR}/${FMK_NAME}&quot; -output &quot;${INSTALL_DIR}/${FMK_NAME}&quot;
-
-rm -r &quot;${WRK_DIR}&quot;
-
-open &quot;${INSTALL_DIR}&quot;</code></pre><p>如圖</p>
-<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework05.png" alt="framework05" style="width:310px">
-
-
-<h3 id="6-最後-builde-project，會在-Products-生成你的個人的framework"><a href="#6-最後-builde-project，會在-Products-生成你的個人的framework" class="headerlink" title="6.最後 builde project，會在[Products] 生成你的個人的framework"></a>6.最後 builde project，會在[Products] 生成你的個人的framework</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework06.png" alt="framework06" style="width:210px">
-
-
-<h4 id="ps-如果要生成靜態的library使用，要注意一個設定"><a href="#ps-如果要生成靜態的library使用，要注意一個設定" class="headerlink" title="ps. 如果要生成靜態的library使用，要注意一個設定"></a>ps. 如果要生成靜態的library使用，要注意一個設定</h4><p>在 [Build Settings][Mach-O Type] 要選 [Static Library]</p>
-<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework07.png" alt="framework07" style="width:310px">
-
-
-
-<h3 id="7-最後給別人引用時-要注意一下，除了在-Linked-Frameworks-and-Libraries-下引用之外，還要在-Targer-General-Embeded-Binies-下加入自定義的framework"><a href="#7-最後給別人引用時-要注意一下，除了在-Linked-Frameworks-and-Libraries-下引用之外，還要在-Targer-General-Embeded-Binies-下加入自定義的framework" class="headerlink" title="7. 最後給別人引用時 要注意一下，除了在[Linked Frameworks and Libraries]下引用之外，還要在[Targer][General][Embeded Binies]下加入自定義的framework"></a>7. 最後給別人引用時 要注意一下，除了在[Linked Frameworks and Libraries]下引用之外，還要在[Targer][General][Embeded Binies]下加入自定義的framework</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/framework08.png" alt="framework08" style="width:310px">
-
-
-<h3 id="打完收工"><a href="#打完收工" class="headerlink" title="打完收工"></a>打完收工</h3>
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/iOS/">iOS</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -1387,7 +1262,7 @@ open &quot;${INSTALL_DIR}&quot;</code></pre><p>如圖</p>
     
         <li><a class="flat-box" href="/categories/Test/"><div class='name'>Test</div><div class='badget'>7</div></a></li>
     
-        <li><a class="flat-box" href="/categories/iOS/"><div class='name'>iOS</div><div class='badget'>21</div></a></li>
+        <li><a class="flat-box" href="/categories/iOS/"><div class='name'>iOS</div><div class='badget'>23</div></a></li>
     
     </ul>
     
@@ -1398,7 +1273,7 @@ open &quot;${INSTALL_DIR}&quot;</code></pre><p>如圖</p>
 <div class="m_widget tagcloud">
     <div class="header">Tags</div>
     <div class='content'>
-        <a href="/tags/APP-Size/" style="font-size: 14px; color: #808080">APP Size</a> <a href="/tags/ATDD/" style="font-size: 14px; color: #808080">ATDD</a> <a href="/tags/Android/" style="font-size: 15.5px; color: #606060">Android</a> <a href="/tags/BDD/" style="font-size: 14px; color: #808080">BDD</a> <a href="/tags/CCLayer/" style="font-size: 15.5px; color: #606060">CCLayer</a> <a href="/tags/Calendar/" style="font-size: 14px; color: #808080">Calendar</a> <a href="/tags/Clean-Code/" style="font-size: 16.25px; color: #505050">Clean Code</a> <a href="/tags/Date/" style="font-size: 14px; color: #808080">Date</a> <a href="/tags/Delegate/" style="font-size: 14px; color: #808080">Delegate</a> <a href="/tags/Dependency-Management/" style="font-size: 14px; color: #808080">Dependency Management</a> <a href="/tags/EventKit/" style="font-size: 14px; color: #808080">EventKit</a> <a href="/tags/Extension/" style="font-size: 14.75px; color: #707070">Extension</a> <a href="/tags/GCD/" style="font-size: 14px; color: #808080">GCD</a> <a href="/tags/Html/" style="font-size: 14px; color: #808080">Html</a> <a href="/tags/Language/" style="font-size: 14px; color: #808080">Language</a> <a href="/tags/Memory/" style="font-size: 14px; color: #808080">Memory</a> <a href="/tags/Monkey-Test/" style="font-size: 14px; color: #808080">Monkey Test</a> <a href="/tags/NSZombie/" style="font-size: 14px; color: #808080">NSZombie</a> <a href="/tags/OBJC/" style="font-size: 18.5px; color: #202020">OBJC</a> <a href="/tags/Press-Test/" style="font-size: 14px; color: #808080">Press Test</a> <a href="/tags/QA/" style="font-size: 14px; color: #808080">QA</a> <a href="/tags/SPE/" style="font-size: 14px; color: #808080">SPE</a> <a href="/tags/String/" style="font-size: 14px; color: #808080">String</a> <a href="/tags/Test/" style="font-size: 17px; color: #404040">Test</a> <a href="/tags/TextField/" style="font-size: 14px; color: #808080">TextField</a> <a href="/tags/TextView/" style="font-size: 14px; color: #808080">TextView</a> <a href="/tags/UI-Test/" style="font-size: 14.75px; color: #707070">UI Test</a> <a href="/tags/UIImage/" style="font-size: 14px; color: #808080">UIImage</a> <a href="/tags/Unit-Test/" style="font-size: 14px; color: #808080">Unit Test</a> <a href="/tags/User-Story/" style="font-size: 14px; color: #808080">User Story</a> <a href="/tags/cornerradius/" style="font-size: 14px; color: #808080">cornerradius</a> <a href="/tags/crop/" style="font-size: 14px; color: #808080">crop</a> <a href="/tags/iOS/" style="font-size: 20px; color: #000">iOS</a> <a href="/tags/spotlight/" style="font-size: 14px; color: #808080">spotlight</a> <a href="/tags/swift/" style="font-size: 17.75px; color: #303030">swift</a> <a href="/tags/xCode/" style="font-size: 14px; color: #808080">xCode</a> <a href="/tags/其他/" style="font-size: 15.5px; color: #606060">其他</a> <a href="/tags/字型/" style="font-size: 14px; color: #808080">字型</a> <a href="/tags/教學/" style="font-size: 14.75px; color: #707070">教學</a> <a href="/tags/新手村/" style="font-size: 19.25px; color: #101010">新手村</a> <a href="/tags/網路/" style="font-size: 14px; color: #808080">網路</a> <a href="/tags/資料/" style="font-size: 14px; color: #808080">資料</a> <a href="/tags/遊戲/" style="font-size: 14px; color: #808080">遊戲</a>
+        <a href="/tags/APP-Size/" style="font-size: 14px; color: #808080">APP Size</a> <a href="/tags/ATDD/" style="font-size: 14px; color: #808080">ATDD</a> <a href="/tags/Android/" style="font-size: 15.5px; color: #606060">Android</a> <a href="/tags/BDD/" style="font-size: 14px; color: #808080">BDD</a> <a href="/tags/CCLayer/" style="font-size: 15.5px; color: #606060">CCLayer</a> <a href="/tags/Cache/" style="font-size: 14px; color: #808080">Cache</a> <a href="/tags/Calendar/" style="font-size: 14px; color: #808080">Calendar</a> <a href="/tags/Clean-Code/" style="font-size: 16.25px; color: #505050">Clean Code</a> <a href="/tags/Date/" style="font-size: 14px; color: #808080">Date</a> <a href="/tags/Delegate/" style="font-size: 14px; color: #808080">Delegate</a> <a href="/tags/Dependency-Management/" style="font-size: 14px; color: #808080">Dependency Management</a> <a href="/tags/EventKit/" style="font-size: 14px; color: #808080">EventKit</a> <a href="/tags/Extension/" style="font-size: 14.75px; color: #707070">Extension</a> <a href="/tags/GCD/" style="font-size: 14px; color: #808080">GCD</a> <a href="/tags/Html/" style="font-size: 14px; color: #808080">Html</a> <a href="/tags/Language/" style="font-size: 14px; color: #808080">Language</a> <a href="/tags/Memory/" style="font-size: 14px; color: #808080">Memory</a> <a href="/tags/Monkey-Test/" style="font-size: 14px; color: #808080">Monkey Test</a> <a href="/tags/NSZombie/" style="font-size: 14px; color: #808080">NSZombie</a> <a href="/tags/Network/" style="font-size: 14px; color: #808080">Network</a> <a href="/tags/OBJC/" style="font-size: 18.5px; color: #202020">OBJC</a> <a href="/tags/Press-Test/" style="font-size: 14px; color: #808080">Press Test</a> <a href="/tags/QA/" style="font-size: 14px; color: #808080">QA</a> <a href="/tags/SPE/" style="font-size: 14px; color: #808080">SPE</a> <a href="/tags/String/" style="font-size: 14px; color: #808080">String</a> <a href="/tags/Test/" style="font-size: 17px; color: #404040">Test</a> <a href="/tags/TextField/" style="font-size: 14px; color: #808080">TextField</a> <a href="/tags/TextView/" style="font-size: 14px; color: #808080">TextView</a> <a href="/tags/UI-Test/" style="font-size: 14.75px; color: #707070">UI Test</a> <a href="/tags/UIImage/" style="font-size: 14px; color: #808080">UIImage</a> <a href="/tags/Unit-Test/" style="font-size: 14px; color: #808080">Unit Test</a> <a href="/tags/User-Story/" style="font-size: 14px; color: #808080">User Story</a> <a href="/tags/cornerradius/" style="font-size: 14px; color: #808080">cornerradius</a> <a href="/tags/crop/" style="font-size: 14px; color: #808080">crop</a> <a href="/tags/httpDNS/" style="font-size: 14px; color: #808080">httpDNS</a> <a href="/tags/iOS/" style="font-size: 20px; color: #000">iOS</a> <a href="/tags/spotlight/" style="font-size: 14px; color: #808080">spotlight</a> <a href="/tags/swift/" style="font-size: 17.75px; color: #303030">swift</a> <a href="/tags/xCode/" style="font-size: 14px; color: #808080">xCode</a> <a href="/tags/其他/" style="font-size: 15.5px; color: #606060">其他</a> <a href="/tags/字型/" style="font-size: 14px; color: #808080">字型</a> <a href="/tags/教學/" style="font-size: 14.75px; color: #707070">教學</a> <a href="/tags/新手村/" style="font-size: 19.25px; color: #101010">新手村</a> <a href="/tags/網路/" style="font-size: 14px; color: #808080">網路</a> <a href="/tags/資料/" style="font-size: 14px; color: #808080">資料</a> <a href="/tags/遊戲/" style="font-size: 14px; color: #808080">遊戲</a>
     </div>
 </div>
 
@@ -1444,8 +1319,8 @@ open &quot;${INSTALL_DIR}&quot;</code></pre><p>如圖</p>
 <script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
 <script src="/js/jquery.fitvids.js"></script>
 <script>
-	var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
-	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = "AIzaSyD0gTnnQWtlHKf8Ma8KRkVWS_9x5G_MNhc";
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "006142247967894411495:h0xvkkyi07r";
 	var ALGOLIA_API_KEY = "";
 	var ALGOLIA_APP_ID = "";
 	var ALGOLIA_INDEX_NAME = "";

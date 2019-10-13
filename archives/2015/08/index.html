@@ -72,13 +72,13 @@
 						</li>
 					
 						<li>
-							<a class='flat-box nav-app' href='/app'>
+							<a class='flat-box nav-app' href='/app.html'>
 								APP
 							</a>
 						</li>
 					
 						<li>
-							<a class='flat-box nav-about' href='/about'>
+							<a class='flat-box nav-about' href='/about.html'>
 								About
 							</a>
 						</li>
@@ -126,11 +126,11 @@
 				Archives
 			</a>
 		
-			<a href="/app" class="nav-app nav">
+			<a href="/app.html" class="nav-app nav">
 				APP
 			</a>
 		
-			<a href="/about" class="nav-about nav">
+			<a href="/about.html" class="nav-about nav">
 				About
 			</a>
 		
@@ -319,64 +319,6 @@ FMResultSet *rs = [db executeQuery:@&quot;select * from foo&quot;];
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2015/08/13/XCode-debug再進化-3/">
-        XCode debug再進化－3
-      </a>
-    </h2>
-    
-    <time>
-      8月 13, 2015
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <p>在xcode debug時，有些功能可能用不太到，不過既然知道了，就分享出來給大家知道，致於想不想用，什麼時候用，就端看自已的判斷了</p>
-<p><br><br><br>這次是要介紹如何在debug模式下，做到更新 UI 的指令</p>
-<h3 id="先中斷一下吧"><a href="#先中斷一下吧" class="headerlink" title="先中斷一下吧"></a>先中斷一下吧</h3><p>在一個範例的按鈕裡裡先拉一個 IBAction  然後給一個中斷點</p>
-<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-01.png" alt="debug2-01" style="width:310px">
-
-<p>在debug前的 UI 長成這樣</p>
-<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-02.png" alt="debug2-02" style="width:310px">
-
-<p>按下按鈕，被中斷後，在debug navagator的lldb裡下指令</p>
-<pre><code>e id $myView = (id)0x154d0e9d0</code></pre><p>其中</p>
-<pre><code>e 是 expresss 的簡寫
-id 是型別
-$myView 是變數容器
-0x154d0e9d0 是記憶體位址 （需要與左側的變數的記憶體位址一致）</code></pre><p>結果如下圖</p>
-<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-03.png" alt="debug2-03" style="width:310px">
-
-<p>接著 可以輸入想要做的事情</p>
-<pre><code>e (void)[$myView setBackgroundColor:[UIColor redColor]]</code></pre><p>內容就不多解釋了，只是，醬子打完後  手機是不會動的（廢話，因為還卡在中斷點）</p>
-<br>
-所以，要通知 UI 做更新才行
-
-<pre><code>e (void)[CATransaction flush]</code></pre><p>你會發現，還在中斷點的debug模式下，手機的畫面更新了！！！！（如下圖）<br><br></p>
-<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-04.png" alt="debug2-04" style="width:310px">
-
-
-<p>真的太神奇了，傑克</p>
-<p><br><br><br><br></p>
-
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/iOS/">iOS</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
       <a href="/2015/08/13/XCode-debug再進化-4/">
         XCode debug再進化－4
       </a>
@@ -439,6 +381,64 @@ Watchpoint 1: addr = 0x16fd25614 size = 4 state = enabled type = w
 <pre><code>1 是列表中的順序數</code></pre><p>執行結果如下</p>
 <pre><code>1 watchpoints deleted.</code></pre><p>再繼續跑程式就不會停下來了！！</p>
 <p>無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾無䭾！！！</p>
+<p><br><br><br><br></p>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/iOS/">iOS</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2015/08/13/XCode-debug再進化-3/">
+        XCode debug再進化－3
+      </a>
+    </h2>
+    
+    <time>
+      8月 13, 2015
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <p>在xcode debug時，有些功能可能用不太到，不過既然知道了，就分享出來給大家知道，致於想不想用，什麼時候用，就端看自已的判斷了</p>
+<p><br><br><br>這次是要介紹如何在debug模式下，做到更新 UI 的指令</p>
+<h3 id="先中斷一下吧"><a href="#先中斷一下吧" class="headerlink" title="先中斷一下吧"></a>先中斷一下吧</h3><p>在一個範例的按鈕裡裡先拉一個 IBAction  然後給一個中斷點</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-01.png" alt="debug2-01" style="width:310px">
+
+<p>在debug前的 UI 長成這樣</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-02.png" alt="debug2-02" style="width:310px">
+
+<p>按下按鈕，被中斷後，在debug navagator的lldb裡下指令</p>
+<pre><code>e id $myView = (id)0x154d0e9d0</code></pre><p>其中</p>
+<pre><code>e 是 expresss 的簡寫
+id 是型別
+$myView 是變數容器
+0x154d0e9d0 是記憶體位址 （需要與左側的變數的記憶體位址一致）</code></pre><p>結果如下圖</p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-03.png" alt="debug2-03" style="width:310px">
+
+<p>接著 可以輸入想要做的事情</p>
+<pre><code>e (void)[$myView setBackgroundColor:[UIColor redColor]]</code></pre><p>內容就不多解釋了，只是，醬子打完後  手機是不會動的（廢話，因為還卡在中斷點）</p>
+<br>
+所以，要通知 UI 做更新才行
+
+<pre><code>e (void)[CATransaction flush]</code></pre><p>你會發現，還在中斷點的debug模式下，手機的畫面更新了！！！！（如下圖）<br><br></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/debug2-04.png" alt="debug2-04" style="width:310px">
+
+
+<p>真的太神奇了，傑克</p>
 <p><br><br><br><br></p>
 
 
@@ -621,7 +621,7 @@ value： [LinkedIn Application Id]</code></pre><h3 id="修改url-scheme"><a href
     
         <li><a class="flat-box" href="/categories/Test/"><div class='name'>Test</div><div class='badget'>7</div></a></li>
     
-        <li><a class="flat-box" href="/categories/iOS/"><div class='name'>iOS</div><div class='badget'>21</div></a></li>
+        <li><a class="flat-box" href="/categories/iOS/"><div class='name'>iOS</div><div class='badget'>23</div></a></li>
     
     </ul>
     
@@ -632,7 +632,7 @@ value： [LinkedIn Application Id]</code></pre><h3 id="修改url-scheme"><a href
 <div class="m_widget tagcloud">
     <div class="header">Tags</div>
     <div class='content'>
-        <a href="/tags/APP-Size/" style="font-size: 14px; color: #808080">APP Size</a> <a href="/tags/ATDD/" style="font-size: 14px; color: #808080">ATDD</a> <a href="/tags/Android/" style="font-size: 15.5px; color: #606060">Android</a> <a href="/tags/BDD/" style="font-size: 14px; color: #808080">BDD</a> <a href="/tags/CCLayer/" style="font-size: 15.5px; color: #606060">CCLayer</a> <a href="/tags/Calendar/" style="font-size: 14px; color: #808080">Calendar</a> <a href="/tags/Clean-Code/" style="font-size: 16.25px; color: #505050">Clean Code</a> <a href="/tags/Date/" style="font-size: 14px; color: #808080">Date</a> <a href="/tags/Delegate/" style="font-size: 14px; color: #808080">Delegate</a> <a href="/tags/Dependency-Management/" style="font-size: 14px; color: #808080">Dependency Management</a> <a href="/tags/EventKit/" style="font-size: 14px; color: #808080">EventKit</a> <a href="/tags/Extension/" style="font-size: 14.75px; color: #707070">Extension</a> <a href="/tags/GCD/" style="font-size: 14px; color: #808080">GCD</a> <a href="/tags/Html/" style="font-size: 14px; color: #808080">Html</a> <a href="/tags/Language/" style="font-size: 14px; color: #808080">Language</a> <a href="/tags/Memory/" style="font-size: 14px; color: #808080">Memory</a> <a href="/tags/Monkey-Test/" style="font-size: 14px; color: #808080">Monkey Test</a> <a href="/tags/NSZombie/" style="font-size: 14px; color: #808080">NSZombie</a> <a href="/tags/OBJC/" style="font-size: 18.5px; color: #202020">OBJC</a> <a href="/tags/Press-Test/" style="font-size: 14px; color: #808080">Press Test</a> <a href="/tags/QA/" style="font-size: 14px; color: #808080">QA</a> <a href="/tags/SPE/" style="font-size: 14px; color: #808080">SPE</a> <a href="/tags/String/" style="font-size: 14px; color: #808080">String</a> <a href="/tags/Test/" style="font-size: 17px; color: #404040">Test</a> <a href="/tags/TextField/" style="font-size: 14px; color: #808080">TextField</a> <a href="/tags/TextView/" style="font-size: 14px; color: #808080">TextView</a> <a href="/tags/UI-Test/" style="font-size: 14.75px; color: #707070">UI Test</a> <a href="/tags/UIImage/" style="font-size: 14px; color: #808080">UIImage</a> <a href="/tags/Unit-Test/" style="font-size: 14px; color: #808080">Unit Test</a> <a href="/tags/User-Story/" style="font-size: 14px; color: #808080">User Story</a> <a href="/tags/cornerradius/" style="font-size: 14px; color: #808080">cornerradius</a> <a href="/tags/crop/" style="font-size: 14px; color: #808080">crop</a> <a href="/tags/iOS/" style="font-size: 20px; color: #000">iOS</a> <a href="/tags/spotlight/" style="font-size: 14px; color: #808080">spotlight</a> <a href="/tags/swift/" style="font-size: 17.75px; color: #303030">swift</a> <a href="/tags/xCode/" style="font-size: 14px; color: #808080">xCode</a> <a href="/tags/其他/" style="font-size: 15.5px; color: #606060">其他</a> <a href="/tags/字型/" style="font-size: 14px; color: #808080">字型</a> <a href="/tags/教學/" style="font-size: 14.75px; color: #707070">教學</a> <a href="/tags/新手村/" style="font-size: 19.25px; color: #101010">新手村</a> <a href="/tags/網路/" style="font-size: 14px; color: #808080">網路</a> <a href="/tags/資料/" style="font-size: 14px; color: #808080">資料</a> <a href="/tags/遊戲/" style="font-size: 14px; color: #808080">遊戲</a>
+        <a href="/tags/APP-Size/" style="font-size: 14px; color: #808080">APP Size</a> <a href="/tags/ATDD/" style="font-size: 14px; color: #808080">ATDD</a> <a href="/tags/Android/" style="font-size: 15.5px; color: #606060">Android</a> <a href="/tags/BDD/" style="font-size: 14px; color: #808080">BDD</a> <a href="/tags/CCLayer/" style="font-size: 15.5px; color: #606060">CCLayer</a> <a href="/tags/Cache/" style="font-size: 14px; color: #808080">Cache</a> <a href="/tags/Calendar/" style="font-size: 14px; color: #808080">Calendar</a> <a href="/tags/Clean-Code/" style="font-size: 16.25px; color: #505050">Clean Code</a> <a href="/tags/Date/" style="font-size: 14px; color: #808080">Date</a> <a href="/tags/Delegate/" style="font-size: 14px; color: #808080">Delegate</a> <a href="/tags/Dependency-Management/" style="font-size: 14px; color: #808080">Dependency Management</a> <a href="/tags/EventKit/" style="font-size: 14px; color: #808080">EventKit</a> <a href="/tags/Extension/" style="font-size: 14.75px; color: #707070">Extension</a> <a href="/tags/GCD/" style="font-size: 14px; color: #808080">GCD</a> <a href="/tags/Html/" style="font-size: 14px; color: #808080">Html</a> <a href="/tags/Language/" style="font-size: 14px; color: #808080">Language</a> <a href="/tags/Memory/" style="font-size: 14px; color: #808080">Memory</a> <a href="/tags/Monkey-Test/" style="font-size: 14px; color: #808080">Monkey Test</a> <a href="/tags/NSZombie/" style="font-size: 14px; color: #808080">NSZombie</a> <a href="/tags/Network/" style="font-size: 14px; color: #808080">Network</a> <a href="/tags/OBJC/" style="font-size: 18.5px; color: #202020">OBJC</a> <a href="/tags/Press-Test/" style="font-size: 14px; color: #808080">Press Test</a> <a href="/tags/QA/" style="font-size: 14px; color: #808080">QA</a> <a href="/tags/SPE/" style="font-size: 14px; color: #808080">SPE</a> <a href="/tags/String/" style="font-size: 14px; color: #808080">String</a> <a href="/tags/Test/" style="font-size: 17px; color: #404040">Test</a> <a href="/tags/TextField/" style="font-size: 14px; color: #808080">TextField</a> <a href="/tags/TextView/" style="font-size: 14px; color: #808080">TextView</a> <a href="/tags/UI-Test/" style="font-size: 14.75px; color: #707070">UI Test</a> <a href="/tags/UIImage/" style="font-size: 14px; color: #808080">UIImage</a> <a href="/tags/Unit-Test/" style="font-size: 14px; color: #808080">Unit Test</a> <a href="/tags/User-Story/" style="font-size: 14px; color: #808080">User Story</a> <a href="/tags/cornerradius/" style="font-size: 14px; color: #808080">cornerradius</a> <a href="/tags/crop/" style="font-size: 14px; color: #808080">crop</a> <a href="/tags/httpDNS/" style="font-size: 14px; color: #808080">httpDNS</a> <a href="/tags/iOS/" style="font-size: 20px; color: #000">iOS</a> <a href="/tags/spotlight/" style="font-size: 14px; color: #808080">spotlight</a> <a href="/tags/swift/" style="font-size: 17.75px; color: #303030">swift</a> <a href="/tags/xCode/" style="font-size: 14px; color: #808080">xCode</a> <a href="/tags/其他/" style="font-size: 15.5px; color: #606060">其他</a> <a href="/tags/字型/" style="font-size: 14px; color: #808080">字型</a> <a href="/tags/教學/" style="font-size: 14.75px; color: #707070">教學</a> <a href="/tags/新手村/" style="font-size: 19.25px; color: #101010">新手村</a> <a href="/tags/網路/" style="font-size: 14px; color: #808080">網路</a> <a href="/tags/資料/" style="font-size: 14px; color: #808080">資料</a> <a href="/tags/遊戲/" style="font-size: 14px; color: #808080">遊戲</a>
     </div>
 </div>
 
@@ -678,8 +678,8 @@ value： [LinkedIn Application Id]</code></pre><h3 id="修改url-scheme"><a href
 <script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
 <script src="/js/jquery.fitvids.js"></script>
 <script>
-	var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
-	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = "AIzaSyD0gTnnQWtlHKf8Ma8KRkVWS_9x5G_MNhc";
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "006142247967894411495:h0xvkkyi07r";
 	var ALGOLIA_API_KEY = "";
 	var ALGOLIA_APP_ID = "";
 	var ALGOLIA_INDEX_NAME = "";

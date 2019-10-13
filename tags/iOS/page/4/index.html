@@ -72,13 +72,13 @@
 						</li>
 					
 						<li>
-							<a class='flat-box nav-app' href='/app'>
+							<a class='flat-box nav-app' href='/app.html'>
 								APP
 							</a>
 						</li>
 					
 						<li>
-							<a class='flat-box nav-about' href='/about'>
+							<a class='flat-box nav-about' href='/about.html'>
 								About
 							</a>
 						</li>
@@ -126,11 +126,11 @@
 				Archives
 			</a>
 		
-			<a href="/app" class="nav-app nav">
+			<a href="/app.html" class="nav-app nav">
 				APP
 			</a>
 		
-			<a href="/about" class="nav-about nav">
+			<a href="/about.html" class="nav-about nav">
 				About
 			</a>
 		
@@ -148,6 +148,99 @@
 
 <section class="post-list">
 	
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2015/06/30/Dungeon Generator/">
+        Dungeon Generator
+      </a>
+    </h2>
+    
+    <time>
+      6月 30, 2015
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <p>diablo的亂數地圖是怎麼做的？還是直接用swift來寫一次</p>
+<p>###方法：</p>
+<p>將矩形的地圖空間以「切割法」亂數切割房間，在切割的同時留一個出口，</p>
+<p>反覆的切割後  就會得到一個亂數生成的房間了</p>
+<h3 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h3><p>牆壁－寛1  出口－寛1</p>
+<p><a href="https://github.com/nobodyyu/DungeonGenerator/tree/master" target="_blank" rel="noopener">GitHub下載連結</a></p>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/iOS/">iOS</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2015/06/16/dropbox-practice-2015/">
+        dropbox practice 2015
+      </a>
+    </h2>
+    
+    <time>
+      6月 16, 2015
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <p>手機也能透過sdk來讀取放在dropbox雲端空間的檔案！！<br><br>利用dropbox來打造一個可以儲存讀取雲端空間的app吧<br><br>只要跟著如下的步驟做就可以了<br><br></p>
+<h3 id="在APP-Console開一個app"><a href="#在APP-Console開一個app" class="headerlink" title="在APP Console開一個app"></a>在APP Console開一個app</h3><p><a href>https://www.dropbox.com/developers/apps</a></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox01.png" alt="dropbox01" style="width:310px">
+
+<p>把其中的app key 和 app secret複製下來 </p>
+<h3 id="下載sdk範例程式"><a href="#下載sdk範例程式" class="headerlink" title="下載sdk範例程式"></a>下載sdk範例程式</h3><p><a href>https://www.dropbox.com/developers/core/sdks/ios</a></p>
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox02.png" alt="dropbox02" style="width:310px">
+
+
+
+<h3 id="把-app-key-與-app-secret貼到範例的delegate-m-裡"><a href="#把-app-key-與-app-secret貼到範例的delegate-m-裡" class="headerlink" title="把 app key 與 app secret貼到範例的delegate.m 裡"></a>把 app key 與 app secret貼到範例的delegate.m 裡</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox03.png" alt="dropbox03" style="width:310px">
+
+
+<p>記得要設定根目錄 </p>
+<pre><code>NSString *root = kDBRootDropbox;</code></pre><p>或</p>
+<pre><code>NSString *root = kDBRootAppFolder；</code></pre><h3 id="設定url-schema-讓-dropbox-signon-可以回得來"><a href="#設定url-schema-讓-dropbox-signon-可以回得來" class="headerlink" title="設定url schema 讓 dropbox signon 可以回得來"></a>設定url schema 讓 dropbox signon 可以回得來</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox04.png" alt="dropbox04" style="width:310px">
+
+
+<h3 id="好了的話就把程式run起來"><a href="#好了的話就把程式run起來" class="headerlink" title="好了的話就把程式run起來"></a>好了的話就把程式run起來</h3><img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox05.png" alt="dropbox05" style="width:310px">
+
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox06.png" alt="dropbox06" style="width:310px">
+
+<img class="img-shadow" src="https://raw.githubusercontent.com/nobodyyu/GraphicsBed/master/dropbox07.png" alt="dropbox07" style="width:310px">
+
+<p>拍洗  照片不給看～</p>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/iOS/">iOS</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
     <div class='post-wrapper'>
       <article class="post reveal">
   <section class="meta">
@@ -1047,224 +1140,6 @@ group.motionEffects = @[xAxis,yAxis];
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2015/05/05/make-UIRefreshControll-by-your-self/">
-        make UIRefreshControll by your self
-      </a>
-    </h2>
-    
-    <time>
-      5月 5, 2015
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <p>##裡面用到了幾個技示巧</p>
-<p>1。 旋轉的animation<br>2。 移動的animation<br>3。 移除不必要的UIActivityIndicator</p>
-<h3 id="bikeRegreshConrtol-h"><a href="#bikeRegreshConrtol-h" class="headerlink" title="bikeRegreshConrtol.h"></a>bikeRegreshConrtol.h</h3><pre><code>#import &lt;UIKit/UIKit.h&gt;
-
-@interface bikeRegreshConrtol : UIRefreshControl
-
-
--(void)makeAnimate;
-
-@end</code></pre><h3 id="bikeRegreshConrtol-m"><a href="#bikeRegreshConrtol-m" class="headerlink" title="bikeRegreshConrtol.m"></a>bikeRegreshConrtol.m</h3><p>#import “bikeRegreshConrtol.h”</p>
-<pre><code>@implementation bikeRegreshConrtol
-
--(instancetype)init{
-
-    self = [super init];
-    if (self) {
-
-    }
-
-
-    return  self;
-
-}
-
--(void)makeAnimate{
-
-    for (UIView *V in self.subviews) {
-        if ([[V class] isSubclassOfClass:[UIImageView class]]) {
-            NSLog(@&quot;%@&quot;,[V class]);
-        }else{
-            [V removeFromSuperview];
-        }
-    }
-
-    UIImageView *wheel1 = [[UIImageView alloc] initWithImage:
-                           [UIImage imageNamed: @&quot;wheel.png&quot;]];
-
-    [wheel1 setFrame:CGRectMake(50, self.center.y, 30, 30)];
-
-
-    UIImageView *wheel2 = [[UIImageView alloc] initWithImage:
-                           [UIImage imageNamed: @&quot;wheel.png&quot;]];
-
-    [wheel2 setFrame:CGRectMake(90, self.center.y, 30, 30)];
-
-
-    if ([wheel1.layer animationForKey:@&quot;SpinAnimation&quot;] == nil) {
-        CABasicAnimation* animation = [CABasicAnimation animationWithKeyPath:@&quot;transform.rotation.z&quot;];
-        animation.fromValue = [NSNumber numberWithFloat:0.0f];
-        animation.toValue = [NSNumber numberWithFloat: 2*M_PI];
-        animation.duration = 2.4f;
-        animation.repeatCount = INFINITY;
-        [wheel1.layer addAnimation:animation forKey:@&quot;SpinAnimation&quot;];
-    }
-
-    if ([wheel2.layer animationForKey:@&quot;SpinAnimation&quot;] == nil) {
-        CABasicAnimation* animation = [CABasicAnimation animationWithKeyPath:@&quot;transform.rotation.z&quot;];
-        animation.fromValue = [NSNumber numberWithFloat:0.0f];
-        animation.toValue = [NSNumber numberWithFloat: 2*M_PI];
-        animation.duration = 2.2f;
-        animation.repeatCount = INFINITY;
-        [wheel2.layer addAnimation:animation forKey:@&quot;SpinAnimation&quot;];
-    }
-
-    [self insertSubview:wheel1 atIndex:3];
-    [self insertSubview:wheel2 atIndex:2];
-
-    UIImageView *back1 = [[UIImageView alloc] initWithImage:
-                           [UIImage imageNamed: @&quot;background.png&quot;]];
-
-    [back1 setFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
-
-    [self insertSubview:back1 atIndex:1];
-
-
-
-    UIImageView *back2 = [[UIImageView alloc] initWithImage:
-                          [UIImage imageNamed: @&quot;background.png&quot;]];
-
-    [back2 setFrame:CGRectMake(320, 0, self.bounds.size.width, self.bounds.size.height)];
-
-    [self insertSubview:back2 atIndex:0];
-
-    [self bringSubviewToFront:wheel1];
-    [self bringSubviewToFront:wheel2];
-//    
-
-    [self doAnimate:back1 :back2];
-
-
-}
-
--(void)doAnimate:(UIImageView *)img :(UIImageView *)img2{
-    [UIView animateWithDuration:32.0f animations:^{
-        [img setFrame:CGRectMake(-320, 0, img.frame.size.width, img.frame.size.height)];
-        [img2 setFrame:CGRectMake(0, 0, img.frame.size.width, img.frame.size.height)];
-    } completion:^(BOOL finished) {
-        [img setFrame:CGRectMake(0, 0, img.frame.size.width, img.frame.size.height)];
-        [img2 setFrame:CGRectMake(320, 0, img.frame.size.width, img.frame.size.height)];
-        [self doAnimate:img :img2];
-    }];
-}</code></pre><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><pre><code>refreshControl = [[bikeRegreshConrtol alloc] init];
-[refreshControl addTarget:self action:@selector(refresh)
-              forControlEvents:UIControlEventValueChanged];
-[mTable addSubview:refreshControl];
-
-[refreshControl makeAnimate];</code></pre><h3 id="更新結束"><a href="#更新結束" class="headerlink" title="更新結束"></a>更新結束</h3><pre><code>[refreshControl endRefreshing];</code></pre>
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/iOS/">iOS</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2015/05/04/make-HUD-by-your-self/">
-        make HUD by your self
-      </a>
-    </h2>
-    
-    <time>
-      5月 4, 2015
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <h3 id="首先，需要一個singleton來統管這個HUD，避免一次出現兩個hud以上的窘境"><a href="#首先，需要一個singleton來統管這個HUD，避免一次出現兩個hud以上的窘境" class="headerlink" title="首先，需要一個singleton來統管這個HUD，避免一次出現兩個hud以上的窘境"></a>首先，需要一個singleton來統管這個HUD，避免一次出現兩個hud以上的窘境</h3><pre><code>static LoadingView *myInstance = nil;
-
-+(LoadingView *)shared
-{
-    // check to see if an instance already exists
-    if (nil == myInstance) {
-        myInstance  = [[[self class] alloc] init];
-        // initialize variables here
-    }
-    // return the instance of this class
-    return myInstance;
-}</code></pre><h3 id="接著實作兩個-instanceMethod"><a href="#接著實作兩個-instanceMethod" class="headerlink" title="接著實作兩個 instanceMethod"></a>接著實作兩個 instanceMethod</h3><pre><code>+ (void)dismiss{
-
-    [[UIApplication sharedApplication] endIgnoringInteractionEvents];
-    [[self shared] selfHide];
-}
-+ (void)show
-{
-    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
-    [[self shared] selfShow];
-}</code></pre><h3 id="兩個class-method"><a href="#兩個class-method" class="headerlink" title="兩個class method"></a>兩個class method</h3><p>自window中找到hud並移除</p>
-<pre><code>-(void)selfHide{
-    [[((AppDelegate *)([UIApplication sharedApplication].delegate)).window viewWithTag:56789] removeFromSuperview];
-    [[((AppDelegate *)([UIApplication sharedApplication].delegate)).window viewWithTag:56790] removeFromSuperview];
-}</code></pre><p>將hud加到最上層的window，範例中的hud為中間一個靜置圖片，週遭再放一個不斷旋轉的圖片</p>
-<pre><code>-(void)selfShow{
-
-    UIImageView *mView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-    [mView setImage:[UIImage imageNamed:@&quot;loading.png&quot;]];
-    mView.tag = 56789;
-    [mView setCenter:((AppDelegate *)([UIApplication sharedApplication].delegate)).window.center];
-
-    UIImageView *mView2 = [[UIImageView alloc] initWithFrame:CGRectMake(0,0, 100, 100)];
-    [mView2 setImage:[UIImage imageNamed:@&quot;loading2.png&quot;]];
-    mView2.tag = 56790;
-    [mView2 setCenter:mView.center];
-
-    if ([mView2.layer animationForKey:@&quot;SpinAnimation&quot;] == nil) {
-        CABasicAnimation* animation = [CABasicAnimation animationWithKeyPath:@&quot;transform.rotation.z&quot;];
-        animation.fromValue = [NSNumber numberWithFloat:0.0f];
-        animation.toValue = [NSNumber numberWithFloat: 2*M_PI];
-        animation.duration = 1.0f;
-        animation.repeatCount = INFINITY;
-        [mView2.layer addAnimation:animation forKey:@&quot;SpinAnimation&quot;];
-    }
-
-    [((AppDelegate *)([UIApplication sharedApplication].delegate)).window addSubview:mView];
-    [((AppDelegate *)([UIApplication sharedApplication].delegate)).window addSubview:mView2];
-
-}</code></pre><p>接著，在其他地方引用，再呼叫 [LoadingView show]、[LoadingView dismiss] 就可以了</p>
-
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/iOS/">iOS</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -1322,7 +1197,7 @@ group.motionEffects = @[xAxis,yAxis];
     
         <li><a class="flat-box" href="/categories/Test/"><div class='name'>Test</div><div class='badget'>7</div></a></li>
     
-        <li><a class="flat-box" href="/categories/iOS/"><div class='name'>iOS</div><div class='badget'>21</div></a></li>
+        <li><a class="flat-box" href="/categories/iOS/"><div class='name'>iOS</div><div class='badget'>23</div></a></li>
     
     </ul>
     
@@ -1333,7 +1208,7 @@ group.motionEffects = @[xAxis,yAxis];
 <div class="m_widget tagcloud">
     <div class="header">Tags</div>
     <div class='content'>
-        <a href="/tags/APP-Size/" style="font-size: 14px; color: #808080">APP Size</a> <a href="/tags/ATDD/" style="font-size: 14px; color: #808080">ATDD</a> <a href="/tags/Android/" style="font-size: 15.5px; color: #606060">Android</a> <a href="/tags/BDD/" style="font-size: 14px; color: #808080">BDD</a> <a href="/tags/CCLayer/" style="font-size: 15.5px; color: #606060">CCLayer</a> <a href="/tags/Calendar/" style="font-size: 14px; color: #808080">Calendar</a> <a href="/tags/Clean-Code/" style="font-size: 16.25px; color: #505050">Clean Code</a> <a href="/tags/Date/" style="font-size: 14px; color: #808080">Date</a> <a href="/tags/Delegate/" style="font-size: 14px; color: #808080">Delegate</a> <a href="/tags/Dependency-Management/" style="font-size: 14px; color: #808080">Dependency Management</a> <a href="/tags/EventKit/" style="font-size: 14px; color: #808080">EventKit</a> <a href="/tags/Extension/" style="font-size: 14.75px; color: #707070">Extension</a> <a href="/tags/GCD/" style="font-size: 14px; color: #808080">GCD</a> <a href="/tags/Html/" style="font-size: 14px; color: #808080">Html</a> <a href="/tags/Language/" style="font-size: 14px; color: #808080">Language</a> <a href="/tags/Memory/" style="font-size: 14px; color: #808080">Memory</a> <a href="/tags/Monkey-Test/" style="font-size: 14px; color: #808080">Monkey Test</a> <a href="/tags/NSZombie/" style="font-size: 14px; color: #808080">NSZombie</a> <a href="/tags/OBJC/" style="font-size: 18.5px; color: #202020">OBJC</a> <a href="/tags/Press-Test/" style="font-size: 14px; color: #808080">Press Test</a> <a href="/tags/QA/" style="font-size: 14px; color: #808080">QA</a> <a href="/tags/SPE/" style="font-size: 14px; color: #808080">SPE</a> <a href="/tags/String/" style="font-size: 14px; color: #808080">String</a> <a href="/tags/Test/" style="font-size: 17px; color: #404040">Test</a> <a href="/tags/TextField/" style="font-size: 14px; color: #808080">TextField</a> <a href="/tags/TextView/" style="font-size: 14px; color: #808080">TextView</a> <a href="/tags/UI-Test/" style="font-size: 14.75px; color: #707070">UI Test</a> <a href="/tags/UIImage/" style="font-size: 14px; color: #808080">UIImage</a> <a href="/tags/Unit-Test/" style="font-size: 14px; color: #808080">Unit Test</a> <a href="/tags/User-Story/" style="font-size: 14px; color: #808080">User Story</a> <a href="/tags/cornerradius/" style="font-size: 14px; color: #808080">cornerradius</a> <a href="/tags/crop/" style="font-size: 14px; color: #808080">crop</a> <a href="/tags/iOS/" style="font-size: 20px; color: #000">iOS</a> <a href="/tags/spotlight/" style="font-size: 14px; color: #808080">spotlight</a> <a href="/tags/swift/" style="font-size: 17.75px; color: #303030">swift</a> <a href="/tags/xCode/" style="font-size: 14px; color: #808080">xCode</a> <a href="/tags/其他/" style="font-size: 15.5px; color: #606060">其他</a> <a href="/tags/字型/" style="font-size: 14px; color: #808080">字型</a> <a href="/tags/教學/" style="font-size: 14.75px; color: #707070">教學</a> <a href="/tags/新手村/" style="font-size: 19.25px; color: #101010">新手村</a> <a href="/tags/網路/" style="font-size: 14px; color: #808080">網路</a> <a href="/tags/資料/" style="font-size: 14px; color: #808080">資料</a> <a href="/tags/遊戲/" style="font-size: 14px; color: #808080">遊戲</a>
+        <a href="/tags/APP-Size/" style="font-size: 14px; color: #808080">APP Size</a> <a href="/tags/ATDD/" style="font-size: 14px; color: #808080">ATDD</a> <a href="/tags/Android/" style="font-size: 15.5px; color: #606060">Android</a> <a href="/tags/BDD/" style="font-size: 14px; color: #808080">BDD</a> <a href="/tags/CCLayer/" style="font-size: 15.5px; color: #606060">CCLayer</a> <a href="/tags/Cache/" style="font-size: 14px; color: #808080">Cache</a> <a href="/tags/Calendar/" style="font-size: 14px; color: #808080">Calendar</a> <a href="/tags/Clean-Code/" style="font-size: 16.25px; color: #505050">Clean Code</a> <a href="/tags/Date/" style="font-size: 14px; color: #808080">Date</a> <a href="/tags/Delegate/" style="font-size: 14px; color: #808080">Delegate</a> <a href="/tags/Dependency-Management/" style="font-size: 14px; color: #808080">Dependency Management</a> <a href="/tags/EventKit/" style="font-size: 14px; color: #808080">EventKit</a> <a href="/tags/Extension/" style="font-size: 14.75px; color: #707070">Extension</a> <a href="/tags/GCD/" style="font-size: 14px; color: #808080">GCD</a> <a href="/tags/Html/" style="font-size: 14px; color: #808080">Html</a> <a href="/tags/Language/" style="font-size: 14px; color: #808080">Language</a> <a href="/tags/Memory/" style="font-size: 14px; color: #808080">Memory</a> <a href="/tags/Monkey-Test/" style="font-size: 14px; color: #808080">Monkey Test</a> <a href="/tags/NSZombie/" style="font-size: 14px; color: #808080">NSZombie</a> <a href="/tags/Network/" style="font-size: 14px; color: #808080">Network</a> <a href="/tags/OBJC/" style="font-size: 18.5px; color: #202020">OBJC</a> <a href="/tags/Press-Test/" style="font-size: 14px; color: #808080">Press Test</a> <a href="/tags/QA/" style="font-size: 14px; color: #808080">QA</a> <a href="/tags/SPE/" style="font-size: 14px; color: #808080">SPE</a> <a href="/tags/String/" style="font-size: 14px; color: #808080">String</a> <a href="/tags/Test/" style="font-size: 17px; color: #404040">Test</a> <a href="/tags/TextField/" style="font-size: 14px; color: #808080">TextField</a> <a href="/tags/TextView/" style="font-size: 14px; color: #808080">TextView</a> <a href="/tags/UI-Test/" style="font-size: 14.75px; color: #707070">UI Test</a> <a href="/tags/UIImage/" style="font-size: 14px; color: #808080">UIImage</a> <a href="/tags/Unit-Test/" style="font-size: 14px; color: #808080">Unit Test</a> <a href="/tags/User-Story/" style="font-size: 14px; color: #808080">User Story</a> <a href="/tags/cornerradius/" style="font-size: 14px; color: #808080">cornerradius</a> <a href="/tags/crop/" style="font-size: 14px; color: #808080">crop</a> <a href="/tags/httpDNS/" style="font-size: 14px; color: #808080">httpDNS</a> <a href="/tags/iOS/" style="font-size: 20px; color: #000">iOS</a> <a href="/tags/spotlight/" style="font-size: 14px; color: #808080">spotlight</a> <a href="/tags/swift/" style="font-size: 17.75px; color: #303030">swift</a> <a href="/tags/xCode/" style="font-size: 14px; color: #808080">xCode</a> <a href="/tags/其他/" style="font-size: 15.5px; color: #606060">其他</a> <a href="/tags/字型/" style="font-size: 14px; color: #808080">字型</a> <a href="/tags/教學/" style="font-size: 14.75px; color: #707070">教學</a> <a href="/tags/新手村/" style="font-size: 19.25px; color: #101010">新手村</a> <a href="/tags/網路/" style="font-size: 14px; color: #808080">網路</a> <a href="/tags/資料/" style="font-size: 14px; color: #808080">資料</a> <a href="/tags/遊戲/" style="font-size: 14px; color: #808080">遊戲</a>
     </div>
 </div>
 
@@ -1379,8 +1254,8 @@ group.motionEffects = @[xAxis,yAxis];
 <script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
 <script src="/js/jquery.fitvids.js"></script>
 <script>
-	var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
-	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = "AIzaSyD0gTnnQWtlHKf8Ma8KRkVWS_9x5G_MNhc";
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "006142247967894411495:h0xvkkyi07r";
 	var ALGOLIA_API_KEY = "";
 	var ALGOLIA_APP_ID = "";
 	var ALGOLIA_INDEX_NAME = "";
