@@ -3,563 +3,389 @@
   <title>iOS @ Taipei</title>
   
   <subtitle>iOS and his good friends</subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="https://ios.taipei/atom.xml" rel="self"/>
   
-  <link href="http://ios.taipei/"/>
-  <updated>2019-10-13T04:20:28.790Z</updated>
-  <id>http://ios.taipei/</id>
+  <link href="https://ios.taipei/"/>
+  <updated>2022-10-14T06:17:28.669Z</updated>
+  <id>https://ios.taipei/</id>
   
   <author>
-    <name>AKI YU</name>
+    <name>Aki Yu</name>
     
   </author>
   
-  <generator uri="http://hexo.io/">Hexo</generator>
+  <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Line X iOS 社群合辦分享會</title>
-    <link href="http://ios.taipei/2019/07/03/LineXiOS/"/>
-    <id>http://ios.taipei/2019/07/03/LineXiOS/</id>
-    <published>2019-07-03T15:00:00.000Z</published>
-    <updated>2019-10-13T04:20:28.790Z</updated>
+    <title>swift 語言的基礎 - Range 範圍表示式</title>
+    <link href="https://ios.taipei/2022/10/14/01-11-swift/"/>
+    <id>https://ios.taipei/2022/10/14/01-11-swift/</id>
+    <published>2022-10-13T16:00:05.000Z</published>
+    <updated>2022-10-14T06:17:28.669Z</updated>
     
-    <content type="html"><![CDATA[<p>網路世界裡有許許多多不同層級的cache</p><p>要能夠保留cache的機制，又得隨心所欲的更新，就得多了解背後運作的原理。</p><p>投影片</p><a id="more"></a><p><a href="https://github.com/ios-taipei/DataBed/raw/master/LineXiOS%40Taipei20190703.key" target="_blank" rel="noopener">https://github.com/ios-taipei/DataBed/raw/master/LineXiOS%40Taipei20190703.key</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;網路世界裡有許許多多不同層級的cache&lt;/p&gt;
-&lt;p&gt;要能夠保留cache的機制，又得隨心所欲的更新，就得多了解背後運作的原理。&lt;/p&gt;
-&lt;p&gt;投影片&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="iOS" scheme="http://ios.taipei/categories/iOS/"/>
+    <content type="html"><![CDATA[<h1 id="Range-範圍"><a href="#Range-範圍" class="headerlink" title="Range 範圍"></a>Range 範圍</h1><h2 id="封閉式-Closed-Range"><a href="#封閉式-Closed-Range" class="headerlink" title="封閉式 Closed Range"></a>封閉式 Closed Range</h2><pre><code class="swift">for number in 1...5 {  print(number)}</code></pre><p>range 只有正向的寫法，沒有逆向顛倒的寫法</p><p>以下寫法是有問題的</p><pre><code class="swift">for number in 5...1 {  print(number)}</code></pre><h2 id="半開放-Half-Open-Range"><a href="#半開放-Half-Open-Range" class="headerlink" title="半開放 Half-Open Range"></a>半開放 Half-Open Range</h2><pre><code class="swift">for number in 1..&lt;4 {  print(number)}</code></pre><h2 id="單邊-One-Sided-Range"><a href="#單邊-One-Sided-Range" class="headerlink" title="單邊 One-Sided Range"></a>單邊 One-Sided Range</h2><pre><code class="swift">let range = ..5print(range.contains(-1))</code></pre>]]></content>
     
     
-      <category term="iOS" scheme="http://ios.taipei/tags/iOS/"/>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Range-範圍&quot;&gt;&lt;a href=&quot;#Range-範圍&quot; class=&quot;headerlink&quot; title=&quot;Range 範圍&quot;&gt;&lt;/a&gt;Range 範圍&lt;/h1&gt;&lt;h2 id=&quot;封閉式-Closed-Range&quot;&gt;&lt;a href=&quot;#封閉式-Closed-Ra</summary>
+      
     
-      <category term="新手村" scheme="http://ios.taipei/tags/%E6%96%B0%E6%89%8B%E6%9D%91/"/>
     
-      <category term="Network" scheme="http://ios.taipei/tags/Network/"/>
     
-      <category term="httpDNS" scheme="http://ios.taipei/tags/httpDNS/"/>
+    <category term="swift" scheme="https://ios.taipei/categories/swift/"/>
     
-      <category term="Cache" scheme="http://ios.taipei/tags/Cache/"/>
+    
+    <category term="swift" scheme="https://ios.taipei/tags/swift/"/>
+    
+    <category term="新手" scheme="https://ios.taipei/tags/%E6%96%B0%E6%89%8B/"/>
     
   </entry>
   
   <entry>
-    <title>新增行事曆的事件</title>
-    <link href="http://ios.taipei/2019/05/19/calenderEvent/"/>
-    <id>http://ios.taipei/2019/05/19/calenderEvent/</id>
-    <published>2019-05-19T15:00:00.000Z</published>
-    <updated>2019-10-12T06:56:04.203Z</updated>
+    <title>swift 語言的基礎 - 列舉 Enum</title>
+    <link href="https://ios.taipei/2022/10/12/01-12-swift/"/>
+    <id>https://ios.taipei/2022/10/12/01-12-swift/</id>
+    <published>2022-10-11T16:00:05.000Z</published>
+    <updated>2022-10-21T01:19:43.718Z</updated>
     
-    <content type="html"><![CDATA[<p>Q: 想要加一個事件在行日曆上嗎？ </p><a id="more"></a><h4 id="OBJC"><a href="#OBJC" class="headerlink" title="OBJC"></a>OBJC</h4><pre><code>EKEventStore *eventStore = [[EKEventStore alloc] init];EKEvent *event  = [EKEvent eventWithEventStore:eventStore];event.title     = @&quot;EVENT TITLE&quot;;event.startDate = [[NSDate alloc] init];event.endDate   = [[NSDate alloc] initWithTimeInterval:600 sinceDate:event.startDate];[event setCalendar:[eventStore defaultCalendarForNewEvents]];NSError *err;[eventStore saveEvent:event span:EKSpanThisEvent error:&amp;err];  </code></pre><h4 id="swift"><a href="#swift" class="headerlink" title="swift"></a>swift</h4><pre><code>let store = EKEventStore()store.requestAccessToEntityType(.Event) {(granted, error) in    if !granted { return }    var event = EKEvent(eventStore: store)    event.title = &quot;Event Title&quot;    event.startDate = NSDate() //today    event.endDate = event.startDate.dateByAddingTimeInterval(60*60) //1 hour long meeting    event.calendar = store.defaultCalendarForNewEvents    do {        try store.saveEvent(event, span: .ThisEvent, commit: true)        self.savedEventId = event.eventIdentifier     } catch {        // error     }}      </code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Q: 想要加一個事件在行日曆上嗎？ &lt;/p&gt;
-    
-    </summary>
-    
-      <category term="iOS" scheme="http://ios.taipei/categories/iOS/"/>
+    <content type="html"><![CDATA[<h1 id="未完待續"><a href="#未完待續" class="headerlink" title="未完待續"></a>未完待續</h1>]]></content>
     
     
-      <category term="iOS" scheme="http://ios.taipei/tags/iOS/"/>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;未完待續&quot;&gt;&lt;a href=&quot;#未完待續&quot; class=&quot;headerlink&quot; title=&quot;未完待續&quot;&gt;&lt;/a&gt;未完待續&lt;/h1&gt;</summary>
+      
     
-      <category term="新手村" scheme="http://ios.taipei/tags/%E6%96%B0%E6%89%8B%E6%9D%91/"/>
     
-      <category term="swift" scheme="http://ios.taipei/tags/swift/"/>
     
-      <category term="OBJC" scheme="http://ios.taipei/tags/OBJC/"/>
+    <category term="swift" scheme="https://ios.taipei/categories/swift/"/>
     
-      <category term="Calendar" scheme="http://ios.taipei/tags/Calendar/"/>
     
-      <category term="EventKit" scheme="http://ios.taipei/tags/EventKit/"/>
+    <category term="swift" scheme="https://ios.taipei/tags/swift/"/>
+    
+    <category term="新手" scheme="https://ios.taipei/tags/%E6%96%B0%E6%89%8B/"/>
     
   </entry>
   
   <entry>
-    <title>String to Date, Date to String</title>
-    <link href="http://ios.taipei/2019/05/19/DateToString/"/>
-    <id>http://ios.taipei/2019/05/19/DateToString/</id>
-    <published>2019-05-19T15:00:00.000Z</published>
-    <updated>2019-10-12T07:04:38.415Z</updated>
+    <title>swift 語言的基礎 - Reference Type / Value Type</title>
+    <link href="https://ios.taipei/2022/10/08/01-10-swift/"/>
+    <id>https://ios.taipei/2022/10/08/01-10-swift/</id>
+    <published>2022-10-07T16:00:05.000Z</published>
+    <updated>2022-10-12T05:40:53.390Z</updated>
     
-    <content type="html"><![CDATA[<p>因為太常用了，所以存一份當紀念</p><a id="more"></a><pre><code>import Foundationextension DateFormatter {    convenience init (format: String) {        self.init()        dateFormat = format        locale = Locale.current    }}extension String {    func toDate (dateFormatter: DateFormatter) -&gt; Date? {        return dateFormatter.date(from: self)    }    func toDateString (dateFormatter: DateFormatter, outputFormat: String) -&gt; String? {        guard let date = toDate(dateFormatter: dateFormatter) else { return nil }        return DateFormatter(format: outputFormat).string(from: date)    }}extension Date {    func toString (dateFormatter: DateFormatter) -&gt; String? {        return dateFormatter.string(from: self)    }}</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;因為太常用了，所以存一份當紀念&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="iOS" scheme="http://ios.taipei/categories/iOS/"/>
+    <content type="html"><![CDATA[<h1 id="Reference-Type-x2F-Value-Type"><a href="#Reference-Type-x2F-Value-Type" class="headerlink" title="Reference Type / Value Type"></a>Reference Type / Value Type</h1><p>所有的程式言語</p><h2 id="Reference-Type"><a href="#Reference-Type" class="headerlink" title="Reference Type"></a>Reference Type</h2><h2 id="Value-Type"><a href="#Value-Type" class="headerlink" title="Value Type"></a>Value Type</h2>]]></content>
     
     
-      <category term="iOS" scheme="http://ios.taipei/tags/iOS/"/>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Reference-Type-x2F-Value-Type&quot;&gt;&lt;a href=&quot;#Reference-Type-x2F-Value-Type&quot; class=&quot;headerlink&quot; title=&quot;Reference Type / Value Type&quot;&gt;&lt;/a&gt;R</summary>
+      
     
-      <category term="新手村" scheme="http://ios.taipei/tags/%E6%96%B0%E6%89%8B%E6%9D%91/"/>
     
-      <category term="swift" scheme="http://ios.taipei/tags/swift/"/>
     
-      <category term="OBJC" scheme="http://ios.taipei/tags/OBJC/"/>
+    <category term="swift" scheme="https://ios.taipei/categories/swift/"/>
     
-      <category term="Date" scheme="http://ios.taipei/tags/Date/"/>
+    
+    <category term="swift" scheme="https://ios.taipei/tags/swift/"/>
+    
+    <category term="新手" scheme="https://ios.taipei/tags/%E6%96%B0%E6%89%8B/"/>
     
   </entry>
   
   <entry>
-    <title>Delete in UITextField</title>
-    <link href="http://ios.taipei/2019/01/02/textfieldDelete/"/>
-    <id>http://ios.taipei/2019/01/02/textfieldDelete/</id>
-    <published>2019-01-02T15:00:00.000Z</published>
-    <updated>2019-10-12T06:50:28.967Z</updated>
+    <title>swift 語言的基礎 - 物件導向(Object Oriented Programming, OOP)</title>
+    <link href="https://ios.taipei/2022/10/07/01-09-swift/"/>
+    <id>https://ios.taipei/2022/10/07/01-09-swift/</id>
+    <published>2022-10-06T16:00:05.000Z</published>
+    <updated>2022-10-14T06:21:13.421Z</updated>
     
-    <content type="html"><![CDATA[<p>Q: 在UITextField之中，要怎麼知道delete按下去了呢？這時候  我們可以透過delegate來判斷是不是刪除鍵按到了 </p><a id="more"></a><h3 id="swift"><a href="#swift" class="headerlink" title="swift"></a>swift</h3><pre><code>import UIKitprotocol MyTextFieldDelegate {    func textFieldDidDelete()}class MyTextField: UITextField {    var myDelegate: MyTextFieldDelegate?    override func deleteBackward() {        super.deleteBackward()        myDelegate?.textFieldDidDelete()    }}</code></pre><p>實作</p><pre><code>import UIKitclass ViewController: UIViewController, MyTextFieldDelegate {    override func viewDidLoad() {        super.viewDidLoad()        let input = MyTextField(frame: CGRect(x: 50, y: 50, width: 150, height: 40))        input.myDelegate = self        view.addSubview(input)        input.becomeFirstResponder()    }    func textFieldDidDelete() {        print(&quot;delete&quot;)    }}</code></pre><h4 id="OBJC"><a href="#OBJC" class="headerlink" title="OBJC"></a>OBJC</h4><pre><code>//MyTextField.h//create delegate protocol@protocol MyTextFieldDelegate &lt;NSObject&gt;@optional- (void)textFieldDidDelete;@end@interface MyTextField : UITextField&lt;UIKeyInput&gt;//create &quot;myDelegate&quot;@property (nonatomic, assign) id&lt;MyTextFieldDelegate&gt; myDelegate;@end//Implementation#import &quot;MyTextField.h&quot;@implementation MyTextField- (void)deleteBackward {    [super deleteBackward];    if ([_myDelegate respondsToSelector:@selector(textFieldDidDelete)]){        [_myDelegate textFieldDidDelete];    }}@end</code></pre><p>實作</p><pre><code>@interface ViewController : UIViewController &lt;MyTextFieldDelegate&gt;@end//View Controller Implementation- (void)viewDidLoad {    MyTextField *input =      [[MyTextField alloc] initWithFrame:CGRectMake(0, 0, 70, 30)];    input.myDelegate = self;    [self.view addSubview:input];}//MyTextField Delegate- (void)textFieldDidDelete {    NSLog(@&quot;delete&quot;);}</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Q: 在UITextField之中，要怎麼知道delete按下去了呢？這時候  我們可以透過delegate來判斷是不是刪除鍵按到了 &lt;/p&gt;
-    
-    </summary>
-    
-      <category term="iOS" scheme="http://ios.taipei/categories/iOS/"/>
+    <content type="html"><![CDATA[<h1 id="物件導向-介紹"><a href="#物件導向-介紹" class="headerlink" title="物件導向 - 介紹"></a>物件導向 - 介紹</h1><p>在沒有開始使用物件的觀念時，如何用程式撰寫，來寫出對於一輛汽車的描述？</p><p>範例：</p><p>藍色的東西，有四個輪子，品牌是BMW，還能夠按喇叭。</p><pre><code class="swift">// 車子的顏色let carColor =  .blue// 汽車有 4 個輪胎let numberOfCarTires =  4// 品牌let carBrand = "BMW"// 按喇叭func horn(){  print("Ba Ba Ba")}horn() //按一下喇叭</code></pre><p>如果改用<span style="color:blue">物件</span>的方式來描述呢？</p><p>我們先將一輛車子的設計藍圖先規劃出來，將屬性和操作的可能性，聚合起來，並且將可能改變的數值，變成變數，將其放到設計藍圖的外部。等到有需要建造汽車時，再將變數放進去。</p><p>設計藍圖的觀念  就是程式人說的 <span style="color:blue">類別 (Class)</span></p><h2 id="類別-Class"><a href="#類別-Class" class="headerlink" title="類別(Class)"></a>類別(Class)</h2><pre><code class="swift">class Car {  enum Brand {    case BMW, Benz, Toyata  }  // 顏色  let color = .blue  // 幾條腿  let numberOfTires = 4    // 品牌名  let brand: Brand    init(brand: Brand) { self.brand = brand }    func horn(){ print("Ba Ba Ba") }  }</code></pre><p>其中，有一些名詞，慢慢地要開始熟悉，其中 color(顏色) 變數用以描述車子，我們將之稱之為 <span style="color:blue">屬性 (Property)</span>，按喇叭是一個操作函數，我們將之稱之為 <span style="color:blue">方法 (Method)</span>。</p><p>在使用上，如何用程式描述相同的汽車？</p><pre><code class="swift">// 有一台藍色，有四個輪子，品牌是BMW，還能夠按喇叭。let car1 = Car(brand: .BMW)// 有一台藍色，有四個輪子，品牌是Bens，還能夠按喇叭。let car2 = Car(brand: .Benz)// 有一台藍色，有四個輪子，品牌是Toyota，還能夠按喇叭。let car3 = Car(brand: .Toyata)</code></pre><p>是不是簡潔許多，又可重複地使用設計藍圖一直打造汽車了呢？  這就是物件導向的優點。</p><h2 id="物件-Object"><a href="#物件-Object" class="headerlink" title="物件(Object)"></a>物件(Object)</h2><p>那物件呢？ 其實就是透過Class被製造(init)出來的實體 car1,car2,car3,就是一個個物件了</p><p>我們可以讓 car2 按一下喇叭</p><pre><code class="swift">car2.horn()</code></pre><h2 id="隱藏在-Class-裡的進階觀念"><a href="#隱藏在-Class-裡的進階觀念" class="headerlink" title="隱藏在 Class 裡的進階觀念"></a>隱藏在 Class 裡的進階觀念</h2><p>Class 屬於 Reference Type 的型別, 那什麼是 <span style="color:blue">Reference Type </span>呢？</p><p>留待下一章 <a href="/2022/10/08/01-10-swift/">Reference Type / Value Type</a> 時再解釋。</p>]]></content>
     
     
-      <category term="iOS" scheme="http://ios.taipei/tags/iOS/"/>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;物件導向-介紹&quot;&gt;&lt;a href=&quot;#物件導向-介紹&quot; class=&quot;headerlink&quot; title=&quot;物件導向 - 介紹&quot;&gt;&lt;/a&gt;物件導向 - 介紹&lt;/h1&gt;&lt;p&gt;在沒有開始使用物件的觀念時，如何用程式撰寫，來寫出對於一輛汽車的描述？&lt;/p&gt;
+&lt;p&gt;範例：</summary>
+      
     
-      <category term="新手村" scheme="http://ios.taipei/tags/%E6%96%B0%E6%89%8B%E6%9D%91/"/>
     
-      <category term="swift" scheme="http://ios.taipei/tags/swift/"/>
     
-      <category term="OBJC" scheme="http://ios.taipei/tags/OBJC/"/>
+    <category term="swift" scheme="https://ios.taipei/categories/swift/"/>
     
-      <category term="TextField" scheme="http://ios.taipei/tags/TextField/"/>
     
-      <category term="Delegate" scheme="http://ios.taipei/tags/Delegate/"/>
+    <category term="swift" scheme="https://ios.taipei/tags/swift/"/>
+    
+    <category term="新手" scheme="https://ios.taipei/tags/%E6%96%B0%E6%89%8B/"/>
     
   </entry>
   
   <entry>
-    <title>iPlayground 2018 第一屆</title>
-    <link href="http://ios.taipei/2018/10/23/iplayground2018/"/>
-    <id>http://ios.taipei/2018/10/23/iplayground2018/</id>
-    <published>2018-10-23T15:00:00.000Z</published>
-    <updated>2019-10-13T04:27:36.995Z</updated>
+    <title>swift 語言的基礎 - 函數 (Function)</title>
+    <link href="https://ios.taipei/2022/10/06/01-07-swift/"/>
+    <id>https://ios.taipei/2022/10/06/01-07-swift/</id>
+    <published>2022-10-05T16:00:05.000Z</published>
+    <updated>2022-10-17T02:05:17.680Z</updated>
     
-    <content type="html"><![CDATA[<p>因為時間長度的關係，只能把各種不同的Test walkthrough 一遍</p><p>希望能激發與會者對於各種不同的測試有者不一樣的思維與想法</p><p>投影片</p><a id="more"></a><p><a href="https://github.com/ios-taipei/DataBed/raw/master/iPlayground.key" target="_blank" rel="noopener">https://github.com/ios-taipei/DataBed/raw/master/iPlayground.key</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;因為時間長度的關係，只能把各種不同的Test walkthrough 一遍&lt;/p&gt;
-&lt;p&gt;希望能激發與會者對於各種不同的測試有者不一樣的思維與想法&lt;/p&gt;
-&lt;p&gt;投影片&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="iOS" scheme="http://ios.taipei/categories/iOS/"/>
+    <content type="html"><![CDATA[<h1 id="基本函數-介紹"><a href="#基本函數-介紹" class="headerlink" title="基本函數 - 介紹"></a>基本函數 - 介紹</h1><p>函數是一個，用以執行特殊目的一個程式區塊這是一個swift的基礎函數說明</p><pre><code class="swift">func functionName(parameters)-&gt; returnType {  // function body }</code></pre><p>舉例來說，有一個做香腸的函數，我們只要把豬肉放進去，裡面怎麼做，因為被函數包起來了，實作細節要進到函數裡詳查，但函數產出的結果，會得到香腸。</p>  <img src="/images/pig.png" width="280"><pre><code class="swift">func 香腸產生器(放入的肉:豬肉型別)-&gt; 香腸型別 {  // function body     return 1 根香腸}</code></pre><p>當然，一個簡單的函數也可沒有input 也沒有output </p><pre><code class="swift">func greeting() {    print("Hello World!")}</code></pre><p>如果函數完成了之後，要怎麼樣使用呢？只要在程式的生命週期裡，適當的地方呼叫</p><pre><code class="swift">greeting()//或者是var return = 香腸產生器(5隻豬)print(return) // 100 根香腸</code></pre><h2 id="使用系統內建的函數"><a href="#使用系統內建的函數" class="headerlink" title="使用系統內建的函數"></a>使用系統內建的函數</h2><p>其實，print() 就是一個系統內建的函數</p><pre><code class="swift">print("ABC")</code></pre><p>再舉多一個取極大值的例子</p><pre><code class="swift">import Foundationvar value = max(3, 5)print(value) //5</code></pre><p>在使用系統內建的函數，或是使用別的做好的函數庫，在使用之前，都會有個 import 函數庫的操作。如此，能夠使用已經有的函數庫，就不用自己一再地重覆造輪子了</p><p>沒有輪子？自己造一個吧！！！</p><h2 id="第一個使用者自行定義的函數"><a href="#第一個使用者自行定義的函數" class="headerlink" title="第一個使用者自行定義的函數"></a>第一個使用者自行定義的函數</h2><p>用函數來實作一個加法器</p><h3 id="加法器函數範例"><a href="#加法器函數範例" class="headerlink" title="加法器函數範例"></a>加法器函數範例</h3><pre><code class="swift">func addNumbers(num1: Int, num2: Int) -&gt; Int{  return num1 + num2}</code></pre><p>有一個函數，名字叫做「addNumbers」,有兩個輸入參數，分別為 num1 與 num2，型別為 Int, 回傳值 是一個 Int, 能夠回傳 兩個數相加的值。 </p><p><span style="color:red">讀懂程式，是在學習寫程式之前很重要的一個步驟</span></p><p>呼叫函數</p><pre><code class="swift">var result = addNumbers(num1: 3, num2: 4)print(result). //7</code></pre><p>其中 num1 與 num2 是具名參數，如果想要少打一點字，可以使用不具名參數</p><pre><code class="swift">func addNumbers(_ num1: Int, num2: Int) -&gt; Int{  return num1 + num2}</code></pre><p>num1 前多了個 “_”</p><p>呼叫函數,就要配合改為</p><pre><code class="swift">var result = addNumbers(5, num2: 6)print(result). //11</code></pre><p>想要為參數加一個別名，也可以寫成醬子</p><pre><code class="swift">func sum(of num1: Int,and num2: Int) -&gt; Int{  return num1 + num2}</code></pre><p>num1 前多了個 “of”, num2 前多了個 “and”</p><p>呼叫函數,就要配合改為</p><pre><code class="swift">var result = sum(of :5, and : 6)print(result). //11</code></pre><p>是不是比較容易讀了呢？</p><h1 id="函數的多種變化"><a href="#函數的多種變化" class="headerlink" title="函數的多種變化"></a>函數的多種變化</h1><h2 id="不定量參數的函數-Function-with-variadic-parameters"><a href="#不定量參數的函數-Function-with-variadic-parameters" class="headerlink" title="不定量參數的函數 (Function with variadic parameters)"></a>不定量參數的函數 (Function with variadic parameters)</h2><p>有時候想要傳很多參數但參數又不是固定幾個的時候，swift 語言提供了一種未限定參數個數的函數，範例如下：</p><pre><code class="swift">func sum(numbers: Int...) -&gt; Int{    var result = 0  for num in numbers {    result += num  }  return result}</code></pre><p>型別的後面多了 <b>…</b> , 代表著，傳入的參數 numbers, 其實是一個型別為 Int 的 collection，可以讓你傳入 0～很多個參數到函數裡面，而在函數中取值的話，用迴圈把參數裡的值一一取出利用。</p><p>呼叫函數的方法為</p><pre><code class="swift">var rtn = sum(numbers:1,2,3,4,5)print(rtn)</code></pre><h2 id="回傳多個值的函數-Function-with-return-multiple-values"><a href="#回傳多個值的函數-Function-with-return-multiple-values" class="headerlink" title="回傳多個值的函數 (Function with return multiple values)"></a>回傳多個值的函數 (Function with return multiple values)</h2><p>有時候想要回傳很多值的時候，可以回傳一個 Tuple，範例如下：</p><pre><code class="swift">func sum(numbers: Int...) -&gt; (String, Int) {    var result = 0  for num in numbers {    result += num  }  return ("經過計算後的結果", result)}</code></pre><h2 id="巢狀函數-Neste木Function"><a href="#巢狀函數-Neste木Function" class="headerlink" title="巢狀函數 (Neste木Function)"></a>巢狀函數 (Neste木Function)</h2><p>函數裡面也可以再放函數，沒問題的，生命週期也僅限於相同的一個 Code Block 裡使用</p><pre><code class="swift">func 香腸產生器() {  // code    func 調味() {    // code  }  調味()  }</code></pre><h2 id="傳址呼叫-Call-By-Reference"><a href="#傳址呼叫-Call-By-Reference" class="headerlink" title="傳址呼叫 Call By Reference"></a>傳址呼叫 Call By Reference</h2><h2 id="函數的參數中帶有-inout"><a href="#函數的參數中帶有-inout" class="headerlink" title="函數的參數中帶有 inout??"></a>函數的參數中帶有 inout??</h2><pre><code class="swift">func 肉肉加工函數(肉: 豬肉)-&gt; 豬肉 {  //bla bla bla  //肉 = 處理好的肉？？？  //如果你想把傳進來的肉再次地賦值，會發現不會成功  //因為此時傳進來的"肉" 是以 let 存在的變數  //  let 處理好的肉 = 肉+肉+肉  return 處理好的肉}//另一種寫法func 肉肉加工函數(肉: inout 豬肉) { //這裡多 inout  //肉 就不是 let 型式了， 而是指向記憶體位置的 var  肉 = 處理好的肉}//呼叫方式有點不同var 將要被處理的肉 : 肉肉肉加工函數(肉: &amp;將要被處理的肉)  //多了一個&amp;在變數前面print(將要被處理的肉)   // 其實變成處理好的肉</code></pre><p>有關於傳址乎叫 Call ByReference 還是 / 傳值呼叫 Call ByValue</p><p>留待下下章 <a href="/2022/10/08/01-10-swift/">Reference Type / Value Type</a> 時再解釋。</p><h2 id="遞迴-Recursion"><a href="#遞迴-Recursion" class="headerlink" title="遞迴 Recursion"></a>遞迴 Recursion</h2><p>什麼是遞迴？ 原理其實很簡單，就是函數裡的處理過程中，再次呼叫自己的函數。</p><pre><code class="swift">func recurse() {  ... ...    recurse()  ...  ...     }recurse()</code></pre><p>停不下來？？ 對，這就是遞迴的重點，要有跳脫的機制，不然就會陷入無窮迴圈，不斷地呼叫，而造成記憶體堆疊而炸掉程式。</p><h3 id="經典範例1"><a href="#經典範例1" class="headerlink" title="經典範例1"></a>經典範例1</h3><pre><code class="swift">func cumulativeSum(_ number:Int) -&gt; Int {  if number == 1 {  //跳脫條件    return 1  }   //不符合條件就往下繼續  return number + cumulativeSum(number - 1)}print(cumulativeSum(5))</code></pre><h3 id="經典範例2"><a href="#經典範例2" class="headerlink" title="經典範例2"></a>經典範例2</h3><pre><code class="swift">func fibonacci(_ i:Int) -&gt; Int {  if i &lt;= 2 { return 1 }   return fibonacci(i - 1) + fibonacci(i - 2) }print(fibonacci(5))</code></pre><h2 id="函數多載-Overloading"><a href="#函數多載-Overloading" class="headerlink" title="函數多載(Overloading)"></a>函數多載(Overloading)</h2><p>實務經驗中，函數的功能一樣，但有可能輸入的參數的型別不同，那麼，要讓開發者在使用中儘量地不改變開發的習慣時，就會再多寫一個多載函數</p><pre><code class="swift">func calAge(_ age:Int){  ...}func calAge(_ age:String){  ...}//呼叫calAge(18)calAge("18")</code></pre><p>或者，參數的型別相同，但命名的別稱不同，使用的情境也不同。</p><pre><code class="swift">func calAge(bank age:Int){  ...}func calAge(householdAdmin age:int){  ...}//呼叫calAge(bank:18)calAge(householdAdmin:18)</code></pre><h2 id="閉包-Closure-也可以算是一種內聯函數（inline-function），或是匿名函數的表示方式-但有點篇幅-所以下一章再講"><a href="#閉包-Closure-也可以算是一種內聯函數（inline-function），或是匿名函數的表示方式-但有點篇幅-所以下一章再講" class="headerlink" title="閉包 Closure 也可以算是一種內聯函數（inline function），或是匿名函數的表示方式,但有點篇幅  所以下一章再講"></a>閉包 Closure 也可以算是一種內聯函數（inline function），或是匿名函數的表示方式,但有點篇幅  所以下一章再講</h2><h2 id="運算子方法-Operator-Method"><a href="#運算子方法-Operator-Method" class="headerlink" title="運算子方法(Operator Method)"></a>運算子方法(Operator Method)</h2><p>雖然和函數看起來關係不大，不過也稱得上是隱式的函數的終極簡化版，晚點有機會再說明。</p><h1 id="使用函數的好處"><a href="#使用函數的好處" class="headerlink" title="使用函數的好處"></a>使用函數的好處</h1><ol><li>簡化程式與重複利用</li><li>增加程式的可讀性</li><li>每個函數就像是積木一樣，一塊塊排好，就可以做出完整的功能</li></ol>]]></content>
     
     
-      <category term="iOS" scheme="http://ios.taipei/tags/iOS/"/>
-    
-      <category term="新手村" scheme="http://ios.taipei/tags/%E6%96%B0%E6%89%8B%E6%9D%91/"/>
-    
-      <category term="Test" scheme="http://ios.taipei/tags/Test/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Other Tests</title>
-    <link href="http://ios.taipei/2018/10/14/TestStory07/"/>
-    <id>http://ios.taipei/2018/10/14/TestStory07/</id>
-    <published>2018-10-14T06:10:00.000Z</published>
-    <updated>2018-10-20T03:05:23.047Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="軟體開發故事07-其他不同的測試與驅動開發"><a href="#軟體開發故事07-其他不同的測試與驅動開發" class="headerlink" title="軟體開發故事07 - 其他不同的測試與驅動開發"></a>軟體開發故事07 - 其他不同的測試與驅動開發</h2><p>在整個軟體開發的過程中，還是會有一些可能要做的測試。</p><p>舉個例子</p><h3 id="壓力測試"><a href="#壓力測試" class="headerlink" title="壓力測試"></a>壓力測試</h3><a id="more"></a><p>有聽過server在做壓力測試的，為什麼手機APP也有機會要做壓力測試？</p><p>舉個例子吧</p><p>以兩個帳戶之間互相轉帳為例子， a 有1000元 轉給 b 200元，b也同時轉200給 a，程式如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">let a = Account(id: 1, balance: 1000)</span><br><span class="line">let b = Account(id: 2, balance: 0)</span><br><span class="line"></span><br><span class="line">DispatchQueue.global(qos: .background).async &#123;</span><br><span class="line">    self.transfer(from: a, to: b, amount: 200)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">DispatchQueue.global(qos: .background).async &#123;</span><br><span class="line">self.transfer(from: b, to: a, amount: 200)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func transfer(from: Account, to: Account, amount: Double) &#123;</span><br><span class="line">    from.synchronized(self) &#123;  () -&gt; Void  in</span><br><span class="line">        to.synchronized(self) &#123; () -&gt; Void in</span><br><span class="line">            from.withdraw(amount: amount)</span><br><span class="line">            to.deposit(amount: amount)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>此時因為我們在背景執行轉帳時，就有可能發生Race condition或dead lock的情況發生，只做一次有可能是成功的，但是連續做個一萬次再來看兩個人的balance，一沒寫好，就有可能金額是不對的。</p><p>簡單的範例如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">extension NSObject &#123;</span><br><span class="line">    func synchronized&lt;T&gt;(_ lock: AnyObject, _ closure: () throws -&gt; T) rethrows -&gt; T &#123;</span><br><span class="line">    objc_sync_enter(lock)</span><br><span class="line">    defer &#123; objc_sync_exit(lock) &#125;</span><br><span class="line">        return try closure()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="記憶體監控"><a href="#記憶體監控" class="headerlink" title="記憶體監控"></a>記憶體監控</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">override func didReceiveMemoryWarning() &#123;</span><br><span class="line">   //這裡要測 </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>嗯，不多解釋了。<br><img src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/memory_monitor.png" alt="記憶體監控"></p><h3 id="網路監控與測試"><a href="#網路監控與測試" class="headerlink" title="網路監控與測試"></a>網路監控與測試</h3><ul><li><p>Network Link Conditioner<br><img src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/networklinkconditioner.png" alt="Network Link Conditioner"></p></li><li><p>Packet Logger<br><img src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/packetlogger.png" alt="Packet Logger"></p></li><li><p>Charles Proxy<br><img src="https://xebialabs.com/assets/files/plugins/Charles.jpg" alt="Charles Proxy"></p></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;軟體開發故事07-其他不同的測試與驅動開發&quot;&gt;&lt;a href=&quot;#軟體開發故事07-其他不同的測試與驅動開發&quot; class=&quot;headerlink&quot; title=&quot;軟體開發故事07 - 其他不同的測試與驅動開發&quot;&gt;&lt;/a&gt;軟體開發故事07 - 其他不同的測試與驅動開發&lt;/h2&gt;&lt;p&gt;在整個軟體開發的過程中，還是會有一些可能要做的測試。&lt;/p&gt;
-&lt;p&gt;舉個例子&lt;/p&gt;
-&lt;h3 id=&quot;壓力測試&quot;&gt;&lt;a href=&quot;#壓力測試&quot; class=&quot;headerlink&quot; title=&quot;壓力測試&quot;&gt;&lt;/a&gt;壓力測試&lt;/h3&gt;
-    
-    </summary>
-    
-      <category term="Test" scheme="http://ios.taipei/categories/Test/"/>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;基本函數-介紹&quot;&gt;&lt;a href=&quot;#基本函數-介紹&quot; class=&quot;headerlink&quot; title=&quot;基本函數 - 介紹&quot;&gt;&lt;/a&gt;基本函數 - 介紹&lt;/h1&gt;&lt;p&gt;函數是一個，用以執行特殊目的一個程式區塊這是一個swift的基礎函數說明&lt;/p&gt;
+&lt;pre&gt;</summary>
+      
     
     
-      <category term="Test" scheme="http://ios.taipei/tags/Test/"/>
     
-      <category term="Press Test" scheme="http://ios.taipei/tags/Press-Test/"/>
+    <category term="swift" scheme="https://ios.taipei/categories/swift/"/>
     
-      <category term="Monkey Test" scheme="http://ios.taipei/tags/Monkey-Test/"/>
+    
+    <category term="swift" scheme="https://ios.taipei/tags/swift/"/>
+    
+    <category term="新手" scheme="https://ios.taipei/tags/%E6%96%B0%E6%89%8B/"/>
     
   </entry>
   
   <entry>
-    <title>What is QA</title>
-    <link href="http://ios.taipei/2018/10/14/TestStory06/"/>
-    <id>http://ios.taipei/2018/10/14/TestStory06/</id>
-    <published>2018-10-14T06:10:00.000Z</published>
-    <updated>2018-10-20T03:05:30.400Z</updated>
+    <title>swift 語言的基礎 - Strong, Weak and Unowned</title>
+    <link href="https://ios.taipei/2022/10/06/01-08-1-swift/"/>
+    <id>https://ios.taipei/2022/10/06/01-08-1-swift/</id>
+    <published>2022-10-05T16:00:05.000Z</published>
+    <updated>2022-10-21T01:20:28.007Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="軟體開發故事06-What-is-QA"><a href="#軟體開發故事06-What-is-QA" class="headerlink" title="軟體開發故事06 - What is QA?"></a>軟體開發故事06 - What is QA?</h2><p>從上述的故事之中，你會發現好像有人一直在滑手機或是不講話？<br><br>那只是在這個故事之中特意的呈現。<br></p><p>什麼是QA? <br><br>在專案管理之中，QA是有明確的定義，Quality Assurance-品質保證工程師。<br></p><a id="more"></a><p>為了避免和 QC (Quality Control)搞混，我們把專案執行的生命週期給畫出來，如此一來就知道角色的差異。</p><p><img src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/project_life_cycle.png" alt="專案生命週期"></p><p>QA在執行的後期，做的工作其實是測試員 Tester 的工作<br><br>如果知道明確的測試方式與工作，那麼由誰來做Tester，似乎就沒有那麼地強迫要非QA不可，有時候PM也跳下來測也不一定。</p><p>QA有多麼苦，我們可以看一下專案規模隨者時間演進的變化</p><p><img src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/CRsteps.png" alt="專案CR"></p><p>圖表由左到右，藍色的部份代表這一期的功能產出，之後的藍色代表原專案的新功能（Change Requestment）<br></p><p>為了計算方便，假設每個區塊需要1個小時的測試時間，區塊與區塊間相依性的整合測試一樣也是需要一個小時的測試。<br></p><p>那麼，專案在第一期的測試時間為一個小時，專案在第二期的時候是3小時，專案在第三期的時候需要7小時，第四期的時候，要完整的測完，則是需要15小時。(有沒有很可怕？？)</p><p>不自動化，純手動測試，就會出現測試人員根本就來不及測試就上線的情況了。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;軟體開發故事06-What-is-QA&quot;&gt;&lt;a href=&quot;#軟體開發故事06-What-is-QA&quot; class=&quot;headerlink&quot; title=&quot;軟體開發故事06 - What is QA?&quot;&gt;&lt;/a&gt;軟體開發故事06 - What is QA?&lt;/h2&gt;&lt;p&gt;從上述的故事之中，你會發現好像有人一直在滑手機或是不講話？&lt;br&gt;&lt;br&gt;那只是在這個故事之中特意的呈現。&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;什麼是QA? &lt;br&gt;&lt;br&gt;在專案管理之中，QA是有明確的定義，Quality Assurance-品質保證工程師。&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Test" scheme="http://ios.taipei/categories/Test/"/>
+    <content type="html"><![CDATA[<h1 id="Strong-Weak-and-Unowned-介紹"><a href="#Strong-Weak-and-Unowned-介紹" class="headerlink" title="Strong, Weak and Unowned - 介紹"></a>Strong, Weak and Unowned - 介紹</h1><h2 id="Manual-Reference-Count-MRC-x2F-Automatic-Reference-Counting-ARC"><a href="#Manual-Reference-Count-MRC-x2F-Automatic-Reference-Counting-ARC" class="headerlink" title="Manual Reference Count - (MRC) / Automatic Reference Counting - (ARC)"></a>Manual Reference Count - (MRC) / Automatic Reference Counting - (ARC)</h2><p>這篇在介紹swift裡記憶體的管理機制</p><p>早前的手機，因為硬體資源的限制，對於記憶體的使用格外的珍惜，早期在 Objective-C / Xcode 4 的年代，每個變數的引用與操作 alloc、new、retain、release 都要手動的一個個計數，在撰寫程式時，以良好的習慣，儘可能地釋放出更多記憶體供程式運行。當然，萬一呼叫到已經釋放掉的變數，就直接 Crash，不好好釋放的話，記憶體堆疊到不夠用了 (Memory leak)，也是直接 Crash。</p><p>隨著硬體的進步，Apple 也慢慢將手動參考計數 轉往自動參考計數，慢慢地由autorelease,再演化成由系統透過 Strong, Weak , Unowned 來判斷記憶體回收的時機</p><h1 id="未完待續"><a href="#未完待續" class="headerlink" title="未完待續"></a>未完待續</h1>]]></content>
     
     
-      <category term="Test" scheme="http://ios.taipei/tags/Test/"/>
-    
-      <category term="QA" scheme="http://ios.taipei/tags/QA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Unit Test</title>
-    <link href="http://ios.taipei/2018/10/13/TestStory03/"/>
-    <id>http://ios.taipei/2018/10/13/TestStory03/</id>
-    <published>2018-10-13T06:10:00.000Z</published>
-    <updated>2018-10-20T03:05:54.648Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="軟體開發故事03-單元測試-Unit-Test-與-測試趨動開發-Test-Driven-Development-TDD"><a href="#軟體開發故事03-單元測試-Unit-Test-與-測試趨動開發-Test-Driven-Development-TDD" class="headerlink" title="軟體開發故事03 - 單元測試 Unit Test 與 測試趨動開發 Test Driven Development (TDD)"></a>軟體開發故事03 - 單元測試 Unit Test 與 測試趨動開發 Test Driven Development (TDD)</h2><p>前情提要：工程師1有可能寫出一個功能，裡面的程式能通過測試用例，QA也沒測到，但是上線實測有可能會壞掉的嗎？</p><a id="more"></a><p>相信你應該有答案，那麼，為什麼要寫單元測試？<br><br>因為公司要求，因為要被code review，因為要導CI、CD，因為別人bla bla bla…<br><br>自己的想法呢？程式都沒時間寫了，不寫測試我可以多寫幾千行程式<br></p><p>大多時候工程師是一個不太好被別人說服的角色，那麼，我們來模擬一下工程師1怎麼使用SPE來同時寫出單元測試和實體程式</p><p>事前先準備好<br></p><ol><li>單元測試所需要的環境<br></li><li>實際程式的環境</li></ol><h3 id="Ready-Go"><a href="#Ready-Go" class="headerlink" title="Ready, Go!!"></a>Ready, Go!!</h3><p>第一步，看一下我們的user story，先把測試給寫出來</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">假設(Given)，存在有一個可用的帳號與密碼</span><br><span class="line">當(When)，使用者開啟APP,輸入帳號 aki ,密碼 qaz，點選「登入」</span><br><span class="line">然後(Then)，要看到首頁的內容。(success)</span><br></pre></td></tr></table></figure><p>test case 如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//============== Test ==================</span><br><span class="line">func testLoginSuccess() &#123;</span><br><span class="line"></span><br><span class="line">  XCTAssert(login(acc: &quot;aki&quot;, pass: &quot;qaz&quot;))     </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p> 如上，我們寫出了第一個Test Case,此時試著跑一下Test,會得到 Test Failed，因為login函數還沒有實做。此時我們把Failed的狀態簡稱「<span style="color:red">紅燈</span>」。</p><p>接著，我們需要把紅燈的地方修到好，所以要實作一個login函數，用以檢核帳號密碼，最終回傳成功或失敗</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//============== Code ==================</span><br><span class="line">func login(acc:String,pass:String)-&gt;Bool&#123;</span><br><span class="line">return true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>此時跑一下Test， 你會得到login回傳true，喔耶～～ 測試通過了，此時成功的狀態（success），我們簡稱為「<span style="color:green">綠燈</span>」。</p><p>身為工程師的你，摸一下你的xx，不用多想也知道，不管什麼東西進來都是true，所以，我們白痴地依依 Test Case 來<span style="color:blue">重構</span>一下功能</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//============== Code ==================</span><br><span class="line">func login(acc:String,pass:String)-&gt;Bool&#123;</span><br><span class="line">if acc==&quot;&quot; || pass==&quot;&quot; &#123;</span><br><span class="line">return false</span><br><span class="line">&#125;else&#123;</span><br><span class="line">   return true</span><br><span class="line">&#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>白痴重構結束後，再跑一下測試，嗯嗯嗯  還是綠燈。那就可以拿下一個Test Case來做了</p><hr>第二個使用者故事 如下<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">假設(Given)，存在有一個可用的帳號與密碼</span><br><span class="line">當(When)，使用者開啟APP,輸入帳號 aki ,密碼 123，點選「登入」</span><br><span class="line">然後(Then)，要跳出錯誤訊息（Failed）</span><br></pre></td></tr></table></figure><p>第二個Test case 如下：</p><h4 id="寫測試"><a href="#寫測試" class="headerlink" title="寫測試"></a>寫測試</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">func testLoginFailed() &#123;</span><br><span class="line">    XCTAssertFalse(login(acc: &quot;aki&quot;, pass: &quot;123&quot;))     </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="跑測試亮紅燈"><a href="#跑測試亮紅燈" class="headerlink" title="跑測試亮紅燈"></a>跑測試亮紅燈</h4><h4 id="改code"><a href="#改code" class="headerlink" title="改code"></a>改code</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//============== Code ==================</span><br><span class="line">func login(acc:String,pass:String)-&gt;Bool&#123;</span><br><span class="line">if acc==&quot;aki&quot; &#123;</span><br><span class="line">if(pass==&quot;qaz&quot;)&#123;</span><br><span class="line">return true</span><br><span class="line">&#125;else if pass==&quot;123&quot;&#123;</span><br><span class="line">return false</span><br><span class="line">&#125;</span><br><span class="line">return false</span><br><span class="line">&#125;else&#123;</span><br><span class="line">   return false</span><br><span class="line">&#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="跑一下測試，綠燈"><a href="#跑一下測試，綠燈" class="headerlink" title="跑一下測試，綠燈"></a>跑一下測試，綠燈</h4><h4 id="重構，跑一下測試，綠燈"><a href="#重構，跑一下測試，綠燈" class="headerlink" title="重構，跑一下測試，綠燈"></a>重構，跑一下測試，綠燈</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//============== Code ==================</span><br><span class="line">func login(acc:String,pass:String)-&gt;Bool&#123;</span><br><span class="line">if acc==&quot;aki&quot; &#123;</span><br><span class="line">if(pass==&quot;qaz&quot;)&#123;</span><br><span class="line">return true</span><br><span class="line">&#125;</span><br><span class="line">return false</span><br><span class="line">&#125;else&#123;</span><br><span class="line">   return false</span><br><span class="line">&#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>無限loop直到所有的測試都通過，此時程式就寫好了，而且應該被完整的重構過。</p><h3 id="反思一下我們在上面的所有動作"><a href="#反思一下我們在上面的所有動作" class="headerlink" title="反思一下我們在上面的所有動作"></a>反思一下我們在上面的所有動作</h3><p>我們把上述的動作抽離出來<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Action 01: 寫好 Test Case 後,跑一下測試（嗯。。。紅燈）</span><br><span class="line">Action 02: 改code之後,跑一下測試（嗯。。。綠燈）</span><br><span class="line">Action 03: code的有沒有要重構或調整的部份，改完之後再跑一次測試，直到綠燈（重構）</span><br></pre></td></tr></table></figure><p>在01－03之間，藉由不斷地添加Test Case，跑test case，寫程式，重構，來建構一個開發的流程。</p><p>這就是 TDD 呀！！</p><h3 id="想一下，不寫測試不行嗎？"><a href="#想一下，不寫測試不行嗎？" class="headerlink" title="想一下，不寫測試不行嗎？"></a>想一下，不寫測試不行嗎？</h3><p>可以啊<br><br>那有可能會發生什麼問題？<br><br>QA會花很多力氣在做局部的測試，當一個專案愈大，就愈難完整的測到完，沒測試到的部份，頂多就是閉著眼睛上線，直接讓User幫你測試。這部份留到QA的部份再加以解釋</p><h4 id="先寫代碼，再寫測試不行嗎？"><a href="#先寫代碼，再寫測試不行嗎？" class="headerlink" title="先寫代碼，再寫測試不行嗎？"></a>先寫代碼，再寫測試不行嗎？</h4><p>可以啊<br><br>後來寫的測試可以證明這個代碼沒有bug，但是不能證明這個代碼能夠解決User使用上的問題<br></p><p>舉個例子吧。<br></p><p>我們想要寫一個function來知道一個字串是不是數字<br><br>比如說 “123” 時為true，”ABC”時為false，<br><br>於是工程師寫下了一段Code，</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">func isInteger(aStr:String) -&gt; Bool&#123;</span><br><span class="line">do &#123;</span><br><span class="line">   let a = try Int(aStr)</span><br><span class="line">       return true</span><br><span class="line">   &#125;catch &#123;</span><br><span class="line">   return false</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>語意是利用變數型別的轉換正確或失敗來判斷這一個變數是不是數字</p><p>如果不做測試的話，其實是不會知道問題在那裡<br><br>如果輸入了 “123” 為 true， 但是輸入了 “ABC” 一樣是true</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">func isInteger(aStr:String) -&gt; Bool&#123;</span><br><span class="line">        </span><br><span class="line">let number = Int(aStr)</span><br><span class="line">        </span><br><span class="line">   if number != nil &#123;</span><br><span class="line">     return true</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   return false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>兩個 Test Case “123”,”ABC” 的回傳都符合我們的預期。</p><p>在一般的情況下，也許上面的code沒有問題，但是如果今天也許我們需要經營辛巴威市場時，我們加個測試看會不會過 <br><br>“1234567890123456789012345678901234567890”?</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">func testIsTrue()&#123;</span><br><span class="line">XCTAssert(isInteger(aStr: &quot;1234567890123456789012345678901234567890&quot;))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="再次強調，在很多情況之下，我們是很相信工程師的"><a href="#再次強調，在很多情況之下，我們是很相信工程師的" class="headerlink" title="再次強調，在很多情況之下，我們是很相信工程師的"></a>再次強調，在很多情況之下，我們是很相信工程師的</h3><h3 id="工程師有沒有可能出錯？-那怕是千萬之一的機會，產品如果有問題，公司、團隊、個人能不能承擔犯錯之後的結果？"><a href="#工程師有沒有可能出錯？-那怕是千萬之一的機會，產品如果有問題，公司、團隊、個人能不能承擔犯錯之後的結果？" class="headerlink" title="工程師有沒有可能出錯？ 那怕是千萬之一的機會，產品如果有問題，公司、團隊、個人能不能承擔犯錯之後的結果？"></a>工程師有沒有可能出錯？ 那怕是千萬之一的機會，產品如果有問題，公司、團隊、個人能不能承擔犯錯之後的結果？</h3><h3 id="工程師能不能信用擔保，或者用性命擔保程式沒有什麼？"><a href="#工程師能不能信用擔保，或者用性命擔保程式沒有什麼？" class="headerlink" title="工程師能不能信用擔保，或者用性命擔保程式沒有什麼？"></a>工程師能不能信用擔保，或者用性命擔保程式沒有什麼？</h3><h3 id="寫了測試就不會出錯了嗎？"><a href="#寫了測試就不會出錯了嗎？" class="headerlink" title="寫了測試就不會出錯了嗎？"></a>寫了測試就不會出錯了嗎？</h3><p>會，人還是會犯錯的，只是在一連串的犯錯的學習中，可以透過TestCase來了解，程式為什麼這樣子寫<br>（有時候，別人也可以透過Test Case來了解程式的流程而不用深入程式實作的細節）</p><h3 id="應不應該追求所謂的100％的測試覆蓋率-100-Test-Coverage-？"><a href="#應不應該追求所謂的100％的測試覆蓋率-100-Test-Coverage-？" class="headerlink" title="應不應該追求所謂的100％的測試覆蓋率(100 Test Coverage)？"></a>應不應該追求所謂的100％的測試覆蓋率(100 Test Coverage)？</h3><p>要看投入的時間成本，和所回收的效益，才能判斷值不值得。這個判斷的點，我們晚點回過頭來探討。</p><p>註1:如果你想要做TDD的練習，那麼有一些道場(dojo、どじょ)提供一些套路（Kata、型、かた），其中一個比較有名的道場如下：<br><a href="http://www.codingdojo.org/KataCatalogue/" target="_blank" rel="noopener">http://www.codingdojo.org/KataCatalogue/</a></p><p>註2:<br><img src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/news-integer-parse.png" alt="辛巴威幣"></p><hr>想一下：有一段正則表示式是,你敢不敢直接把code推上production？<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\A(?=[a-z0-9@.!#$%&amp;&apos;*+/=?^_`&#123;|&#125;~-]&#123;6,254&#125;\z)(?=[a-z0-9.!#$%&amp;&apos;*+/=?^_`&#123;|&#125;~-]&#123;1,64&#125;@)[a-z0-9!#$%&amp;&apos;*+/=?^_`&#123;|&#125;~-]+(?:\.[a-z0-9!#$%&amp;&apos;*+/=?^_`&#123;|&#125;~-]+)*@(?:(?=[a-z0-9-]&#123;1,63&#125;\.)[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?=[a-z0-9-]&#123;1,63&#125;\z)[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\z</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;軟體開發故事03-單元測試-Unit-Test-與-測試趨動開發-Test-Driven-Development-TDD&quot;&gt;&lt;a href=&quot;#軟體開發故事03-單元測試-Unit-Test-與-測試趨動開發-Test-Driven-Development-TDD&quot; class=&quot;headerlink&quot; title=&quot;軟體開發故事03 - 單元測試 Unit Test 與 測試趨動開發 Test Driven Development (TDD)&quot;&gt;&lt;/a&gt;軟體開發故事03 - 單元測試 Unit Test 與 測試趨動開發 Test Driven Development (TDD)&lt;/h2&gt;&lt;p&gt;前情提要：工程師1有可能寫出一個功能，裡面的程式能通過測試用例，QA也沒測到，但是上線實測有可能會壞掉的嗎？&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Test" scheme="http://ios.taipei/categories/Test/"/>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Strong-Weak-and-Unowned-介紹&quot;&gt;&lt;a href=&quot;#Strong-Weak-and-Unowned-介紹&quot; class=&quot;headerlink&quot; title=&quot;Strong, Weak and Unowned - 介紹&quot;&gt;&lt;/a&gt;Stron</summary>
+      
     
     
-      <category term="Test" scheme="http://ios.taipei/tags/Test/"/>
     
-      <category term="Unit Test" scheme="http://ios.taipei/tags/Unit-Test/"/>
+    <category term="swift" scheme="https://ios.taipei/categories/swift/"/>
+    
+    
+    <category term="swift" scheme="https://ios.taipei/tags/swift/"/>
+    
+    <category term="新手" scheme="https://ios.taipei/tags/%E6%96%B0%E6%89%8B/"/>
     
   </entry>
   
   <entry>
-    <title>UI Test, Record and Replay</title>
-    <link href="http://ios.taipei/2018/10/13/TestStory04/"/>
-    <id>http://ios.taipei/2018/10/13/TestStory04/</id>
-    <published>2018-10-13T06:10:00.000Z</published>
-    <updated>2018-10-20T03:05:51.616Z</updated>
+    <title>swift 語言的基礎 - 閉包 (Closure)</title>
+    <link href="https://ios.taipei/2022/10/06/01-08-2-swift/"/>
+    <id>https://ios.taipei/2022/10/06/01-08-2-swift/</id>
+    <published>2022-10-05T16:00:05.000Z</published>
+    <updated>2022-10-20T16:15:35.142Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="軟體開發故事04-UI-Test-，操作行為的錄製與播放"><a href="#軟體開發故事04-UI-Test-，操作行為的錄製與播放" class="headerlink" title="軟體開發故事04 - UI Test ，操作行為的錄製與播放"></a>軟體開發故事04 - UI Test ，操作行為的錄製與播放</h2><p>前情提要：工程師1把後端做好了</p><p>同時，另一位工程師2也把前端的UI也做好了，兩個前後端串接好後，直接交付由QA進行測試。</p><p>工程師2說：「前端不用測，QA會幫我們找到問題。」</p><p>如果你相信工程師2說的，那麼這章可以跳過不看。</p><a id="more"></a><h3 id="UI-要怎麼測？"><a href="#UI-要怎麼測？" class="headerlink" title="UI 要怎麼測？"></a>UI 要怎麼測？</h3><ul><li>原始時代 － 佷久很久以前，工程師自己手按一按</li><li>漁獵時代 － 使用者來按或找有空的人一起幫忙按一下</li><li>農業時代 － 找專職的QA 來按</li><li>工業時代 － 用機器來測試程式</li><li>資訊時代 － 寫測試程式來測試程式<br>A- I時代 － 用人工智慧來測試</li></ul><p>前三個時代就不講了，第四個時代的開始，其目的在減少QA的負擔（人數）</p><h3 id="怎麼用機器怎麼測試？機器能做什麼？？"><a href="#怎麼用機器怎麼測試？機器能做什麼？？" class="headerlink" title="怎麼用機器怎麼測試？機器能做什麼？？"></a>怎麼用機器怎麼測試？機器能做什麼？？</h3><p>大量、重覆、一成不變的工作，是可以由機器所取代的。<br><br>或許你用過XCode 內建的 Recorder 來錄製UITesting。<br><br>很簡單，在按下錄製鈕後，操作app，就會自動產生一堆程式碼了。看你想要重構與否，基本上就算是ui test了<br></p><p><img src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/uitest_record.png" alt="UI Test Record"></p><p>如果想要自己刻一個錄製機器呢？（為什麼待會會交代）<br><br>目標：做一個Mac APP，將模擬器上的操作錄製下來，儲存結束，並且可以回覆播放<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 找到模擬器</span><br><span class="line">2. 紀錄滑鼠位置與動作</span><br><span class="line">3. 儲存結果</span><br><span class="line">4. 重覆播放</span><br><span class="line">5. 紀錄結果</span><br></pre></td></tr></table></figure><p>開始吧</p><ol><li>透過pid（process id）找到模擬器</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">StopwatchStart();</span><br><span class="line">CFArrayRef windowList = CGWindowListCopyWindowInfo(listOptions, kCGNullWindowID);</span><br><span class="line">StopwatchEnd(&quot;Create Window List&quot;);</span><br><span class="line"></span><br><span class="line">// Copy the returned list, further pruned, to another list. This also adds some bookkeeping</span><br><span class="line">// information to the list as well as </span><br><span class="line">NSMutableArray * prunedWindowList = [NSMutableArray array];</span><br><span class="line">   self.windowListData = [[WindowListApplierData alloc] initWindowListData:prunedWindowList];</span><br><span class="line"></span><br><span class="line">   CFArrayApplyFunction(windowList, CFRangeMake(0, CFArrayGetCount(windowList)), &amp;WindowListApplierFunction, (__bridge void *)(self.windowListData));</span><br><span class="line">CFRelease(windowList);</span><br><span class="line">   </span><br><span class="line">   for (NSInteger i = prunedWindowList.count-1; i&gt;=0; i--) &#123;</span><br><span class="line">       //iOS</span><br><span class="line">       if([[[prunedWindowList objectAtIndex:i] objectForKey:@&quot;applicationName&quot;] containsString:@&quot;Simulator&quot;])&#123;</span><br><span class="line">           </span><br><span class="line">       &#125;else&#123;</span><br><span class="line">           [prunedWindowList removeObjectAtIndex:i];</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure><p> 其中 Application Name 是  Simulator， 如果你想用命令模式打開模擬器的話，可以用下面的指令玩看看</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">xcrun instruments -s  //列出所有可用的的設備</span><br><span class="line">xcrun instruments -w &quot;iPhone XS (12.0)&quot;  //開啟模擬器</span><br><span class="line">xcrun simctl install booted &lt;app路径&gt; //安裝ipa</span><br><span class="line">xcrun simctl launch booted &lt;app identifier&gt; //打開指定的app</span><br><span class="line">xcrun simctl uninstall booted &lt;app identifier&gt; //解除安裝</span><br></pre></td></tr></table></figure><ol start="2"><li><p>模擬器開啟後，記錄模擬器的座標、尺寸、滑鼠的座標與滑鼠的動作</p></li><li><p>一連串的紀錄允許簡單的編輯修改，定義為一個action存在資料庫<br>，由許多action建構成一個 UI Test</p></li><li><p>將action用滑鼠事件回送到模擬器上，就可以重現QA的動作了 </p></li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//calculate new touch point x,y</span><br><span class="line">if(type==1)&#123;</span><br><span class="line">   [mMouseEvent mouseTouchDownWithPoint: CGPointMake(ex, ey)];</span><br><span class="line">&#125;else if(type==2)&#123;</span><br><span class="line">   [mMouseEvent mouseDragWithPoint: CGPointMake(ex, ey)];</span><br><span class="line">&#125;else if(type==3)&#123;</span><br><span class="line">   [mMouseEvent mouseTouchUpWithPoint: CGPointMake(ex, ey)];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ol start="5"><li>拍畫面用以比對結果</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">StopwatchStart();</span><br><span class="line">CGImageRef windowImage = CGWindowListCreateImage(imageBounds, singleWindowListOptions, windowID, imageOptions);</span><br><span class="line">Profile(windowImage);</span><br><span class="line">StopwatchEnd(&quot;Single Window&quot;);</span><br><span class="line">[self setOutputImage:windowImage];</span><br><span class="line">CGImageRelease(windowImage);</span><br></pre></td></tr></table></figure><p>應用程式截圖<br><img src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/mac_recorder.png" alt="mac recorder"></p><h3 id="內建的很好用呀-為什麼不用內建的就好"><a href="#內建的很好用呀-為什麼不用內建的就好" class="headerlink" title="內建的很好用呀  為什麼不用內建的就好"></a>內建的很好用呀  為什麼不用內建的就好</h3><p>舉例來說<br></p><p>我們想要在同一個時間內跑多個裝置的ui test，或是ui test的test case太多，能不能夠分成兩組以上同時跑？</p><p>也有時候座標記錄，相對來說，可利用性比較大一些。<br></p><p>比方說</p><p>IoT 寫字機<br><img src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/writing_machine.jpeg" alt="mac recorder"></p><h3 id="價值在那裡？"><a href="#價值在那裡？" class="headerlink" title="價值在那裡？"></a>價值在那裡？</h3><p>聽話、任勞任怨<br>比一個QA工程師的薪水便宜<br>bla bla bla</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;軟體開發故事04-UI-Test-，操作行為的錄製與播放&quot;&gt;&lt;a href=&quot;#軟體開發故事04-UI-Test-，操作行為的錄製與播放&quot; class=&quot;headerlink&quot; title=&quot;軟體開發故事04 - UI Test ，操作行為的錄製與播放&quot;&gt;&lt;/a&gt;軟體開發故事04 - UI Test ，操作行為的錄製與播放&lt;/h2&gt;&lt;p&gt;前情提要：工程師1把後端做好了&lt;/p&gt;
-&lt;p&gt;同時，另一位工程師2也把前端的UI也做好了，兩個前後端串接好後，直接交付由QA進行測試。&lt;/p&gt;
-&lt;p&gt;工程師2說：「前端不用測，QA會幫我們找到問題。」&lt;/p&gt;
-&lt;p&gt;如果你相信工程師2說的，那麼這章可以跳過不看。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Test" scheme="http://ios.taipei/categories/Test/"/>
+    <content type="html"><![CDATA[<h1 id="閉包-Closure-介紹"><a href="#閉包-Closure-介紹" class="headerlink" title="閉包(Closure) - 介紹"></a>閉包(Closure) - 介紹</h1><p>這裡是學習 swift 的一個關卡，不要急，先理解，模仿，再求變化</p><p>Reference Type</p><h2 id="基本型態"><a href="#基本型態" class="headerlink" title="基本型態"></a>基本型態</h2><pre><code class="swift">{ (parameters) -&gt; returnType in   // statements}</code></pre><p>parameters: 由外部傳進來的參數<br>returnType: 要回傳的型別<br>in: 將宣告與程式區塊分離的介詞</p><p>來一個簡單的 hello world 範例</p><pre><code class="swift">var sayHi = { print("hello world")}sayHi()</code></pre><p>加入參數</p><pre><code class="swift">var sayHi = { (name:String) in print("hello world, \(name)!!")}sayHi("Sweetie")</code></pre><p>回傳值</p><pre><code class="swift">var sum = { (number1 :Int, number2:Int) in   number1 + number2}print(sum(3,5)) //8</code></pre><h2 id="進階變化"><a href="#進階變化" class="headerlink" title="進階變化"></a>進階變化</h2><p>把閉包當做是一個參數丟到函數裡</p><h3 id="範例1"><a href="#範例1" class="headerlink" title="範例1"></a>範例1</h3><p>假如要做一個計算機，裡面需要把兩個數做處理, 寫法如下</p><pre><code class="swift">let operatorAdd = {(n1:Int,n2:Int) in  return n1 + n2}func calculate(_ num1:Int,_ num2:Int,_ opertator:(Int,Int)-&gt;Int ) -&gt; Int{  return opertator(num1,num2)}print(calculate(3,5,operatorAdd)) //8</code></pre><p>如果要實作減法，那就寫一個減法的閉包放進去，就會兩數相減了，是不是很神奇？？？</p><pre><code class="swift">let operatorMinus = {(n1:Int,n2:Int) in  return n1 - n2}print(calculate(3,5,operatorMinus)) //-1</code></pre><h3 id="經典範例2"><a href="#經典範例2" class="headerlink" title="經典範例2"></a>經典範例2</h3><pre><code class="swift">var names = ["aki","bill","cat"]var compare = { (s1: String, s2: String) -&gt; Bool in    return s1 &lt; s2}print(names.sorted(by: compare)) //["cat","bill","aki"],//其中又可以省略成names.sorted(by:(s1,s2) in s1&lt;s2)//超省略names.sorted(by:{$0&lt;$1})//終極省略names.sorted(by: &lt;)  //Operator Methods//所以~~~ 範例 1 的函數，可以省略成calculate(3,8,+)  //11calculate(3,8,-)  //-5//傑克，真是太神奇了</code></pre><h2 id="尾隨閉包-Trailing-Closure"><a href="#尾隨閉包-Trailing-Closure" class="headerlink" title="尾隨閉包 Trailing Closure"></a>尾隨閉包 Trailing Closure</h2><p>當閉包做為函數的參數，又剛好是最後一個的時候，就稱之為<span style="color:blue">尾隨閉包</span>，為什麼要介紹這個呢？因為 swift 很好心的想要簡略一些寫法。</p><p>先來一個變化前的函數</p><p>香腸產生器，將調味函數做成一個閉包參數，結果如下</p><pre><code class="swift">var seasoning = {    print("加鹽巴")}func sausageGenerator(meat:String,closureSeasoning: () -&gt; ()) {    print(meat)    closureSeasoning()    })//呼叫sausageGenerator("肉肉",seasoning)//有些閉包的寫法 可以省略 ()-&gt;() 直接寫成 {}sausageGenerator("肉肉",closureSeasoning:{print("加醬油")})</code></pre><p>因為閉包是最後一個參數，在呼叫函數時也可以改寫為 </p><pre><code class="swift">sausageGenerator(meat:meat) {  //原本放在 closureSeasoning 閉包裡的內容 就可以寫在這裡了  print("加胡椒")})</code></pre><h2 id="捕獲值-Capture-Value"><a href="#捕獲值-Capture-Value" class="headerlink" title="捕獲值 Capture Value"></a>捕獲值 Capture Value</h2><p>在閉包裡的程式區塊之中，在記憶體還沒回收之前，儲存的值是一直存在的，我們稱之為捕獲，舉例如下：</p><pre><code class="swift">//函數會產生一個加鹽巴的閉包func addSalt() -&gt; () -&gt; Void {    var saltCount = 1    return {        print("加了 \(saltCount) 次鹽巴")        saltCount += 1    }}//做一個閉包來使用var addSaltClosure = addSalt()sausageGenerator(meat:"肉",closureSeasoning:addSaltClosure)sausageGenerator(meat:"肉",closureSeasoning:addSaltClosure)sausageGenerator(meat:"肉",closureSeasoning:addSaltClosure)sausageGenerator(meat:"肉",closureSeasoning:addSaltClosure)////肉//加了 1 次鹽巴//肉//加了 2 次鹽巴//肉//加了 3 次鹽巴//肉//加了 4 次鹽巴</code></pre><p>發現了一個有趣的結果，saltCount 的值是一直被捕獲在閉包的程式區塊之中，隨著程式執行四次，就被遞增了四次。意即變數會一直被抓住，直到這個閉包被記憶體釋放後，saltCount 才會被消失。</p><p>那麼, 如果我們把程式外部的值傳到閉包裡，外部的值如果在閉包裡被捕獲，又要在外部修改，在這個當下就會產生程式的衝突，一個要拿，一個卻緊緊不放。</p><p>為了解決這個問題，請看另一個章節 <a href="/2022/10/06/01-08-1-swift/">swift 語言的特性 (Strong, Weak, UnOwned)</a></p><h2 id="非逃逸閉包-NoEscape-Closure"><a href="#非逃逸閉包-NoEscape-Closure" class="headerlink" title="非逃逸閉包 NoEscape Closure"></a>非逃逸閉包 NoEscape Closure</h2><p>當我們把閉包當做是一個參數丟到函數裡的時候，而在函數執行返回之後，才會繼續執行閉包，如果很明確的只要閉包乖乖當一個參數，生命週期只在函數裡完成，不再使用 reference type 的特性，將裡面的值接著向外操作，那麼只要加上個 @noescape 的前綴，就可以限制閉包的逃逸</p><pre><code class="swift">var seasoning = {    print("加鹽巴")}func sausageGenerator(meat:String, @noescape closureSeasoning: () -&gt; ()) {    print(meat)    closureSeasoning()    })</code></pre><h2 id="自動閉包-Auto-Closure"><a href="#自動閉包-Auto-Closure" class="headerlink" title="自動閉包 Auto Closure"></a>自動閉包 Auto Closure</h2><p>範例如下：</p><pre><code class="swift">func sausageGenerator(meat:String,season: @autoclosure () -&gt; ()) { greet()}// pass closure without {}sausageGenerator(meat: "肉", season: print("加鹽巴"))</code></pre>]]></content>
     
     
-      <category term="Test" scheme="http://ios.taipei/tags/Test/"/>
-    
-      <category term="UI Test" scheme="http://ios.taipei/tags/UI-Test/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>UI Test, Cucumberish</title>
-    <link href="http://ios.taipei/2018/10/13/TestStory05/"/>
-    <id>http://ios.taipei/2018/10/13/TestStory05/</id>
-    <published>2018-10-13T06:10:00.000Z</published>
-    <updated>2018-10-20T03:05:36.703Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="軟體開發故事05-UI-Test，Cucumberish"><a href="#軟體開發故事05-UI-Test，Cucumberish" class="headerlink" title="軟體開發故事05 - UI Test，Cucumberish"></a>軟體開發故事05 - UI Test，Cucumberish</h2><p>工程師2 想要做 UI Testing, 又不想買機器的話呢？<br><br>那麼就看看測試的資訊時代，用程式測試程式是怎麼做的？<br></p><a id="more"></a><h3 id="工具很多，只不過我選了-Cucumberish"><a href="#工具很多，只不過我選了-Cucumberish" class="headerlink" title="工具很多，只不過我選了 Cucumberish"></a>工具很多，只不過我選了 Cucumberish</h3><p>你也可以選別的，比方說 calabash，appium，macaca,….</p><p>原因有機會再解釋。先來看一下 cucumberish吧</p><ul><li>安裝 cucumberish</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">target &apos;TestMe&apos; do</span><br><span class="line">  use_frameworks!</span><br><span class="line"></span><br><span class="line">  target &apos;TestMeTests&apos; do</span><br><span class="line">    inherit! :search_paths</span><br><span class="line">    pod &apos;Cucumberish&apos;</span><br><span class="line">  end</span><br><span class="line"></span><br><span class="line">  target &apos;TestMeUITests&apos; do</span><br><span class="line">    inherit! :search_paths</span><br><span class="line">  end</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></table></figure><p>pod install 完成後開啟 workspace</p><p>設定的部份請參考<br><a href="https://github.com/Ahmed-Ali/Cucumberish" target="_blank" rel="noopener">Github Cucumberish</a></p><p>主要有三個資料夾 Scenario(環境)、Steps(操作步驟)和Features(SPE文件)</p><p>完成後的檔案與資料夾(如圖)<br><img src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/cucumber01.png" alt="Cucumberish01"></p><p>在實作的一開始，工程師2拿到了一份 SPE 的 Feature 文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Feature: TestMe Cucumberish Login Test Exapmle</span><br><span class="line"></span><br><span class="line">Scenario Outline: Verify Login Process</span><br><span class="line">Given the app is running</span><br><span class="line">When I enter Account &quot;&lt;acc&gt;&quot; and Password &quot;&lt;pass&gt;&quot;</span><br><span class="line">Then I should see &quot;&lt;result&gt;&quot;</span><br><span class="line"></span><br><span class="line">Examples:</span><br><span class="line">|  acc  |  pass   |    result       |</span><br><span class="line">|  aki  |  qaz    |    success      |</span><br><span class="line">|  aki  |  123    |    帳號密碼錯誤   |</span><br></pre></td></tr></table></figure><p>接著到 Scenario 裡加上一個 LoginPage.swift 程式碼如下，大意是把操作的步驟給實作出來</p><p>Scenario 程式碼，以Login為例，Home的也要做</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">import XCTest</span><br><span class="line"></span><br><span class="line">class LoginPage: Page &#123;</span><br><span class="line">    private lazy var account = findElement(.textField)[&quot;textAccount&quot;]</span><br><span class="line">    private lazy var password = findElement(.secureTextField)[&quot;textPassword&quot;]</span><br><span class="line">    private lazy var btnLogin = findElement(.button)[&quot;btnLogin&quot;]</span><br><span class="line">    </span><br><span class="line">    required init() &#123;</span><br><span class="line">        waitFor(element: account)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @discardableResult func checkPage() -&gt; LoginPage&#123;</span><br><span class="line">        XCTAssertTrue(account.exists)</span><br><span class="line">        XCTAssertTrue(password.exists)</span><br><span class="line">        XCTAssertTrue(btnLogin.exists)</span><br><span class="line">        return self</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @discardableResult func inputData(_ acc: String, _ pass:String) -&gt; LoginPage&#123;</span><br><span class="line">        account.tap()</span><br><span class="line">        account.typeText(acc)</span><br><span class="line">        password.tap()</span><br><span class="line">        password.typeText(pass)</span><br><span class="line">        return self</span><br><span class="line">    &#125;</span><br><span class="line">   </span><br><span class="line">    @discardableResult func clickLogin() -&gt;LoginPage&#123;</span><br><span class="line">        btnLogin.tap()</span><br><span class="line">        return self</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @discardableResult func clickAlert(_ msg:String) -&gt;LoginPage&#123;</span><br><span class="line">        let msgResult = findElement(.alert).element.staticTexts.element(boundBy: 0).label</span><br><span class="line">        </span><br><span class="line">        XCTAssertEqual(msg,msgResult)</span><br><span class="line">        return self</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>最後，Steps 把 Feature 的文件和 Scenario 裡的操作做結合</p><p>Steps 程式碼</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">import XCTest</span><br><span class="line">import Cucumberish</span><br><span class="line"></span><br><span class="line">class StepDefinetion: NSObject &#123;</span><br><span class="line">    </span><br><span class="line">    var application : XCUIApplication!</span><br><span class="line">    </span><br><span class="line">    func setup(_ application: XCUIApplication)</span><br><span class="line">    &#123;</span><br><span class="line">        self.application = application</span><br><span class="line">        </span><br><span class="line">        Given(&quot;the app is running&quot;) &#123; (args, userInfo) -&gt; Void in</span><br><span class="line">            LoginPage().checkPage()</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        When(&quot;I enter Account \&quot;([^\\\&quot;]*)\&quot; and Password \&quot;([^\\\&quot;]*)\&quot;&quot;)&#123;(args,userInfo)-&gt;Void in</span><br><span class="line">            </span><br><span class="line">            guard let acc = args?[0] , let pass = args?[1]</span><br><span class="line">                else &#123;</span><br><span class="line">                    XCTAssert(false)</span><br><span class="line">                    return</span><br><span class="line">            &#125;</span><br><span class="line">            LoginPage().inputData(acc, pass)</span><br><span class="line">            LoginPage().clickLogin()</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        Then(&quot;I should see \&quot;([^\\\&quot;]*)\&quot;&quot;)&#123;(args,userInfo)-&gt;Void in</span><br><span class="line">            </span><br><span class="line">            guard let expectedResult = args?[0]</span><br><span class="line">                else &#123;</span><br><span class="line">                XCTAssert(false)</span><br><span class="line">                return</span><br><span class="line">            &#125;</span><br><span class="line">            if expectedResult == &quot;success&quot; &#123;</span><br><span class="line">                HomePage().checkPage()</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                LoginPage().clickAlert(expectedResult)</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    class func setup(_ application: XCUIApplication)</span><br><span class="line">    &#123;</span><br><span class="line">        StepDefinetion().setup(application)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>— 此次範例的 <a href="https://github.com/ios-taipei/TestMe" target="_blank" rel="noopener">Github TestMe</a> 在此—</p><p>跑一下 UITest 看看結果</p><p><img src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/cucumberis-testresult.png" alt="Cucumberish01"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;軟體開發故事05-UI-Test，Cucumberish&quot;&gt;&lt;a href=&quot;#軟體開發故事05-UI-Test，Cucumberish&quot; class=&quot;headerlink&quot; title=&quot;軟體開發故事05 - UI Test，Cucumberish&quot;&gt;&lt;/a&gt;軟體開發故事05 - UI Test，Cucumberish&lt;/h2&gt;&lt;p&gt;工程師2 想要做 UI Testing, 又不想買機器的話呢？&lt;br&gt;&lt;br&gt;那麼就看看測試的資訊時代，用程式測試程式是怎麼做的？&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Test" scheme="http://ios.taipei/categories/Test/"/>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;閉包-Closure-介紹&quot;&gt;&lt;a href=&quot;#閉包-Closure-介紹&quot; class=&quot;headerlink&quot; title=&quot;閉包(Closure) - 介紹&quot;&gt;&lt;/a&gt;閉包(Closure) - 介紹&lt;/h1&gt;&lt;p&gt;這裡是學習 swift 的一個關卡，不要</summary>
+      
     
     
-      <category term="Test" scheme="http://ios.taipei/tags/Test/"/>
     
-      <category term="UI Test" scheme="http://ios.taipei/tags/UI-Test/"/>
+    <category term="swift" scheme="https://ios.taipei/categories/swift/"/>
+    
+    
+    <category term="swift" scheme="https://ios.taipei/tags/swift/"/>
+    
+    <category term="新手" scheme="https://ios.taipei/tags/%E6%96%B0%E6%89%8B/"/>
     
   </entry>
   
   <entry>
-    <title>Specification By Example</title>
-    <link href="http://ios.taipei/2018/10/13/TestStory02/"/>
-    <id>http://ios.taipei/2018/10/13/TestStory02/</id>
-    <published>2018-10-13T06:00:00.000Z</published>
-    <updated>2018-10-20T03:05:57.784Z</updated>
+    <title>swift 語言的基礎 - 集合 (Collections)</title>
+    <link href="https://ios.taipei/2022/10/05/01-06-swift/"/>
+    <id>https://ios.taipei/2022/10/05/01-06-swift/</id>
+    <published>2022-10-04T16:00:05.000Z</published>
+    <updated>2022-10-11T08:50:52.587Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="軟體開發故事02-實例化需求-Specification-by-Example"><a href="#軟體開發故事02-實例化需求-Specification-by-Example" class="headerlink" title="軟體開發故事02 - 實例化需求 Specification by Example"></a>軟體開發故事02 - 實例化需求 Specification by Example</h2><p>前情提要：在驗收的 D Day 當天，User發現了預期之外的驗證碼功能，覺得這項功能在手機上不需要，所以PM只好回過頭來，要求團隊再花時間把多做的功能拿掉。</p><p>請大家思考一下，那裡可能出現了問題？</p><a id="more"></a><p>不過是一個小小的使用者登入的功能，User心裡所想的，PM心裡所想的，工程師心裡所想的，QA心裡所想的，Art心裡所想的，都有可能不一樣？？？</p><p>1990年，Elizabeth Newton － 史丹福大學心理學研究生，通過研究一個簡單的遊戲，提出了「知識的詛咒」（curse of knowledge）,在遊戲的過程中（註1），會因為每個人的背景不同，教育不同，經驗的不同產生出一種認知的偏差。</p><p>以故事之中APP登入的功能為例</p><ul><li><p>User認為他對於登入的描述夠清楚了。</p></li><li><p>PM知道其他APP是怎麼登入的而User提出的需求沒有太特別，一定做得出來。</p></li><li><p>工程師1想的是APP其他型態的登入要不要做</p></li><li><p>工程師2在意的是資料欄位的檢核，也許還要先開規格給工程師1</p></li><li><p>Art只能憑過去的經驗，把猜測要出的圖出一出</p></li><li><p>QA還沒進入狀況，等開發出來之後再來看</p></li></ul><p>通常，一個團隊裡面，大多數會存在一個意見領袖，抑或是一個脾氣很大的人，或是比較強勢不讓步的人，這裡分別用工程師2的角色代入這個情境來看看。</p><ul><li>PM: 老闆說不要放驗證碼</li><li>工程師2：APP不加驗證碼的話，不就等於裸體上街一樣嗎，駭客知道你的API後一直打，後台掛掉你要負責嗎？</li><li>工程師1：沒有人在APP上放驗證碼的。</li><li>Art: （小聲）UX的確不放驗證碼比較好。</li><li>QA: 你們決定好就好。</li></ul><p>（幾個循環之後）</p><ul><li>工程師2：請尊重專業好嗎？資安你不懂啦，每個使用者登入都要檢核，放驗證碼是最簡單最基本的。(怒氣值＋10)</li><li>工程師2：舊專案的網頁有放驗證碼，後端的檢核機制是一樣的，你要給我2倍的時間把程式拉出來另外寫，當初你沒有說，所以估時間沒算到要加寫的時間。(怒氣值＋10)</li><li>工程師2：我有其他更重要的ticket，你要把一些ticket拿掉，這個當初是你沒有講清楚的，我不想加班幫你擦屁股。(怒氣值＋10)<br>（幾個循環又幾個循環之後）</li><li>工程師2：改好了。</li><li>工程師1(心想):舊的code先不砍好了，我有預感會加回來。</li><li>Art: 工程師1知道怎麼弄吧，自己砍就好了，設計沒有變，不用問我。 </li><li>QA（心想):終於….</li></ul><p>（此時生產線才開始活絡了起來，工程師1才開接後台，好了之後套圖，把之前的元件delete掉，好了QA才開始點個幾下，馬上交付給PM）</p><p>於是乎。User過了幾天後才拿到拿掉驗證碼的版本。</p><p><span style="color: gray">Scenario 檢討會議</span></p><ul><li>工程師1: PM 你要問清楚，需求不明確的話下面的人很難做事</li><li>工程師2: PM 每次都把問題丟到團隊裡，事後再來說這裡不對、那裡不對</li><li>Art: （轉筆+發呆）</li><li>QA: 不要只會說 PM, 配合 PM 本來就是職責</li><li>PM: (怒氣+100)</li></ul><p><span style="color: gray">Scenario 老闆辦公室</span></p><ul><li>PM: 老闆下次可不可以多講一些？</li><li>User: 我是老闆還是你是老闆？</li></ul><p>故事從這裡再停一停。反思一下上述已經發生的問題。</p><p>你看到了那些問題？</p><p>你覺得這個團隊的氣氛如何？是開心？還是很有凝聚力？<br><br>如果BDD、ATDD可行的話，為什麼還有這麼多問題呢？<br><br>有什麼方法可以讓這個團隊可以做出符合使用者期望的功能呢？<br></p><h3 id="實例化需求-Specification-by-Example"><a href="#實例化需求-Specification-by-Example" class="headerlink" title="實例化需求 Specification by Example"></a>實例化需求 Specification by Example</h3><p>我們來回顧一下團隊的需求金字塔</p><ul><li>User: 我說的算</li><li>PM: 準時或提早做出符合使用者期望的功能</li><li>Art: 不要違背UX和美感</li><li>QA: 做出來的東西要能夠測試</li><li>工程師2：在乎的是資料格式，檢核，串接、資安、系統穩定</li><li>工程師1：需要知道要的的範圍邊界，登入的方法很多，有無窮多種可能性的登入方法，比方說Facebook Login,指紋登入，人臉辨識登入。</li></ul><p>需求愈往下，就愈發散，創造各式各樣的可能性就愈多。</p><p>看起來，要讓需求不發散，避免各說各話，甚至是可以聚焦的一份好的規格文件。</p><p>然後，我們來看看這份好的文件要有那些優點？</p><ol><li>大家都看得懂（廢話）<br></li><li>大家看完之後不會衍生出一堆黑人問號<br></li><li>對要製做的功能與文件的描述能要夠相符，User也可以買單<br></li></ol><p>有人問我，為什麼PM寫的專案需求文件沒有人看？<br><br>裡面有scope time cost，quality… 想要找什麼，裡面都有寫了呀？(理論上是醬子沒錯)<br><br>實際上，很少有人會去看專案文件，這在軟體業裡算是常態吧，大多數軟體開發細節，或是User Story，很少會落在白紙黑字之上，通常文件寫好之後就束諸高閣，無人問津，最後連更新文件都變得是件苦差事。<br></p><p>一份沒有人看的文件，那怕製作再精美，多麼圖文並荿，也是沒有價值的廢紙。</p><p>那，有什麼好的建議呢？「舉個例子吧」</p><ul><li>OS:什麼？ 什麼意思？ 你說的是「舉個例子」？ 那你舉個例子來看看</li></ul><p>我們回到第一次的場景</p><p><span style="color:gray">Scenario 01: 地點－老闆辦公室 </span></p><ul><li><p>User： 幫我們的APP做一個登入的功能，當使用者登入後要看到首頁的內容。<br></p></li><li><p>PM: <s>好，我請團隊評估一下所需要的時間。應該一個星期可以完成。</s> 可以舉個例子嗎？</p></li><li><p>User：  (吱吱喳喳…)</p></li><li><p>PM：  (吱吱喳喳…)</p></li><li><p>PM：我整理一下，討論的結果是不是如下：</p></li></ul><ol><li>我用帳號 “aki”  密碼 “qaz” 按「登入」鈕之後，畫面會移轉到「首頁」</li><li>我用帳號 “aki”  密碼 “123” 按「登入」鈕之後，登入失敗，會跳出「帳號密碼錯誤」錯誤訊息</li></ol><p>為了方便，我們將它整理成一份表格</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">As an User,</span><br><span class="line">I Want a login feature.</span><br><span class="line">When I enter @account and @password,</span><br><span class="line">So That I Can see Main Page.</span><br></pre></td></tr></table></figure><table><thead><tr><th>account</th><th>password</th><th>result</th></tr></thead><tbody><tr><td>aki</td><td>qaz</td><td>success</td></tr><tr><td>aki</td><td>123</td><td>帳號密碼錯誤</td></tr></tbody></table><p><span style="color: gray">Scenario 02: 地點－團隊會議室</span></p><ul><li>工程師1：我想加兩條，沒有輸入帳號，或是沒有輸入密碼的都算是錯誤</li></ul><table><thead><tr><th>account</th><th>password</th><th>result</th></tr></thead><tbody><tr><td>aki</td><td></td><td>帳號密碼錯誤</td></tr><tr><td></td><td>qaz</td><td>帳號密碼錯誤</td></tr></tbody></table><ul><li>工程師2：我想加個兩條，帳號有最短和最長的限制，太短或太長都不能讓使用者打我的api</li></ul><table><thead><tr><th>account</th><th>password</th><th>result</th></tr></thead><tbody><tr><td>ak</td><td>qaz</td><td>帳號長度不符</td></tr><tr><td>DaijyoujitaniSaemonzaburo</td><td>qaz</td><td>帳號長度不符</td></tr></tbody></table><ul><li>團隊: (吱吱喳喳…)</li><li>PM: 我們統整一下表格如下：</li></ul><table><thead><tr><th>account</th><th>password</th><th>result</th></tr></thead><tbody><tr><td>aki</td><td>qaz</td><td>success</td></tr><tr><td>aki</td><td>123</td><td>帳號密碼錯誤</td></tr><tr><td>aki</td><td></td><td>密碼不得為空</td></tr><tr><td></td><td>qaz</td><td>帳號不得為空</td></tr><tr><td>ak</td><td>qaz</td><td>帳號長度不符</td></tr><tr><td>DaijyoujitaniSaemonzaburo</td><td>qaz</td><td>帳號長度不符</td></tr><tr><td>（註2）</td><td></td><td></td></tr></tbody></table><ul><li>QA: 咦，Test Case竟然順便寫好了，那我可以用自動化工具來寫測試了(暗爽中)</li><li>Art: 只要三個元素呀，兩個輸入框，一個登入鈕，我就先出這幾個元素的圖</li><li>PM: 大家看一看沒問題的話，我就拿這一張表格再去和User再確認一次</li></ul><h3 id="從上面的表格中我們觀察到「有什麼」？"><a href="#從上面的表格中我們觀察到「有什麼」？" class="headerlink" title="從上面的表格中我們觀察到「有什麼」？?"></a>從上面的表格中我們觀察到「有什麼」？?</h3><ol><li>資料庫裡真的有一個帳號 aki ，密碼為 qaz</li><li>帳密未輸入的防呆有了</li><li>帳號基本的長度檢核有了</li></ol><h3 id="從上面的表格中我們觀察到「沒有什麼」？"><a href="#從上面的表格中我們觀察到「沒有什麼」？" class="headerlink" title="從上面的表格中我們觀察到「沒有什麼」？?"></a>從上面的表格中我們觀察到「沒有什麼」？?</h3><ol start="4"><li>沒有驗證碼(當PM拿著例子去和User確認時就會知道了)</li><li>密碼強度？ 一般常見的強規則是：<u>密碼最低要求8字元; 必須包含<br>至少一個大寫英文字元，至少一個小寫英文字元，至少一個數字字元，至少一個符號字元</u><br>自己試著練習一下，加上一條密碼強度檢核條件，也要順便檢查輸入的值和輸出的結果有沒有需要調整的</li></ol><h3 id="反思一下，這個團隊做了什麼樣子的改變？"><a href="#反思一下，這個團隊做了什麼樣子的改變？" class="headerlink" title="反思一下，這個團隊做了什麼樣子的改變？?"></a>反思一下，這個團隊做了什麼樣子的改變？?</h3><p>當有人為了這個流程舉了一個例子之後，所有的人都可以用這個例子放到自己心目中的流程去試一下，有什麼不對的地方，一旦發現了，再多加幾個例子來描述這個流程有什麼不足的地方，例子愈多，流程就愈完整，就愈不容易做出預期之外的功能了</p><h3 id="什麼樣的例子是好的例子？"><a href="#什麼樣的例子是好的例子？" class="headerlink" title="什麼樣的例子是好的例子？"></a>什麼樣的例子是好的例子？</h3><ol><li>愈真實的例子愈好</li><li>愈簡單愈好</li></ol><p>舉個例子</p><table><thead><tr><th>account</th><th>password</th><th>result</th></tr></thead><tbody><tr><td>test</td><td>test</td><td>success</td></tr></tbody></table><p>工程師2拿出自己的測試資料當例子時，有沒有可能會測試通過，但是換個帳號就測試失敗了？有沒有可能有個通用密碼為test，不管什麼帳號用test當密碼都能登入。</p><p>拿真實的帳號來測，問題就自動消失了</p><p>舉第二個例子</p><table><thead><tr><th>account</th><th>password</th><th>result</th></tr></thead><tbody><tr><td>aki</td><td>qaz</td><td>success</td></tr><tr><td>DaijyoujitaniSaemonzaburo</td><td>qaz</td><td>帳號長度不符</td></tr><tr><td>DaijyoujitaniSaemonzabur</td><td>qaz</td><td>success</td></tr></tbody></table><p>帳號的長度少一個字元後就成功了<br>在邏輯上，這兩條指的是相同的一件事，就是帳號長度存在一個邊界，且邊界值為24, 第三條就顯得多餘了。</p><p>當然，你想要多加幾條測試來增加信心，也不是不行，但是生命就應該花時間在更有價值的事情上不是嗎？</p><p>註1：<br>遊戲有兩個角色，一個人是敲節奏的人（A），一個人是聽到節奏猜歌曲的人(B)。<br><br>實驗如下：<br><br>選定120首歌曲眾所能詳的歌曲，由A敲節奏，由B聽節奏猜歌曲，分別予以紀錄。<br><br>按照伊莉莎白根據實驗得出的結果:<br><br>A認為自己敲的節奏能夠讓B猜出來的機率為50%<br><br>B聽到A敲打的節奏而正確猜到歌曲的機為只有2.5%<br></p><p>註2：<br>大正寺谷 左衛門三郎</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;軟體開發故事02-實例化需求-Specification-by-Example&quot;&gt;&lt;a href=&quot;#軟體開發故事02-實例化需求-Specification-by-Example&quot; class=&quot;headerlink&quot; title=&quot;軟體開發故事02 - 實例化需求 Specification by Example&quot;&gt;&lt;/a&gt;軟體開發故事02 - 實例化需求 Specification by Example&lt;/h2&gt;&lt;p&gt;前情提要：在驗收的 D Day 當天，User發現了預期之外的驗證碼功能，覺得這項功能在手機上不需要，所以PM只好回過頭來，要求團隊再花時間把多做的功能拿掉。&lt;/p&gt;
-&lt;p&gt;請大家思考一下，那裡可能出現了問題？&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Test" scheme="http://ios.taipei/categories/Test/"/>
+    <content type="html"><![CDATA[<h1 id="陣列-Array"><a href="#陣列-Array" class="headerlink" title="陣列 (Array)"></a>陣列 (Array)</h1><p>有序的容器，可以包含相同的值</p><pre><code class="swift">var numbers : [Int] = [1, 2, 3, 4]//取值print(numbers[0])print(numbers[2])</code></pre><h2 id="陣列的基本操作"><a href="#陣列的基本操作" class="headerlink" title="陣列的基本操作"></a>陣列的基本操作</h2><table><thead><tr><th>說明</th><th>範例</th></tr></thead><tbody><tr><td>append()</td><td>新增元素</td></tr><tr><td>remove(at:)</td><td>移除元素</td></tr><tr><td>removeAll()</td><td>移除所有元素</td></tr><tr><td>insert(,at:)</td><td>插入元素</td></tr><tr><td>sort(by:)</td><td>排序</td></tr><tr><td>shuffle()</td><td>洗亂順序</td></tr><tr><td>forEach()</td><td>反覆依序取出元素</td></tr><tr><td>contains()</td><td>找出包含有關的元素</td></tr><tr><td>first(where:)</td><td>找出第一個符合條件的元素</td></tr><tr><td>joined(separator:)</td><td>將陣列的所有元素以分隔符號串起為字串</td></tr><tr><td>swapAt()</td><td>交換元素的位置</td></tr><tr><td>reversed()</td><td>反序排列</td></tr><tr><td>count</td><td>陣列長度</td></tr><tr><td>isEmpty</td><td>陣列是否為空</td></tr><tr><td>randomElement()</td><td>隨機給一個元素</td></tr></tbody></table><p>值的修改就在該位置做賦值，就會蓋過去了</p><pre><code>numbers[2] = 5</code></pre><h2 id="陣列的迴圈"><a href="#陣列的迴圈" class="headerlink" title="陣列的迴圈"></a>陣列的迴圈</h2><pre><code class="swift">for i in numbers {  print(i)}</code></pre><h1 id="集合-Sets"><a href="#集合-Sets" class="headerlink" title="集合 Sets"></a>集合 Sets</h1><p>無序的容器，所存放的值必須不同</p><pre><code class="swift">var numberSet : Set = [112, 114, 115, 116, 117]</code></pre><h2 id="集合的基本操作"><a href="#集合的基本操作" class="headerlink" title="集合的基本操作"></a>集合的基本操作</h2><table><thead><tr><th>說明</th><th>範例</th></tr></thead><tbody><tr><td>contains()</td><td>找出包含有關的元素</td></tr><tr><td>insert(,at:)</td><td>插入元素</td></tr><tr><td>first(where:)</td><td>找出第一個符合條件的元素</td></tr><tr><td>joined(separator:)</td><td>將組合的所有元素以分隔符號串起為字串</td></tr><tr><td>remove(at:)</td><td>移除元素</td></tr><tr><td>forEach()</td><td>反覆依序取出元素</td></tr><tr><td>sort()</td><td>排序</td></tr><tr><td>reversed()</td><td>反序排列</td></tr><tr><td>count</td><td>陣列長度</td></tr><tr><td>isEmpty</td><td>陣列是否為空</td></tr><tr><td>randomElement()</td><td>隨機給一個元素</td></tr></tbody></table><h2 id="集合的迴圈"><a href="#集合的迴圈" class="headerlink" title="集合的迴圈"></a>集合的迴圈</h2><pre><code class="swift">for s in numbersSet {  print(s)}</code></pre><h2 id="集合的特殊操作"><a href="#集合的特殊操作" class="headerlink" title="集合的特殊操作"></a>集合的特殊操作</h2><p>假設兩個集合為已知</p><pre><code class="swift">// first setlet setA: Set = [1, 2, 3]// second setlet setB: Set = [2, 3, 4]</code></pre><h3 id="聯集-Union"><a href="#聯集-Union" class="headerlink" title="聯集 (Union)"></a>聯集 (Union)</h3><p><img src="/images/swift-set-union.png"></p><pre><code class="swift">print("Union: ", setA.union(setB))</code></pre><h3 id="交集-Intersection"><a href="#交集-Intersection" class="headerlink" title="交集 (Intersection)"></a>交集 (Intersection)</h3><p><img src="/images/swift-set-intersect.png"></p><pre><code class="swift">print("Intersection: ", setA.intersection(setB))</code></pre><h3 id="差集-Difference"><a href="#差集-Difference" class="headerlink" title="差集 (Difference)"></a>差集 (Difference)</h3><p><img src="/images/swift-set-difference.png"></p><pre><code class="swift">print("Subtracting: ", setA.subtracting(setB))</code></pre><h3 id="對稱差集-Symmetric-Difference"><a href="#對稱差集-Symmetric-Difference" class="headerlink" title="對稱差集 (Symmetric Difference )"></a>對稱差集 (Symmetric Difference )</h3><p><img src="/images/swift-set-symmetric-difference.png"></p><pre><code class="swift">print("Symmetric Difference: ", setA.symmetricDifference(setB))</code></pre><h3 id="檢查子集合-isSubset"><a href="#檢查子集合-isSubset" class="headerlink" title="檢查子集合 (isSubset)"></a>檢查子集合 (isSubset)</h3><pre><code class="swift">print("isSubset: ", setA.isSubset(of:setB))</code></pre><h3 id="檢查相等-equal"><a href="#檢查相等-equal" class="headerlink" title="檢查相等 (equal)"></a>檢查相等 (equal)</h3><pre><code class="swift">print("is Equal: ", setA == setB)</code></pre><h1 id="字典-Dictionary"><a href="#字典-Dictionary" class="headerlink" title="字典 Dictionary"></a>字典 Dictionary</h1><p>存儲資料是以 key - value 的型式存在</p><p>範例：</p><pre><code class="swift">var telCode = ["Taiwan":"+886","US":"+1"]</code></pre><h2 id="字典的基本操作"><a href="#字典的基本操作" class="headerlink" title="字典的基本操作"></a>字典的基本操作</h2><p>增加元素（修改元素）</p><pre><code class="swift">telCode["Japan"] = "+81"</code></pre><p>取得所有的 keys</p><pre><code class="swift">var countryName  = Array(telCode.keys)</code></pre><p>取得所有的 value</p><pre><code class="swift">var values  = Array(telCode.values)</code></pre><p>用 key 來移除資料</p><pre><code class="swift">telCode.removeValue(forKey: "US")</code></pre><h2 id="其他的基本操作"><a href="#其他的基本操作" class="headerlink" title="其他的基本操作"></a>其他的基本操作</h2><table><thead><tr><th>說明</th><th>範例</th></tr></thead><tbody><tr><td>count</td><td>字典長度</td></tr><tr><td>first(where:)</td><td>找出第一個符合條件的元素</td></tr><tr><td>isEmpty</td><td>陣列是否為空</td></tr><tr><td>contains()</td><td>找出包含有關的元素</td></tr><tr><td>remove(at:)</td><td>移除元素</td></tr><tr><td>forEach()</td><td>反覆依序取出元素</td></tr><tr><td>sort()</td><td>排序</td></tr><tr><td>reversed()</td><td>反序排列</td></tr><tr><td>randomElement()</td><td>隨機給一個元素</td></tr><tr><td>shuffle()</td><td>洗亂順序</td></tr></tbody></table><h1 id="元組-tuple"><a href="#元組-tuple" class="headerlink" title="元組(tuple)"></a>元組(tuple)</h1><pre><code class="swift">//一個簡單的元組var productTuple = ("MacBook", 1099.99)print(productTuple.0)print(productTuple.1)//有名字的元組var productTuple = (name: "MacBook", price: 1399.99)print(productTuple.name)print(productTuple.price)//巢狀元組var alphabets = ("A", "B", "C", ("a", "b", "c"))//第 0 個   // 印出 "A"print(alphabets.0) //第 3 個  // 印出 ("a", "b", "c")print(alphabets.3)//第 3 個元組的第 1 個print(alphabets.3.0)  // 印出 "a"</code></pre>]]></content>
     
     
-      <category term="Test" scheme="http://ios.taipei/tags/Test/"/>
-    
-      <category term="SPE" scheme="http://ios.taipei/tags/SPE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Software Development Story 01 - User Story, ATDD and BDD</title>
-    <link href="http://ios.taipei/2018/10/13/TestStory01/"/>
-    <id>http://ios.taipei/2018/10/13/TestStory01/</id>
-    <published>2018-10-13T06:00:00.000Z</published>
-    <updated>2018-10-20T03:06:03.480Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="軟體開發故事01-使用者故事-User-Story-驗收測試動開發-ATDD-Acceptance-Test-Driven-與-行為驅動開發-BDD-Behavior-Driven-Design"><a href="#軟體開發故事01-使用者故事-User-Story-驗收測試動開發-ATDD-Acceptance-Test-Driven-與-行為驅動開發-BDD-Behavior-Driven-Design" class="headerlink" title="軟體開發故事01 - 使用者故事 User Story, 驗收測試動開發 ATDD -Acceptance Test Driven 與 行為驅動開發 BDD - Behavior Driven Design"></a>軟體開發故事01 - 使用者故事 User Story, 驗收測試動開發 ATDD -Acceptance Test Driven 與 行為驅動開發 BDD - Behavior Driven Design</h2><h3 id="很久很久以前，軟體開發的形狀是醬子的"><a href="#很久很久以前，軟體開發的形狀是醬子的" class="headerlink" title="很久很久以前，軟體開發的形狀是醬子的"></a>很久很久以前，軟體開發的形狀是醬子的</h3><p>  在大多數軟體開發的歷程中，當老闆藉由市場資訊以及用戶需求，口述軟體想要什麼樣子的操作，希望得到什麼樣子的結果，甚至對於軟體的細節，像是用辭字句，甚至是顏色等等。</p><p>  於是，使用者和工程師之間，就會不斷地在開發與驗收的過程中產生溝通的問題。<br>  <a id="more"></a><br>  為了解決使用者與工程師之間溝通(<s>雞同鴨講</s>）的問題，於是乎創造出一個職位叫做PM，擔任團隊的溝通窗口，建立一道防火牆，避免老闆因為專業度的不足，做出難以達成的目標，軟體成果無法交付，或是對於團隊直接指導棋，造成團隊向心力潰散。</p><h3 id="PM-在做什麼？"><a href="#PM-在做什麼？" class="headerlink" title="PM 在做什麼？"></a>PM 在做什麼？</h3><p>PM的出現是來解決問題的，為了向老闆報告，於是工作開始細分成一包包的工作包，介定要作的範圍、時間以及要花的成本，避免品質落差太大，所以要做品管，對內要做好團隊成員的團隊建立，團隊溝通的方式，管理風險，以及外包、採購的管理。最重要的任何一個可能會影響專案成敗的利害關係人都必須打點好，專案才有可能順利結案，老闆才能拿到如專案計劃所規劃的產出（軟體）。</p><h3 id="PM-最重要的是什麼？："><a href="#PM-最重要的是什麼？：" class="headerlink" title="PM 最重要的是什麼？："></a>PM 最重要的是什麼？：</h3><p>如果PM不懂技術，就會再長出一個System Analysis或是System Architecture的角色,如果PM不懂營運，就會再長出一個Business Analysis的角色，如果專案太大，就會再長出一些小PM，將專案分切成許多小專案。如果專案成本金額太高，財會部門會來幫忙，如果PM不懂時程規劃，就會再長出一個跟催(Expeditor)的角色，PM不懂品質管制，就會長出QA和QC，如果PM不懂任用人事，就會有Functional Manager或HR介入，如果PM不懂工具，MIS會來幫忙，如果PM不懂外包，就會由採購來介入。</p><p>一個團隊之所以變得如此偉大（真的要搞到這麼大？？），由此可見PM的重要性！！！</p><p>一個PM就要練就各式各樣的溝通模式（簡稱：見人說人話）身為一個團隊的窗口，能夠做到將老闆的表達，清楚地轉化為團隊不同成員之間可以正確理解的話語、文件或是其他形式的紀綠。管理團隊成員能夠在時程之內交付產出。</p><p>故事從這裡先停一停。反思一下可能存在的問題。</p><h3 id="要怎麼訓練大家有相同的溝通方式和基礎呢？？"><a href="#要怎麼訓練大家有相同的溝通方式和基礎呢？？" class="headerlink" title="要怎麼訓練大家有相同的溝通方式和基礎呢？？"></a>要怎麼訓練大家有相同的溝通方式和基礎呢？？</h3><p>舉個團隊日常的故事當例子吧</p><table><thead><tr><th>出場角色表</th><th align="left">職責說明</th></tr></thead><tbody><tr><td>User</td><td align="left">軟體所有權有者</td></tr><tr><td>PM</td><td align="left">出張嘴的防火牆</td></tr><tr><td>軟體工程師1</td><td align="left">前端開發者</td></tr><tr><td>軟體工程師2</td><td align="left">後端開發者</td></tr><tr><td>Art</td><td align="left">UI/UX，出圖都靠他</td></tr><tr><td>QA</td><td align="left">替User做早期驗收，對程式測試有足夠的了解，避免交付出太糟糕或是問題一堆的軟體，有時候沒有這個角色，大多是不進行測試，責任對內由工程師扛，對外由PM扛</td></tr><tr><td>用戶</td><td align="left">市場上真正的軟體操作者</td></tr></tbody></table><h3 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h3><p><span style="color:gray">Scenario 01: 地點－老闆辦公室 </span></p><ul><li>User： 幫我們的APP做一個登入的功能，當使用者登入後要看到首頁的內容。<br></li><li>PM: 好，我請團隊評估一下所需要的時間。應該一個星期可以完成。</li></ul><p><span style="color: gray">Scenario 02: 地點－團隊會議室</span></p><ul><li>PM: 老闆說APP要一個登入的功能，使用者登入後要看到首頁的內容。（90％老闆的表達原文轉錄）<br></li><li>工程師1: 只要登入就好？要不要Facebook Login? 要有人上去fb後台設定後，我才能串接哦<br></li><li>工程師2: 要開那些欄位？長度多少？ API那記錄那些東西？不要不自動登入？OAuth咧？JWT?<br></li><li>Art: 是不是給底圖和色碼就好了？<br></li><li>QA: 等你們做完我再測（繼續滑手機）<br></li></ul><p><span style="color: gray">!@#$%^&amp;<em>!@#$%^&amp;</em> 七嘴八舌分隔線  !@#$%^&amp;<em>!@#$%^&amp;</em>!@#$%^&amp;<em>!@#$%^&amp;</em></span><br><br><span style="color: gray">!@#$%^&amp;<em>!@#$%^&amp;</em> 七嘴八舌分隔線  !@#$%^&amp;<em>!@#$%^&amp;</em>!@#$%^&amp;<em>!@#$%^&amp;</em></span><br><br><span style="color: gray">!@#$%^&amp;<em>!@#$%^&amp;</em> 七嘴八舌分隔線  !@#$%^&amp;<em>!@#$%^&amp;</em>!@#$%^&amp;<em>!@#$%^&amp;</em></span><br></p><ul><li>PM: 我再去和 User 確定好了 <br></li></ul><hr>一天過去了，一天過去了，一天過去了，一天過去了<br>(除了PM之外，團隊都沒在忙)<hr><h3 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h3><ul><li>PM: User說登入用帳號＋密碼，想要早點拿到，Facebook登入要不要做都可以，自動登入如果有的話是最好的了。User 不懂什麼是OAuth，什麼是JWT，你要用簡單的話說，不然我也不知道怎麼和User解釋<br></li><li>工程師2: 不懂不要做最好了，那帳號欄位長度多少？密碼強度呢？怎麼沒問呢？<br></li><li>PM: User才不懂那些東西，你照上次專案怎麼做就copy一份來接著做。<br></li><li>工程師1: 我畫面拉好了，等著後端做好之後，我再來串。以防萬一，我把JWT的code貼一份到程式裡放著，要用的話馬上就有了。（自信滿滿）<br></li><li>Art: (好像沒人理我，我自己出個RWD設計好了，以免被人說我沒做事)<br></li><li>QA: 等你們做完我再測（繼續滑手機）<br></li></ul><h3 id="Day-D-1）早上"><a href="#Day-D-1）早上" class="headerlink" title="Day (D-1）早上"></a>Day (D-1）早上</h3><ul><li>PM: QA東西測了沒？ 明天要交</li><li>QA: 東西還沒給我測試，誰知道他們在慢什麼，太晚給我，我又要加班測了，喂!PM,我要登記申請今天的加班。</li><li>工程師2: 我也要，如果QA測有問題的話，我也要加班來改。</li><li>工程師1: 避免你們改了什麼，要害我修改APP，原本要去約會的，只好改天了。</li><li>Art: 大家都加班了，我也加班stand by好了。</li><li>PM: ..!@#$%^&amp;<em>!@#$%^&amp;</em>…..</li></ul><h3 id="Day-D-1）晚上"><a href="#Day-D-1）晚上" class="headerlink" title="Day (D-1）晚上"></a>Day (D-1）晚上</h3><ul><li>QA: (測試中)</li><li>工程師1: (看ptt) </li><li>工程師2:（看youtube）</li><li>Art: （看pinterest）</li><li>QA: 這裡好像怪怪的，為什麼帳號輸入特殊符號也可以登入，你們在寫程式的時候自己都不測的嗎？</li><li>工程師1: 後端要擋一下呀！</li><li>工程師2: 前端為什麼不擋？</li></ul><p>(各自念個兩句後，就開程式起來改了)</p><ul><li>QA: (繼讀測試)</li><li>工程師1: (看ptt) </li><li>工程師2:（看facebook）</li><li>Art: （看Dcard）</li><li>PM: （好了沒？）</li></ul><hr>幾個循環之後，功能完善了，QA也驗完了<hr><ul><li>PM: 大家這麼努力為工作付出，有這麼好的團隊真的太幸福了。大家可以下班了。</li><li>眾人: （眼神死）很多東西一開始就講好，如果夠清楚的話，也不用最後再來一直改….</li></ul><h3 id="Day-D"><a href="#Day-D" class="headerlink" title="Day D"></a>Day D</h3><p><span style="color:gray">Scenario 01: 地點－老闆辦公室 </span></p><ul><li>User: 這..做出來的東西好像和我們一開始說的不一樣…怎麼多了一個驗證碼？</li><li>PM: 我會開一張ticket，請團隊拿掉。</li></ul><p><span style="color: gray">Scenario 02: 地點－團隊會議室</span></p><ul><li>PM: 是誰自動主張把驗證碼加上去的？</li><li>工程師2: 我們的網頁專案一直都有驗證碼的功能…</li><li>工程師1: (JWT的code這次沒用到，躺著裡面不會被發現吧)</li><li>ART: (iPad不用測呀？我有做，不過好像沒什麼人關心)</li></ul><h4 id="從上面的故事中我們觀察到了什麼？"><a href="#從上面的故事中我們觀察到了什麼？" class="headerlink" title="從上面的故事中我們觀察到了什麼？?"></a>從上面的故事中我們觀察到了什麼？?</h4><ol><li>溝通很重要  </li><li>每個人都覺得自己是個很好溝通的人（尤其是PM）</li><li>當下說好的東西不一定照著做，可能會受到以往的經驗而做出自己的判斷</li></ol><p>當然，或許你有其他的觀察，我們留到後面再說。</p><h4 id="你對於這個團隊的感覺是什麼？"><a href="#你對於這個團隊的感覺是什麼？" class="headerlink" title="你對於這個團隊的感覺是什麼？"></a>你對於這個團隊的感覺是什麼？</h4><ol><li>還算可以的團隊，至少東西有做出來了</li><li>好像還可以更好？</li></ol><h4 id="思考一下，對於這個團隊最有幫助的可能是什麼？"><a href="#思考一下，對於這個團隊最有幫助的可能是什麼？" class="headerlink" title="思考一下，對於這個團隊最有幫助的可能是什麼？"></a>思考一下，對於這個團隊最有幫助的可能是什麼？</h4><ol><li>有效的溝通</li><li>與User確認過的，一份大家都看得懂的好的規格書</li></ol><h3 id="什麼是使用者故事-User-Story"><a href="#什麼是使用者故事-User-Story" class="headerlink" title="什麼是使用者故事 User Story?"></a>什麼是使用者故事 User Story?</h3><p>回顧一下軟體開發的第一天 User說的話</p><p>「幫我們的APP做一個登入的功能，當使用者登入後要看到首頁的內容。」<br><br>這句話，其實就是一個典型的User Story。</p><p>我們稍微改一下描述。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">As an User,</span><br><span class="line">I Want a login feature.</span><br><span class="line">When I login,</span><br><span class="line">So That I Can see Main Page.</span><br></pre></td></tr></table></figure><p>對於User來說，完整地說出一個故事，就已經是相當盡責的User了。接著呢？PM和團隊要設法將一個個的故事拆解，變成許多工程師可以實作的功能，並且可以滿足故事的測試用例。好讓QA可以測試，一同做出使用者可以驗收的產品。</p><h3 id="由User-Story-衍生出的-ATDD、BDD"><a href="#由User-Story-衍生出的-ATDD、BDD" class="headerlink" title="由User Story 衍生出的 ATDD、BDD"></a>由User Story 衍生出的 ATDD、BDD</h3><p>拆解成可測試用例的動作就是所謂的ATDD, Acceptance Test Driven Design</p><p>關注於使用者的操作行為所需要的功能拆解就是所謂的BDD, Behavior Driven Design。</p><p>以下介紹 Gherkin 語法，用自然語言來定義與描述測試用例</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Feature:</span><br><span class="line">在APP實現一個登入的功能</span><br><span class="line">Scenario:</span><br><span class="line">假設(Given)，存在有一個可用的帳號與密碼</span><br><span class="line">當(When)，使用者開啟APP,輸入帳號,密碼，點選「登入」</span><br><span class="line">然後(Then)，要看到首頁的內容。</span><br></pre></td></tr></table></figure><p>如此一來，我們就能夠將一個個的使用者故事，轉化成一個個可以讓大家容易理解的測試用例，工程師知道怎麼做，QA知道怎麼驗，使用者在驗收時就一定會買單了。</p><p>（美美的畫面如何測試與驗收，留到UI Testing時再來說，一般而言，一定也可以用Gherkin語法來闡述有關UI/UX的測試用例）</p><p>（後話）：Gherkin語法和企管學裡的 STAR 非常地像，在大公司裡，或多或少都會用STAR語法來寫HR最喜歡的績效評量(Performance Appraisal)或是在面試時用STAR來檢驗應徵者的描述是否完整。<br>S: Situation, T:Task, A:Action, R:Result</p><p>那麼要如何正確地寫出好的Acceptance Test Cases?<br>要怎麼樣做會更好？？ </p><p>&lt;未完待續&gt;</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;軟體開發故事01-使用者故事-User-Story-驗收測試動開發-ATDD-Acceptance-Test-Driven-與-行為驅動開發-BDD-Behavior-Driven-Design&quot;&gt;&lt;a href=&quot;#軟體開發故事01-使用者故事-User-Story-驗收測試動開發-ATDD-Acceptance-Test-Driven-與-行為驅動開發-BDD-Behavior-Driven-Design&quot; class=&quot;headerlink&quot; title=&quot;軟體開發故事01 - 使用者故事 User Story, 驗收測試動開發 ATDD -Acceptance Test Driven 與 行為驅動開發 BDD - Behavior Driven Design&quot;&gt;&lt;/a&gt;軟體開發故事01 - 使用者故事 User Story, 驗收測試動開發 ATDD -Acceptance Test Driven 與 行為驅動開發 BDD - Behavior Driven Design&lt;/h2&gt;&lt;h3 id=&quot;很久很久以前，軟體開發的形狀是醬子的&quot;&gt;&lt;a href=&quot;#很久很久以前，軟體開發的形狀是醬子的&quot; class=&quot;headerlink&quot; title=&quot;很久很久以前，軟體開發的形狀是醬子的&quot;&gt;&lt;/a&gt;很久很久以前，軟體開發的形狀是醬子的&lt;/h3&gt;&lt;p&gt;  在大多數軟體開發的歷程中，當老闆藉由市場資訊以及用戶需求，口述軟體想要什麼樣子的操作，希望得到什麼樣子的結果，甚至對於軟體的細節，像是用辭字句，甚至是顏色等等。&lt;/p&gt;
-&lt;p&gt;  於是，使用者和工程師之間，就會不斷地在開發與驗收的過程中產生溝通的問題。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Test" scheme="http://ios.taipei/categories/Test/"/>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;陣列-Array&quot;&gt;&lt;a href=&quot;#陣列-Array&quot; class=&quot;headerlink&quot; title=&quot;陣列 (Array)&quot;&gt;&lt;/a&gt;陣列 (Array)&lt;/h1&gt;&lt;p&gt;有序的容器，可以包含相同的值&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;swift</summary>
+      
     
     
-      <category term="Test" scheme="http://ios.taipei/tags/Test/"/>
     
-      <category term="User Story" scheme="http://ios.taipei/tags/User-Story/"/>
+    <category term="swift" scheme="https://ios.taipei/categories/swift/"/>
     
-      <category term="ATDD" scheme="http://ios.taipei/tags/ATDD/"/>
     
-      <category term="BDD" scheme="http://ios.taipei/tags/BDD/"/>
+    <category term="swift" scheme="https://ios.taipei/tags/swift/"/>
+    
+    <category term="新手" scheme="https://ios.taipei/tags/%E6%96%B0%E6%89%8B/"/>
     
   </entry>
   
   <entry>
-    <title>DUNS申請以及相關問題</title>
-    <link href="http://ios.taipei/2018/06/24/duns/"/>
-    <id>http://ios.taipei/2018/06/24/duns/</id>
-    <published>2018-06-24T15:00:00.000Z</published>
-    <updated>2018-06-25T14:00:53.913Z</updated>
+    <title>swift 語言的基礎 - 運算子 Operators</title>
+    <link href="https://ios.taipei/2022/10/04/01-05-swift/"/>
+    <id>https://ios.taipei/2022/10/04/01-05-swift/</id>
+    <published>2022-10-03T16:00:04.000Z</published>
+    <updated>2022-10-11T06:42:56.297Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="D-U-N-S-申請以及相關問題"><a href="#D-U-N-S-申請以及相關問題" class="headerlink" title="D-U-N-S 申請以及相關問題"></a>D-U-N-S 申請以及相關問題</h2><p>Q: What is D-U-N-S?</p><a id="more"></a><p>A:   The D‑U‑N‑S Number is a unique nine-digit identifier for businesses. It is used to establish a D&amp;B® business credit file, which is often referenced by lenders and potential business partners to help predict the reliability and/or financial stability of the company in question. “D‑U‑N‑S,” which stands for data universal numbering system, is used to maintain up-to-date and timely information on more than 300 million global businesses.</p><p>大意是說，有跨國生意需求時，可以幫你做基本的徵信，以降低風險。</p><p>不知為何，被APPLE拿來當做公司帳號的初步篩選。因此，如果想要申請公司或組織的開發者計劃，或是企業方案之前，都要先有一組D-U-N-S號碼，才能夠繼續進行。</p><p>通常在台灣，如果是成立一段時間的公司，會由台灣鄧白氏主動幫你加入，申請之前，可以先查一下，看有沒有已經有號碼了</p><ul><li>點我 <a href="https://developer.apple.com/enroll/duns-lookup/#!/search" target="_blank" rel="noopener">查詢 D-U-N-S</a><ul><li><span style="color:blue">Legal</span> entity name （公司組織法律名稱）</li><li>Headquarters address (總公司地址)</li><li>Mailing address (郵件位址)</li><li><span style="color:blue">Your work contact information</span> (聯絡方式)</li></ul></li></ul><p>如果沒有的話，就必須要申請 D-U-N-S 了，一樣的流程，只是時間會久一點（據說要五個工作天，建議是多留點時間等等），這裡會由D&amp;B的真人來電話聯絡，用以確認是否為正常的公司。</p><p><span style="color:red">有可能被reject的事項為</span></p><ul><li>獨資的個人公司</li><li>無法查到公司正確的相關資訊<ul><li>DBAs - Do Business As XXX (e.g. iOS@Taipei 不是一個合法的公司名稱)</li><li>Fictitious Name - 虛擬名稱</li><li>貿易名</li><li>分公司名 （需由總公司統一申請） </li></ul></li><li>這裡會用真人打電話聯絡確認，回答如果不正確的話，可是會被reject的 </li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;D-U-N-S-申請以及相關問題&quot;&gt;&lt;a href=&quot;#D-U-N-S-申請以及相關問題&quot; class=&quot;headerlink&quot; title=&quot;D-U-N-S 申請以及相關問題&quot;&gt;&lt;/a&gt;D-U-N-S 申請以及相關問題&lt;/h2&gt;&lt;p&gt;Q: What is D-U-N-S?&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="iOS" scheme="http://ios.taipei/categories/iOS/"/>
+    <content type="html"><![CDATA[<h1 id="算術運算子-Arithmetic-Operator"><a href="#算術運算子-Arithmetic-Operator" class="headerlink" title="算術運算子 Arithmetic Operator"></a>算術運算子 Arithmetic Operator</h1><table><thead><tr><th>Operator 運算子</th><th>說明</th><th>範例</th></tr></thead><tbody><tr><td>+</td><td>加</td><td>3 + 2 = 5</td></tr><tr><td>-</td><td>減</td><td>3 - 2 = 1</td></tr><tr><td>*</td><td>乘</td><td>3 * 2 = 6</td></tr><tr><td>/</td><td>除</td><td>5 / 2 = 2</td></tr><tr><td>%</td><td>求餘</td><td>5 % 3 = 2</td></tr></tbody></table><h1 id="指派運算子-Assignment-Operator"><a href="#指派運算子-Assignment-Operator" class="headerlink" title="指派運算子 Assignment Operator"></a>指派運算子 Assignment Operator</h1><table><thead><tr><th>Operator 運算子</th><th>說明</th><th>範例</th></tr></thead><tbody><tr><td>=</td><td>右邊的值指派給左邊的變數</td><td>a = 7</td></tr><tr><td>+=</td><td>先加 再指派</td><td>a += 1    // a = a + 1</td></tr><tr><td>-=</td><td>先減 再指派</td><td>a -= 3.   // a = a - 3</td></tr><tr><td>*=</td><td>先乘 再指派</td><td>a *= 4    // a = a * 4</td></tr><tr><td>/=</td><td>先除 再指派</td><td>a /= 3    // a = a / 3</td></tr><tr><td>%=</td><td>先求餘數 再指派</td><td>a /= 3    // a = a / 3</td></tr></tbody></table><h1 id="比較運算子-Comparison-Operators"><a href="#比較運算子-Comparison-Operators" class="headerlink" title="比較運算子 Comparison Operators"></a>比較運算子 Comparison Operators</h1><table><thead><tr><th>Operator 運算子</th><th>說明</th><th>範例</th><th>返回值</th></tr></thead><tbody><tr><td>==</td><td>相等</td><td>3 == 5</td><td>false</td></tr><tr><td>!=</td><td>不相等</td><td>3 != 5</td><td>true</td></tr><tr><td>&gt;</td><td>大於</td><td>3 &gt; 5</td><td>false</td></tr><tr><td>&lt;</td><td>小於</td><td>3 &lt; 5</td><td>true</td></tr><tr><td>&gt;=</td><td>大於等於</td><td>3 &gt;= 5</td><td>false</td></tr><tr><td>&lt;=</td><td>小於等於</td><td>3&lt;=5</td><td>true</td></tr></tbody></table><h1 id="邏輯運算子-Logical-Operators"><a href="#邏輯運算子-Logical-Operators" class="headerlink" title="邏輯運算子 Logical Operators"></a>邏輯運算子 Logical Operators</h1><table><thead><tr><th>Operator 運算子</th><th>說明</th><th>範例</th><th>說明</th></tr></thead><tbody><tr><td>&amp;&amp;</td><td>且</td><td>a &amp;&amp; b</td><td>Logical AND 當a和b都是true 時才是 true</td></tr><tr><td>||</td><td>或</td><td>a || b</td><td>Logical OR 當a或b，只要其中一個為true 時就是 true</td></tr><tr><td>!</td><td>相反</td><td>!a</td><td>邏輯相反</td></tr></tbody></table><h1 id="按位運算子-Bitwise-Operators"><a href="#按位運算子-Bitwise-Operators" class="headerlink" title="按位運算子 Bitwise Operators"></a>按位運算子 Bitwise Operators</h1><table><thead><tr><th>Operator 運算子</th><th>說明</th></tr></thead><tbody><tr><td>&amp;</td><td>Binary AND</td></tr><tr><td>|</td><td>Binary OR</td></tr><tr><td>^</td><td>Binary XOR</td></tr><tr><td>~</td><td>Binary One’s Complement</td></tr><tr><td>&lt;&lt;</td><td>Binary Shift Left</td></tr><tr><td>&gt;&gt;</td><td>Binary Shift Right</td></tr></tbody></table><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><table><thead><tr><th>Operator 運算子</th><th>說明</th><th>範例</th><th>返回值</th></tr></thead><tbody><tr><td>? :</td><td>三元判斷式</td><td>let s = (3 &gt; 5) ? “Success” : “Error”</td><td>“Success”</td></tr><tr><td>??</td><td>空值合併判斷式</td><td>number ?? 5</td><td>當 number 為 nil 時 返回 5， 當number 不為 nil 時 返回 number</td></tr><tr><td>…</td><td>範圍表示式</td><td>1…5</td><td>返回 1,2,3,4,5</td></tr></tbody></table>]]></content>
     
     
-      <category term="iOS" scheme="http://ios.taipei/tags/iOS/"/>
-    
-      <category term="教學" scheme="http://ios.taipei/tags/%E6%95%99%E5%AD%B8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>寫在程式開發之前00-1</title>
-    <link href="http://ios.taipei/2018/06/24/Tutorial_00_1/"/>
-    <id>http://ios.taipei/2018/06/24/Tutorial_00_1/</id>
-    <published>2018-06-24T15:00:00.000Z</published>
-    <updated>2018-06-25T14:01:03.369Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="寫在程式開發之前-00-1"><a href="#寫在程式開發之前-00-1" class="headerlink" title="寫在程式開發之前 00-1"></a>寫在程式開發之前 00-1</h2><p>Q: 什麼是 <u style="color:blue">Apple ID</u>? 什麼又是 <u style="color:blue">Developer Program</u>?</p><a id="more"></a><p>A: </p><ul><li><span style="color:#666">假設你使用過apple的任一個電子設備，並且註冊過帳號，那麼這個帳號則稱為 Apple ID</span> </li><li><span style="color:#666">假設你使用<span style="color:blue">Apple ID</span>登入<a href="http://developer.apple.com" target="_blank" rel="noopener">開發者登入</a></span> 進行操作, <ul><li>若你未入加入任何一個開發者計劃，會被提示 <span style="color:blue">Enroll in iOS Developer Program</span></li><li>若你已加入，則會顯示 <span style="color:blue">Individual</span> 和 <span style="color:blue">Company/Organization</span> 兩種不同的類型 (需支付一年$99USD的費用)，此時就可以進行後台的使用，如憑證、裝置管理、APP管理等功能，同時 <a href="http://itunesconnect.apple.com" target="_blank" rel="noopener">itunes connect</a> 也可以針對上架的APP進行管理<ul><li>獨立個人開發者 (<span style="color:blue">Individual</span>) 可以單人使用，但是無法加入第二個、第三個開發者共同開發，如果有共同協作開發需求時，只能將自身的憑證與相關檔案交付給其他人才能同步開發，或是在xcode的偏好設定中，輸入帳號密碼給第三者。</li><li>公司、組織 (<span style="color:blue">Company/Organization</span>) 則是可以加入多人共同開發，如果有人員異動時，也方便由帳號管理中加入或移除，而非由單一帳密或憑證檔案管理的方式。</li><li>要申請為公司類別，需要 <a href="https://www.dnb.com.tw/" target="_blank" rel="noopener">DUNS 鄧白氏號碼</a>，若只為了apple 開發申請的話，可以加入免費版本。如何申請 <span style="color:blue">DUNS</span>，會由另一篇文章來解釋。</li></ul></li><li>若有企業開發需求（B2B），或是 (<del style="color:red"> 無法 </del>) 不想在app store上架等等，可以申請 <span style="color:blue">Enterprise Program</span> (＄299 USD/年), 申請方式和公司類別相同，但是申請審查會更加地嚴格。申請流程會用另一篇文章來解說。</li><li><span style="color:orange">附註：Apple ID 若為Enterprise Program的話，是不能和其他 developer program混用的，在此同時，itunes connect 也會變成無法登入的狀態</span></li><li>最後，如果想要開發apple的配件的話，則是要啟用 MFi Program，繳的費用和上面都不一樣，這又是另一篇故事了。</li></ul></li></ul><hr>Q: 什麼是 <u style="color:blue">Team ID</u> ? 什麼是 <u style="color:blue"> App ID</u> ? 什麼是 <u style="color:blue"> Bundle ID</u>? 什麼是 <u style="color:blue">Product ID</u> ?<p>A:</p><ul><li><span style="color:blue"> Product ID</span><span style="color:#666"> 指的是在app store裡，用來區分不同的APP之間的差異。一些功能，如推播，就是依賴Product ID來找到你的APP，好將訊息正確送到你的手機上。Product ID是由</span> <span style="color:blue"> Team ID<span> + <span style="color:blue">Bundle ID<span><span style="color:#666">所組成的</span></span></span></span></span></li><li><span style="color:blue">Team ID</span><span style="color:#666">是在加入開發者計劃後，由系統給予的一組文字，你可以在<a href="https://developer.apple.com/account/#/membership" target="_blank" rel="noopener">開發者網站 &gt; 會員（membership）</a></span><span><span style="color:#666">裡找到這個值。(未來如果想要推播的話，這個值就會派得上用場了)</span></span></li><li><span style="color:blue"> App ID </span><span style="color:#666">通常會使用</span><span style="color:blue">域名反解</span>(reverse domain name)<span style="color:#666">的規則以避免和其他人重複，未來上架時無法新增APP。</span></li><li><span style="color:blue"> App ID </span><span style="color:#666">在 XCode裡又稱之為  </span><span style="color:blue"> Bundle Identifier</span>，<span style="color:#666">也有人寫成</span><span style="color:blue"> Bundle ID</span>，<span style="color:#666"></span></li></ul><hr>Q: 什麼是 <u style="color:blue">UUID</u> ? 什麼是 <u style="color:blue"> advertisingIdentifier</u> ? <p>A:</p><ul><li><span style="color:blue">UDID (Unique Device Identifier)</span> <span style="color:#666">指的是iOS設備上唯一的裝置識別標籤 - 和 UUID 不同 Universally Unique Identifier）</span></li><li><span style="color:orange">附註：APP刪除再重裝的時候，UDID據說是會改變的，通常會寫入一份在手機的keychain裡，在做一些統計的時候派得上。</span></li><li><span style="color:blue">advertisingIdentifier</span><span style="color:#666">是另一個辨別裝置的標籤，由AdSupport.Framework提供，如果沒有使用到廣告但是加入了advertisingIdentifier的呼叫的話，可是會被<span style="color:red">退件</span><span style="color:#666">的</span></span></li><li>自已產？！！！吃飽太閒的話，也可以啦！！</li><li><span style="color:orange">在 itunes 桌面應用程式裡，接上手機並且信任之後，可以在手機的摘要裡找到 UDID</span></li><li><span style="color:orange">XCode裡的裝置，摘要裡也找得到。</span></li><li><span style="color:orange">當然，也可以下載一些來路不明的描述檔加以信任，並且連到特殊的網站後，可以查得到UDID</span></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;寫在程式開發之前-00-1&quot;&gt;&lt;a href=&quot;#寫在程式開發之前-00-1&quot; class=&quot;headerlink&quot; title=&quot;寫在程式開發之前 00-1&quot;&gt;&lt;/a&gt;寫在程式開發之前 00-1&lt;/h2&gt;&lt;p&gt;Q: 什麼是 &lt;u style=&quot;color:blue&quot;&gt;Apple ID&lt;/u&gt;? 什麼又是 &lt;u style=&quot;color:blue&quot;&gt;Developer Program&lt;/u&gt;?&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="iOS" scheme="http://ios.taipei/categories/iOS/"/>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;算術運算子-Arithmetic-Operator&quot;&gt;&lt;a href=&quot;#算術運算子-Arithmetic-Operator&quot; class=&quot;headerlink&quot; title=&quot;算術運算子 Arithmetic Operator&quot;&gt;&lt;/a&gt;算術運算子 Arith</summary>
+      
     
     
-      <category term="iOS" scheme="http://ios.taipei/tags/iOS/"/>
     
-      <category term="教學" scheme="http://ios.taipei/tags/%E6%95%99%E5%AD%B8/"/>
+    <category term="swift" scheme="https://ios.taipei/categories/swift/"/>
+    
+    
+    <category term="swift" scheme="https://ios.taipei/tags/swift/"/>
+    
+    <category term="新手" scheme="https://ios.taipei/tags/%E6%96%B0%E6%89%8B/"/>
     
   </entry>
   
   <entry>
-    <title>Carthage-introduction</title>
-    <link href="http://ios.taipei/2018/06/21/Carthage-introduction/"/>
-    <id>http://ios.taipei/2018/06/21/Carthage-introduction/</id>
-    <published>2018-06-21T15:32:12.000Z</published>
-    <updated>2018-06-21T15:34:31.000Z</updated>
+    <title>swift 語言的基礎 - nil / optional / unwrap</title>
+    <link href="https://ios.taipei/2022/10/03/01-04-swift/"/>
+    <id>https://ios.taipei/2022/10/03/01-04-swift/</id>
+    <published>2022-10-02T16:00:03.000Z</published>
+    <updated>2022-10-14T07:58:35.115Z</updated>
     
-    <content type="html"><![CDATA[<p>相信大家對於CocoaPods非常的熟悉，用的愛不釋手，那麼為什麼還要看一下Carthage呢？</p><a id="more"></a><p>在還沒有CocoaPods之類，大家都是用拖檔案，拖library進來，甚至是拖另一個專案到專案裡面來，記得還要<br>copy items if needed，有CocoaPods，只要幾行指令，就完成了所有的工作了，就連考試都得了一百分呢！！</p><p>Carthage與CocoaPods的不同在那裡呢？</p><p>首先，CocoaPods預設會自動產生具有dependency的workspace並且更新你的專案檔，Carthage則是使用xcodebuild來打包成framework，以方便引用，避免污染專案檔</p><p>再來，CocoaPods在每次編譯時，都會重新打包所有的pods，當使用第三方元件使用的多時，編譯就會變慢，有機會會差到幾十秒</p><p>最後，Carthage比CocoaPods好封裝多了，只要開一個Project/Framework,裡面的scheme設為shared就可以了</p><p>附帶一提的是 Carthage 的打包，可以不讓別人看到source code，這不知道要算優點還是缺點</p><p>1。安裝Carthage</p><p>Carthage提供OS X平台的pkg安裝文件，可以從Github的最新release中找到，按照指示一步步安裝即可。</p><p>2。新增framework到程式裡</p><p>安裝完Carthage後，你能够使用它来新增framework到你的專案裡。注意Carthage只支持dynamic framework(iOS8以上)。</p><p>3。執行</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">carthage update</span><br></pre></td></tr></table></figure><p>和CocoaPods一樣，會將相依的資料抓到 Carthage/Checkouts 目錄下，並且編譯好</p><p>4。設定<br>在你的專案的target的[General][Embedded Binaries]，將framework從Carthage.build裡拉進去。<br>（如果有git，也順便push上去，醬子其他人只要執行carthage bootstrap就能使用了。</p><p>5。update<br>如果變動了Cartfile，或者想升级到最新版本，執行carthage update命令就可以了。</p><p>6。檢查<br>如果編譯失敗的話，試著在命令列執行</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcodebuild -scheme <span class="type">SCHEME</span> -workspace <span class="type">WORKSPACE</span> build</span><br></pre></td></tr></table></figure><p>或</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcodebuild -scheme <span class="type">SCHEME</span> -project <span class="type">PROJECT</span> build</span><br></pre></td></tr></table></figure><p>其中大寫的地方要換成你的workspace或專案名稱, 有沒有很簡單？</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;相信大家對於CocoaPods非常的熟悉，用的愛不釋手，那麼為什麼還要看一下Carthage呢？&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="iOS" scheme="http://ios.taipei/categories/iOS/"/>
+    <content type="html"><![CDATA[<h1 id="空值-nil-x2F-optional-x2F-unwrap（-）"><a href="#空值-nil-x2F-optional-x2F-unwrap（-）" class="headerlink" title="空值(nil)/ optional(?) / unwrap（!）"></a>空值(nil)/ optional(?) / unwrap（!）</h1><h2 id="什麼是空值"><a href="#什麼是空值" class="headerlink" title="什麼是空值"></a>什麼是空值</h2><p>如果要舉一個生活中的例子，程式裡的變數，就像是一個裝著鞋子的鞋盒(optional)，變數裡面的值，就是鞋子。程式在運作或傳遞變數時，是將鞋盒傳來傳去，如果需要對值做一些變化的時候，才會把鞋子從鞋盒拿出來(wrap)，整理好再放回去鞋盒裡去。如果鞋盒裡沒有鞋子(nil),那麼，執恴要把鞋子給拿出來，就會造成程式執行錯誤，或者是crash。</p><h2 id="why-Optional"><a href="#why-Optional" class="headerlink" title="why Optional"></a>why Optional</h2><p>程式在取用變數時，有一定的機率會遇到變收尚未初始化或尚未賦值，程式取不到值，而發生異常或是直接CRASH的狀況發生，為了防止意外，可以假設設定每個變數都有可以是不存的，所以就會在型別的後綴加一個問題，來表示 optional, 100% 確定有值的，就不用 optional, 就可以用很快的速度，不一一檢查變數，直接執行程式。</p><h3 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h3><pre><code class="swift">Int? i = 1String? s = "aaa"Double? d = 0.1</code></pre><p>在確定有值的時候，(強迫？)取值的方式為</p><pre><code class="swift">print(i!)//output   1print(s!)//output   "aaa"print(d!)//output   0.1</code></pre><p>如果不加(！),取值的結果就會不一樣</p><pre><code class="swift">print(i)//output    optional(1)print(s)//output    optional("sss")print(d)//output    optional(0.1)</code></pre><h2 id="optional-的特性"><a href="#optional-的特性" class="headerlink" title="optional ? 的特性"></a>optional ? 的特性</h2><p>如果在等號的左邊有個?，那麼如果變數為 nil 時， 則整行不會被執行</p><pre><code class="swift">var abc = nilabc?.text = "123" //將不會執行</code></pre><h2 id="現實生活中的型別安全"><a href="#現實生活中的型別安全" class="headerlink" title="現實生活中的型別安全"></a>現實生活中的型別安全</h2><p>那麼，到底什麼時候要用 optional，什麼時候不用呢？ 舉個生活中的例子來說，手機APP裡，使用 http request 與 伺服器端溝通， 當收到 API 的http response, 大部份是回覆 json 格式的 response, 手機再接著畫出UI的呈現。但是，server api 其實沒想像中的可靠，萬一少回了一個欄位呢？，萬一回的欄位的型別不對了呢？所以，只要是未知的變數，絕大部份都會做型別安全的保護，讓程式不會因為壞掉而無法繼續運作。</p><p>以下有幾種不同的 optional binding寫法</p><p>範例 1</p><pre><code class="swift">String? s = "aaa"if s != nil {    //如果鞋盒裡有鞋子的話, 就拿出來，並且命名為 s1，    //s1 在這個 code block 的生命週期裡，就隨時可取用，不用擔心程式爆炸 } else {    //鞋盒裡沒有鞋子，不要想了}</code></pre><p>範例 2</p><pre><code class="swift">String? s = "aaa"if let s1 = s {    //如果鞋盒裡有鞋子的話, 就拿出來，並且命名為 s1，    //s1 在這個 code block 的生命週期裡，就隨時可取用，不用擔心程式爆炸 } else {    //鞋盒裡沒有鞋子，不要想了}</code></pre><p>範例 3</p><pre><code class="swift">String? s = "aaa"guard let s1 = s else {    //鞋盒裡沒有鞋子，不要繼續了    return}    //s1 在這個 guard let 之後，就隨時可取用，不用擔心程式爆炸 </code></pre><p>範例 4</p><p>Nil-coalescing operator</p><pre><code class="swift">String? s = "aaa"let s1 : String = s ?? ""</code></pre><p>如果 s 不是 nil 的話。則 s1 = s 裡的值。不然的話。s1是預設值  “” ( 空字串 ) </p><p>然後 s1 就有值了，  不管是不是 s 鞋盒裡的值， 但至少不會壞掉。</p>]]></content>
     
     
-      <category term="iOS" scheme="http://ios.taipei/tags/iOS/"/>
-    
-      <category term="Dependency Management" scheme="http://ios.taipei/tags/Dependency-Management/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GCD</title>
-    <link href="http://ios.taipei/2018/06/21/GCD/"/>
-    <id>http://ios.taipei/2018/06/21/GCD/</id>
-    <published>2018-06-21T15:08:55.000Z</published>
-    <updated>2018-06-21T15:12:08.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="GCD-有許多用法，不知道你會那幾種？"><a href="#GCD-有許多用法，不知道你會那幾種？" class="headerlink" title="GCD 有許多用法，不知道你會那幾種？"></a>GCD 有許多用法，不知道你會那幾種？</h2><a id="more"></a><p><strong>1. 背景執行</strong></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> defaultPriority = <span class="type">DISPATCH_QUEUE_PRIORITY_DEFAULT</span></span><br><span class="line"><span class="keyword">let</span> backgroundQueue = dispatch_get_global_queue(defaultPriority, <span class="number">0</span>)</span><br><span class="line">dispatch_async(backgroundQueue, &#123;</span><br><span class="line">     <span class="keyword">let</span> result = doSomeExpensiveWork()</span><br><span class="line">     dispatch_async(dispatch_get_main_queue(), &#123;</span><br><span class="line">          <span class="comment">//use `result` somehow </span></span><br><span class="line">     &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><p><strong>2. Singleton</strong></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">+ (instancetype) sharedInstance &#123;</span><br><span class="line">     <span class="keyword">static</span> dispatch_once_t onceToken;</span><br><span class="line">     <span class="keyword">static</span> id sharedInstance;</span><br><span class="line">     dispatch_once(&amp;amp;amp;onceToken, ^&#123;</span><br><span class="line">          sharedInstance = [[<span class="keyword">self</span> alloc] <span class="keyword">init</span>];</span><br><span class="line">     &#125;);</span><br><span class="line">     <span class="keyword">return</span> sharedInstance;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>3. with blocks</strong></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typealias</span> <span class="type">DoneBlock</span> = () -&amp;gt; ()</span><br><span class="line"><span class="keyword">typealias</span> <span class="type">WorkBlock</span> = (<span class="type">DoneBlock</span>) -&amp;gt; ()</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AsyncSerialWorker</span> </span>&#123;</span><br><span class="line">     <span class="keyword">private</span> <span class="keyword">let</span> serialQueue = dispatch_queue_create(<span class="string">"ios.taipei.queue"</span>, <span class="type">DISPATCH_QUEUE_SERIAL</span>)</span><br><span class="line"></span><br><span class="line">     <span class="function"><span class="keyword">func</span> <span class="title">enqueueWork</span><span class="params">(work: WorkBlock)</span></span> &#123;</span><br><span class="line">          dispatch_async(serialQueue) &#123;</span><br><span class="line">               <span class="keyword">let</span> semaphore = dispatch_semaphore_create(<span class="number">0</span>)</span><br><span class="line">               work(&#123;</span><br><span class="line">                    dispatch_semaphore_signal(semaphore)</span><br><span class="line">               &#125;)</span><br><span class="line">               dispatch_semaphore_wait(semaphore, <span class="type">DISPATCH_TIME_FOREVER</span>)</span><br><span class="line">          &#125;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>4. multi-task</strong></p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">dispatch_group_t group = dispatch_group_create()</span><br><span class="line">     <span class="keyword">for</span> item <span class="keyword">in</span> someArray &#123;</span><br><span class="line">          dispatch_group_async(group, backgroundQueue, &#123;</span><br><span class="line">               performExpensiveWork(item: item)</span><br><span class="line">          &#125;)</span><br><span class="line">     &#125;</span><br><span class="line">     dispatch_group_notify(group, dispatch_get_main_queue(), &#123;</span><br><span class="line">     <span class="comment">// all the work is complete</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;GCD-有許多用法，不知道你會那幾種？&quot;&gt;&lt;a href=&quot;#GCD-有許多用法，不知道你會那幾種？&quot; class=&quot;headerlink&quot; title=&quot;GCD 有許多用法，不知道你會那幾種？&quot;&gt;&lt;/a&gt;GCD 有許多用法，不知道你會那幾種？&lt;/h2&gt;
-    
-    </summary>
-    
-      <category term="iOS" scheme="http://ios.taipei/categories/iOS/"/>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;空值-nil-x2F-optional-x2F-unwrap（-）&quot;&gt;&lt;a href=&quot;#空值-nil-x2F-optional-x2F-unwrap（-）&quot; class=&quot;headerlink&quot; title=&quot;空值(nil)/ optional(?) / unw</summary>
+      
     
     
-      <category term="iOS" scheme="http://ios.taipei/tags/iOS/"/>
     
-      <category term="GCD" scheme="http://ios.taipei/tags/GCD/"/>
+    <category term="swift" scheme="https://ios.taipei/categories/swift/"/>
+    
+    
+    <category term="swift" scheme="https://ios.taipei/tags/swift/"/>
+    
+    <category term="新手" scheme="https://ios.taipei/tags/%E6%96%B0%E6%89%8B/"/>
     
   </entry>
   
   <entry>
-    <title>XCode 搜尋小技巧</title>
-    <link href="http://ios.taipei/2018/06/21/xcode-search/"/>
-    <id>http://ios.taipei/2018/06/21/xcode-search/</id>
-    <published>2018-06-21T15:00:28.000Z</published>
-    <updated>2018-06-21T15:22:15.000Z</updated>
+    <title>swift 語言的基礎 - 流程控制</title>
+    <link href="https://ios.taipei/2022/10/02/01-03-swift/"/>
+    <id>https://ios.taipei/2022/10/02/01-03-swift/</id>
+    <published>2022-10-01T16:00:02.000Z</published>
+    <updated>2022-10-11T08:45:19.674Z</updated>
     
-    <content type="html"><![CDATA[<p>茫茫碼海中，要怎麼找到你想要找的那一段程式碼？關鍵字下的不夠精準，找不到或是搜尋的資料太多，都是種苦惱。還是想找個Hex? 找Tab? 找ip？ 找url？ 找email?</p><p>好的搜尋技巧帶你上天堂，下面幾個技巧該可以能帶你上天堂</p><a id="more"></a><ol>     <li><strong>定義搜尋（只搜尋「定義」的字串）</strong></li></ol>搜尋關鍵字會把所有找到的資料帶出來（以simple為例）<img src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-search-definition01.png" width="264" height="260"><p>在find的第二層，將搜尋改為definition<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-search-definition02.png" alt="定義02" width="281" height="246"></p><p>結果就只會出現「定義」裡的關鍵字搜尋了<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-search-definition03.png" alt="定義03" width="263" height="260"></p><p>&nbsp;</p><p><strong>2. Pattern </strong></p><p>在搜尋裡先打一個「”」,用以區隔 pattern之用，接著，在放大鏡裡點選 insert pattern<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-insert-pattern.png" alt="pattern01" width="263" height="132"></p><p>接著，點選「url」,再補個「”」給他<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-insert-pattern-url.png" alt="pattern02" width="277" height="310"></p><p>結果，就是我們想要的結果<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-insert-pattern-result.png" alt="pattern03" width="261" height="150"></p><p><strong>3. 指定路徑</strong></p><p>如果是已知路徑下搜尋，只要在 下方的「in Workspace」點一下</p><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-path01.png" alt="path01" width="267" height="130"><p>再點選你要搜尋的路徑就可以了</p><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-path02.png" alt="path02" width="266" height="233"><p>有興趣的人還有scope的進階版可以玩<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-path03.png" alt="path03" width="805" height="175"></p><ol start="4"><li>Call Hierarchy</li></ol><p>想知道有誰呼叫了某個函數？<br><img class="aligncenter wp-image-5 size-full" src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-call-Hierarchy.png" alt="call-hierarchy" width="260" height="189"></p><p>還有一個方法，就是當你移到函數的位置時<br><img src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/xcode-call-Hierarchy02.png" alt="call-hierarchy" width="567" height="463"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;茫茫碼海中，要怎麼找到你想要找的那一段程式碼？關鍵字下的不夠精準，找不到或是搜尋的資料太多，都是種苦惱。還是想找個Hex? 找Tab? 找ip？ 找url？ 找email?&lt;/p&gt;
-&lt;p&gt;好的搜尋技巧帶你上天堂，下面幾個技巧該可以能帶你上天堂&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="iOS" scheme="http://ios.taipei/categories/iOS/"/>
+    <content type="html"><![CDATA[<h1 id="程式語言常用的流程控制"><a href="#程式語言常用的流程控制" class="headerlink" title="程式語言常用的流程控制"></a>程式語言常用的流程控制</h1><h2 id="條件式陳述-Conditional-Statement"><a href="#條件式陳述-Conditional-Statement" class="headerlink" title="條件式陳述 Conditional Statement"></a>條件式陳述 Conditional Statement</h2><h3 id="if-else"><a href="#if-else" class="headerlink" title="if-else"></a>if-else</h3><pre><code class="swift">var age = 25if (age &gt; 20) {  print("可以結婚了")} else if (age &gt; 18){  print("可以投票了")} else {  print("乖乖等長大")}</code></pre><h3 id="switch-case"><a href="#switch-case" class="headerlink" title="switch-case"></a>switch-case</h3><pre><code class="swift">let dayOfWeek = 4switch dayOfWeek {  case 1:    print("Sunday")          case 2:    print("Monday")          case 3:    print("Tuesday")          case 4:    print("Wednesday")    fallthrough          case 5:    print("Thursday")          case 6:    print("Friday")          case 7:    print("Saturday")          default:    print("Invalid day")}</code></pre><p>條件可以是任何型別，數字範圍，文字，字典或元組</p><p>另外，有一個不常用 但還是知道一下比較好的參數</p><p>fallthrough 可以穿透一層 case</p><h2 id="迴圈式陳述-Loop-Statement"><a href="#迴圈式陳述-Loop-Statement" class="headerlink" title="迴圈式陳述 Loop Statement"></a>迴圈式陳述 Loop Statement</h2><h3 id="for-in-loop"><a href="#for-in-loop" class="headerlink" title="for-in-loop"></a>for-in-loop</h3><p>範例 1</p><pre><code class="swift">let languages = ["Flutter","Swift", "Kotlin"]for language in languages where language != "Kotlin" {      print(language)}</code></pre><p>範例 2</p><pre><code class="swift">for i in 1 ... 5 {    print(i)}</code></pre><pre><code class="swift">for i in 1 ..&lt; 5 {    print(i)}</code></pre><p>範例 3</p><pre><code class="swift">for i in stride(from: 1, to: 10, by: 2) {    print(i)}</code></pre><h3 id="Nest-for-in-loop-巢狀迴圈、跳過-continue-與中斷-break"><a href="#Nest-for-in-loop-巢狀迴圈、跳過-continue-與中斷-break" class="headerlink" title="Nest for-in-loop 巢狀迴圈、跳過(continue)與中斷(break)"></a>Nest for-in-loop 巢狀迴圈、跳過(continue)與中斷(break)</h3><p>範例 1</p><pre><code class="swift">outerLoop: for i in 1...3{  innerLoop: for j in 1...3 {     if i==1 &amp;&amp; j == 3 {      continue outerLoop    }    if j == 3 {      break outerLoop    }      print("i = \(i), j = \(j)")  }}</code></pre><h3 id="while-loop"><a href="#while-loop" class="headerlink" title="while-loop"></a>while-loop</h3><p>範例 1</p><pre><code class="swift">var i = 1, n = 5while (i &lt;= n) {  print(i)   i = i + 1}</code></pre><p>範例 2</p><pre><code class="swift">var i = 1, n = 5repeat {    print(i)  i = i + 1} while (i &lt;= n)</code></pre><h3 id="保護式陳述-guard-statement"><a href="#保護式陳述-guard-statement" class="headerlink" title="保護式陳述 guard statement"></a>保護式陳述 guard statement</h3><p>範例 1</p><pre><code class="swift">func checkOddEven() {  var number = 7  guard number % 2 == 0 else {        print("奇數")    return  }  print("偶數")}</code></pre><p>範例 2</p><pre><code class="swift">func checkNumber() {      var number? = 7    guard let myNumber = number else {        print("number is undefined")    return  }  guard number % 2 == 0 else {        print("奇數")    return  }  print("偶數")}</code></pre><p>型別後出現了一個問號，請看下一篇文章  swift: Type Safe</p>]]></content>
     
     
-      <category term="iOS" scheme="http://ios.taipei/tags/iOS/"/>
-    
-      <category term="xCode" scheme="http://ios.taipei/tags/xCode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SpotLight 初探</title>
-    <link href="http://ios.taipei/2018/06/21/Spotlight-inspect/"/>
-    <id>http://ios.taipei/2018/06/21/Spotlight-inspect/</id>
-    <published>2018-06-21T15:00:28.000Z</published>
-    <updated>2019-10-12T14:38:55.798Z</updated>
-    
-    <content type="html"><![CDATA[<img src="https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/spotlight01.png"><p>當使用者使用spotlight查詢時，總是有些app會列出內容出來，那又是怎麼樣的小技巧呢？</p><a id="more"></a><p>先把兩個必要的framework包進來</p><pre class="prettyprint">import CoreSpotlightimport MobileCoreServices</pre><p>接著，準備一個獨立的ID，避免與別的app衝突，通常會使用域名反解，與一個資料陣列,型別為 CSSearchableItem</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> domainID: <span class="type">String</span> = <span class="string">"com.yuaki.informationPlus"</span></span><br><span class="line"><span class="keyword">var</span> searchableItems: [<span class="type">CSSearchableItem</span>] = []</span><br></pre></td></tr></table></figure><p>接著，</p><p>定義每筆資料的屬性設定 (item為資料物件)</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> attributeSet = </span><br><span class="line"><span class="type">CSSearchableItemAttributeSet</span>(itemContentType: kUTTypeItem <span class="keyword">as</span> <span class="type">String</span>)</span><br><span class="line">attributeSet.title = item.title</span><br><span class="line">attributeSet.contentDescription = item.subtitle</span><br><span class="line">attributeSet.contentCreationDate = item.date</span><br></pre></td></tr></table></figure><p>接著為這個屬性設定關鍵字,以方便被搜尋</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// define search keywords</span></span><br><span class="line"><span class="keyword">var</span> keywords = item.title.componentsSeparatedByString(<span class="string">" "</span>)</span><br><span class="line">keywords.appendContentsOf(item.subtitle.componentsSeparatedByString(<span class="string">" "</span>))</span><br><span class="line">attributeSet.keywords = keywords</span><br></pre></td></tr></table></figure><p>然後把屬性放到 CSSearchableItem裡 再加到陣列中備用</p><pre class="prettyprint">let searchItem = CSSearchableItem(uniqueIdentifier: "Parking", domainIdentifier: domainID, attributeSet: attributeSet)searchableItems.append(searchItem)</pre><p>最後加到index裡</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">CSSearchableIndex</span>.defaultSearchableIndex().indexSearchableItems(searchableItems) &#123; (error) -&amp;gt; <span class="type">Void</span> <span class="keyword">in</span></span><br><span class="line">     <span class="keyword">if</span> error != <span class="literal">nil</span> &#123;</span><br><span class="line">         <span class="built_in">print</span>(error?.localizedDescription)</span><br><span class="line">     &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">         <span class="built_in">print</span>(<span class="string">"items indexed witch success!"</span>)</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>醬子就好了！！！</p><p>其中uniqueIdentifier可以在 continueUserActivity 的userInfo 被撈取</p><p>有沒有很方便呀</p><p>附記：index看起來沒有容量的限制，意思是…… 我可以塞爆他嗎？</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;img src=&quot;https://github.com/nobodyyu/GraphicsBed/raw/master/ios%40Taipei/spotlight01.png&quot;&gt;
-
-&lt;p&gt;當使用者使用spotlight查詢時，總是有些app會列出內容出來，那又是怎麼樣的小技巧呢？&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="iOS" scheme="http://ios.taipei/categories/iOS/"/>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;程式語言常用的流程控制&quot;&gt;&lt;a href=&quot;#程式語言常用的流程控制&quot; class=&quot;headerlink&quot; title=&quot;程式語言常用的流程控制&quot;&gt;&lt;/a&gt;程式語言常用的流程控制&lt;/h1&gt;&lt;h2 id=&quot;條件式陳述-Conditional-Statement&quot;&gt;</summary>
+      
     
     
-      <category term="iOS" scheme="http://ios.taipei/tags/iOS/"/>
     
-      <category term="spotlight" scheme="http://ios.taipei/tags/spotlight/"/>
+    <category term="swift" scheme="https://ios.taipei/categories/swift/"/>
+    
+    
+    <category term="swift" scheme="https://ios.taipei/tags/swift/"/>
+    
+    <category term="新手" scheme="https://ios.taipei/tags/%E6%96%B0%E6%89%8B/"/>
     
   </entry>
   
   <entry>
-    <title>取得手機現在正在用的語言</title>
-    <link href="http://ios.taipei/2018/05/03/detectLanguage/"/>
-    <id>http://ios.taipei/2018/05/03/detectLanguage/</id>
-    <published>2018-05-03T15:00:00.000Z</published>
-    <updated>2019-10-12T06:33:43.021Z</updated>
+    <title>swift 語言的基礎 - 註解、程式區塊與標記</title>
+    <link href="https://ios.taipei/2022/10/01/01-02-swift/"/>
+    <id>https://ios.taipei/2022/10/01/01-02-swift/</id>
+    <published>2022-09-30T16:00:01.000Z</published>
+    <updated>2022-10-11T08:44:28.657Z</updated>
     
-    <content type="html"><![CDATA[<p>Q: 這邊要教你取得手機現在正在用的語言 </p><a id="more"></a><h3 id="OBJC"><a href="#OBJC" class="headerlink" title="OBJC"></a>OBJC</h3><pre><code>[[NSBundle mainBundle] preferredLocalizations];</code></pre><h3 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h3><pre><code>let language = NSBundle.mainBundle().preferredLocalizations.first</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Q: 這邊要教你取得手機現在正在用的語言 &lt;/p&gt;
-    
-    </summary>
-    
-      <category term="iOS" scheme="http://ios.taipei/categories/iOS/"/>
+    <content type="html"><![CDATA[<h1 id="註解"><a href="#註解" class="headerlink" title="註解"></a>註解</h1><h2 id="單行註解"><a href="#單行註解" class="headerlink" title="單行註解"></a>單行註解</h2><pre><code class="swift">// 我是一行註解</code></pre><h2 id="多行註解"><a href="#多行註解" class="headerlink" title="多行註解"></a>多行註解</h2><pre><code class="swift">/* 我是多行註解 */</code></pre><p>基本上 第一個 /* 之後，會找到與之對稱的 */ 做為結束</p><h1 id="程式區塊（Code-Block）"><a href="#程式區塊（Code-Block）" class="headerlink" title="程式區塊（Code Block）"></a>程式區塊（Code Block）</h1><p>絕大部份的程式都有區塊的概念，舉例來說</p><pre><code class="swift">if condition {   //區塊開始。。。} //區塊結束</code></pre><h1 id="Xcode-標記（MARK、TODO、FIXME）"><a href="#Xcode-標記（MARK、TODO、FIXME）" class="headerlink" title="Xcode 標記（MARK、TODO、FIXME）"></a>Xcode 標記（MARK、TODO、FIXME）</h1><h2 id="MARK"><a href="#MARK" class="headerlink" title="MARK"></a>MARK</h2><pre><code class="swift">// MARK: 測試1 不帶分隔線func test1() {}</code></pre><p>多了一個 dash</p><pre><code class="swift">// MARK: - 測試2 帶分隔線func test2() {}</code></pre><h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><pre><code class="swift">func test3() {// TODO: - 待做}</code></pre><h2 id="FIXME"><a href="#FIXME" class="headerlink" title="FIXME"></a>FIXME</h2><pre><code class="swift">func test4() {// FIXME: - 不修會壞掉}</code></pre><h2 id="看一下範例"><a href="#看一下範例" class="headerlink" title="看一下範例"></a>看一下範例</h2><h2 id=""><a href="#" class="headerlink" title=""></a><img src="/images/01-02-swift.png" alt="範例"></h2>]]></content>
     
     
-      <category term="iOS" scheme="http://ios.taipei/tags/iOS/"/>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;註解&quot;&gt;&lt;a href=&quot;#註解&quot; class=&quot;headerlink&quot; title=&quot;註解&quot;&gt;&lt;/a&gt;註解&lt;/h1&gt;&lt;h2 id=&quot;單行註解&quot;&gt;&lt;a href=&quot;#單行註解&quot; class=&quot;headerlink&quot; title=&quot;單行註解&quot;&gt;&lt;/a&gt;單行註解&lt;/h</summary>
+      
     
-      <category term="新手村" scheme="http://ios.taipei/tags/%E6%96%B0%E6%89%8B%E6%9D%91/"/>
     
-      <category term="swift" scheme="http://ios.taipei/tags/swift/"/>
     
-      <category term="OBJC" scheme="http://ios.taipei/tags/OBJC/"/>
+    <category term="swift" scheme="https://ios.taipei/categories/swift/"/>
     
-      <category term="Language" scheme="http://ios.taipei/tags/Language/"/>
+    
+    <category term="swift" scheme="https://ios.taipei/tags/swift/"/>
+    
+    <category term="新手" scheme="https://ios.taipei/tags/%E6%96%B0%E6%89%8B/"/>
     
   </entry>
   
   <entry>
-    <title>移除字串中的html tag</title>
-    <link href="http://ios.taipei/2018/01/23/NoHtml/"/>
-    <id>http://ios.taipei/2018/01/23/NoHtml/</id>
-    <published>2018-01-23T15:00:00.000Z</published>
-    <updated>2019-10-12T06:31:14.242Z</updated>
+    <title>swift 語言的基礎 - 變數，常數</title>
+    <link href="https://ios.taipei/2022/09/30/01-01-swift/"/>
+    <id>https://ios.taipei/2022/09/30/01-01-swift/</id>
+    <published>2022-09-29T16:00:00.000Z</published>
+    <updated>2022-10-11T09:14:05.380Z</updated>
     
-    <content type="html"><![CDATA[<p>Q: 這邊要教你把html字串給清除掉 </p><a id="more"></a><h3 id="OBJC"><a href="#OBJC" class="headerlink" title="OBJC"></a>OBJC</h3><pre><code>-(NSString *) stringByStrippingHTML {  NSRange r;  NSString *s = [[self copy] autorelease];  while ((r = [s rangeOfString:@&quot;&lt;[^&gt;]+&gt;&quot; options:NSRegularExpressionSearch]).location != NSNotFound)    s = [s stringByReplacingCharactersInRange:r withString:@&quot;&quot;];  return s;}</code></pre><h3 id="swift"><a href="#swift" class="headerlink" title="swift"></a>swift</h3><pre><code>let encodedString = &quot;HTML String&quot;guard let data = htmlEncodedString.data(using: .utf8) else {    return nil}let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [    .documentType: NSAttributedString.DocumentType.html,    .characterEncoding: String.Encoding.utf8.rawValue]guard let attributedString = try? NSAttributedString(data: data, options: options) else {    return nil}let decodedString = attributedString.string</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Q: 這邊要教你把html字串給清除掉 &lt;/p&gt;
-    
-    </summary>
-    
-      <category term="iOS" scheme="http://ios.taipei/categories/iOS/"/>
+    <content type="html"><![CDATA[<h1 id="程式語言常用的變數型別"><a href="#程式語言常用的變數型別" class="headerlink" title="程式語言常用的變數型別"></a>程式語言常用的變數型別</h1><h2 id="布林-Bool-、字符-Charater-、字串-String-、整數-Integer-和浮點數-Double、Float"><a href="#布林-Bool-、字符-Charater-、字串-String-、整數-Integer-和浮點數-Double、Float" class="headerlink" title="布林(Bool)、字符(Charater)、字串(String)、整數(Integer)和浮點數(Double、Float)"></a>布林(Bool)、字符(Charater)、字串(String)、整數(Integer)和浮點數(Double、Float)</h2><pre><code class="swift">var isOpen = truelet c = "a"let s = "我是一個字串"  var i = 1let d : Double = 0.5//試著印出來看看print(isOpen)print(c)print(s)print(i)print(d)</code></pre><h3 id="解釋-1"><a href="#解釋-1" class="headerlink" title="解釋 1"></a>解釋 1</h3><p>字串 (String) 其實就是 字符 (Character) 的 陣列 (Array)</p><h3 id="解釋-2"><a href="#解釋-2" class="headerlink" title="解釋 2"></a>解釋 2</h3><p>let 是常數的賦值關鍵字，意思為等號右邊的內容，放入 等號左邊 的名詞，等之後要用的時候，方便使用，但不能再次賦值或修改</p><p>var 是變數的賦值關鍵字，意思為等號右邊的內容，放入 等號左邊 的名詞，等之後要用的時候，方便使用，能夠多次賦值或修改</p><p>如果型別是已知的話。在等號左邊 加上 <span style="color:red">: 型別 </span>，如果不加的話，型別則是會由右邊的值的型別來幫你決定。</p><h3 id="解釋-3"><a href="#解釋-3" class="headerlink" title="解釋 3"></a>解釋 3</h3><p>print 是一個 將內容輸出到除錯視窗 的 函數，常用來觀測數值的變化與除錯debug，</p>]]></content>
     
     
-      <category term="iOS" scheme="http://ios.taipei/tags/iOS/"/>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;程式語言常用的變數型別&quot;&gt;&lt;a href=&quot;#程式語言常用的變數型別&quot; class=&quot;headerlink&quot; title=&quot;程式語言常用的變數型別&quot;&gt;&lt;/a&gt;程式語言常用的變數型別&lt;/h1&gt;&lt;h2 id=&quot;布林-Bool-、字符-Charater-、字串-Stri</summary>
+      
     
-      <category term="新手村" scheme="http://ios.taipei/tags/%E6%96%B0%E6%89%8B%E6%9D%91/"/>
     
-      <category term="swift" scheme="http://ios.taipei/tags/swift/"/>
     
-      <category term="Extension" scheme="http://ios.taipei/tags/Extension/"/>
+    <category term="swift" scheme="https://ios.taipei/categories/swift/"/>
     
-      <category term="OBJC" scheme="http://ios.taipei/tags/OBJC/"/>
     
-      <category term="Html" scheme="http://ios.taipei/tags/Html/"/>
+    <category term="swift" scheme="https://ios.taipei/tags/swift/"/>
     
-      <category term="String" scheme="http://ios.taipei/tags/String/"/>
+    <category term="新手" scheme="https://ios.taipei/tags/%E6%96%B0%E6%89%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>開發環境介紹</title>
+    <link href="https://ios.taipei/2022/09/29/00-01-devTool/"/>
+    <id>https://ios.taipei/2022/09/29/00-01-devTool/</id>
+    <published>2022-09-28T16:00:00.000Z</published>
+    <updated>2022-10-11T06:42:49.766Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="開發-App-的所需工具"><a href="#開發-App-的所需工具" class="headerlink" title="開發 App 的所需工具"></a>開發 App 的所需工具</h1><p>　　<b><b>Apple</b></b> 系統是一個封閉式的系統，因此，<b>App</b> 想要運行在蘋果的裝置上的話，就必須要使用 <b>Apple</b> 的 <b>OS</b> 以及 開發工具 <b>Xcode</b> 進行打包與上架。同時也可以開發 <b>Android</b> 相關的 <b>App</b>。雖然 <b>Android</b> 的開發，可以使用 <b>windows</b> 系統，但是一旦你選擇了 <b>windows</b> 系統，那麼你就等於放棄了開發 <b>Apple</b> 的市場。因此，在對於開發者的系統選擇上，我只推薦 <b>Mac</b> 來進行 <b>App</b> 開發。</p><p>　　工欲善其事，必先利其器，好用的工具能夠讓開發者節省時間，以下是在開發之前，你要事先準備好：</p><h2 id="硬體"><a href="#硬體" class="headerlink" title="硬體"></a>硬體</h2><h3 id="Mac-電腦"><a href="#Mac-電腦" class="headerlink" title="Mac 電腦"></a>Mac 電腦</h3><ul><li><b>Mac Book Pro</b></li><li><b>Mac Mini</b></li><li><s> Mac Book Air </s></li><li><s> 黑蘋果 </s></li></ul><h4 id="MBP-挑選的重點"><a href="#MBP-挑選的重點" class="headerlink" title="MBP 挑選的重點:"></a>MBP 挑選的重點:</h4><p>RAM - 8G 最低。 16G 開發就不太會有卡頓感，32G的話。同時跑很多程式沒問題</p><p>CPU - CPU 各有優劣， Intel / M1 / M2 … 當下能挑選的其實不多</p><p>硬碟空間 - 256 G 對於開發者是絕對不夠的， 512G 的應該就足夠開發</p><p>螢幕大小 - 13吋 / 14 吋 / 16吋。 大的看起來舒服，但是重！！！</p><h4 id="Mini-挑選的重點"><a href="#Mini-挑選的重點" class="headerlink" title="Mini 挑選的重點:"></a>Mini 挑選的重點:</h4><p>同上，只是沒有螢幕，不能移動</p><h4 id="Air"><a href="#Air" class="headerlink" title="Air"></a>Air</h4><p>文書機，不建議用來開發，因為沒有風扇，CPU 會因為熱 而導致降頻。手放在鍵盤上很有感覺。</p><p>另外 TYPE-C 接頭只有二個，透過外接的HUB外接螢幕，再同時裝手機進行偵錯，偶而會有BUILD到一半斷線的可能性。</p><h3 id="測試機"><a href="#測試機" class="headerlink" title="測試機"></a>測試機</h3><ul><li>iPhone</li><li>iPad</li><li>傳輸線</li><li>模擬器</li></ul><h3 id="建議"><a href="#建議" class="headerlink" title="建議"></a>建議</h3><p>再差的手機也會比模擬器好</p><h2 id="軟體"><a href="#軟體" class="headerlink" title="軟體"></a>軟體</h2><ul><li><b>Mac OS</b></li><li><b>Xcode</b></li></ul><h2 id="帳號"><a href="#帳號" class="headerlink" title="帳號"></a>帳號</h2><ul><li><b>Apple ID (Email) </b></li><li><b>Apple Developer Program</b></li><li><b>Apple Developer Enterprise Program (特殊情況下使用)</b></li></ul><hr><p>　　在開發 <b>APP</b> 之前，我們可以先算一下成本，要先買電腦，要先買手機，要每年付開發者上架的年費<br><b>Apple STORE</b> 參考價格</p><p>開發機 擇1</p><ul><li><a href="https://www.apple.com/tw/shop/buy-mac/macbook-pro/16-%E5%90%8B">MBP</a> 16吋 <b>NTD</b> $74,900</li><li><a href="https://www.apple.com/tw/shop/buy-mac/mac-mini">Mac Mini</a> <b>NTD</b> $27,900</li></ul><p><b>iPhone</b> 擇1 </p><ul><li><a href="https://www.apple.com/tw/shop/buy-iphone/iphone-se">iPhone SE</a>  <b>NTD</b> $14,900</li><li><a href="https://www.apple.com/tw/shop/buy-iphone/iphone-14-pro">iPhone 14 Pro</a> <b>NTD</b> $34,900</li></ul><p><b>Apple Developer Program</b></p><ul><li>每年 <b>NTD</b> $3,400. <a href="https://developer.apple.com/">(點此前往)</a></li></ul><h1 id="還沒開始寫程式，至少就已經噴了快10萬元新台幣"><a href="#還沒開始寫程式，至少就已經噴了快10萬元新台幣" class="headerlink" title="還沒開始寫程式，至少就已經噴了快10萬元新台幣"></a>還沒開始寫程式，至少就已經噴了快10萬元新台幣</h1><p>沒錯，若是你選擇用 <b>Windows</b> 來開發 <b>Android</b> 的話，也不是不行，只是這裡剛好不適合你。。。。咦？ </p><p>先想想。開發 <b>App</b> 是為了什麼? </p><ol><li>錢</li><li>興趣</li><li>工作與生活的平衡</li></ol><p>撇去興趣這種主觀的判斷，薪水在初階工程師，是差不多的，但是以稀缺性而言，<b>iOS</b> 的工程師因為進入門檻高，所以人少，因此，可以選擇的工作機會會比較多，因此更有條件找到喜歡的工作。</p><p>長期而言，如果想要再向上突破，雙刀流 (<b>iOS/Android</b>) 也是一條往更高的職位前進的方法。</p><p>職場有一種都市傳說，就是</p><ol><li><p><b>123</b> 法則</p><p> 1 個人 - 領 2 份薪水 - 做 3 份工作</p></li><li><p><b>234</b> 法測</p><p> 2 個人 - 領 3 份薪水 - 做 4 份工作</p></li></ol><p>當你為你的人生做了一個重大選擇，那麼下一步是什麼？下下步呢？</p><p>如果你還是想選 <b>Android</b> 開發，當然 我會推薦你不同的選擇，留到 <b>Android</b> 開發的章節再聊。</p><p>PS。 </p><p>錢夠的話。我只推薦 <span style="color:red"><b>頂規</b></span> </p><p>BUILD CODE 快，思維不會被打斷，不用等的感覺，真的是工程師的夢想。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;開發-App-的所需工具&quot;&gt;&lt;a href=&quot;#開發-App-的所需工具&quot; class=&quot;headerlink&quot; title=&quot;開發 App 的所需工具&quot;&gt;&lt;/a&gt;開發 App 的所需工具&lt;/h1&gt;&lt;p&gt;　　&lt;b&gt;&lt;b&gt;Apple&lt;/b&gt;&lt;/b&gt; 系統是一個封閉式</summary>
+      
+    
+    
+    
+    <category term="開發環境" scheme="https://ios.taipei/categories/%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83/"/>
+    
+    
+    <category term="開發環境" scheme="https://ios.taipei/tags/%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83/"/>
+    
+    <category term="Mac" scheme="https://ios.taipei/tags/Mac/"/>
+    
+    <category term="Xcode" scheme="https://ios.taipei/tags/Xcode/"/>
+    
+    <category term="Apple ID" scheme="https://ios.taipei/tags/Apple-ID/"/>
+    
+    <category term="Apple Developer Program" scheme="https://ios.taipei/tags/Apple-Developer-Program/"/>
     
   </entry>
   

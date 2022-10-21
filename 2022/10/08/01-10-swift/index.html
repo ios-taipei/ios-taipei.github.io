@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>swift 語言的基礎 - Reference Type / Value Type | iOS @ Taipei</title>
+  <meta name="keywords" content=" swift , 新手 ">
+  <meta name="description" content="swift 語言的基礎 - Reference Type / Value Type | iOS @ Taipei">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="Guys who fall in love with iOS">
+<meta property="og:type" content="website">
+<meta property="og:title" content="404">
+<meta property="og:url" content="https://ios.taipei/404/index.html">
+<meta property="og:site_name" content="iOS @ Taipei">
+<meta property="og:description" content="Guys who fall in love with iOS">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2022-09-29T02:00:23.000Z">
+<meta property="article:modified_time" content="2022-09-29T02:00:23.697Z">
+<meta property="article:author" content="Aki Yu">
+<meta property="article:tag" content="iOS">
+<meta property="article:tag" content="Android">
+<meta property="article:tag" content="Mobile">
+<meta property="article:tag" content="UI">
+<meta property="article:tag" content="UX">
+<meta property="article:tag" content="iPhone">
+<meta property="article:tag" content="iPad">
+<meta property="article:tag" content="Tablet">
+<meta property="article:tag" content="Watch">
+<meta property="article:tag" content="TV">
+<meta property="article:tag" content="Flutter">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.png">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/rainbow.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="iOS @ Taipei" type="application/atom+xml">
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.png"/>
+</a>
+<div class="author">
+    <span>Aki Yu</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+            <a title="facebook"
+               href="https://www.facebook.com/ios.taipei"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a title="email"
+               href="mailto:nobodyyu@gail.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="所有文章">所有文章
+            
+                <small>(14)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="開發環境">
+                        
+                        開發環境
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="swift">
+                        
+                        swift
+                        <small>(13)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">About</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="14">
+<input type="hidden" id="yelog_site_word_count" value="6.7k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="#">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">所有文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>開發環境</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>新手</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Apple Developer Program</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Apple ID</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Mac</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>swift</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Xcode</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        
+        <a id="top" class="所有文章 swift "
+           href="/2022/09/30/01-01-swift/"
+           data-tag="swift,新手"
+           data-author="" >
+            <span class="post-title" title="swift 語言的基礎 - 變數，常數">swift 語言的基礎 - 變數，常數</span>
+            <span class="post-date" title="2022-09-30 00:00:00">2022/09/30</span>
+        </a>
+        
+        
+        <a id="top" class="所有文章 swift "
+           href="/2022/10/01/01-02-swift/"
+           data-tag="swift,新手"
+           data-author="" >
+            <span class="post-title" title="swift 語言的基礎 - 註解、程式區塊與標記">swift 語言的基礎 - 註解、程式區塊與標記</span>
+            <span class="post-date" title="2022-10-01 00:00:01">2022/10/01</span>
+        </a>
+        
+        
+        <a id="top" class="所有文章 swift "
+           href="/2022/10/02/01-03-swift/"
+           data-tag="swift,新手"
+           data-author="" >
+            <span class="post-title" title="swift 語言的基礎 - 流程控制">swift 語言的基礎 - 流程控制</span>
+            <span class="post-date" title="2022-10-02 00:00:02">2022/10/02</span>
+        </a>
+        
+        
+        <a id="top" class="所有文章 swift "
+           href="/2022/10/03/01-04-swift/"
+           data-tag="swift,新手"
+           data-author="" >
+            <span class="post-title" title="swift 語言的基礎 - nil / optional / unwrap">swift 語言的基礎 - nil / optional / unwrap</span>
+            <span class="post-date" title="2022-10-03 00:00:03">2022/10/03</span>
+        </a>
+        
+        
+        <a id="top" class="所有文章 swift "
+           href="/2022/10/04/01-05-swift/"
+           data-tag="swift,新手"
+           data-author="" >
+            <span class="post-title" title="swift 語言的基礎 - 運算子 Operators">swift 語言的基礎 - 運算子 Operators</span>
+            <span class="post-date" title="2022-10-04 00:00:04">2022/10/04</span>
+        </a>
+        
+        
+        <a id="top" class="所有文章 swift "
+           href="/2022/10/05/01-06-swift/"
+           data-tag="swift,新手"
+           data-author="" >
+            <span class="post-title" title="swift 語言的基礎 - 集合 (Collections)">swift 語言的基礎 - 集合 (Collections)</span>
+            <span class="post-date" title="2022-10-05 00:00:05">2022/10/05</span>
+        </a>
+        
+        
+        <a id="top" class="所有文章 swift "
+           href="/2022/10/07/01-09-swift/"
+           data-tag="swift,新手"
+           data-author="" >
+            <span class="post-title" title="swift 語言的基礎 - 物件導向(Object Oriented Programming, OOP)">swift 語言的基礎 - 物件導向(Object Oriented Programming, OOP)</span>
+            <span class="post-date" title="2022-10-07 00:00:05">2022/10/07</span>
+        </a>
+        
+        
+        <a id="top" class="所有文章 swift "
+           href="/2022/10/06/01-07-swift/"
+           data-tag="swift,新手"
+           data-author="" >
+            <span class="post-title" title="swift 語言的基礎 - 函數 (Function)">swift 語言的基礎 - 函數 (Function)</span>
+            <span class="post-date" title="2022-10-06 00:00:05">2022/10/06</span>
+        </a>
+        
+        
+        <a id="top" class="所有文章 swift "
+           href="/2022/10/06/01-08-1-swift/"
+           data-tag="swift,新手"
+           data-author="" >
+            <span class="post-title" title="swift 語言的基礎 - Strong, Weak and Unowned">swift 語言的基礎 - Strong, Weak and Unowned</span>
+            <span class="post-date" title="2022-10-06 00:00:05">2022/10/06</span>
+        </a>
+        
+        
+        <a id="top" class="所有文章 swift "
+           href="/2022/10/06/01-08-2-swift/"
+           data-tag="swift,新手"
+           data-author="" >
+            <span class="post-title" title="swift 語言的基礎 - 閉包 (Closure)">swift 語言的基礎 - 閉包 (Closure)</span>
+            <span class="post-date" title="2022-10-06 00:00:05">2022/10/06</span>
+        </a>
+        
+        
+        <a id="top" class="所有文章 swift "
+           href="/2022/10/08/01-10-swift/"
+           data-tag="swift,新手"
+           data-author="" >
+            <span class="post-title" title="swift 語言的基礎 - Reference Type / Value Type">swift 語言的基礎 - Reference Type / Value Type</span>
+            <span class="post-date" title="2022-10-08 00:00:05">2022/10/08</span>
+        </a>
+        
+        
+        <a id="top" class="所有文章 swift "
+           href="/2022/10/14/01-11-swift/"
+           data-tag="swift,新手"
+           data-author="" >
+            <span class="post-title" title="swift 語言的基礎 - Range 範圍表示式">swift 語言的基礎 - Range 範圍表示式</span>
+            <span class="post-date" title="2022-10-14 00:00:05">2022/10/14</span>
+        </a>
+        
+        
+        <a id="top" class="所有文章 swift "
+           href="/2022/10/12/01-12-swift/"
+           data-tag="swift,新手"
+           data-author="" >
+            <span class="post-title" title="swift 語言的基礎 - 列舉 Enum">swift 語言的基礎 - 列舉 Enum</span>
+            <span class="post-date" title="2022-10-12 00:00:05">2022/10/12</span>
+        </a>
+        
+        
+        <a id="top" class="所有文章 開發環境 "
+           href="/2022/09/29/00-01-devTool/"
+           data-tag="開發環境,Mac,Xcode,Apple ID,Apple Developer Program"
+           data-author="" >
+            <span class="post-title" title="開發環境介紹">開發環境介紹</span>
+            <span class="post-date" title="2022-09-29 00:00:00">2022/09/29</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first">
+                <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+            </div>
+            <div class="brackets">
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-01-10-swift" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">swift 語言的基礎 - Reference Type / Value Type</h1>
+    
+    <div class="article-meta">
+        
+        <span class="top"><a>置顶</a></span>
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="swift">swift</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color1">swift</a>
+            
+            <a class="color3">新手</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2022-10-12 13:40:53'>2022-10-08 00:00</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>Count:14</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference-Type-x2F-Value-Type"><span class="toc-text">Reference Type &#x2F; Value Type</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference-Type"><span class="toc-text">Reference Type</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Value-Type"><span class="toc-text">Value Type</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Reference-Type-x2F-Value-Type"><a href="#Reference-Type-x2F-Value-Type" class="headerlink" title="Reference Type / Value Type"></a>Reference Type / Value Type</h1><p>所有的程式言語</p>
+<h2 id="Reference-Type"><a href="#Reference-Type" class="headerlink" title="Reference Type"></a>Reference Type</h2><h2 id="Value-Type"><a href="#Value-Type" class="headerlink" title="Value Type"></a>Value Type</h2>
+      
+       <hr><span style="font-style: italic;color: gray;"> 轉載請註明來源，歡迎對文章中的引用來源進行考證，歡迎指出任何有錯誤或不夠清晰的表達。可以在下面評論區評論，也可以郵件至 nobodyyu@gmail.com </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2014-2022 iOS@Taipei
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().trim().split('\n').length, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: ;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 602px;
+    }
+    .nav.fullscreen {
+        margin-left: -602px;
+    }
+    .nav-left {
+        width: 180px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
