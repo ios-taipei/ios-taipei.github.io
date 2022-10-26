@@ -6,7 +6,7 @@
   <link href="https://ios.taipei/atom.xml" rel="self"/>
   
   <link href="https://ios.taipei/"/>
-  <updated>2022-10-14T06:17:28.669Z</updated>
+  <updated>2022-10-26T04:00:06.083Z</updated>
   <id>https://ios.taipei/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://ios.taipei/2022/10/14/01-11-swift/"/>
     <id>https://ios.taipei/2022/10/14/01-11-swift/</id>
     <published>2022-10-13T16:00:05.000Z</published>
-    <updated>2022-10-14T06:17:28.669Z</updated>
+    <updated>2022-10-26T04:00:06.083Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Range-範圍"><a href="#Range-範圍" class="headerlink" title="Range 範圍"></a>Range 範圍</h1><h2 id="封閉式-Closed-Range"><a href="#封閉式-Closed-Range" class="headerlink" title="封閉式 Closed Range"></a>封閉式 Closed Range</h2><pre><code class="swift">for number in 1...5 {  print(number)}</code></pre><p>range 只有正向的寫法，沒有逆向顛倒的寫法</p><p>以下寫法是有問題的</p><pre><code class="swift">for number in 5...1 {  print(number)}</code></pre><h2 id="半開放-Half-Open-Range"><a href="#半開放-Half-Open-Range" class="headerlink" title="半開放 Half-Open Range"></a>半開放 Half-Open Range</h2><pre><code class="swift">for number in 1..&lt;4 {  print(number)}</code></pre><h2 id="單邊-One-Sided-Range"><a href="#單邊-One-Sided-Range" class="headerlink" title="單邊 One-Sided Range"></a>單邊 One-Sided Range</h2><pre><code class="swift">let range = ..5print(range.contains(-1))</code></pre>]]></content>
     
@@ -43,18 +43,18 @@
   </entry>
   
   <entry>
-    <title>swift 語言的基礎 - 列舉 Enum</title>
+    <title>swift 語言的基礎 - Class / Struct / Enum</title>
     <link href="https://ios.taipei/2022/10/12/01-12-swift/"/>
     <id>https://ios.taipei/2022/10/12/01-12-swift/</id>
     <published>2022-10-11T16:00:05.000Z</published>
-    <updated>2022-10-21T01:19:43.718Z</updated>
+    <updated>2022-10-26T09:42:46.401Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="未完待續"><a href="#未完待續" class="headerlink" title="未完待續"></a>未完待續</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h1><h2 id="初始化-Initialization"><a href="#初始化-Initialization" class="headerlink" title="初始化 Initialization"></a>初始化 Initialization</h2><p>我們想要有一個 Class，其用意是一個 點, 內容有 座標 x,y 兩個值，程式示意如下：</p><pre><code class="swift">class Point {  var x: Int  var y: Int }</code></pre><p>這裡其實會出錯，原因在於，當我們想要創建一個點的時候，x,y 因為不是 Optional Type, 沒有辦法事後再給初始值，所以有幾種不同的寫法，可以解初始值的問題</p><h2 id="先給一個值，後面再來改"><a href="#先給一個值，後面再來改" class="headerlink" title="先給一個值，後面再來改"></a>先給一個值，後面再來改</h2><pre><code class="swift">class Point {  var x: Int = 0   var y: Int = 0}</code></pre><h2 id="Optional-Type"><a href="#Optional-Type" class="headerlink" title="Optional Type"></a>Optional Type</h2><pre><code class="swift">class Point {  var x: Int?   var y: Int?}</code></pre><h2 id="Init-Function"><a href="#Init-Function" class="headerlink" title="Init Function"></a>Init Function</h2><pre><code class="swift">class Point {  var x: Int   var y: Int  init() {    x = 0    y = 0  }}</code></pre><h2 id="Init-Function-With-Paramter"><a href="#Init-Function-With-Paramter" class="headerlink" title="Init Function With Paramter"></a>Init Function With Paramter</h2><pre><code class="swift">class Point {  var x: Int   var y: Int  init(x:Int, y:Int) {    self.x = x    self.y = y  }}</code></pre><p>提示  init function 只能有一個，</p><h1 id="未完待續"><a href="#未完待續" class="headerlink" title="未完待續"></a>未完待續</h1>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;未完待續&quot;&gt;&lt;a href=&quot;#未完待續&quot; class=&quot;headerlink&quot; title=&quot;未完待續&quot;&gt;&lt;/a&gt;未完待續&lt;/h1&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;Class&quot;&gt;&lt;a href=&quot;#Class&quot; class=&quot;headerlink&quot; title=&quot;Class&quot;&gt;&lt;/a&gt;Class&lt;/h1&gt;&lt;h2 id=&quot;初始化-Initialization&quot;&gt;&lt;a href=&quot;#初始化-Initialization&quot; cla</summary>
       
     
     
@@ -73,9 +73,9 @@
     <link href="https://ios.taipei/2022/10/08/01-10-swift/"/>
     <id>https://ios.taipei/2022/10/08/01-10-swift/</id>
     <published>2022-10-07T16:00:05.000Z</published>
-    <updated>2022-10-12T05:40:53.390Z</updated>
+    <updated>2022-10-26T07:45:30.828Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Reference-Type-x2F-Value-Type"><a href="#Reference-Type-x2F-Value-Type" class="headerlink" title="Reference Type / Value Type"></a>Reference Type / Value Type</h1><p>所有的程式言語</p><h2 id="Reference-Type"><a href="#Reference-Type" class="headerlink" title="Reference Type"></a>Reference Type</h2><h2 id="Value-Type"><a href="#Value-Type" class="headerlink" title="Value Type"></a>Value Type</h2>]]></content>
+    <content type="html"><![CDATA[<h1 id="Reference-Type-x2F-Value-Type"><a href="#Reference-Type-x2F-Value-Type" class="headerlink" title="Reference Type / Value Type"></a>Reference Type / Value Type</h1><p>所有的程式言語的變數大多都有 Reference Type 與 Value Type 的觀念</p><p>以下就用 swift 裡 struct / class 兩個看起來很像，但是一個是 reference type ，一個是 value type 來簡單介紹</p><h2 id="官網範例"><a href="#官網範例" class="headerlink" title="官網範例"></a>官網範例</h2><pre><code class="swift">// Value type examplestruct S { var data: Int = -1 }  var a = S()  var b = a// a is copied to b  a.data = 42// Changes a, not b  println("\(a.data), \(b.data)")// prints "42, -1"</code></pre><pre><code class="swift">// Reference type exampleclass C { var data: Int = -1 }var x = C()var y = x// x is copied to yx.data = 42// changes the instance referred to by x (and y)println("\(x.data), \(y.data)")// prints "42, 42"</code></pre><p>大意是說  Value Type 的使用，在複製一份給新的變數時，兩個變數彼此的值的修改，是不互相影響的， Reference Type的使用，在複製一份給新的變數時，其實不是真的複製一份，而是把當下的記憶體位址告訴新變數，新變數的修改，值的變化，也會造成舊變數一併被修改。</p><h2 id="使用的時機？"><a href="#使用的時機？" class="headerlink" title="使用的時機？"></a>使用的時機？</h2><p>使用時機的考量點在於–對值的修改，會不會/有沒有必要 影響到其他的變數。</p><h2 id="有關於-Class-與-Struct-的介紹，留待其他章節再補完"><a href="#有關於-Class-與-Struct-的介紹，留待其他章節再補完" class="headerlink" title="有關於 Class 與 Struct 的介紹，留待其他章節再補完"></a>有關於 Class 與 Struct 的介紹，留待其他章節再補完</h2>]]></content>
     
     
       
@@ -99,9 +99,9 @@
     <link href="https://ios.taipei/2022/10/07/01-09-swift/"/>
     <id>https://ios.taipei/2022/10/07/01-09-swift/</id>
     <published>2022-10-06T16:00:05.000Z</published>
-    <updated>2022-10-14T06:21:13.421Z</updated>
+    <updated>2022-10-26T07:50:06.590Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="物件導向-介紹"><a href="#物件導向-介紹" class="headerlink" title="物件導向 - 介紹"></a>物件導向 - 介紹</h1><p>在沒有開始使用物件的觀念時，如何用程式撰寫，來寫出對於一輛汽車的描述？</p><p>範例：</p><p>藍色的東西，有四個輪子，品牌是BMW，還能夠按喇叭。</p><pre><code class="swift">// 車子的顏色let carColor =  .blue// 汽車有 4 個輪胎let numberOfCarTires =  4// 品牌let carBrand = "BMW"// 按喇叭func horn(){  print("Ba Ba Ba")}horn() //按一下喇叭</code></pre><p>如果改用<span style="color:blue">物件</span>的方式來描述呢？</p><p>我們先將一輛車子的設計藍圖先規劃出來，將屬性和操作的可能性，聚合起來，並且將可能改變的數值，變成變數，將其放到設計藍圖的外部。等到有需要建造汽車時，再將變數放進去。</p><p>設計藍圖的觀念  就是程式人說的 <span style="color:blue">類別 (Class)</span></p><h2 id="類別-Class"><a href="#類別-Class" class="headerlink" title="類別(Class)"></a>類別(Class)</h2><pre><code class="swift">class Car {  enum Brand {    case BMW, Benz, Toyata  }  // 顏色  let color = .blue  // 幾條腿  let numberOfTires = 4    // 品牌名  let brand: Brand    init(brand: Brand) { self.brand = brand }    func horn(){ print("Ba Ba Ba") }  }</code></pre><p>其中，有一些名詞，慢慢地要開始熟悉，其中 color(顏色) 變數用以描述車子，我們將之稱之為 <span style="color:blue">屬性 (Property)</span>，按喇叭是一個操作函數，我們將之稱之為 <span style="color:blue">方法 (Method)</span>。</p><p>在使用上，如何用程式描述相同的汽車？</p><pre><code class="swift">// 有一台藍色，有四個輪子，品牌是BMW，還能夠按喇叭。let car1 = Car(brand: .BMW)// 有一台藍色，有四個輪子，品牌是Bens，還能夠按喇叭。let car2 = Car(brand: .Benz)// 有一台藍色，有四個輪子，品牌是Toyota，還能夠按喇叭。let car3 = Car(brand: .Toyata)</code></pre><p>是不是簡潔許多，又可重複地使用設計藍圖一直打造汽車了呢？  這就是物件導向的優點。</p><h2 id="物件-Object"><a href="#物件-Object" class="headerlink" title="物件(Object)"></a>物件(Object)</h2><p>那物件呢？ 其實就是透過Class被製造(init)出來的實體 car1,car2,car3,就是一個個物件了</p><p>我們可以讓 car2 按一下喇叭</p><pre><code class="swift">car2.horn()</code></pre><h2 id="隱藏在-Class-裡的進階觀念"><a href="#隱藏在-Class-裡的進階觀念" class="headerlink" title="隱藏在 Class 裡的進階觀念"></a>隱藏在 Class 裡的進階觀念</h2><p>Class 屬於 Reference Type 的型別, 那什麼是 <span style="color:blue">Reference Type </span>呢？</p><p>留待下一章 <a href="/2022/10/08/01-10-swift/">Reference Type / Value Type</a> 時再解釋。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="物件導向-介紹"><a href="#物件導向-介紹" class="headerlink" title="物件導向 - 介紹"></a>物件導向 - 介紹</h1><p>在沒有開始使用物件的觀念時，如何用程式撰寫，來寫出對於一輛汽車的描述？</p><p>範例：</p><p>藍色的東西，有四個輪子，品牌是BMW，還能夠按喇叭。</p><pre><code class="swift">// 車子的顏色let carColor =  .blue// 汽車有 4 個輪胎let numberOfCarTires =  4// 品牌let carBrand = "BMW"// 按喇叭func horn(){  print("Ba Ba Ba")}horn() //按一下喇叭</code></pre><p>如果改用<span style="color:blue">物件</span>的方式來描述呢？</p><p>我們先將一輛車子的設計藍圖先規劃出來，將屬性和操作的可能性，聚合起來，並且將可能改變的數值，變成變數，將其放到設計藍圖的外部。等到有需要建造汽車時，再將變數放進去。</p><p>設計藍圖的觀念  就是程式人說的 <span style="color:blue">類別 (Class)</span></p><h2 id="類別-Class"><a href="#類別-Class" class="headerlink" title="類別(Class)"></a>類別(Class)</h2><pre><code class="swift">class Car {  enum Brand {    case BMW, Benz, Toyata  }  // 顏色  let color = .blue  // 幾條腿  let numberOfTires = 4    // 品牌名  let brand: Brand    init(brand: Brand) { self.brand = brand }    func horn(){ print("Ba Ba Ba") }  }</code></pre><p>其中，有一些名詞，慢慢地要開始熟悉，其中 color(顏色) 變數用以描述車子，我們將之稱之為 <span style="color:blue">屬性 (Property)</span>，按喇叭是一個操作函數，我們將之稱之為 <span style="color:blue">方法 (Method)</span>。</p><p>在使用上，如何用程式描述相同的汽車？</p><pre><code class="swift">// 有一台藍色，有四個輪子，品牌是BMW，還能夠按喇叭。let car1 = Car(brand: .BMW)// 有一台藍色，有四個輪子，品牌是Bens，還能夠按喇叭。let car2 = Car(brand: .Benz)// 有一台藍色，有四個輪子，品牌是Toyota，還能夠按喇叭。let car3 = Car(brand: .Toyata)</code></pre><p>是不是簡潔許多，又可重複地使用設計藍圖一直打造汽車了呢？  這就是物件導向的優點。</p><h2 id="物件-Object"><a href="#物件-Object" class="headerlink" title="物件(Object)"></a>物件(Object)</h2><p>那物件呢？ 其實就是透過Class被製造(init)出來的實體 car1,car2,car3,就是一個個物件了</p><p>我們可以讓 car2 按一下喇叭</p><pre><code class="swift">car2.horn()</code></pre><h2 id="隱藏在-Class-裡的進階觀念"><a href="#隱藏在-Class-裡的進階觀念" class="headerlink" title="隱藏在 Class 裡的進階觀念"></a>隱藏在 Class 裡的進階觀念</h2><p>Class 屬於 Reference Type 的型別, 那什麼是 <span style="color:blue">Reference Type </span>呢？</p><p>留待下一章 <a href="/2022/10/08/01-10-swift/">Reference Type / Value Type</a> 時再解釋。</p><h2 id="有關更多-Class-的介紹-會在其他章節再做更詳細的說明"><a href="#有關更多-Class-的介紹-會在其他章節再做更詳細的說明" class="headerlink" title="有關更多 Class 的介紹  會在其他章節再做更詳細的說明"></a>有關更多 Class 的介紹  會在其他章節再做更詳細的說明</h2>]]></content>
     
     
       
@@ -153,9 +153,9 @@
     <link href="https://ios.taipei/2022/10/06/01-08-1-swift/"/>
     <id>https://ios.taipei/2022/10/06/01-08-1-swift/</id>
     <published>2022-10-05T16:00:05.000Z</published>
-    <updated>2022-10-21T01:20:28.007Z</updated>
+    <updated>2022-10-26T03:20:45.064Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Strong-Weak-and-Unowned-介紹"><a href="#Strong-Weak-and-Unowned-介紹" class="headerlink" title="Strong, Weak and Unowned - 介紹"></a>Strong, Weak and Unowned - 介紹</h1><h2 id="Manual-Reference-Count-MRC-x2F-Automatic-Reference-Counting-ARC"><a href="#Manual-Reference-Count-MRC-x2F-Automatic-Reference-Counting-ARC" class="headerlink" title="Manual Reference Count - (MRC) / Automatic Reference Counting - (ARC)"></a>Manual Reference Count - (MRC) / Automatic Reference Counting - (ARC)</h2><p>這篇在介紹swift裡記憶體的管理機制</p><p>早前的手機，因為硬體資源的限制，對於記憶體的使用格外的珍惜，早期在 Objective-C / Xcode 4 的年代，每個變數的引用與操作 alloc、new、retain、release 都要手動的一個個計數，在撰寫程式時，以良好的習慣，儘可能地釋放出更多記憶體供程式運行。當然，萬一呼叫到已經釋放掉的變數，就直接 Crash，不好好釋放的話，記憶體堆疊到不夠用了 (Memory leak)，也是直接 Crash。</p><p>隨著硬體的進步，Apple 也慢慢將手動參考計數 轉往自動參考計數，慢慢地由autorelease,再演化成由系統透過 Strong, Weak , Unowned 來判斷記憶體回收的時機</p><h1 id="未完待續"><a href="#未完待續" class="headerlink" title="未完待續"></a>未完待續</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="Strong-Weak-and-Unowned-介紹"><a href="#Strong-Weak-and-Unowned-介紹" class="headerlink" title="Strong, Weak and Unowned - 介紹"></a>Strong, Weak and Unowned - 介紹</h1><h2 id="Manual-Reference-Count-MRC-x2F-Automatic-Reference-Counting-ARC"><a href="#Manual-Reference-Count-MRC-x2F-Automatic-Reference-Counting-ARC" class="headerlink" title="Manual Reference Count - (MRC) / Automatic Reference Counting - (ARC)"></a>Manual Reference Count - (MRC) / Automatic Reference Counting - (ARC)</h2><p>這篇在介紹swift裡記憶體的管理機制</p><p>早前的手機，因為硬體資源的限制，對於記憶體的使用格外的珍惜，早期在 Objective-C / Xcode 4 的年代，每個變數的引用與操作 alloc、new、retain、release 都要手動的一個個計數，在撰寫程式時，以良好的習慣，儘可能地釋放出更多記憶體供程式運行。當然，萬一呼叫到已經釋放掉的變數，就直接 Crash，不好好釋放的話，或是變數之間互相引用，造成循環引用，而導致變數在需要被釋放時被咬住而無法釋放(Retain Cycle), 一旦記憶體堆疊到不夠用了 (Memory leak)，也是直接 Crash。</p><p>隨著硬體的進步，Apple 也慢慢將手動參考計數 轉往自動參考計數，慢慢地由autorelease,再演化成由系統透過 Strong, Weak , Unowned 來判斷記憶體回收的時機</p><h1 id="比較表"><a href="#比較表" class="headerlink" title="比較表"></a>比較表</h1><table><thead><tr><th></th><th>Strong</th><th>Weak</th><th>Unowned</th></tr></thead><tbody><tr><td>Reference Count</td><td>O</td><td></td><td></td></tr><tr><td>Optional</td><td>O</td><td>O</td><td></td></tr><tr><td>Non-Optional</td><td>O</td><td></td><td>O</td></tr><tr><td>var</td><td>O</td><td>O</td><td>O</td></tr><tr><td>let</td><td>O</td><td></td><td>O</td></tr></tbody></table><p>說明</p><ol><li>只有 Strong 會增加 Reference Count</li><li>Strong / Weak 可以是 nil, 但是 unowned 不能為nil</li><li>Weak 不能用 let 宣告，因為在引用的過程中避免循環，所以只能讀 不能寫</li></ol><p>來個常見網路使用的範例</p><pre><code class="swift">//呼叫API  完成後用completion(trailing closure) 回傳後繼續class API {    var completion: ((Data?, Error?) -&gt; Void) = { (_,_) in }}  //給一個 ViewController 長成醬子class VC: UIViewController {      let api = API()    func loading(_ show:Bool){}    func loadAPI() {        loading(true)        api.completion = { (data, error) in            loading(false)  //這裡會出錯        }    }}</code></pre><p>這是個常見的例子  我們在讀取API的前和後，想要秀出轉轉轉的 UIActivityIndicator 讓使用者知道現在正在讀取API，在API讀完之後，將 UIActivityIndicator 設定會隱藏。</p><p>在閉包的程式區塊裡，想要使用外部的變數，或是使用外部的函數，Xcode 會提示你加一個 self.</p><pre><code class="swift">      func loadAPI() {        loading(true)        api.completion = { (data, error) in            self.loading(false)  //這裡會出錯        }      }</code></pre><p>在前面，用以得知，這個是由上一層來的。又因為 Closure 是 Reference Type, 在閉包裡的參數變化，外部的變數值也會跟著變化，因此, 這裡的 Xcode 其實是會報錯的，閉包會把 self.loading 咬住而讓 VC 無法被釋放。</p><p>正確的做法是在閉包裡，對於 self 的引用，由 strong 改為 weak / optional type</p><pre><code class="swift">      func loadAPI() {        loading(true)        api.completion = { [weak self] (data, error) in            self?.loading(false)          }      }</code></pre><p>如此一來，當外部的 self 不存在時 閉包裡的 loading 也不會強迫使用 外部的 self</p><p>那？有沒有其他的解法?</p><pre><code class="swift">      func loadAPI() {        loading(true)        api.completion = { [unowned self] (data, error) in            self.loading(false)          }      }</code></pre><p>使用 unowned 時, self 後不用加 ?</p><h2 id="例外？"><a href="#例外？" class="headerlink" title="例外？"></a>例外？</h2><p>這是一個 animate 的 closure, 因為要對 view 做透明度的變化，在閉包裡的 view ，要在前面加一個 self, 那麼為什麼不用在閉包裡宣告 weak 或是 unowned ? 那是因為 view 的生命週期，只執行一次，不會留存在記憶體裡面重覆使用，因此 沒有 refernece count，自然也沒有 retain cycle 的問題</p><pre><code class="swift">UIView.animate(withDuration: 1.0) {    self.view.alpha = 0.5}</code></pre>]]></content>
     
     
       

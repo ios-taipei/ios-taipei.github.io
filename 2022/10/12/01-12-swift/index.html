@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>swift 語言的基礎 - 列舉 Enum | iOS @ Taipei</title>
+  <title>swift 語言的基礎 - Class / Struct / Enum | iOS @ Taipei</title>
   <meta name="keywords" content=" swift , 新手 ">
-  <meta name="description" content="swift 語言的基礎 - 列舉 Enum | iOS @ Taipei">
+  <meta name="description" content="swift 語言的基礎 - Class / Struct / Enum | iOS @ Taipei">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Guys who fall in love with iOS">
 <meta property="og:type" content="website">
@@ -210,7 +210,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="14">
-<input type="hidden" id="yelog_site_word_count" value="6.7k">
+<input type="hidden" id="yelog_site_word_count" value="7.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -407,7 +407,7 @@
            href="/2022/10/12/01-12-swift/"
            data-tag="swift,新手"
            data-author="" >
-            <span class="post-title" title="swift 語言的基礎 - 列舉 Enum">swift 語言的基礎 - 列舉 Enum</span>
+            <span class="post-title" title="swift 語言的基礎 - Class / Struct / Enum">swift 語言的基礎 - Class / Struct / Enum</span>
             <span class="post-date" title="2022-10-12 00:00:05">2022/10/12</span>
         </a>
         
@@ -444,7 +444,7 @@
     <div class="pjax">
         <article id="post-01-12-swift" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">swift 語言的基礎 - 列舉 Enum</h1>
+        <h1 class="article-title">swift 語言的基礎 - Class / Struct / Enum</h1>
     
     <div class="article-meta">
         
@@ -473,12 +473,12 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2022-10-21 09:19:43'>2022-10-12 00:00</time>
+            Created At : <time class="date" title='Updated At: 2022-10-26 17:42:46'>2022-10-12 00:00</time>
         
     </div>
     <div class="article-meta">
         
-        <span>Count:4</span>
+        <span>Count:187</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -497,7 +497,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BA%8C"><span class="toc-text">未完待續</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Class"><span class="toc-text">Class</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96-Initialization"><span class="toc-text">初始化 Initialization</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%88%E7%B5%A6%E4%B8%80%E5%80%8B%E5%80%BC%EF%BC%8C%E5%BE%8C%E9%9D%A2%E5%86%8D%E4%BE%86%E6%94%B9"><span class="toc-text">先給一個值，後面再來改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Optional-Type"><span class="toc-text">Optional Type</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Init-Function"><span class="toc-text">Init Function</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Init-Function-With-Paramter"><span class="toc-text">Init Function With Paramter</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BA%8C"><span class="toc-text">未完待續</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -513,9 +513,50 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="未完待續"><a href="#未完待續" class="headerlink" title="未完待續"></a>未完待續</h1>
+        <h1 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h1><h2 id="初始化-Initialization"><a href="#初始化-Initialization" class="headerlink" title="初始化 Initialization"></a>初始化 Initialization</h2><p>我們想要有一個 Class，其用意是一個 點, 內容有 座標 x,y 兩個值，程式示意如下：</p>
+<pre><code class="swift">
+class Point {
+  var x: Int
+  var y: Int 
+}
+</code></pre>
+<p>這裡其實會出錯，原因在於，當我們想要創建一個點的時候，x,y 因為不是 Optional Type, 沒有辦法事後再給初始值，所以有幾種不同的寫法，可以解初始值的問題</p>
+<h2 id="先給一個值，後面再來改"><a href="#先給一個值，後面再來改" class="headerlink" title="先給一個值，後面再來改"></a>先給一個值，後面再來改</h2><pre><code class="swift">
+class Point {
+  var x: Int = 0 
+  var y: Int = 0
+}
+</code></pre>
+<h2 id="Optional-Type"><a href="#Optional-Type" class="headerlink" title="Optional Type"></a>Optional Type</h2><pre><code class="swift">
+class Point {
+  var x: Int? 
+  var y: Int?
+}
+</code></pre>
+<h2 id="Init-Function"><a href="#Init-Function" class="headerlink" title="Init Function"></a>Init Function</h2><pre><code class="swift">
+class Point {
+  var x: Int 
+  var y: Int
+  init() {
+    x = 0
+    y = 0
+  }
+}
+</code></pre>
+<h2 id="Init-Function-With-Paramter"><a href="#Init-Function-With-Paramter" class="headerlink" title="Init Function With Paramter"></a>Init Function With Paramter</h2><pre><code class="swift">
+class Point {
+  var x: Int 
+  var y: Int
+  init(x:Int, y:Int) {
+    self.x = x
+    self.y = y
+  }
+}
+</code></pre>
+<p>提示  init function 只能有一個，</p>
+<h1 id="未完待續"><a href="#未完待續" class="headerlink" title="未完待續"></a>未完待續</h1>
       
-       <hr><span style="font-style: italic;color: gray;"> 轉載請註明來源，歡迎對文章中的引用來源進行考證，歡迎指出任何有錯誤或不夠清晰的表達。可以在下面評論區評論，也可以郵件至 nobodyyu@gmail.com </span>
+       <hr><span style="font-style: italic;color: gray;"> 轉載請註明來源，歡迎對文章中的引用來源進行考證，歡迎指出任何有錯誤或不夠清晰的表達。可以郵件至 nobodyyu@gmail.com </span>
     </div>
 </article>
 

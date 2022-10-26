@@ -210,7 +210,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="14">
-<input type="hidden" id="yelog_site_word_count" value="6.7k">
+<input type="hidden" id="yelog_site_word_count" value="7.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -407,7 +407,7 @@
            href="/2022/10/12/01-12-swift/"
            data-tag="swift,新手"
            data-author="" >
-            <span class="post-title" title="swift 語言的基礎 - 列舉 Enum">swift 語言的基礎 - 列舉 Enum</span>
+            <span class="post-title" title="swift 語言的基礎 - Class / Struct / Enum">swift 語言的基礎 - Class / Struct / Enum</span>
             <span class="post-date" title="2022-10-12 00:00:05">2022/10/12</span>
         </a>
         
@@ -473,12 +473,12 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2022-10-12 13:40:53'>2022-10-08 00:00</time>
+            Created At : <time class="date" title='Updated At: 2022-10-26 15:45:30'>2022-10-08 00:00</time>
         
     </div>
     <div class="article-meta">
         
-        <span>Count:14</span>
+        <span>Count:293</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -497,7 +497,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference-Type-x2F-Value-Type"><span class="toc-text">Reference Type &#x2F; Value Type</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference-Type"><span class="toc-text">Reference Type</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Value-Type"><span class="toc-text">Value Type</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference-Type-x2F-Value-Type"><span class="toc-text">Reference Type &#x2F; Value Type</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%98%E7%B6%B2%E7%AF%84%E4%BE%8B"><span class="toc-text">官網範例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E7%9A%84%E6%99%82%E6%A9%9F%EF%BC%9F"><span class="toc-text">使用的時機？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%89%E9%97%9C%E6%96%BC-Class-%E8%88%87-Struct-%E7%9A%84%E4%BB%8B%E7%B4%B9%EF%BC%8C%E7%95%99%E5%BE%85%E5%85%B6%E4%BB%96%E7%AB%A0%E7%AF%80%E5%86%8D%E8%A3%9C%E5%AE%8C"><span class="toc-text">有關於 Class 與 Struct 的介紹，留待其他章節再補完</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -513,10 +513,30 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Reference-Type-x2F-Value-Type"><a href="#Reference-Type-x2F-Value-Type" class="headerlink" title="Reference Type / Value Type"></a>Reference Type / Value Type</h1><p>所有的程式言語</p>
-<h2 id="Reference-Type"><a href="#Reference-Type" class="headerlink" title="Reference Type"></a>Reference Type</h2><h2 id="Value-Type"><a href="#Value-Type" class="headerlink" title="Value Type"></a>Value Type</h2>
+        <h1 id="Reference-Type-x2F-Value-Type"><a href="#Reference-Type-x2F-Value-Type" class="headerlink" title="Reference Type / Value Type"></a>Reference Type / Value Type</h1><p>所有的程式言語的變數大多都有 Reference Type 與 Value Type 的觀念</p>
+<p>以下就用 swift 裡 struct / class 兩個看起來很像，但是一個是 reference type ，一個是 value type 來簡單介紹</p>
+<h2 id="官網範例"><a href="#官網範例" class="headerlink" title="官網範例"></a>官網範例</h2><pre><code class="swift">
+// Value type example
+struct S { var data: Int = -1 }
+  var a = S()
+  var b = a						// a is copied to b
+  a.data = 42						// Changes a, not b
+  println("\(a.data), \(b.data)")	// prints "42, -1"
+
+</code></pre>
+<pre><code class="swift">
+// Reference type example
+class C { var data: Int = -1 }
+var x = C()
+var y = x						// x is copied to y
+x.data = 42						// changes the instance referred to by x (and y)
+println("\(x.data), \(y.data)")	// prints "42, 42"
+</code></pre>
+<p>大意是說  Value Type 的使用，在複製一份給新的變數時，兩個變數彼此的值的修改，是不互相影響的， Reference Type的使用，在複製一份給新的變數時，其實不是真的複製一份，而是把當下的記憶體位址告訴新變數，新變數的修改，值的變化，也會造成舊變數一併被修改。</p>
+<h2 id="使用的時機？"><a href="#使用的時機？" class="headerlink" title="使用的時機？"></a>使用的時機？</h2><p>使用時機的考量點在於–對值的修改，會不會/有沒有必要 影響到其他的變數。</p>
+<h2 id="有關於-Class-與-Struct-的介紹，留待其他章節再補完"><a href="#有關於-Class-與-Struct-的介紹，留待其他章節再補完" class="headerlink" title="有關於 Class 與 Struct 的介紹，留待其他章節再補完"></a>有關於 Class 與 Struct 的介紹，留待其他章節再補完</h2>
       
-       <hr><span style="font-style: italic;color: gray;"> 轉載請註明來源，歡迎對文章中的引用來源進行考證，歡迎指出任何有錯誤或不夠清晰的表達。可以在下面評論區評論，也可以郵件至 nobodyyu@gmail.com </span>
+       <hr><span style="font-style: italic;color: gray;"> 轉載請註明來源，歡迎對文章中的引用來源進行考證，歡迎指出任何有錯誤或不夠清晰的表達。可以郵件至 nobodyyu@gmail.com </span>
     </div>
 </article>
 

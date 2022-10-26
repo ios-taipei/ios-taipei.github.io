@@ -210,7 +210,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="14">
-<input type="hidden" id="yelog_site_word_count" value="6.7k">
+<input type="hidden" id="yelog_site_word_count" value="7.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -407,7 +407,7 @@
            href="/2022/10/12/01-12-swift/"
            data-tag="swift,新手"
            data-author="" >
-            <span class="post-title" title="swift 語言的基礎 - 列舉 Enum">swift 語言的基礎 - 列舉 Enum</span>
+            <span class="post-title" title="swift 語言的基礎 - Class / Struct / Enum">swift 語言的基礎 - Class / Struct / Enum</span>
             <span class="post-date" title="2022-10-12 00:00:05">2022/10/12</span>
         </a>
         
@@ -473,12 +473,12 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2022-10-21 09:20:28'>2022-10-06 00:00</time>
+            Created At : <time class="date" title='Updated At: 2022-10-26 11:20:45'>2022-10-06 00:00</time>
         
     </div>
     <div class="article-meta">
         
-        <span>Count:220</span>
+        <span>Count:786</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -497,7 +497,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Strong-Weak-and-Unowned-%E4%BB%8B%E7%B4%B9"><span class="toc-text">Strong, Weak and Unowned - 介紹</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Manual-Reference-Count-MRC-x2F-Automatic-Reference-Counting-ARC"><span class="toc-text">Manual Reference Count - (MRC) &#x2F; Automatic Reference Counting - (ARC)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BA%8C"><span class="toc-text">未完待續</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Strong-Weak-and-Unowned-%E4%BB%8B%E7%B4%B9"><span class="toc-text">Strong, Weak and Unowned - 介紹</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Manual-Reference-Count-MRC-x2F-Automatic-Reference-Counting-ARC"><span class="toc-text">Manual Reference Count - (MRC) &#x2F; Automatic Reference Counting - (ARC)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AF%94%E8%BC%83%E8%A1%A8"><span class="toc-text">比較表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E5%A4%96%EF%BC%9F"><span class="toc-text">例外？</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -514,11 +514,114 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="Strong-Weak-and-Unowned-介紹"><a href="#Strong-Weak-and-Unowned-介紹" class="headerlink" title="Strong, Weak and Unowned - 介紹"></a>Strong, Weak and Unowned - 介紹</h1><h2 id="Manual-Reference-Count-MRC-x2F-Automatic-Reference-Counting-ARC"><a href="#Manual-Reference-Count-MRC-x2F-Automatic-Reference-Counting-ARC" class="headerlink" title="Manual Reference Count - (MRC) / Automatic Reference Counting - (ARC)"></a>Manual Reference Count - (MRC) / Automatic Reference Counting - (ARC)</h2><p>這篇在介紹swift裡記憶體的管理機制</p>
-<p>早前的手機，因為硬體資源的限制，對於記憶體的使用格外的珍惜，早期在 Objective-C / Xcode 4 的年代，每個變數的引用與操作 alloc、new、retain、release 都要手動的一個個計數，在撰寫程式時，以良好的習慣，儘可能地釋放出更多記憶體供程式運行。當然，萬一呼叫到已經釋放掉的變數，就直接 Crash，不好好釋放的話，記憶體堆疊到不夠用了 (Memory leak)，也是直接 Crash。</p>
+<p>早前的手機，因為硬體資源的限制，對於記憶體的使用格外的珍惜，早期在 Objective-C / Xcode 4 的年代，每個變數的引用與操作 alloc、new、retain、release 都要手動的一個個計數，在撰寫程式時，以良好的習慣，儘可能地釋放出更多記憶體供程式運行。當然，萬一呼叫到已經釋放掉的變數，就直接 Crash，不好好釋放的話，或是變數之間互相引用，造成循環引用，而導致變數在需要被釋放時被咬住而無法釋放(Retain Cycle), 一旦記憶體堆疊到不夠用了 (Memory leak)，也是直接 Crash。</p>
 <p>隨著硬體的進步，Apple 也慢慢將手動參考計數 轉往自動參考計數，慢慢地由autorelease,再演化成由系統透過 Strong, Weak , Unowned 來判斷記憶體回收的時機</p>
-<h1 id="未完待續"><a href="#未完待續" class="headerlink" title="未完待續"></a>未完待續</h1>
+<h1 id="比較表"><a href="#比較表" class="headerlink" title="比較表"></a>比較表</h1><table>
+<thead>
+<tr>
+<th></th>
+<th>Strong</th>
+<th>Weak</th>
+<th>Unowned</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Reference Count</td>
+<td>O</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Optional</td>
+<td>O</td>
+<td>O</td>
+<td></td>
+</tr>
+<tr>
+<td>Non-Optional</td>
+<td>O</td>
+<td></td>
+<td>O</td>
+</tr>
+<tr>
+<td>var</td>
+<td>O</td>
+<td>O</td>
+<td>O</td>
+</tr>
+<tr>
+<td>let</td>
+<td>O</td>
+<td></td>
+<td>O</td>
+</tr>
+</tbody></table>
+<p>說明</p>
+<ol>
+<li>只有 Strong 會增加 Reference Count</li>
+<li>Strong / Weak 可以是 nil, 但是 unowned 不能為nil</li>
+<li>Weak 不能用 let 宣告，因為在引用的過程中避免循環，所以只能讀 不能寫</li>
+</ol>
+<p>來個常見網路使用的範例</p>
+<pre><code class="swift">
+//呼叫API  完成後用completion(trailing closure) 回傳後繼續
+
+class API {
+    var completion: ((Data?, Error?) -&gt; Void) = { (_,_) in }
+}  
+
+//給一個 ViewController 長成醬子
+
+class VC: UIViewController {  
+    let api = API()
+
+    func loading(_ show:Bool){}
+
+    func loadAPI() {
+        loading(true)
+        api.completion = { (data, error) in
+            loading(false)  //這裡會出錯
+        }
+    }
+}
+</code></pre>
+<p>這是個常見的例子  我們在讀取API的前和後，想要秀出轉轉轉的 UIActivityIndicator 讓使用者知道現在正在讀取API，在API讀完之後，將 UIActivityIndicator 設定會隱藏。</p>
+<p>在閉包的程式區塊裡，想要使用外部的變數，或是使用外部的函數，Xcode 會提示你加一個 self.</p>
+<pre><code class="swift">      func loadAPI() {
+        loading(true)
+        api.completion = { (data, error) in
+            self.loading(false)  //這裡會出錯
+        }
+      }
+</code></pre>
+<p>在前面，用以得知，這個是由上一層來的。又因為 Closure 是 Reference Type, 在閉包裡的參數變化，外部的變數值也會跟著變化，因此, 這裡的 Xcode 其實是會報錯的，閉包會把 self.loading 咬住而讓 VC 無法被釋放。</p>
+<p>正確的做法是在閉包裡，對於 self 的引用，由 strong 改為 weak / optional type</p>
+<pre><code class="swift">      func loadAPI() {
+        loading(true)
+        api.completion = { [weak self] (data, error) in
+            self?.loading(false)  
+        }
+      }
+</code></pre>
+<p>如此一來，當外部的 self 不存在時 閉包裡的 loading 也不會強迫使用 外部的 self</p>
+<p>那？有沒有其他的解法?</p>
+<pre><code class="swift">      func loadAPI() {
+        loading(true)
+        api.completion = { [unowned self] (data, error) in
+            self.loading(false)  
+        }
+      }
+</code></pre>
+<p>使用 unowned 時, self 後不用加 ?</p>
+<h2 id="例外？"><a href="#例外？" class="headerlink" title="例外？"></a>例外？</h2><p>這是一個 animate 的 closure, 因為要對 view 做透明度的變化，在閉包裡的 view ，要在前面加一個 self, 那麼為什麼不用在閉包裡宣告 weak 或是 unowned ? 那是因為 view 的生命週期，只執行一次，不會留存在記憶體裡面重覆使用，因此 沒有 refernece count，自然也沒有 retain cycle 的問題</p>
+<pre><code class="swift">
+UIView.animate(withDuration: 1.0) {
+    self.view.alpha = 0.5
+}
+</code></pre>
+
       
-       <hr><span style="font-style: italic;color: gray;"> 轉載請註明來源，歡迎對文章中的引用來源進行考證，歡迎指出任何有錯誤或不夠清晰的表達。可以在下面評論區評論，也可以郵件至 nobodyyu@gmail.com </span>
+       <hr><span style="font-style: italic;color: gray;"> 轉載請註明來源，歡迎對文章中的引用來源進行考證，歡迎指出任何有錯誤或不夠清晰的表達。可以郵件至 nobodyyu@gmail.com </span>
     </div>
 </article>
 
