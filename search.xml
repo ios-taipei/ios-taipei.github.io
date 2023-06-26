@@ -58,6 +58,87 @@
     
     
     <entry>
+      <title>Xcode 環境的準備</title>
+      <link href="/2022/10/12/00-02-xcode-install/"/>
+      <url>/2022/10/12/00-02-xcode-install/</url>
+      
+        <content type="html"><![CDATA[<p>homebrew 比較好用</p><pre><code>brew install cocoapods</code></pre><p>官網推薦，不過在 m1 新電腦上很容易遇到 ruby 或 ffi 的問題，有想要試試的人，可以自己試看看</p><pre><code>sudo gem install cocoapods</code></pre><p>Gem files will remain installed in /Library/Ruby/Gems/2.6.0/gems/ffi-1.15.5 for inspection.<br>Results logged to /Library/Ruby/Gems/2.6.0/extensions/universal-darwin-22/2.6.0/ffi-1.15.5/gem_make.out</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> swift </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> swift </tag>
+            
+            <tag> 新手 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Android Studio 環境的準備</title>
+      <link href="/2022/10/12/00-04-android-studio-install/"/>
+      <url>/2022/10/12/00-04-android-studio-install/</url>
+      
+        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="f65ff8bd8770536ea4d0ee3d4b29d79e0871fe7d66e04b3094c21d876f5c0660">7574752a31b61ee7638f016dfc1ca517e75be6656e668c3132c5cede4c62cf25d6e7dbbb6f782a853ed270a81dfe0ccaef21d06a9807a6172b93252b2256f533cf15110f0dcf40ad4c179704fdf7cd02c6823ce54f653313ea61f1a5d64c2975cad6d38d8c6fd8e9fdbb7c18d4e219120bab643ed0047976dcd4cafe8aac03f05f92dfa7ccc14fe564e92336703442a445a08e682338507cc153e3bda87035e32a1a49c4866e32e274867d254d14b36e5278d7505c034c8be0b8df40d9d338ca300db318a4de5074917d22560a7f35eaaeef2c32477d5edadd61fd190ea49bcc820b414c2bd2a3ba1a678c975b4455dc15d0228f6282fec493a8efd0b5727ba424d7ee6cab978f405398f4f419210733dbc006bde81cbeb84668ac7e9c74468d</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">請輸入密碼</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      
+      
+      <categories>
+          
+          <category> android </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 新手 </tag>
+            
+            <tag> android </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VS Code 環境的準備</title>
+      <link href="/2022/10/12/00-03-vscode-install/"/>
+      <url>/2022/10/12/00-03-vscode-install/</url>
+      
+        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="9c8e3d6a73661df21ccaaa5180ec4a1783d2c3d0d35a5e6d275a70dc5aea59c6">7574752a31b61ee7638f016dfc1ca517fb023543b065aca84c1d733eb0b70bd4973f5cb5c9faa7b3aaef19fec9b14e5817768189b513cf8edb1d5f42234baa6fba4733fe18bc7d9f0f94c3271de65a91b45e0258b7b51d708d96c035e28b4f4c11e860e37b8fc5812ce8498f1cf9ccfde4d7d41707f1d4ac8b83b2bc5c768bfd7d80fe1ff8decdaa807ebeb5ce80da30fdd509e9fd901a7410288b913c8b1a3b2188ff02ede419682a7e02cfb7d65ef1b855eae5a717b77d2dcf48e78603e867451161286511aef783ed416e4539839a1f5544da2b626e5e9cd00f0e6cd7a236c2abe06a2e837ceb91d3e6c56197aae23be302e4e8c4c08dce394271bea88ccb8550c00d44777eb064b819905283ff2d571122e6e35e84767bdac19856558cef74b559852c60387eeec9e3fd0ae8756a49080b9e2cc9fd0753d7275302c93705557797f4856538b89b4737fcbb45a21b</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">請輸入密碼</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      
+      
+      <categories>
+          
+          <category> vscode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 新手 </tag>
+            
+            <tag> vscode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>swift 語言的基礎 - Reference Type / Value Type</title>
       <link href="/2022/10/08/01-10-swift/"/>
       <url>/2022/10/08/01-10-swift/</url>
